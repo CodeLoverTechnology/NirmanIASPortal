@@ -1,0 +1,13 @@
+<p>
+  niasenquiry works!
+</p>
+<div class="container-fluid">
+  <h2>Enquiry List</h2>
+  <ul *ngFor="let Enq of EnquiryList">
+    <li>{{Enq.Name}}</li>
+    <li>{{Enq.EmailID}}</li>
+    <li>{{Enq.ContactNo}}</li>
+    <li>{{Enq.EnquiryMessage}}</li>
+  </ul>
+    {{ EnquiryList.value | json }}
+</div>
