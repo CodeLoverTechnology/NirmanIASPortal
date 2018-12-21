@@ -4,13 +4,13 @@ export class EnquiryModel {
     public Name:string,
     public EmailID :string,
     public ContactNo : number,
-   // public TypeOfEnquiry : string,
     public EnquiryMessage : string,
     public ReplyMessage : string,
+    public ReferenceEnquiryID : number,
     public CreatedBy : string,
-    public CreatedDate : Date,
+    public CreatedDate : string,
     public ModifiedBy : string,
-    public ModifiedDate : Date,
+    public ModifiedDate : string,
     public Active : boolean
 ){}
 }

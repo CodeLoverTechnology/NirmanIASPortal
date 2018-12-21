@@ -9,5 +9,5 @@ import { EnquiryModel } from './enquiry-model';
 export class AppComponent {
   TypeOfEnquiry = ['Student','Class','Faculty'];
   title = 'NirmanIASWeb';
-  enquiry = new EnquiryModel(0,'Harsh','abc@gmail.com',9865327412,'Faculty Test By Dev Team.',null,'Admin',new Date(),'Admin',new Date(),true);
+  enquiry = new EnquiryModel(1,'Harsh','abc@gmail.com',1234567890,'type message','reply message',null,'Harsh','2018-12-21','Harsh','2018-12-21',true);
 }

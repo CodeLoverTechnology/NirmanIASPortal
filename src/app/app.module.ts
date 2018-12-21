@@ -10,7 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 import { ContactComponent } from './contact/contact.component';
 import { BannerComponent } from './banner/banner.component';
-
+import {EnquiryServicesService} from "./enquiry-services.service";
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +27,7 @@ import { BannerComponent } from './banner/banner.component';
     FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [EnquiryServicesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

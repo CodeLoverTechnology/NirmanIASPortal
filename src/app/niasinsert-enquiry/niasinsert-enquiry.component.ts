@@ -8,31 +8,31 @@ import { EnquiryServicesService } from '../enquiry-services.service';
   styleUrls: ['./niasinsert-enquiry.component.css']
 })
 export class NIASInsertEnquiryComponent implements OnInit {
-  TypeOfEnquiry = ['Student','Class','Faculty'];
-  TopicHasError=true;
-  enquiry = new EnquiryModel(0,'Harsh','abc@gmail.com',9865327412,'Faculty Test By Dev Team.',null,'Admin',new Date(),'Admin',new Date(),true);
+  // TypeOfEnquiry = ['Student','Class','Faculty'];
+  // TopicHasError=true;
+  private result:any;
+  enquiry = new EnquiryModel(1,'Harsh','abc@gmail.com',1234567890,'type message','reply message',null,'Harsh','2018-12-21','Harsh','2018-12-21',true);
   constructor(private InsertEnq :EnquiryServicesService) { }
 
   ngOnInit() {
   }
 
-  validateTopic(value){
-    if(value==='default'){
-      this.TopicHasError=true;
-    }
-    else
-    {
-      this.TopicHasError=false;
-    }
-  }
+//   validateTopic(value){
+//     if(value==='default'){
+//       this.TopicHasError=true;
+//     }
+//     else
+//     {
+//       this.TopicHasError=false;
+//     }
+//   }
 
   onSubmit()
   {
     this.InsertEnq.SubmitEnquiry(this.enquiry).subscribe(
-      data => console.log('Success !!!.',data),
-      error => console.error('Error!.',error)
-    );
-    console.log(this.enquiry);
-  }
-
+     data => console.log('Success !!!.',data),
+     error => console.error('Error!.',error)
+   );
+   console.log(this.enquiry);
+}
 }

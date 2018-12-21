@@ -1,10 +1,11 @@
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors=require('cors');
 
 
 
-const PORT=3600;
+const PORT=4200;
 const app =express();
 
 app.use(bodyParser.json());
@@ -12,7 +13,7 @@ app.use(bodyParser.json());
 app.use(cors);
 
 app.get('/',function(req,res){
-    res.send("Hello From Server, Port : 3600");
+    res.send("Hello From Server, Port : 4200");
 })
 
 app.post('/EnquiryInfo',function(req,res){
