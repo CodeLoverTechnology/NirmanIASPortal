@@ -1,0 +1,28 @@
+<table class="table table-hover table-justified">
+  <thead>
+    <tr>
+    <th>EnquiryID</th>
+      <th>Name</th>
+      <th>EmailID</th>
+      <th>ContactNo</th>
+      <th>EnquiryMessage</th>
+      <th>ReplyMessage</th>
+      <th>createdBy</th>
+      <th>createdDate</th>
+      <th>Active</th>
+    </tr>
+  </thead>
+  <tbody>
+        <tr *ngFor="let x of result">
+      <td>{{x.enquiryID}}</td>
+        <td>{{x.name}}</td>
+        <td>{{x.emailID}}</td>
+        <td>{{x.contactNo}}</td>
+        <td>{{x.enquiryMessage}}</td>
+       <td>{{x.replyMessage}}</td>
+       <td>{{x.createdBy}}</td> 
+       <td>{{x.createdDate}}</td>
+       <td>{{x.active}}</td>     
+       </tr>
+       </tbody>
+       </table>

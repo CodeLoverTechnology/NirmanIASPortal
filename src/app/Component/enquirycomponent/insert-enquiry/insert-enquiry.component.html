@@ -1,0 +1,50 @@
+<div class="container-fluid">
+  <h1>Nirman IAS Enquiry </h1>
+  <form #EnquiryForm="ngForm"(ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" name="name" class="form-control" [(ngModel)]="enquiry.name">
+    </div>
+    <div class="form-group">
+      <label>EmailID</label>
+      <input type="text" name="emailID" class="form-control" [(ngModel)]="enquiry.emailID">
+    </div>
+    <div class="form-group">
+      <label>ContactNo</label>
+      <input type="text" name="contactNo" class="form-control" [(ngModel)]="enquiry.contactNo">
+    </div>
+    <div>
+    <label>Enquiry Message</label>
+    <textarea type="text" name="enquiryMessage" class="form-control" [(ngModel)]="enquiry.enquiryMessage"></textarea>
+    </div>
+    <div>
+      <label>ReplyMessage</label>
+      <textarea type="text" name="replyMessage" class="form-control" [(ngModel)]="enquiry.replyMessage"></textarea>
+    </div>
+    <div class="form-group">
+      <label>ReferenceEnquiryID</label>
+      <input type="text" name="referenceEnquiryID" class="form-control" [(ngModel)]="enquiry.referenceEnquiryID">
+    </div>
+    <div class="form-group">
+      <label>CreatedBy</label>
+      <input type="text" name="createdBy" class="form-control" [(ngModel)]="enquiry.createdBy">
+    </div>
+    <div class="form-group">
+      <label>CreatedDate</label>
+      <input type="text" name="createdDate" class="form-control" [(ngModel)]="enquiry.createdDate">
+    </div>
+    <div class="form-group">
+      <label>ModifiedBy</label>
+      <input type="text" name="modifiedBy" class="form-control" [(ngModel)]="enquiry.modifiedBy">
+    </div>
+    <div class="form-group">
+      <label>ModifiedDate</label>
+      <input type="text" name="modifiedDate" class="form-control" [(ngModel)]="enquiry.modifiedDate">
+    </div>
+    <div class="form-group">
+      <label>Active</label>
+      <input type="boolean" name="active" class="form-control" [(ngModel)]="enquiry.active">
+    </div>
+    <button type="submit"  class="btn btn-primary btn-lg ml-2">Submit Now</button>
+    </form>
+  </div>
