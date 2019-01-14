@@ -14,7 +14,7 @@ export class AppComponent {
 
   title = 'NirmanIAS';
   private var_one:string;
-  enquiry = {} as EnquiryModel;
+  enquiry:EnquiryModel = {};
 
   constructor(private _service:EnquiryServiceService) { }
 ngOnInit(){ }
@@ -24,10 +24,8 @@ onSubmit()
             result =>{
               this.enquiry =result ? result : undefined ;
               closeNav();
-              debugger;
-              alert('Success !!!.'+ this.enquiry);
-              this.enquiry = {} as EnquiryModel;
-              
+              alert('Dear Student Your Enquiry has Submited to NIRMAN IAS. We Well get back to you soon!!!...');
+              this.enquiry = {};              
               } ,
     (err:HttpErrorResponse)=>{
    if(err.error instanceof Error){
