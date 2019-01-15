@@ -10,7 +10,6 @@ import { GetEnquiryComponent } from './Component/enquirycomponent/get-enquiry/ge
 import { UpdateEnquiryComponent } from './Component/enquirycomponent/update-enquiry/update-enquiry.component';
 import { DeleteEnquiryComponent } from './Component/enquirycomponent/delete-enquiry/delete-enquiry.component';
 import { EnquiryServiceService } from './Services/EnquiryServices/enquiry-service.service';
-import { ComponentComponent } from './component/component.component';
 import { AboutUsComponent } from './Component/about-us/about-us.component';
 @NgModule({
   declarations: [
@@ -20,7 +19,6 @@ import { AboutUsComponent } from './Component/about-us/about-us.component';
     GetEnquiryComponent,
     UpdateEnquiryComponent,
     DeleteEnquiryComponent,
-    ComponentComponent,
     AboutUsComponent
   ],
   imports: [

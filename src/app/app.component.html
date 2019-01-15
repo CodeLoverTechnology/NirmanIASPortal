@@ -161,8 +161,7 @@
                         <div class="img-thumbnail pl-3 pr-3" style="font-size: 13px;min-height: 362px;background-color: #ffffffc4;">
   
                             <form action="#" enctype="multipart/form-data" method="post" #EnquiryForm="ngForm"(ngSubmit)="onSubmit()">
-      <div class="form-group">
-        <label>Name</label>
+      <div class="form-group">      <label>Name</label>
         <input type="text" name="name"
         #name="ngModel" class="form-control"  [(ngModel)]="enquiry.name" placeholder="Enter Your Name" required >  
     <div class="validation-error" *ngIf="name.invalid && name.touched">This field is required.</div>          
@@ -181,10 +180,12 @@
              </div>
          <div>
          <label>Enquiry Message</label>
-         <textarea type="text" name="enquiryMessage"  maxlength="250" #enquiryMessage ="ngModel" class="form-control" 
+         <textarea type="text" name="enquiryMessage" minlength="10" maxlength="250" #enquiryMessage ="ngModel" class="form-control" required
          placeholder="Enquiry Message" [(ngModel)]="enquiry.enquiryMessage"></textarea>
+         <div class="validation-error" *ngIf="contactNo.invalid && contactNo.touched">Enquiry Message is required.</div>
+             </div>
          </div>
-            <button  type="submit"  class="btn btn-primary btn-lg ml-2">Submit Now</button> 
+            <button [disabled]="!EnquiryForm.valid" type="submit"  class="btn btn-primary btn-lg ml-2">Submit Now</button> 
              <!-- </form> -->
              </form>
              </div>
