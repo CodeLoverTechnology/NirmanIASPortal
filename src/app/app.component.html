@@ -183,7 +183,7 @@
          <textarea type="text" name="enquiryMessage" minlength="10" maxlength="250" #enquiryMessage ="ngModel" class="form-control" required
          placeholder="Enquiry Message" [(ngModel)]="enquiry.enquiryMessage"></textarea>
          <div class="validation-error" *ngIf="enquiryMessage.invalid && contactNo.touched">Enquiry Message is required.</div>
-             </div>
+             
          </div>
             <button [disabled]="!EnquiryForm.valid" type="submit"  class="btn btn-primary btn-lg ml-2">Submit Now</button> 
              <!-- </form> -->
