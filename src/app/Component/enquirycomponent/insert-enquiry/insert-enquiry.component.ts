@@ -16,18 +16,27 @@ constructor(private _service:EnquiryServiceService) { }
 ngOnInit(){ }
 onSubmit()
 {
-  debugger;
-  
-this._service.postEnquiry(this.enquiry).subscribe(
-  result => console.log('Success !!!.',result),
+ var Result = this._service.postEnquiry(this.enquiry).subscribe(
+            result =>{
+              this.enquiry =result ? result : undefined ;
+              closeNav();
+              alert('Dear Student Your Enquiry has Submited to NIRMAN IAS. We Well get back to you soon!!!...');
+              this.enquiry = {};              
+              } ,
     (err:HttpErrorResponse)=>{
    if(err.error instanceof Error){
-          console.log("Server Side Error....!");
+    alert("Server Side Error....!");
         }else{
-          console.log("Client Side Error   !");
+          alert("Client Side Error   !");
         }
       })
-    console.log(this.enquiry);
-  }
+      debugger;
+    console.log(Result);
+    console.log("Result : "+ Result["enquiryID"]);
 
+  }
+   
 }
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+} 

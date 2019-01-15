@@ -1,0 +1,7 @@
+.Fixed_RghtCont {
+    width: 300px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    border-top-left-radius: 25px;
+}
