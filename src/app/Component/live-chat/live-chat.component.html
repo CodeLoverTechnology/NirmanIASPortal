@@ -9,13 +9,13 @@
         <i class="fa fa-times-circle-o text-danger img-thumbnail rounded" onclick="closeForm()" aria-hidden="true" style="position: absolute;margin-top:-27px;margin-left: -15px;"> </i>
         <img src="./assets/NirmanIAS_Logo.png" class="img-fluid" />
       <hr>
-        <div placeholder="Converstation Message" name="msg" id="msg" 
-        style="height: 150px; width: 100%;overflow-y: scroll; scrollbar-face-color:blueviolet;background-color: cornflowerblue;">
+        <div placeholder="Converstation Message"  id="ReplyMessage" 
+        style="height: 150px; width: 100%;overflow-y: scroll; background-color: cornflowerblue;">
       {{chatModel.ReplyMessage}}
       </div>
       <hr>
       <div class="input-group mb-3">
-          <input type="text" id="txtmessage" name="txtmessage" [(ngModel)]="chatModel.ChatMessage" class="form-control" placeholder="Typeing" />
+          <input type="text" id="ChatMessage" [(ngModel)]="chatModel.ChatMessage" class="form-control" placeholder="Typeing" />
           <div class="input-group-append">
               <button [disabled]="!EnquiryForm.valid" type="submit"  class="fa fa-arrow-circle-o-right fa-2x rounded shadow"></button> 
           </div>

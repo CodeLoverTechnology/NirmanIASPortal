@@ -1,16 +1,16 @@
 export class EnquiryModel {
     constructor(
-      enquiryID : number = 0,
-      name:string = null,
-      emailID :string = null,
-      contactNo : number = null,
-      enquiryMessage : string = null,
-      replyMessage : string = null,
-      referenceEnquiryID : number = 0,
-      createdBy : string = null,
-      createdDate : string = null,
-      modifiedBy : string = null,
-      modifiedDate : string = null,
-      active : boolean = false
+      public enquiryID : number,
+      public name:string,
+      public emailID :string,
+      public contactNo : number,
+      public enquiryMessage : string,
+      public replyMessage : string,
+      public referenceEnquiryID: number,
+      public createdBy : string,
+      public createdDate : string,
+      public modifiedBy : string,
+      public modifiedDate: string,
+      public active : boolean
 ){}
 }

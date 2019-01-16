@@ -1,16 +1,16 @@
 export class ChatModel {
     constructor(
-      UserChatID:number,
-      ChatMessage :  string,
-      UserIP :   string,
-      ReplyMessage :   string,
-      ReplyBy :   string,
-      Remarks :   string,
-      IsRead : boolean,
-      CraatedBy :  string, 
-      CreatedDate :   string,
-      ModifiedBy :   string,
-      ModifiedDate :   string,
-      Active : boolean
+     public UserChatID:number,
+     public ChatMessage :  string,
+     public UserIP :   string,
+     public ReplyMessage :   string,
+     public ReplyBy :   string,
+      public Remarks :   string,
+      public IsRead : boolean,
+      public CraatedBy :  string, 
+      public CreatedDate :   string,
+      public ModifiedBy :   string,
+      public ModifiedDate :   string,
+      public Active : boolean
       ){}
 }

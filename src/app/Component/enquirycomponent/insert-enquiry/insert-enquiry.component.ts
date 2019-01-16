@@ -10,7 +10,7 @@ import { HttpErrorResponse } from '@Angular/common/http';
 })
 export class InsertEnquiryComponent implements OnInit {
   private var_one:string;
-  enquiry :EnquiryModel = {};
+  enquiry :EnquiryModel;
 
 constructor(private _service:EnquiryServiceService) { }
 ngOnInit(){ }
@@ -21,7 +21,7 @@ onSubmit()
               this.enquiry =result ? result : undefined ;
               closeNav();
               alert('Dear Student Your Enquiry has Submited to NIRMAN IAS. We Well get back to you soon!!!...');
-              this.enquiry = {};              
+              this.enquiry;              
               } ,
     (err:HttpErrorResponse)=>{
    if(err.error instanceof Error){

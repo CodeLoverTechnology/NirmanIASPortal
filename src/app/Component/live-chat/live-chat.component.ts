@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpErrorResponse } from '@Angular/common/http';
-import { FormsModule } from '@angular/forms';
 import { ChatModel } from 'src/app/Entity/ChatModel';
 import { ChatServicesService } from 'src/app/Services/Chat/chat-services.service';
-import { String, StringBuilder } from 'typescript-string-operations';
 
 
 @Component({
@@ -12,8 +9,8 @@ import { String, StringBuilder } from 'typescript-string-operations';
   styleUrls: ['./live-chat.component.css']
 })
 export class LiveChatComponent implements OnInit {
-  chatModel :ChatModel = {};
-  private ConverstaionMessage:string= String.Empty;
+  chatModel :ChatModel;
+  private ConverstaionMessage:string= "";
   constructor(private _service:ChatServicesService) { }
 
   ngOnInit() {
