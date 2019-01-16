@@ -1,0 +1,31 @@
+<form action="#" enctype="multipart/form-data" method="post" #EnquiryForm="ngForm"(ngSubmit)="SendMessageToServer()">
+  
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-3" style="position:fixed;">
+    <i class="fa fa-comments-o fa-3x open-button" style="color:blue;"  onclick="openForm()" 
+    title="Nirman IAS Academy Live Chat"></i>
+  <div class="chat-popup" id="myForm">
+    <div class="form-container">
+      <div class=""> 
+        <i class="fa fa-times-circle-o text-danger img-thumbnail rounded" onclick="closeForm()" aria-hidden="true" style="position: absolute;margin-top:-27px;margin-left: -15px;"> </i>
+        <img src="./assets/NirmanIAS_Logo.png" class="img-fluid" />
+      <hr>
+        <div placeholder="Converstation Message" name="msg" id="msg" 
+        style="height: 150px; width: 100%;overflow-y: scroll; scrollbar-face-color:blueviolet;background-color: cornflowerblue;">
+      {{chatModel.ReplyMessage}}
+      </div>
+      <hr>
+      <div class="input-group mb-3">
+          <input type="text" id="txtmessage" name="txtmessage" [(ngModel)]="chatModel.ChatMessage" class="form-control" placeholder="Typeing" />
+          <div class="input-group-append">
+              <button [disabled]="!EnquiryForm.valid" type="submit"  class="fa fa-arrow-circle-o-right fa-2x rounded shadow"></button> 
+          </div>
+        </div>
+      <hr>
+      
+       </div>
+    </div>
+  </div>
+</div>
+
+<!-- </form> -->
+</form>

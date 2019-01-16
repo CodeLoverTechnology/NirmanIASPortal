@@ -1,50 +1,30 @@
 <div class="container-fluid">
-  <h1>Nirman IAS Enquiry </h1>
-  <form #EnquiryForm="ngForm"(ngSubmit)="onSubmit()">
-    <div class="form-group">
-      <label>Name</label>
-      <input type="text" name="name" class="form-control" [(ngModel)]="enquiry.name">
-    </div>
-    <div class="form-group">
-      <label>EmailID</label>
-      <input type="text" name="emailID" class="form-control" [(ngModel)]="enquiry.emailID">
-    </div>
-    <div class="form-group">
-      <label>ContactNo</label>
-      <input type="text" name="contactNo" class="form-control" [(ngModel)]="enquiry.contactNo">
-    </div>
-    <div>
-    <label>Enquiry Message</label>
-    <textarea type="text" name="enquiryMessage" class="form-control" [(ngModel)]="enquiry.enquiryMessage"></textarea>
-    </div>
-    <div>
-      <label>ReplyMessage</label>
-      <textarea type="text" name="replyMessage" class="form-control" [(ngModel)]="enquiry.replyMessage"></textarea>
-    </div>
-    <div class="form-group">
-      <label>ReferenceEnquiryID</label>
-      <input type="text" name="referenceEnquiryID" class="form-control" [(ngModel)]="enquiry.referenceEnquiryID">
-    </div>
-    <div class="form-group">
-      <label>CreatedBy</label>
-      <input type="text" name="createdBy" class="form-control" [(ngModel)]="enquiry.createdBy">
-    </div>
-    <div class="form-group">
-      <label>CreatedDate</label>
-      <input type="text" name="createdDate" class="form-control" [(ngModel)]="enquiry.createdDate">
-    </div>
-    <div class="form-group">
-      <label>ModifiedBy</label>
-      <input type="text" name="modifiedBy" class="form-control" [(ngModel)]="enquiry.modifiedBy">
-    </div>
-    <div class="form-group">
-      <label>ModifiedDate</label>
-      <input type="text" name="modifiedDate" class="form-control" [(ngModel)]="enquiry.modifiedDate">
-    </div>
-    <div class="form-group">
-      <label>Active</label>
-      <input type="boolean" name="active" class="form-control" [(ngModel)]="enquiry.active">
-    </div>
-    <button type="submit"  class="btn btn-primary btn-lg ml-2">Submit Now</button>
-    </form>
+  <form action="#" enctype="multipart/form-data" method="post" #EnquiryForm="ngForm"(ngSubmit)="onSubmit()">
+    <div class="form-group">      <label>Name</label>
+      <input type="text" name="name"
+      #name="ngModel" class="form-control"  [(ngModel)]="enquiry.name" placeholder="Enter Your Name" required >  
+  <div class="validation-error" *ngIf="name.invalid && name.touched">This field is required.</div>          
+ </div>
+  <div class="form-group">
+      <label >EmailID</label>
+  <input type="text" name="emailID" required  #emailID ="ngModel" class="form-control"  [(ngModel)]="enquiry.emailID" placeholder="EmailID" >
+  
+  <div class="validation-error" *ngIf="emailID.invalid && emailID.touched">Email is invalid.</div>
+   </div> 
+  <div class="form-group">
+       <label>ContactNo</label>
+      <input type="text" name="contactNo" minlength=10 maxlength=10 #contactNo ="ngModel" class="form-control"
+      [(ngModel)]="enquiry.contactNo" placeholder="Enter Mobile Number" required>
+      <div class="validation-error" *ngIf="contactNo.invalid && contactNo.touched">Mobile number required.</div>
+           </div>
+       <div>
+       <label>Enquiry Message</label>
+       <textarea type="text" name="enquiryMessage" minlength="10" maxlength="250" #enquiryMessage ="ngModel" class="form-control" required
+       placeholder="Enquiry Message" [(ngModel)]="enquiry.enquiryMessage"></textarea>
+       <div class="validation-error" *ngIf="enquiryMessage.invalid && contactNo.touched">Enquiry Message is required.</div>
+           
+       </div>
+          <button [disabled]="!EnquiryForm.valid" type="submit"  class="btn btn-primary btn-lg m-3 ">Submit Now</button> 
+           <!-- </form> -->
+           </form>
   </div>

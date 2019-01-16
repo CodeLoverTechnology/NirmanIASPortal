@@ -52,60 +52,9 @@
     background: #bb0000;
     color: white;
 }
-/* //......chat........ */
-.open-button {
-       
-	color: white;
-	padding: 16px 20px;
-	border: none;
-	cursor: pointer;
-	opacity: 0.8;
-	position: fixed;
-	bottom: 23px;
-	right: 28px;
-	width: 80px;
-}
 
-/* The popup chat - hidden by default */
-.chat-popup {
-	display: none;
-	position: fixed;
-	bottom: 0;
-	right: 15px;
-	border: 3px solid #f1f1f1;
-	z-index: 9;
-}
 
-/* Add styles to the form container */
-.form-container {
-	max-width: 300px;
-	padding: 10px;
-	background-color: white;
-}
 
-	/* Full-width textarea */
-	.form-container textarea {
-		width: 100%;
-		padding: 15px;
-		margin: 5px 0 22px 0;
-		border: none;
-		background: #f1f1f1;
-		resize: none;
-		min-height: 200px;
-	}
-
-		/* When the textarea gets focus, do something */
-		.form-container textarea:focus {
-			background-color: #ddd;
-			outline: none;
-		}
-
-	
-	/* Add some hover effects to buttons */
-	.form-container .btn:hover, .open-button:hover {
-		opacity: 1;
-	}
-	/* ........chat close... */
 
 
 /* /DEMO STYLE/ */
@@ -158,50 +107,6 @@ a:focus {
     align-items: stretch;
 }
 
-#sidebar {
-    min-width: 200px;
-    max-width: 200px;
-    background: #b71c1c;
-    color: #fff;
-	transition: all 0.3s;
-	 
-}
-
-#sidebar.active {
-    margin-left: -200px;
-}
-
-#sidebar .sidebar-header {
-    padding: 0px;
-    background: red;
-}
-
-#sidebar ul.components {
-    padding: 20px 0;
-    border-bottom: 1px solid #b71c1c;
-}
-
-#sidebar ul p {
-    color: #fff;
-    padding: 10px;
-}
-
-#sidebar ul li a {
-    padding: 10px;
-    font-size: 1.1em;
-    display: block;
-}
-
-#sidebar ul li a:hover {
-    color: white;
-   
-}
-
-#sidebar ul li.active>a,
-a[aria-expanded="true"] {
-    color: #fff;
-    
-}
 
 a[data-toggle="collapse"] {
     position: relative;
@@ -242,18 +147,6 @@ a.article:hover {
     MEDIAQUERIES
 ----------------------------------------------------- */
 
-@media (max-width: 800px) {
-    #sidebar {
-        margin-left: -200px;
-    }
-    #sidebar.active {
-        margin-left: 0;
-        margin-right: 0;
-    }
-    #sidebarCollapse span {
-        display: none;
-    }
-}
 
 
 

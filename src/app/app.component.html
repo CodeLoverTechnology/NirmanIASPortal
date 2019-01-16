@@ -39,55 +39,7 @@
              </div> 
         </div>
     <div class="wrapper">
-        <nav id="sidebar">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <div class="sidebar-header float-left">
-              <img src="../assets/NirmanIAS_Logo.png" class="img-fluid img-thumbnail">
-            </div>
-            <ul class="list-unstyled components">
-                <li class="active">
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"routerLink='/home'>Home</a>
-                <li>
-                    <a href="">About Us</a>
-                </li>
-                 <li>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Courses</a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu">
-                        <li>
-                            <a href="">UPSC</a>
-                        </li>
-                        <li>
-                            <a href="">State PCS</a>
-                        </li>
-
-                        <li>
-                            <a href="">Test Series</a>
-                        </li>
-                    </ul>
-                </li> 
-                <li>
-                    <a href="">Current Affairs</a>
-                </li>
-                <li>
-                    <a href="">Study Materials</a>
-                </li>
-                <li>
-                    <a href="https://www.youtube.com/user/nirmanias" target="_blank">Video</a>
-                </li>
-                <li>
-                    <a href="">Contact Us</a>
-                </li>
-                <!-- <li>
-                  <a href=""routerLink='/Enquiry'>Enquiry</a>
-              </li>
-               <li>
-                  <a href=""routerLink='/InsertEnquiry'>InsertEnquiry</a>
-              </li>  -->
-            </ul>
-        </div>   
-        </div>
-        </nav>
+        <app-side-menu></app-side-menu>
         <div id="content">
          <button type="button" id="sidebarCollapse" class="btn btn-danger fixed-top">
                     <i class="fa fa-bars"></i>        
@@ -111,40 +63,9 @@
                <a href="https://twitter.com/nirmanias07" target="_blank" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                <a href="https://www.instagram.com/nirmanias/" target="_blank" class="instagram bg-success"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                 </div>
-           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fixed-top" style="position:fixed;">
-        
-                <div class="open-button" onclick="openForm()"><i class="fa fa-comment fa-5x" style="color:red;"></i></div>
-        
-                <div class="chat-popup" id="myForm">
-        
-                    <div class="card form-container">
-                        <div class="text-right">
-                            <i class="fa fa-window-minimize" aria-hidden="true"></i>
-                            
-                            <div class="btn cancel btn-danger" onclick="closeForm()">
-                                
-                                <i class="fa fa-times" aria-hidden="true"></i>
-                            </div>
-                            </div>
-                        <div class=" card-header bg-danger">
-                            <img src="./assets/NirmanIAS_Logo.png" class="img-thumbnail" />
-                        </div>
-                        <div class="card-body">
-                            <textarea placeholder="Hello" name="msg" required></textarea>
-                        </div>
-                        <div class="card-footer bg-danger text-center">
-                            <div class="col-lg-10">
-                                <input type="text" id="txtmessage" class="form-control" placeholder="Typeing" />
-                            </div>
-                            <div class="col-lg-2 text-left">
-                                <button type="submit" class="fa fa-arrow-circle-right fa-2x" style="margin-right:20px;">
-                                   
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+           
+                <app-live-chat></app-live-chat>
+           
            <!--enquiry-->
     <div id="mySidenav" class="sidenav">
         <!-- <div class="ContactForm"> -->
@@ -159,35 +80,8 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12">
                         <div class="img-thumbnail pl-3 pr-3" style="font-size: 13px;min-height: 362px;background-color: #ffffffc4;">
-  
-                            <form action="#" enctype="multipart/form-data" method="post" #EnquiryForm="ngForm"(ngSubmit)="onSubmit()">
-      <div class="form-group">      <label>Name</label>
-        <input type="text" name="name"
-        #name="ngModel" class="form-control"  [(ngModel)]="enquiry.name" placeholder="Enter Your Name" required >  
-    <div class="validation-error" *ngIf="name.invalid && name.touched">This field is required.</div>          
-   </div>
-    <div class="form-group">
-        <label >EmailID</label>
-    <input type="text" name="emailID" required  #emailID ="ngModel" class="form-control"  [(ngModel)]="enquiry.emailID" placeholder="EmailID" >
-    
-    <div class="validation-error" *ngIf="emailID.invalid && emailID.touched">Email is invalid.</div>
-     </div> 
-    <div class="form-group">
-         <label>ContactNo</label>
-        <input type="text" name="contactNo" minlength=10 maxlength=10 #contactNo ="ngModel" class="form-control"
-        [(ngModel)]="enquiry.contactNo" placeholder="Enter Mobile Number" required>
-        <div class="validation-error" *ngIf="contactNo.invalid && contactNo.touched">Mobile number required.</div>
-             </div>
-         <div>
-         <label>Enquiry Message</label>
-         <textarea type="text" name="enquiryMessage" minlength="10" maxlength="250" #enquiryMessage ="ngModel" class="form-control" required
-         placeholder="Enquiry Message" [(ngModel)]="enquiry.enquiryMessage"></textarea>
-         <div class="validation-error" *ngIf="enquiryMessage.invalid && contactNo.touched">Enquiry Message is required.</div>
-             
-         </div>
-            <button [disabled]="!EnquiryForm.valid" type="submit"  class="btn btn-primary btn-lg ml-2">Submit Now</button> 
-             <!-- </form> -->
-             </form>
+  <app-insert-enquiry></app-insert-enquiry>
+                            
              </div>
                         </div>
                     </div>
@@ -197,104 +91,4 @@
         <button type="button" class="MySidePopupBtn btn btn-primary" onclick="openNav()">Enquiry</button>
     
  <!--footer  -->
-       <footer id="tagg">
-         <div class="container-fluid">
-           <div class="row bg-dark">
-       <!-- Footer Links -->
-               <div class="container text-center text-md-left ">
-       
-                   <!-- Grid row -->
-                   <div class="row mt-3 bg-dark-text">
-       
-                       <!-- Grid column -->
-                       <div class="col-md-2 col-lg-2 col-xl-2 ">
-       
-                           <!-- Links -->
-       
-       
-                           <p>
-                               <a class="text-white" href="!">Know About Us</a>
-                           </p>
-                           <p>
-                               <a class="text-white" href="!">Contact Us</a>
-                           </p>
-                           <p>
-                               <a class="text-white" href="!">Addmission</a>
-                           </p>
-                           <p>
-                               <a class="text-white" href="!">Fees</a>
-                           </p>
-       
-       
-                       </div>
-                      
-                       <!-- Grid column -->
-                       <div class="col-md-2 col-lg-2 col-xl-2">
-       
-                           <!-- Links -->
-       
-       
-                           <p>
-                               <a class="text-white" href="!">About</a>
-                           </p>
-                           <p>
-                               <a class="text-white" href="!">Cereers</a>
-                           </p>
-                           <p>
-                               <a class="text-white" href="!">Help</a>
-                           </p>
-                           <p>
-                               <a class="text-white" href="!">Location</a>
-                           </p>
-       
-       
-                       </div>
-                       <div class="col-md-2 col-lg-2 col-xl-2">
-                           <p>
-                               <a class="text-white" href="!">Courses</a>
-                           </p>
-                           <p class="text-white">
-                               ReadMore
-                           </p>
-                           <p>
-                               <a class="text-white" href="!">Location</a>
-                           </p>
-                           <p>
-                               <a class="text-white" href="!">Contact Us</a>
-                           </p>
-                       </div>
-                       <div class="col-md-2 col-lg-2 col-xl-2">
-                           <p>
-                               <a class="text-white" href="!">Help</a>
-                           </p>
-                           <p>
-                               <a class="text-white" href="!">Center</a>
-                           </p>
-                           <p>
-                               <a class="text-white" href="!">Number</a>
-                           </p>
-                       </div>
-                       <div class="col-md-2 col-lg-2 col-xl-2">
-       
-                           <p>
-                               <a class="text-white" href="!">Help</a>
-                           </p>
-                           <p>
-                               <a class="text-white" href="!">Latest News</a>
-                           </p>
-                           <p>
-                               <a class="text-white" href="!">cantact</a>
-                           </p>
-       
-                       </div>
-                       <div class="col-lg-2 col-md-2 col-sm-2">
-                            <a class="nav-link" href="" ><img src="../assets/NirmanIAS_Logo.png" width="100%" height="100%"></a>
-                        <br>
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.1457016622494!2d77.21383991456158!3d28.715191387086925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfe0a9f71d55d%3A0x6b8b117585dfc0c1!2sNirman+IAS!5e0!3m2!1sen!2sin!4v1545377773309" width="100%" height="50%" frameborder="0"  allowfullscreen></iframe>
-                       </div>
-                   </div>
-                 </div>
-                 </div>
-            
-                 </div>
-       </footer>
+       <app-footer></app-footer>
