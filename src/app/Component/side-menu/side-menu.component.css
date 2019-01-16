@@ -1,10 +1,24 @@
 #sidebar {
     min-width: 200px;
     max-width: 200px;
-    background: #b71c1c;
+    min-height: 562px;
+    max-height: 562px;
+    background: #b71c1c;  
+    width: 200px;
+    height: 562px;
+    position: auto;    
+    left: 0;
+    height: 100vh;
+    z-index: 999;    
     color: #fff;
-	transition: all 0.3s;
+    transition: all 0.3s;
 	 
+}
+#content.active {
+    width: 100%;
+}
+#content.active {
+    width: calc(100% - 250px);
 }
 
 #sidebar.active {
@@ -34,6 +48,11 @@
 
 #sidebar ul li a:hover {
     color: white;
+   
+}
+#sidebar ul li a{
+    color: white;
+    text-decoration:none;
    
 }
 

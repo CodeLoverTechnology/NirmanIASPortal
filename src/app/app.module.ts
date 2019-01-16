@@ -15,6 +15,11 @@ import { FooterComponent } from './Component/footer/footer.component';
 import { LiveChatComponent } from './Component/live-chat/live-chat.component';
 import { SideMenuComponent } from './Component/side-menu/side-menu.component';
 import { ChatServicesService } from './Services/Chat/chat-services.service';
+import { LogInComponent } from './component/log-in/log-in/log-in.component';
+import { RegistrationComponent } from './component/registration/registration/registration.component';
+import { ContactUsComponent } from './component/contact-Us/contact-us/contact-us.component';
+import { AdminComponent } from './component/admin/admin/admin.component';
+import { Home2Component } from './component/home/home2/home2.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +32,12 @@ import { ChatServicesService } from './Services/Chat/chat-services.service';
     AboutUsComponent,
     FooterComponent,
     LiveChatComponent,
-    SideMenuComponent
+    SideMenuComponent,
+    LogInComponent,
+    RegistrationComponent,
+    ContactUsComponent,
+    AdminComponent,
+    Home2Component
   ],
   imports: [
     BrowserModule,
