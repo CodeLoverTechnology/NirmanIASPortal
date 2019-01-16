@@ -15,7 +15,7 @@
       </div>
       <hr>
       <div class="input-group mb-3">
-          <input type="text" id="ChatMessage" [(ngModel)]="chatModel.ChatMessage" class="form-control" placeholder="Typeing" />
+          <input type="text" id="txtChatMessage" [ngModel]="chatModel.ChatMessage" class="form-control" placeholder="Typeing" />
           <div class="input-group-append">
               <button [disabled]="!EnquiryForm.valid" type="submit"  class="fa fa-arrow-circle-o-right fa-2x rounded shadow"></button> 
           </div>

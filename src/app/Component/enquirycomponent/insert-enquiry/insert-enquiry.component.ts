@@ -10,7 +10,7 @@ import { HttpErrorResponse } from '@Angular/common/http';
 })
 export class InsertEnquiryComponent implements OnInit {
   private var_one:string;
-  enquiry :EnquiryModel;
+  enquiry ={} as EnquiryModel;
 
 constructor(private _service:EnquiryServiceService) { }
 ngOnInit(){ }
