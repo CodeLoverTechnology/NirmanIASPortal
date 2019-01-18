@@ -11,7 +11,6 @@ import { AboutUsComponent } from './Component/about-us/about-us.component';
 const routes: Routes = [
   {path:"home",component:HomeComponent},
   {path:"home2",component:Home2Component},
-  {path:"about-us",component:AboutUsComponent},
   {path:"login",component:LogInComponent},
   {path:"Enquiry",component:GetEnquiryComponent},
   {path:"InsertEnquiry",component:InsertEnquiryComponent},
