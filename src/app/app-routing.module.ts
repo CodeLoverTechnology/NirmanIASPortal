@@ -7,11 +7,7 @@ import { LogInComponent } from './component/log-in/log-in/log-in.component';
 import { RegistrationComponent } from './component/registration/registration/registration.component';
 import { ContactUsComponent } from './component/contact-Us/contact-us/contact-us.component';
 import { Home2Component } from './component/home/home2/home2.component';
-<<<<<<< HEAD
 import { AboutUsComponent } from './Component/about-us/about-us.component';
-=======
-import {AboutUsComponent } from "./Component/about-us/about-us.component";
->>>>>>> 1ed64c62424c42332057237a0d31f06c9b18fa38
 const routes: Routes = [
   {path:"home",component:HomeComponent},
   {path:"home2",component:Home2Component},
