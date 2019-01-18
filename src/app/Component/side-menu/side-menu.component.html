@@ -1,3 +1,13 @@
+<!-- <div class="navbar">
+    <a [routerLink]="['/']"><b>Home</b></a>
+    <a [routerLink]="['/Menu']"><b>Menu</b></a>
+    <a [routerLink]="['/niasinsert-enquiry']"><b>Enquiry</b></a>
+    <a [routerLink]="['/niasenquiry']"><b>Show Enquiry</b></a>
+    <a [routerLink]="['/Contact']"><b>Contact</b></a>
+    <a [routerLink]="['/Banner']"><b>Banner</b></a>
+    <button (click)="clickMe()"><b>Banner</b></button> 
+</div> -->
+
 <nav id="sidebar">
     <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -8,7 +18,8 @@
         <li class="active">
             <a href="#homeSubmenu" aria-expanded="false" routerLink='/home'>Home</a>
         <li>
-            <a href="">About Us</a>
+                <a [routerLink]="['/about-us']">About Us</a>
+           
         </li>
          <li>
             <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Courses</a>

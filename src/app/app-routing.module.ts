@@ -7,9 +7,11 @@ import { LogInComponent } from './component/log-in/log-in/log-in.component';
 import { RegistrationComponent } from './component/registration/registration/registration.component';
 import { ContactUsComponent } from './component/contact-Us/contact-us/contact-us.component';
 import { Home2Component } from './component/home/home2/home2.component';
+import { AboutUsComponent } from './Component/about-us/about-us.component';
 const routes: Routes = [
   {path:"home",component:HomeComponent},
   {path:"home2",component:Home2Component},
+  {path:"about-us",component:AboutUsComponent},
   {path:"login",component:LogInComponent},
   {path:"Enquiry",component:GetEnquiryComponent},
   {path:"InsertEnquiry",component:InsertEnquiryComponent},
