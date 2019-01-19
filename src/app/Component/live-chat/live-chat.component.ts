@@ -4,7 +4,6 @@ import { ChatServicesService } from 'src/app/Services/Chat/chat-services.service
 import { HttpErrorResponse } from '@Angular/common/http';
 
 
-
 @Component({
   selector: 'app-live-chat',
   templateUrl: './live-chat.component.html',
@@ -33,9 +32,9 @@ export class LiveChatComponent implements OnInit {
     this.chatModel["ChatMessage"]= this._service.postchat(this.chatModel).subscribe(res=>this.ConverstaionMessage=res);
 (err:HttpErrorResponse)=>{
 if(err.error instanceof Error){
-alert("Server Side Error....!");
+console.log("Server Side Error....!");
   }else{
-    alert("Client Side Error   !");
+    console.log("Client Side Error   !");
   }
 }}
 
