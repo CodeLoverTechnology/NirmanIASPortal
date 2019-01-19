@@ -9,25 +9,22 @@
         <i class="fa fa-times-circle-o text-danger img-thumbnail rounded" onclick="closeForm()" aria-hidden="true" style="position: absolute;margin-top:-27px;margin-left: -15px;"> </i>
         <img src="./assets/NirmanIAS_Logo.png" class="img-fluid" />
       <hr>
-        <div class="input-group mb-3">
-          <input type="text" id="txtReplyMessage"
-          #txtReplyMessage="ngModel"
-          [(ngModel)]="chatModel.ReplyMessage" placeholder="Converstation Message"  
-        style="height: 150px; width: 100%;overflow-y: scroll; background-color: cornflowerblue;">
-       {{chatModel.ReplyMessage}} 
-      </div>
-      <hr>
-      <div class="input-group mb-3">
-          <input type="text" id="txtChatMessage" #txtChatMessage="ngModel" [(ngModel)]="chatModel.ChatMessage" class="form-control" placeholder="Typeing" />
-          <div class="input-group-append">
-              <button [disabled]="!EnquiryForm.valid" type="submit"  class="fa fa-arrow-circle-o-right fa-2x rounded shadow"></button> 
-          </div>
-        </div>
-      <hr>
-      
-       </div>
+      <div placeholder="Converstation Message"  id="ReplyMessage" 
+      style="height: 150px; width: 100%;overflow-y: scroll; background-color: cornflowerblue;">
+    {{chatModel.ReplyMessage}}
     </div>
+    <hr>
+    <div class="input-group mb-3">
+        <input type="text" id="txtChatMessage" [ngModel]="chatModel.ChatMessage" class="form-control" placeholder="Typeing" />
+        <div class="input-group-append">
+            <button [disabled]="!EnquiryForm.valid" type="submit"  class="fa fa-arrow-circle-o-right fa-2x rounded shadow"></button> 
+        </div>
+      </div>
+    <hr>
+    
+     </div>
   </div>
+</div>
 </div>
 
 <!-- </form> -->
