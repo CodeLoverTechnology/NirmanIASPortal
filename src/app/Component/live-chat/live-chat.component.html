@@ -1,6 +1,5 @@
 <form action="#" enctype="multipart/form-data" method="post" name="LiveChat" id="LiveChat" #LiveChat="ngForm" (ngSubmit)="SendMessageToServer()">
   
-<<<<<<< HEAD
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-3" style="position:fixed;">
   <!-- <img src="./assets/NIAS_Chat.gif" class="open-button" width="200" height="100" /> -->
     <i class="fa fa-comments fa-5x open-button" style="color:darkblue;"  onclick="openForm()" 
@@ -29,52 +28,3 @@
   </div>
 </div>
 </form>
-=======
-  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-3" style="position:fixed;">
-      <i class="fa fa-comments-o fa-3x open-button" style="color:blue;"  onclick="openForm()" 
-      title="Nirman IAS Academy Live Chat"></i>
-    <div class="chat-popup" id="myForm">
-      <div class="form-container">
-        <div class=""> 
-          <i class="fa fa-times-circle-o text-danger img-thumbnail rounded" onclick="closeForm()" aria-hidden="true" style="position: absolute;margin-top:-27px;margin-left: -15px;"> </i>
-          <img src="./assets/NirmanIAS_Logo.png" class="img-fluid" />
-        <hr>
-          <div placeholder="Converstation Message" name="msg" id="msg" 
-          style="height: 150px; width: 100%;overflow-y: scroll; scrollbar-face-color:blueviolet;background-color: cornflowerblue;">
-        {{chatModel.ReplyMessage}}
-        </div>
-        <hr>
-        <div class="input-group mb-3">
-            <input type="text" id="txtmessage" name="txtmessage" [(ngModel)]="chatModel.ChatMessage" class="form-control" placeholder="Typeing" />
-            <div class="input-group-append">
-                <button [disabled]="!EnquiryForm.valid" type="submit"  class="fa fa-arrow-circle-o-right fa-2x rounded shadow"></button> 
-            </div>
-          </div>
-        <hr>
-        
-         </div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- </form> -->
-  </form>
-<table class="table table-hover table-justified">
-  <tbody>
-        <tr *ngFor="let x of result">
-      <td>{{x.UserChatID}}</td>
-        <td>{{x.ChatMessage}}</td>
-        <td>{{x.UserIP}}</td>
-        <td>{{x.ReplyMessage}}</td>
-        <td>{{x.ReplyBy}}</td>
-       <td>{{x.Remarks}}</td>
-       <td>{{x.IsRead}}</td> 
-       <td>{{x.CraatedBy}}</td>
-       <td>{{x.CreatedDate}}</td>
-       <td>{{x.ModifiedBy}}</td> 
-       <td>{{x.ModifiedDate}}</td>
-       <td>{{x.Active}}</td>     
-       </tr>
-       </tbody>
-       </table>
->>>>>>> aa1f8bec9c32a9f669ae69c287b4d8276dd56990

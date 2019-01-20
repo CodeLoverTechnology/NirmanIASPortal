@@ -18,16 +18,12 @@ const routes: Routes = [
   {path:"InsertEnquiry",component:InsertEnquiryComponent},
   {path:"registration",component: RegistrationComponent},
   {path:"Aboutus",component:AboutUsComponent},
-<<<<<<< HEAD
   {path:"Gallery",component:GalleryNIASComponent},
   {path:"Video",component:VideoNIASComponent},
   {path:"Contact",component:ContactUsComponent},
   {path:"Magazine",component:MagazineListComponent},
   {path:"Books",component:BookListComponent},
   { path: '', redirectTo: '/', pathMatch:'full' }
-=======
-  { path: '', redirectTo: '/home', pathMatch:'full' }
->>>>>>> aa1f8bec9c32a9f669ae69c287b4d8276dd56990
   ];
 
 @NgModule({
