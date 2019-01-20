@@ -1,27 +1,33 @@
 import { NgModule} from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './Component/HomeComponent/home/home.component';
 import { GetEnquiryComponent } from './Component/enquirycomponent/get-enquiry/get-enquiry.component';
 import { InsertEnquiryComponent } from './Component/enquirycomponent/insert-enquiry/insert-enquiry.component';
 import { LogInComponent } from './component/log-in/log-in/log-in.component';
 import { RegistrationComponent } from './component/registration/registration/registration.component';
-import { ContactUsComponent } from './component/contact-Us/contact-us/contact-us.component';
-import { Home2Component } from './component/home/home2/home2.component';
 import { AboutUsComponent } from './Component/about-us/about-us.component';
+import { NIASHomeComponent } from './Component/niashome/niashome.component';
+import { GalleryNIASComponent } from './Component/gallery-nias/gallery-nias.component';
+import { VideoNIASComponent } from './Component/video-nias/video-nias.component';
+import { ContactUsComponent } from './Component/contact-us/contact-us.component';
+import { MagazineListComponent } from './component/Magazine/magazine-list/magazine-list.component';
+import { BookListComponent } from './component/Books/book-list/book-list.component';
 const routes: Routes = [
-  {path:"home",component:HomeComponent},
-  {path:"home2",component:Home2Component},
+  {path:"home",component:NIASHomeComponent},
   {path:"login",component:LogInComponent},
   {path:"Enquiry",component:GetEnquiryComponent},
   {path:"InsertEnquiry",component:InsertEnquiryComponent},
-  {path:"Contact",component:ContactUsComponent},
   {path:"registration",component: RegistrationComponent},
   {path:"Aboutus",component:AboutUsComponent},
-  { path: '', redirectTo: '/home2', pathMatch:'full' }
+  {path:"Gallery",component:GalleryNIASComponent},
+  {path:"Video",component:VideoNIASComponent},
+  {path:"Contact",component:ContactUsComponent},
+  {path:"Magazine",component:MagazineListComponent},
+  {path:"Books",component:BookListComponent},
+  { path: '', redirectTo: '/', pathMatch:'full' }
   ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes) ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

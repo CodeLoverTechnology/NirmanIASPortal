@@ -4,7 +4,6 @@ import { HttpClientModule } from '@Angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HomeComponent } from './Component/HomeComponent/home/home.component';
 import { InsertEnquiryComponent } from './Component/enquirycomponent/insert-enquiry/insert-enquiry.component';
 import { GetEnquiryComponent } from './Component/enquirycomponent/get-enquiry/get-enquiry.component';
 import { UpdateEnquiryComponent } from './Component/enquirycomponent/update-enquiry/update-enquiry.component';
@@ -17,14 +16,17 @@ import { SideMenuComponent } from './Component/side-menu/side-menu.component';
 import { ChatServicesService } from './Services/Chat/chat-services.service';
 import { LogInComponent } from './component/log-in/log-in/log-in.component';
 import { RegistrationComponent } from './component/registration/registration/registration.component';
-import { ContactUsComponent } from './component/contact-Us/contact-us/contact-us.component';
 import { AdminComponent } from './component/admin/admin/admin.component';
-import { Home2Component } from './component/home/home2/home2.component';
+import { NIASHomeComponent } from './Component/niashome/niashome.component';
+import { GalleryNIASComponent } from './Component/gallery-nias/gallery-nias.component';
+import { VideoNIASComponent } from './Component/video-nias/video-nias.component';
+import { ContactUsComponent } from './Component/contact-us/contact-us.component';
+import { MagazineListComponent } from './component/Magazine/magazine-list/magazine-list.component';
+import { BookListComponent } from './component/Books/book-list/book-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     InsertEnquiryComponent,
     GetEnquiryComponent,
     UpdateEnquiryComponent,
@@ -35,16 +37,20 @@ import { Home2Component } from './component/home/home2/home2.component';
     SideMenuComponent,
     LogInComponent,
     RegistrationComponent,
-    ContactUsComponent,
     AdminComponent,
-    Home2Component
+    NIASHomeComponent,
+    GalleryNIASComponent,
+    VideoNIASComponent,
+    ContactUsComponent,
+    MagazineListComponent,
+    BookListComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule    
   ],
    providers: [EnquiryServiceService,ChatServicesService],
   bootstrap: [AppComponent]

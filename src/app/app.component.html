@@ -7,18 +7,19 @@
     <a [routerLink]="['/Banner']"><b>Banner</b></a>
     <button (click)="clickMe()"><b>Banner</b></button> 
 </div> -->
+
    <div class="container-fluid navbar-expand-lg sticky-top">
         <div class="row  slideanim bg-danger"   id="nav">
                 <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 ">
                     <span><i class="fa fa-map-marker ml-5">&nbsp;&nbsp;Delhi(HeadOffice)</i></span>  <br>
-                   <i class="fa fa-phone  ml-4"></i><small>&nbsp;&nbsp;(+91) 9717767797</small> 
+                   <i class="fa fa-phone  ml-4"></i><small>&nbsp;&nbsp;(+91) 11 4705-8219</small> 
                </div>
                  <div class="col-lg-2 col-md-2 col-xs-2 col-sm-2">
                    <span><i class="fa fa-map-marker ">&nbsp;&nbsp;Jaipur</i></span> <br>
                     <i class="fa fa-phone"></i><small>&nbsp;&nbsp;(+91) 9680513367</small> 
                  </div>
                  <div class="col-lg-2 col-md-2 col-xs-2 col-sm-2">
-                  <span><i class="fa fa-map-marker ">&nbsp;&nbsp;Allahabad</i></span><br> 
+                  <span><i class="fa fa-map-marker ">&nbsp;&nbsp;Prayagraj</i></span><br> 
                         <i class="fa fa-phone"></i><small>&nbsp;&nbsp;(+91) 9984474888</small> 
                  </div>
                  <div class="col-lg-2 col-md-2 col-xs-2 col-sm-2">
@@ -26,10 +27,12 @@
                         <i class="fa fa-phone"></i><small>&nbsp;&nbsp;(+91) 97530-02277</small> 
                  </div>
                     <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-                            <a class="nav-link" href="mailto:nirmanias07@gmail.com" target="_blank">
-                    
-                        <i class="fa fa-envelope" >&nbsp;&nbsp;nirmanias07@gmail.com</i>
-                    </a>              
+                            <a href="mailto:info@nirmanias.com" target="_blank">                    
+                        <i class="fa fa-envelope" >&nbsp;&nbsp;info@nirmanias.com</i>
+                    </a> 
+                    <a href="mailto:nirmanias07@gmail.com" target="_blank">                    
+                            <i class="fa fa-envelope" >&nbsp;&nbsp;nirmanias07@gmail.com</i>
+                        </a>              
                     </div>
                 <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 p-2 text-center">
                    
@@ -44,10 +47,10 @@
          <button type="button" id="sidebarCollapse" class="btn btn-danger fixed-top">
                     <i class="fa fa-bars"></i>        
                 </button>
-                <app-home></app-home>
+                <router-outlet></router-outlet>
                 </div>
-    </div>
-    <app-home2></app-home2>
+       </div>
+    
     <!-- SocialIcon -->
        <div class="icon-bar">
                <a href="https://www.youtube.com/channel/UCgJnU1HmRZkRzoyzJVRgq8w?sub_confirmation=1" target="_blank" class="youtube">
@@ -63,9 +66,7 @@
                 </div>
        <app-live-chat></app-live-chat>
            
-           <!--enquiry-->
     <div id="mySidenav" class="sidenav">
-        <!-- <div class="ContactForm"> -->
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" title="Close" style="margin-top: 15px; margin-right: -28px;position: absolute;">
                 <i class="fa fa-times-circle-o text-danger img-thumbnail" aria-hidden="true"></i></a>
             <div class="pb-4 w-100 bg-white" style="max-width:270px;">
@@ -77,17 +78,12 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12">
                         <div class="img-thumbnail pl-3 pr-3" style="font-size: 13px;min-height: 362px;background-color: #ffffffc4;">
-  <app-insert-enquiry></app-insert-enquiry>
-                            
-             </div>
+                            <app-insert-enquiry></app-insert-enquiry>                            
+                            </div>
                         </div>
                     </div>
                 </div>
-        <!-- </div> -->
-    </div>
+        </div>
         <button type="button" class="MySidePopupBtn btn btn-primary" onclick="openNav()">Enquiry</button>
-    
- <!--footer  -->
        <app-footer></app-footer>
-       <!-- <app-admin></app-admin>
-       <app-contact-us></app-contact-us> -->
+ 
