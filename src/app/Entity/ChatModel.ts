@@ -1,7 +1,7 @@
 export class ChatModel {
     constructor(
      public UserChatID:number,
-     public ChatMessage :  string,
+     public ChatMessage :any,
      public UserIP :   string,
      public ReplyMessage :   string,
      public ReplyBy :   string,
