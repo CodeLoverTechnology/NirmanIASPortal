@@ -16,52 +16,47 @@
     </div>
     <ul class="list-unstyled ml-4">
         <li class="active">
-                <a [routerLink]="['home']">Home</a>
-            <!-- <a href="#homeSubmenu" aria-expanded="false" routerLink='/home'>Home</a> -->
+                <a [routerLink]="['/']" class=" text-white"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
         <li>
-                <a [routerLink]="['/Aboutus']">About Us</a>
+            
+                <a [routerLink]="['/Aboutus']"  class=" text-white"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> About Us</a>               
         </li>
          <li>
-            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Courses</a>
-            <ul class="collapse list-unstyled" id="pageSubmenu">
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-book" aria-hidden="true"></i> Courses</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
                 <li>
-                    <a href="">UPSC</a>
+                        <a [routerLink]="['/UPSC_Course']"  class=" text-white"><i class="fa fa-book" aria-hidden="true"></i>
+                            UPSC Courses</a>
                 </li>
                 <li>
-                    <a href="">State PCS</a>
+                        <a [routerLink]="['/StatePCS']"  class=" text-white"><i class="fa fa-book" aria-hidden="true"></i>
+                             State PCS</a>
                 </li>
-
                 <li>
-                    <a href="">Test Series</a>
+                        <a [routerLink]="['/TestSeries']"  class=" text-white"><i class="fa fa-book" aria-hidden="true"></i>
+                            Test Series</a>
                 </li>
             </ul>
         </li> 
         <li>
-            <a href="">Current Affairs</a>
+                <a [routerLink]="['/']"  class=" text-white"><i class="fa fa-newspaper-o" aria-hidden="true"></i> Current Affairs</a>
         </li>
         <li>
-            <a href="Books">Study Materials</a>
+                <a [routerLink]="['/Books']"  class=" text-white"><i class="fa fa-align-center" aria-hidden="true"></i> Books</a>
         </li>
         <li>
-            <a href="Gallery">Gallery</a>
+                <a [routerLink]="['/Gallery']"  class=" text-white"><i class="fa fa-picture-o" aria-hidden="true"></i> Gallery</a>
         </li>
         <li>
-            <a href="Video">Video</a>
+                <a [routerLink]="['/Video']"  class=" text-white"><i class="fa fa-video-camera" aria-hidden="true"></i> Video</a>
         </li>
         <li>
-                <a href="Contact">Contact Us</a>
-            <!-- <a href="" routerLink="./Contact">Contact Us</a> -->
+                <a [routerLink]="['/Contact']"  class=" text-white"><i class="fa fa-info-circle"  aria-hidden="true"></i> Contact</a>
         </li>
       </ul>
 </div>   
 </div>
 </nav>
-<!-- <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Clients</a>
-    <a href="#">Contact</a>
-  </div> -->
+
 
 

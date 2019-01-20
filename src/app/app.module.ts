@@ -23,6 +23,9 @@ import { VideoNIASComponent } from './Component/video-nias/video-nias.component'
 import { ContactUsComponent } from './Component/contact-us/contact-us.component';
 import { MagazineListComponent } from './component/Magazine/magazine-list/magazine-list.component';
 import { BookListComponent } from './component/Books/book-list/book-list.component';
+import { UPSCCoursesComponent } from './Component/Courses/upsc-courses/upsc-courses.component';
+import { StatePCSCoursesComponent } from './Component/Courses/state-pcs-courses/state-pcs-courses.component';
+import { TestSeriesComponent } from './Component/Courses/test-series/test-series.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +47,9 @@ import { BookListComponent } from './component/Books/book-list/book-list.compone
     ContactUsComponent,
     MagazineListComponent,
     BookListComponent,
+    UPSCCoursesComponent,
+    StatePCSCoursesComponent,
+    TestSeriesComponent,
   ],
   imports: [
     BrowserModule,

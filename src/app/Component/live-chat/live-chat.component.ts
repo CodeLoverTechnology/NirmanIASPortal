@@ -28,15 +28,20 @@ export class LiveChatComponent implements OnInit {
   SendMessageToServer()
   {
     this.ConverstaionMessage+=( '\n'+  this.chatModel["ChatMessage"]);
-    this.chatModel["ReplyMessage"]=this.ConverstaionMessage;
-    this.chatModel["ChatMessage"]= this._service.postchat(this.chatModel).subscribe(res=>this.ConverstaionMessage=res);
-(err:HttpErrorResponse)=>{
-if(err.error instanceof Error){
-console.log("Server Side Error....!");
-  }else{
-    console.log("Client Side Error   !");
-  }
-}}
+     this.chatModel["ReplyMessage"]=this.ConverstaionMessage;
+//     var Result = this._service.postchat(this.chatModel).subscribe(
+//       result =>{
+//         this.chatModel =result ? result : undefined ;
+//         this.chatModel["ReplyMessage"]=this.chatModel.ChatMessage + this.chatModel.ReplyMessage;
+//         } ,
+// (err:HttpErrorResponse)=>{
+// if(err.error instanceof Error){
+// alert("Server Side Error....!");
+//   }else{
+//     alert("Client Side Error   !");
+//   }
+// })
+   }
 
   }
 
