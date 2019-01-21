@@ -8,7 +8,7 @@
     <button (click)="clickMe()"><b>Banner</b></button> 
 </div> -->
 
-   <div class="container-fluid navbar-expand-lg sticky-top">
+   <div class="container-fluid navbar-expand-lg fixed-top">
         <div class="row  slideanim bg-danger"   id="nav">
                 <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 ">
                     <span><i class="fa fa-map-marker ml-5">&nbsp;&nbsp;Delhi(HeadOffice)</i></span>  <br>
@@ -41,16 +41,20 @@
                             </div>
              </div> 
         </div>
-    <div class="wrapper">
-        <app-side-menu></app-side-menu>
-        <div id="content">
-         <button type="button" id="sidebarCollapse" class="btn btn-danger fixed-top">
-                    <i class="fa fa-bars"></i>        
-                </button>
-                <router-outlet></router-outlet>
-                </div>
-       </div>
-    
+        <div class="wrapper">
+       <app-side-menu></app-side-menu>
+             
+                   <!-- Page Content  -->
+                    <div id="content">
+                     <button type="button" id="sidebarCollapse" class="btn btn-danger fixed-top">
+                                    <i class="fa fa-align-left fa-2x"></i>
+                                    
+                                </button>
+        <!--<app-home></app-home> -->
+                        <router-outlet></router-outlet>
+                        <app-footer></app-footer>
+                    </div>
+        </div>
     <!-- SocialIcon -->
        <div class="icon-bar">
                <a href="https://www.youtube.com/channel/UCgJnU1HmRZkRzoyzJVRgq8w?sub_confirmation=1" target="_blank" class="youtube">
@@ -84,6 +88,6 @@
                     </div>
                 </div>
         </div>
-        <button type="button" class="MySidePopupBtn btn btn-primary" onclick="openNav()">Enquiry</button>
-       <app-footer></app-footer>
+    <button type="button" class="MySidePopupBtn btn btn-primary" onclick="openNav()">Enquiry</button>
+    
  
