@@ -26,6 +26,10 @@ import { BookListComponent } from './component/Books/book-list/book-list.compone
 import { UPSCCoursesComponent } from './Component/Courses/upsc-courses/upsc-courses.component';
 import { StatePCSCoursesComponent } from './Component/Courses/state-pcs-courses/state-pcs-courses.component';
 import { TestSeriesComponent } from './Component/Courses/test-series/test-series.component';
+import { UPSCPrelimsGSSyllabusComponent } from './Component/Courses/upsc-prelims-gs-syllabus/upsc-prelims-gs-syllabus.component';
+import { UPSCGSMainsSyllabusComponent } from './Component/Courses/upsc-gs-mains-syllabus/upsc-gs-mains-syllabus.component';
+import { CurrentAffairsComponent } from './Component/current-affairs/current-affairs.component';
+import { ClassNotesComponent } from './Component/class-notes/class-notes.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +54,10 @@ import { TestSeriesComponent } from './Component/Courses/test-series/test-series
     UPSCCoursesComponent,
     StatePCSCoursesComponent,
     TestSeriesComponent,
+    UPSCPrelimsGSSyllabusComponent,
+    UPSCGSMainsSyllabusComponent,
+    CurrentAffairsComponent,
+    ClassNotesComponent,    
   ],
   imports: [
     BrowserModule,

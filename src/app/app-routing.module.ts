@@ -14,6 +14,10 @@ import { BookListComponent } from './component/Books/book-list/book-list.compone
 import { UPSCCoursesComponent } from './Component/Courses/upsc-courses/upsc-courses.component';
 import { StatePCSCoursesComponent } from './Component/Courses/state-pcs-courses/state-pcs-courses.component';
 import { TestSeriesComponent } from './Component/Courses/test-series/test-series.component';
+import { UPSCGSMainsSyllabusComponent } from './Component/Courses/upsc-gs-mains-syllabus/upsc-gs-mains-syllabus.component';
+import { UPSCPrelimsGSSyllabusComponent } from './Component/Courses/upsc-prelims-gs-syllabus/upsc-prelims-gs-syllabus.component';
+import { CurrentAffairsComponent } from './Component/current-affairs/current-affairs.component';
+import { ClassNotesComponent } from './Component/class-notes/class-notes.component';
 const routes: Routes = [
   {path:"",component:NIASHomeComponent},
   {path:"login",component:LogInComponent},
@@ -29,6 +33,11 @@ const routes: Routes = [
   {path:"UPSC_Course",component:UPSCCoursesComponent},
   {path:"StatePCS",component:StatePCSCoursesComponent},
   {path:"TestSeries",component:TestSeriesComponent},
+  {path:"GSMainsSyllabus",component:UPSCGSMainsSyllabusComponent},
+  {path:"PrelimsGSSyllabus",component:UPSCPrelimsGSSyllabusComponent},
+  {path:"CurrentAffairs",component:CurrentAffairsComponent},
+  {path:"ClassNotes",component:ClassNotesComponent},
+
   // { path: '', redirectTo: '/', pathMatch:'full' }
   ];
 
