@@ -33,9 +33,9 @@
             $('#sidebar, #content').toggleClass('active');
             $('.collapse.in').toggleClass('in');
             $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-        });
+        });        
     });
-    
+     
  (function () 
  {
     var po = document.createElement('script'); 
@@ -70,39 +70,13 @@
             }
         }
                      
-        // function openCity(evt, cityName) {
-        //     var i, tabcontent, tablinks;
-        //     tabcontent = document.getElementsByClassName("tabcontent");
-        //     for (i = 0; i < tabcontent.length; i++) {
-        //         tabcontent[i].style.display = "none";
-        //     }
-        //     tablinks = document.getElementsByClassName("tablinks");
-        //     for (i = 0; i < tablinks.length; i++) {
-        //         tablinks[i].className = tablinks[i].className.replace(" active", "");
-        //     }
-        //     document.getElementById(cityName).style.display = "block";
-        //     evt.currentTarget.className += " active";
-        // }
-
-       function openNav() {
+        function openNav() {
         document.getElementById("mySidenav").style.width = "100%";
      }
 
     function closeNav() {
          document.getElementById("mySidenav").style.width = "0";
      }    
-  
-    //  $(document).ready(function () {
-    //         $("#sidebar").mCustomScrollbar({
-    //             theme: "minimal"
-    //         });
-
-    //         $('#sidebarCollapse').on('click', function () {
-    //             $('#sidebar, #content').toggleClass('active');
-    //             $('.collapse.in').toggleClass('in');
-    //             $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-    //         });
-    //     });
  </script>
 </head>
 <body>
