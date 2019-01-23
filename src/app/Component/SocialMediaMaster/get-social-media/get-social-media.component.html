@@ -1,0 +1,28 @@
+<table class="table table-hover table-justified">
+  <thead>
+    <tr>
+    <th>SocialMediaID </th>
+      <th>SocialMediaName </th>
+      <th>Address </th>
+      <th>Notes </th>
+      <th>CreatedBy </th>
+      <th>CreatedDate </th>
+      <th>ModifiedBy </th>
+      <th>ModifiedDate </th>
+      <th>Active</th>
+    </tr>
+  </thead>
+  <tbody>
+        <tr *ngFor="let x of result">
+      <td>{{x.SocialMediaID}}</td>
+        <td>{{x.SocialMediaName }}</td>
+        <td>{{x.Address }}</td>
+        <td>{{x.Notes }}</td>
+        <td>{{x.CreatedBy }}</td>
+       <td>{{x.CreatedDate }}</td>
+       <td>{{x.ModifiedBy }}</td> 
+       <td>{{x.ModifiedDate }}</td>
+       <td>{{x.Active}}</td>    
+       </tr>
+       </tbody>
+       </table>

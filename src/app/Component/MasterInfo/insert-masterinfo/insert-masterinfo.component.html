@@ -1,0 +1,58 @@
+<div class="container-fluid">
+  <form enctype="multipart/form-data" method="post" #MasterInfo="ngForm"(ngSubmit)="onSubmit()">
+    <div class="form-group">      <label>MasterID  </label>
+      <input type="text" name="MasterID  "
+      #MasterID  ="ngModel" class="form-control"  [(ngModel)]="MasterInfoModel.MasterID "  required >  
+  <div class="validation-error" *ngIf="MasterID.invalid && MasterID .touched">This field is required.</div>          
+ </div>
+  <div class="form-group">
+      <label >MasterValue  </label>
+  <input type="text" name="MasterValue  " required  #MasterValue   ="ngModel" class="form-control"  [(ngModel)]="MasterInfoModel.MasterValue  "  >
+  
+  <div class="validation-error" *ngIf="MasterValue.invalid && MasterValue.touched">This field is required.</div>
+   </div> 
+  <div class="form-group">
+       <label>MasterTable  </label>
+      <input type="text" name="MasterTable  " #MasterTable   ="ngModel" class="form-control"
+      [(ngModel)]="MasterInfoModel.MasterTable  " required>
+      <div class="validation-error" *ngIf="MasterTable .invalid && MasterTable .touched">This field is required.</div>
+           </div>
+       <div>
+       <label>Sequence  </label>
+       <textarea type="text" name="Sequence"  #Sequence   ="ngModel" class="form-control" required
+        [(ngModel)]="MasterInfoModel.Sequence  "></textarea>
+       <div class="validation-error" *ngIf="Sequence.invalid && Sequence.touched">This field is required.</div>
+       </div>
+       <div>
+        <label>CreatedBy </label>
+        <textarea type="text" name="CreatedBy "  #CreatedBy  ="ngModel" class="form-control" required
+         [(ngModel)]="MasterInfoModel.CreatedBy "></textarea>
+        <div class="validation-error" *ngIf="CreatedBy .invalid && CreatedBy .touched">This field is required.</div>
+        </div>
+        <div>
+          <label>CreatedDate </label>
+          <textarea type="text" name="CreatedDate "  #CreatedDate  ="ngModel" class="form-control" required
+           [(ngModel)]="MasterInfoModel.CreatedDate "></textarea>
+          <div class="validation-error" *ngIf="CreatedDate .invalid && CreatedDate .touched">This field is required.</div>
+          </div>
+          <div>
+            <label>ModifiedBy </label>
+            <textarea type="text" name="ModifiedBy "  #ModifiedBy  ="ngModel" class="form-control" required
+             [(ngModel)]="MasterInfoModel.ModifiedBy "></textarea>
+            <div class="validation-error" *ngIf="ModifiedBy .invalid && ModifiedBy .touched">This field is required.</div>
+            </div>
+            <div>
+              <label>ModifiedDate </label>
+              <textarea type="text" name="ModifiedDate "  #ModifiedDate  ="ngModel" class="form-control" required
+               [(ngModel)]="MasterInfoModel.ModifiedDate "></textarea>
+              <div class="validation-error" *ngIf="ModifiedDate .invalid && ModifiedDate .touched">This field is required.</div>
+              </div>
+                  <div>
+                    <label>Active</label>
+                    <textarea type="text" name="Active"  #Active ="ngModel" class="form-control" required
+                     [(ngModel)]="MasterInfoModel.Active"></textarea>
+                    <div class="validation-error" *ngIf="Active.invalid && Active.touched">This field is required.</div>
+                    </div>
+          <button [disabled]="!MasterInfo.valid" type="submit"  class="btn btn-primary btn-lg m-3 ">Submit Now</button> 
+           </form>
+  </div>

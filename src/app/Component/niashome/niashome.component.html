@@ -94,8 +94,11 @@
         </div>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 text-center"><div class="shadow p-2 m-1 img-thumbnail">
-            <img src="./assets/current affairs.png" width="48" height="48" />
+            
+            <a [routerLink]="['/ClassNotes']" >
+                <img src="./assets/currentaffairs.png" width="48" height="48" />
             <h4>Class Notes</h4>
+            </a>
         </div>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 text-center">
@@ -133,11 +136,11 @@
         </div>
         <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 text-center">
                 <div class="shadow p-2 m-1 img-thumbnail">
-            <a href="Magazine" target="_blank">
-                <img src="./assets/NIAS_Magazine.JPG" width="48" height="48" />
-                <h4>Magazine</h4>
-            </a>
-            </div>
+                    <a [routerLink]="['/Magazine']" ><i class="fa fa-book" aria-hidden="true"></i>
+                        <img src="./assets/NIAS_Magazine.JPG" width="48" height="48" />
+                        <h4>Magazine</h4>
+                    </a>
+                </div>
         </div>
     </div>
 </div>

@@ -1,0 +1,30 @@
+<table class="table table-hover table-justified">
+  <thead>
+    <tr>
+    <th>CourseID</th>
+      <th>CourseType </th>
+      <th>CourseCode </th>
+      <th>CourseName </th>
+      <th>Remarks </th>
+      <th>CreatedBy </th>
+      <th>CreatedDate </th>
+      <th>ModifiedBy</th>
+      <th>ModifiedDate</th>
+      <th>Active</th>
+    </tr>
+  </thead>
+  <tbody>
+        <tr *ngFor="let x of result">
+      <td>{{x.CourseID}}</td>
+        <td>{{x.CourseType}}</td>
+        <td>{{x.CourseCode}}</td>
+        <td>{{x.CourseName}}</td>
+        <td>{{x.Remarks}}</td>
+       <td>{{x.CreatedBy}}</td>
+       <td>{{x.CreatedDate}}</td> 
+       <td>{{x.ModifiedBy}}</td>
+       <td>{{x.ModifiedDate}}</td> 
+       <td>{{x.Active}}</td>    
+       </tr>
+       </tbody>
+       </table>

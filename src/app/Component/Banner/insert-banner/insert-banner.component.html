@@ -1,0 +1,64 @@
+<div class="container-fluid">
+  <form enctype="multipart/form-data" method="post" #BannerMaster="ngForm"(ngSubmit)="onSubmit()">
+    <div class="form-group">      <label>BannerID</label>
+      <input type="text" name="BannerID"
+      #BannerID="ngModel" class="form-control"  [(ngModel)]="BannerModel.BannerID"  required >  
+  <div class="validation-error" *ngIf="BannerID .invalid && BannerID  .touched">This field is required.</div>          
+ </div>
+  <div class="form-group">
+      <label >BannerTitle </label>
+  <input type="text" name="BannerTitle " required  #BannerTitle ="ngModel" class="form-control"  [(ngModel)]="BannerModel.BannerTitle "  >
+   <div class="validation-error" *ngIf="BannerTitle  .invalid && BannerTitle  .touched">This field is required.</div>
+   </div> 
+  <div class="form-group">
+       <label>BannerImagesPath </label>
+      <input type="text" name="BannerImagesPath " #BannerImagesPath ="ngModel" class="form-control"
+      [(ngModel)]="BannerModel.BannerImagesPath " required>
+      <div class="validation-error" *ngIf="BannerImagesPath   .invalid && BannerImagesPath   .touched">This field is required.</div>
+           </div>
+       <div>
+       <label>SubTitle </label>
+       <textarea type="text" name="SubTitle "  #SubTitle ="ngModel" class="form-control" required
+        [(ngModel)]="BannerModel.SubTitle "></textarea>
+       <div class="validation-error" *ngIf="SubTitle.invalid && SubTitle.touched">This field is required.</div>
+       </div>
+       <div>
+        <label>Remarks</label>
+        <textarea type="text" name="Remarks"  #Remarks="ngModel" class="form-control" required
+         [(ngModel)]="BannerModel.Remarks"></textarea>
+        <div class="validation-error" *ngIf="Remarks.invalid && Remarks  .touched">This field is required.</div>
+        </div>
+        <div>
+          <label>CreatedBy</label>
+          <textarea type="text" name="CreatedBy"  #CreatedBy="ngModel" class="form-control" required
+           [(ngModel)]="BannerModel.CreatedBy"></textarea>
+          <div class="validation-error" *ngIf="CreatedBy .invalid && CreatedBy .touched">This field is required.</div>
+          </div>
+          <div>
+            <label>CreatedDate</label>
+            <textarea type="text" name="CreatedDate"  #CreatedDate="ngModel" class="form-control" required
+             [(ngModel)]="BannerModel.CreatedDate"></textarea>
+            <div class="validation-error" *ngIf="CreatedDate  .invalid && CreatedDate  .touched">This field is required.</div>
+            </div>
+            <div>
+              <label>ModifiedBy</label>
+              <textarea type="text" name="ModifiedBy"  #ModifiedBy="ngModel" class="form-control" required
+               [(ngModel)]="BannerModel.ModifiedBy"></textarea>
+              <div class="validation-error" *ngIf="ModifiedBy.invalid && ModifiedBy  .touched">This field is required.</div>
+              </div>
+              
+            <div>
+              <label>ModifiedDate</label>
+              <textarea type="text" name="ModifiedDate"  #ModifiedDate="ngModel" class="form-control" required
+               [(ngModel)]="BannerModel.ModifiedDate"></textarea>
+              <div class="validation-error" *ngIf="ModifiedDate .invalid && ModifiedDate .touched">This field is required.</div>
+              </div>
+                  <div>
+                    <label>Active</label>
+                    <textarea type="text" name="Active"  #Active ="ngModel" class="form-control" required
+                     [(ngModel)]="BannerModel.Active"></textarea>
+                    <div class="validation-error" *ngIf="Active.invalid && Active.touched">This field is required.</div>
+                    </div>
+          <button [disabled]="!BannerMaster.valid" type="submit"  class="btn btn-primary btn-lg m-3 ">Submit Now</button> 
+           </form>
+  </div>
