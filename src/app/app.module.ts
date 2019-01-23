@@ -41,6 +41,10 @@ import { GetBranchComponent } from './component/BranchMaster/get-branch/get-bran
 import { InsertBranchComponent } from './component/BranchMaster/insert-branch/insert-branch.component';
 import { GetBannerComponent } from './component/Banner/get-banner/get-banner.component';
 import { InsertBannerComponent } from './component/Banner/insert-banner/insert-banner.component';
+import { UPSCGSMainsSyllabusComponent } from './Component/Courses/upsc-gs-mains-syllabus/upsc-gs-mains-syllabus.component';
+import { UPSCPrelimsGSSyllabusComponent } from './Component/Courses/upsc-prelims-gs-syllabus/upsc-prelims-gs-syllabus.component';
+import { CurrentAffairsComponent } from './Component/current-affairs/current-affairs.component';
+import { ClassNotesComponent } from './Component/class-notes/class-notes.component';
 
 @NgModule({
   declarations: [
@@ -78,6 +82,13 @@ import { InsertBannerComponent } from './component/Banner/insert-banner/insert-b
     InsertBranchComponent,
     GetBannerComponent,
     InsertBannerComponent,
+    UPSCGSMainsSyllabusComponent,
+    UPSCPrelimsGSSyllabusComponent,
+    UPSCCoursesComponent,
+    TestSeriesComponent,
+    StatePCSCoursesComponent,
+    CurrentAffairsComponent,
+    ClassNotesComponent
   ],
   imports: [
     BrowserModule,
