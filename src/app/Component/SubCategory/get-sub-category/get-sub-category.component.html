@@ -1,0 +1,32 @@
+<table class="table table-hover table-justified">
+  <thead>
+    <tr>
+    <th>SubCategoryID</th>
+      <th>CategoryID</th>
+      <th>SubCategoryCode</th>
+      <th>SubCategoryName</th>
+      <th>SubCatDescription</th>
+      <th>Sequence</th>
+      <th>CreatedBy</th>
+      <th>CreatedDate</th>
+      <th>ModifiedBy</th>
+      <th>ModifiedDate</th>
+      <th>Active</th>
+    </tr>
+  </thead>
+  <tbody>
+        <tr *ngFor="let x of result">
+      <td>{{x.SubCategoryID}}</td>
+        <td>{{x.CategoryID}}</td>
+        <td>{{x.SubCategoryCode}}</td>
+        <td>{{x.SubCategoryName}}</td>
+        <td>{{x.SubCatDescription}}</td>
+       <td>{{x.Sequence}}</td>
+       <td>{{x.CreatedBy}}</td> 
+       <td>{{x.createdDate}}</td>
+       <td>{{x.ModifiedBy}}</td>
+       <td>{{x.ModifiedDate}}</td> 
+       <td>{{x.Active}}</td>    
+       </tr>
+       </tbody>
+       </table>

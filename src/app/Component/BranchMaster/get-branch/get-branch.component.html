@@ -1,0 +1,32 @@
+<table class="table table-hover table-justified">
+  <thead>
+    <tr>
+    <th>BranchCode</th>
+      <th>BranchName  </th>
+      <th>BranchAddress  </th>
+      <th>ContactNo  </th>
+      <th>EmailID  </th>
+      <th>Remarks </th>
+      <th>CreatedBy </th>
+      <th>CreatedDate </th>
+      <th>ModifiedBy</th>
+      <th>ModifiedDate</th>
+      <th>Active</th>
+    </tr>
+  </thead>
+  <tbody>
+        <tr *ngFor="let x of result">
+      <td>{{x.BranchCode }}</td>
+        <td>{{x.BranchName }}</td>
+        <td>{{x.BranchAddress }}</td>
+        <td>{{x.ContactNo }}</td>
+        <td>{{x.EmailID }}</td>
+        <td>{{x.Remarks  }}</td>
+       <td>{{x.CreatedBy}}</td>
+       <td>{{x.CreatedDate}}</td> 
+       <td>{{x.ModifiedBy}}</td>
+       <td>{{x.ModifiedDate}}</td> 
+       <td>{{x.Active}}</td>    
+       </tr>
+       </tbody>
+       </table>

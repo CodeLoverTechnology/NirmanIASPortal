@@ -1,0 +1,69 @@
+<div class="container-fluid">
+  <form enctype="multipart/form-data" method="post" #subcategoryForm="ngForm"(ngSubmit)="onSubmit()">
+    <div class="form-group">      <label>SubCategoryID</label>
+      <input type="text" name="SubCategoryID"
+      #SubCategoryID="ngModel" class="form-control"  [(ngModel)]="SubCategoryMaster.SubCategoryID"  required >  
+  <div class="validation-error" *ngIf="SubCategoryID.invalid && SubCategoryID.touched">This field is required.</div>          
+ </div>
+  <div class="form-group">
+      <label >CategoryID</label>
+  <input type="text" name="CategoryID" required  #CategoryID ="ngModel" class="form-control"  [(ngModel)]="SubCategoryMaster.CategoryID"  >
+  <div class="validation-error" *ngIf="CategoryID.invalid && CategoryID.touched">This field is required.</div>
+   </div> 
+  <div class="form-group">
+       <label>SubCategoryCode</label>
+      <input type="text" name="SubCategoryCode" #SubCategoryCode ="ngModel" class="form-control"
+      [(ngModel)]="SubCategoryMaster.SubCategoryCode" required>
+      <div class="validation-error" *ngIf="SubCategoryCode.invalid && SubCategoryCode.touched">This field is required.</div>
+           </div>
+       <div>
+       <label>SubCategoryName</label>
+       <textarea type="text" name="SubCategoryName"  #SubCategoryName ="ngModel" class="form-control" required
+        [(ngModel)]="SubCategoryMaster.SubCategoryName"></textarea>
+       <div class="validation-error" *ngIf="SubCategoryName.invalid && SubCategoryName.touched">This field is required.</div>
+       </div>
+       <div>
+        <label>SubCatDescription</label>
+        <textarea type="text" name="SubCatDescription"  #SubCatDescription ="ngModel" class="form-control" required
+         [(ngModel)]="SubCategoryMaster.SubCatDescription"></textarea>
+        <div class="validation-error" *ngIf="SubCatDescription.invalid && SubCatDescription.touched">This field is required.</div>
+        </div>
+        <div>
+          <label>Sequence</label>
+          <textarea type="text" name="Sequence"  #Sequence ="ngModel" class="form-control" required
+           [(ngModel)]="SubCategoryMaster.Sequence"></textarea>
+          <div class="validation-error" *ngIf="Sequence.invalid && Sequence.touched">This field is required.</div>
+          </div>
+          <div>
+            <label>CreatedBy</label>
+            <textarea type="text" name="CreatedBy"  #CreatedBy ="ngModel" class="form-control" required
+             [(ngModel)]="SubCategoryMaster.CreatedBy"></textarea>
+            <div class="validation-error" *ngIf="CreatedBy.invalid && CreatedBy.touched">This field is required.</div>
+            </div>
+            <div>
+              <label>CreatedDate</label>
+              <textarea type="text" name="CreatedDate"  #CreatedDate ="ngModel" class="form-control" required
+               [(ngModel)]="SubCategoryMaster.CreatedDate"></textarea>
+              <div class="validation-error" *ngIf="CreatedDate.invalid && CreatedDate.touched">This field is required.</div>
+              </div>
+              <div>
+                <label>ModifiedBy</label>
+                <textarea type="text" name="ModifiedBy"  #ModifiedBy ="ngModel" class="form-control" required
+                 [(ngModel)]="SubCategoryMaster.ModifiedBy"></textarea>
+                <div class="validation-error" *ngIf="ModifiedBy.invalid && ModifiedBy.touched">This field is required.</div>
+                </div>
+                <div>
+                  <label>ModifiedDate</label>
+                  <textarea type="text" name="ModifiedDate"  #ModifiedDate ="ngModel" class="form-control" required
+                   [(ngModel)]="SubCategoryMaster.ModifiedDate"></textarea>
+                  <div class="validation-error" *ngIf="ModifiedDate.invalid && ModifiedDate.touched">This field is required.</div>
+                  </div>
+                  <div>
+                    <label>Active</label>
+                    <textarea type="text" name="Active"  #Active ="ngModel" class="form-control" required
+                     [(ngModel)]="SubCategoryMaster.Active"></textarea>
+                    <div class="validation-error" *ngIf="Active.invalid && Active.touched">This field is required.</div>
+                    </div>
+          <button [disabled]="!subcategoryForm.valid" type="submit"  class="btn btn-primary btn-lg m-3 ">Submit Now</button> 
+           </form>
+  </div>
