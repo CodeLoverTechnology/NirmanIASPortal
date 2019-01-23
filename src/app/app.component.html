@@ -1,32 +1,23 @@
-<!-- <div class="navbar">
-    <a [routerLink]="['/']"><b>Home</b></a>
-    <a [routerLink]="['/Menu']"><b>Menu</b></a>
-    <a [routerLink]="['/niasinsert-enquiry']"><b>Enquiry</b></a>
-    <a [routerLink]="['/niasenquiry']"><b>Show Enquiry</b></a>
-    <a [routerLink]="['/Contact']"><b>Contact</b></a>
-    <a [routerLink]="['/Banner']"><b>Banner</b></a>
-    <button (click)="clickMe()"><b>Banner</b></button> 
-</div> -->
-
-   <div class="container-fluid navbar-expand-lg sticky-top">
+   <div class="container-fluid navbar-expand-lg fixed-top">
         <div class="row  slideanim bg-danger"   id="nav">
-                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 ">
+                <div class="col-lg-2 col-md-2 d-none d-sm-block text-right">
                     <span><i class="fa fa-map-marker ml-5">&nbsp;&nbsp;Delhi(HeadOffice)</i></span>  <br>
-                   <i class="fa fa-phone  ml-4"></i><small>&nbsp;&nbsp;(+91) 11 4705-8219</small> 
+                   <span class="ml-2"><i class="fa fa-phone"></i><small>&nbsp;(+91)11 4705-8219</small> </span>
                </div>
-                 <div class="col-lg-2 col-md-2 col-xs-2 col-sm-2">
+               <div class="col-lg-2 col-md-2  d-none d-sm-block">
+                    <span><i class="fa fa-map-marker ">&nbsp;&nbsp;Gwalior</i></span> <br>
+                          <i class="fa fa-phone"></i><small>&nbsp;&nbsp;(+91) 97530-02277</small> 
+                   </div>
+                     
+               <div class="col-lg-2 col-md-2  d-none d-sm-block">
                    <span><i class="fa fa-map-marker ">&nbsp;&nbsp;Jaipur</i></span> <br>
                     <i class="fa fa-phone"></i><small>&nbsp;&nbsp;(+91) 9680513367</small> 
                  </div>
-                 <div class="col-lg-2 col-md-2 col-xs-2 col-sm-2">
+                 <div class="col-lg-2 col-md-2  d-none d-sm-block">
                   <span><i class="fa fa-map-marker ">&nbsp;&nbsp;Prayagraj</i></span><br> 
                         <i class="fa fa-phone"></i><small>&nbsp;&nbsp;(+91) 9984474888</small> 
                  </div>
-                 <div class="col-lg-2 col-md-2 col-xs-2 col-sm-2">
-                  <span><i class="fa fa-map-marker ">&nbsp;&nbsp;Gwalior</i></span> <br>
-                        <i class="fa fa-phone"></i><small>&nbsp;&nbsp;(+91) 97530-02277</small> 
-                 </div>
-                    <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+                    <div class="col-lg-2 col-md-2  d-none d-sm-block">
                             <a href="mailto:info@nirmanias.com" target="_blank">                    
                         <i class="fa fa-envelope" >&nbsp;&nbsp;info@nirmanias.com</i>
                     </a> 
@@ -34,23 +25,27 @@
                             <i class="fa fa-envelope" >&nbsp;&nbsp;nirmanias07@gmail.com</i>
                         </a>              
                     </div>
-                <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 p-2 text-center">
+                <div class="col-lg-2 col-md-2  d-none d-sm-block p-2 text-center">
                    
                                 <a class="btn-info mt-2 p-2"  href=""><small>हिंदी</small></a>
                                 <a class="btn-info active p-2  mt-2"  href=""><small>ENG</small></a>
                             </div>
              </div> 
         </div>
-    <div class="wrapper">
-        <app-side-menu></app-side-menu>
-        <div id="content">
-         <button type="button" id="sidebarCollapse" class="btn btn-danger fixed-top">
-                    <i class="fa fa-bars"></i>        
-                </button>
-                <router-outlet></router-outlet>
-                </div>
-       </div>
-    
+        <div class="wrapper">
+       <app-side-menu></app-side-menu>
+             
+                   <!-- Page Content  -->
+                    <div id="content">
+                     <button type="button" id="sidebarCollapse" class="btn btn-danger fixed-top">
+                                    <i class="fa fa-bars fa-2x float-left"></i>
+                                    <!-- <h2>NIRMAN IAS</h2> -->
+                                </button>
+        <!--<app-home></app-home> -->
+                        <router-outlet></router-outlet>
+                        <app-footer></app-footer>
+                    </div>
+        </div>
     <!-- SocialIcon -->
        <div class="icon-bar">
                <a href="https://www.youtube.com/channel/UCgJnU1HmRZkRzoyzJVRgq8w?sub_confirmation=1" target="_blank" class="youtube">
@@ -84,6 +79,6 @@
                     </div>
                 </div>
         </div>
-        <button type="button" class="MySidePopupBtn btn btn-primary" onclick="openNav()">Enquiry</button>
-       <app-footer></app-footer>
+    <button type="button" class="MySidePopupBtn btn btn-primary" onclick="openNav()">Enquiry</button>
+    
  
