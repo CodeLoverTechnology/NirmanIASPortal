@@ -245,3 +245,11 @@ a.article:hover {
     }
    
 }
+#page{
+    font-size:39px;
+    color:rgb(73, 3, 3);
+    background-color:white;
+    margin-top:5%;
+    margin-left:3%;
+    /* border:solid 2px rgb(73, 3, 3); */
+}
