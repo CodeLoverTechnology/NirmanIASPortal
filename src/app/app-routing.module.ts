@@ -18,11 +18,20 @@ import { UPSCGSMainsSyllabusComponent } from './Component/Courses/upsc-gs-mains-
 import { UPSCPrelimsGSSyllabusComponent } from './Component/Courses/upsc-prelims-gs-syllabus/upsc-prelims-gs-syllabus.component';
 import { CurrentAffairsComponent } from './Component/current-affairs/current-affairs.component';
 import { ClassNotesComponent } from './Component/class-notes/class-notes.component';
+import { AdminComponent } from './component/admin/admin/admin.component';
+// import { InsertEnquiryComponent } from './Component/enquirycomponent/insert-enquiry/insert-enquiry.component';
+//import { GetEnquiryComponent } from './Component/enquirycomponent/get-enquiry/get-enquiry.component';
+// import { UpdateEnquiryComponent } from './Component/enquirycomponent/update-enquiry/update-enquiry.component';
+// import { DeleteEnquiryComponent } from './Component/enquirycomponent/delete-enquiry/delete-enquiry.component';
+
 const routes: Routes = [
   {path:"",component:NIASHomeComponent},
+  {path:"admin",component:AdminComponent},
+
   {path:"login",component:LogInComponent},
-  {path:"Enquiry",component:GetEnquiryComponent},
+  // {path:"Enquiry",component:GetEnquiryComponent},
   {path:"InsertEnquiry",component:InsertEnquiryComponent},
+  {path:"getEnquiry",component:GetEnquiryComponent},
   {path:"registration",component: RegistrationComponent},
   {path:"Aboutus",component:AboutUsComponent},
   {path:"Gallery",component:GalleryNIASComponent},

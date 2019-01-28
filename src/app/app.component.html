@@ -1,38 +1,65 @@
-   <div class="container-fluid navbar-expand-lg fixed-top">
-        <div class="row  slideanim bg-danger"   id="nav">
+<div id="mySidenav" class="sidenav">
+    <app-side-menu></app-side-menu>
+</div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary text-white fixed-top">    
+    <a class="navbar-brand p-2 m-2" href="#">NIRMAN IAS</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <!-- <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> -->
                 <div class="col-lg-2 col-md-2 d-none d-sm-block text-right">
-                    <span><i class="fa fa-map-marker ml-5">&nbsp;&nbsp;Delhi(HeadOffice)</i></span>  <br>
-                   <span class="ml-2"><i class="fa fa-phone"></i><small>&nbsp;(+91)11 4705-8219</small> </span>
-               </div>
-               <div class="col-lg-2 col-md-2  d-none d-sm-block">
+                    <span><i class="fa fa-map-marker ml-5">&nbsp;&nbsp;Delhi(HeadOffice)</i></span> <br>
+                    <!-- <span class="ml-2"><i class="fa fa-phone"></i><small>&nbsp;(+91)11 4705-8219</small> </span> -->
+                </div>
+            </li>
+            <li class="nav-item">
+                <div class="col-lg-2 col-md-2  d-none d-sm-block">
                     <span><i class="fa fa-map-marker ">&nbsp;&nbsp;Gwalior</i></span> <br>
-                          <i class="fa fa-phone"></i><small>&nbsp;&nbsp;(+91) 97530-02277</small> 
-                   </div>
-                     
-               <div class="col-lg-2 col-md-2  d-none d-sm-block">
-                   <span><i class="fa fa-map-marker ">&nbsp;&nbsp;Jaipur</i></span> <br>
-                    <i class="fa fa-phone"></i><small>&nbsp;&nbsp;(+91) 9680513367</small> 
-                 </div>
-                 <div class="col-lg-2 col-md-2  d-none d-sm-block">
-                  <span><i class="fa fa-map-marker ">&nbsp;&nbsp;Prayagraj</i></span><br> 
-                        <i class="fa fa-phone"></i><small>&nbsp;&nbsp;(+91) 9984474888</small> 
-                 </div>
-                    <div class="col-lg-2 col-md-2  d-none d-sm-block">
-                            <a href="mailto:info@nirmanias.com" target="_blank">                    
-                        <i class="fa fa-envelope text-white" >&nbsp;&nbsp;info@nirmanias.com</i>
-                    </a> 
-                    <a href="mailto:nirmanias07@gmail.com" target="_blank">                    
+                    <!-- <i class="fa fa-phone"></i><small>&nbsp;&nbsp;(+91) 97530-02277</small>  -->
+                </div>
+            </li>
+            <li class="nav-item">
+                <div class="col-lg-2 col-md-2  d-none d-sm-block">
+                    <span><i class="fa fa-map-marker ">&nbsp;&nbsp;Jaipur</i></span> <br>
+                    <!-- <i class="fa fa-phone"></i><small>&nbsp;&nbsp;(+91) 9680513367</small>  -->
+                </div>
+            </li>
+            <li class="nav-item">
+                <div class="col-lg-2 col-md-2  d-none d-sm-block">
+                    <span><i class="fa fa-map-marker ">&nbsp;&nbsp;Prayagraj</i></span><br>
+                    <!-- <i class="fa fa-phone"></i><small>&nbsp;&nbsp;(+91) 9984474888</small>  -->
+                </div>
+            </li>
+            <li class="nav-item">
+                <div class="col-lg-2 col-md-2  d-none d-sm-block">
+                    <a href="mailto:info@nirmanias.com" target="_blank">
+                        <i class="fa fa-envelope text-white">&nbsp;&nbsp;info@nirmanias.com</i>
+                    </a>
+                    <!-- <a href="mailto:nirmanias07@gmail.com" target="_blank">                    
                             <i class="fa fa-envelope text-white" >&nbsp;&nbsp;nirmanias07@gmail.com</i>
-                        </a>              
-                    </div>
+                        </a>               -->
+                </div>
+            </li>
+            <li class="nav-item">
                 <div class="col-lg-2 col-md-2  d-none d-sm-block p-2 text-center">
-                   
-                                <a class="btn-info mt-2 p-2"  href=""><small>हिंदी</small></a>
-                                <a class="btn-info active p-2  mt-2"  href=""><small>ENG</small></a>
-                            </div>
-             </div> 
-        </div>
-      <div id="mySidenav1" class="sidenav bg-danger">
+
+                    <a class="btn-info mt-2 p-2" href=""><small>हिंदी</small></a>
+                    <a class="btn-info active p-2  mt-2" href=""><small>ENG</small></a>
+                </div>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <i class="fa fa-search btn btn-danger" aria-hidden="true"></i>
+        </form>
+    </div>
+</nav>
+
+<!-- <div id="mySidenav1" class="sidenav bg-danger">
         <nav id="sidebar" >
                 <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -91,40 +118,42 @@
                                 <a class="nav-link pl-0"  [routerLink]="['/Contact']"  ><i class="fa fa-info-circle fa-fw"  aria-hidden="true"></i> 
                                     <span class="d-none d-md-inline"> Contact</span></a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link pl-0" [routerLink]="['/login']"  ><i class="fa fa-user fa-fw" aria-hidden="true"></i>
+                                <span class="d-none d-md-inline">  Login</span></a>
+                    </li>
+                    <br><br>
                       </ul>
                 </div>   
                 </div>
             </div>
                 </nav>
-      </div>    
- <!-- <main class="col bg-faded py-3">
+      </div>     -->
+<!-- <main class="col bg-faded py-3">
    </main> -->
-           
-             
-                
-            <div id="main">
-                <br>
-                    <router-outlet></router-outlet>
-                    <app-footer></app-footer>
-                     <span style="font-size:30px;cursor:pointer" class="fixed-top text-white" onclick="openNav1()">&#9776;</span>
-            </div>
-         
-    <!-- SocialIcon -->
-       <div class="icon-bar">
-               <a href="https://www.youtube.com/channel/UCgJnU1HmRZkRzoyzJVRgq8w?sub_confirmation=1" target="_blank" class="youtube">
-                <i class="fa fa-youtube-play" aria-hidden="true"></i></a>
-               <a href="https://www.facebook.com/nirman.ias" target="_blank" class="facebook">
-                <i class="fa fa-facebook-official" aria-hidden="true"></i></a>
-               <a href="https://plus.google.com/102780980116787682106" target="_blank" class="google">
-                <i class="fa fa-google" aria-hidden="true"></i></a>
-               <a href="https://twitter.com/nirmanias07" target="_blank" class="twitter">
-                <i class="fa fa-twitter" aria-hidden="true"></i></a>
-               <a href="https://www.instagram.com/nirmanias/" target="_blank" class="instagram bg-success">
-                <i class="fa fa-instagram" aria-hidden="true"></i></a>
-                </div>
-       <app-live-chat></app-live-chat>
-           
-    <div id="mySidenav" class="sidenav">
+   
+<div id="main">
+   <span id="SideMenu" style="font-size:30px;cursor:pointer" class="fixed-top text-white">&#9776;</span>
+    <router-outlet></router-outlet>
+</div>
+<app-footer></app-footer>
+
+<!-- SocialIcon -->
+<div class="icon-bar">
+    <a href="https://www.youtube.com/channel/UCgJnU1HmRZkRzoyzJVRgq8w?sub_confirmation=1" target="_blank" class="youtube">
+        <i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+    <a href="https://www.facebook.com/nirman.ias" target="_blank" class="facebook">
+        <i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+    <a href="https://plus.google.com/102780980116787682106" target="_blank" class="google">
+        <i class="fa fa-google" aria-hidden="true"></i></a>
+    <a href="https://twitter.com/nirmanias07" target="_blank" class="twitter">
+        <i class="fa fa-twitter" aria-hidden="true"></i></a>
+    <a href="https://www.instagram.com/nirmanias/" target="_blank" class="instagram bg-success">
+        <i class="fa fa-instagram" aria-hidden="true"></i></a>
+</div>
+<app-live-chat></app-live-chat>
+
+ <div id="mySidenav1" class="sidenav1">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" title="Close" style="margin-top: 15px; margin-right: -28px;position: absolute;">
                 <i class="fa fa-times-circle-o text-danger img-thumbnail" aria-hidden="true"></i></a>
             <div class="pb-4 w-100 bg-white" style="max-width:270px;">
@@ -142,5 +171,7 @@
                     </div>
                 </div>
         </div>
-    <button type="button" class="MySidePopupBtn btn btn-primary" onclick="openNav()">Enquiry</button>
- 
+    <button type="button" class="MySidePopupBtn btn btn-primary" onclick="openNav()">Enquiry</button> 
+<!-- <app-admin></app-admin> -->
+<!-- <app-log-in></app-log-in> -->
+<!-- <app-get-enquiry></app-get-enquiry> -->

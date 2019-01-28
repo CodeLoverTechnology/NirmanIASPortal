@@ -1,9 +1,8 @@
 <div class="wrapper">
         <!-- Sidebar  -->
-        <nav id="sidebar">
+        <nav id="sidebar" >
             <div class="sidebar-header">
                 <h3>User</h3>
-                
             </div>
 
             <ul class="list-unstyled components">
@@ -19,12 +18,12 @@
                 </a>
                         <ul class="collapse list-unstyled" id="pageSubmenu">
                             <li>
-                                <a href="#">
-                                 <i class="fa fa-eye"></i>
+                                <a href="/" routerLink="./get-Enquiry">
+                                 <i class="fa fa-eye" ></i>
                                   View</a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="#" routerlink="./viewEnquiry">
                                 <i class="fa fa-pencil"></i>      
                               Edit</a>
                             </li>
@@ -238,77 +237,27 @@
                             </li>
                         </ul>
                 </li>
-
+               <!-- <li> <button class="dropdown-btn">Dropdown 
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                  </div>
+                </li> -->
                 <li>
                     <a href="#">
                         <i class="fa fa-sign-out"></i>
                       LogOut
                     </a>
                 </li>
-            
+          
             </ul>
           </nav>
 
         <!-- Page Content  -->
-       <div class="container" >
-           <div class="row">
-               <div class="col-lg-5 col-md-5 col-sm-10 col-xs-10  shadow-lg " id="page">
-                  <a  href="/">
-                        <i class="fa fa-eye fa-5x"></i>
-                        Enquiry
-                    </a>
-                </div>
-                <div class="col-lg-5 col-md-5 col-sm-10 col-xs-10  shadow-lg" id="page">
-                    <a href="/">
-                        <i class="fa fa-book fa-5x"></i>
-                        Course                     
-                    </a>
-                </div>
-           </div>
-                <div class="row">
-                <div class="col-lg-5 col-md-5 col-sm-10 col-xs-10  shadow-lg" id="page">
-                    <a href="/">
-                        <i class="fa fa-sliders fa-5x"></i>
-                        Banner
-                    </a>
-                  </div>
-                  <div class="col-lg-5 col-md-5 col-sm-10 col-xs-10  shadow-lg" id="page">
-                    <a href="/">
-                        <i class="fa fa-share-square fa-5x "></i>
-                        Social Media
-                  </a>
-                   </div>
-           </div>
-  
-           <div class="row">
-            <div class="col-lg-5 col-md-5 col-sm-10 col-xs-10  shadow-lg" id="page">
-                <a href="/">
-                    <i class="fa fa-sign-out fa-5x "></i>
-                    Branch
-                </a>
-             </div>
-             <div class="col-lg-5 col-md-5 col-sm-10 col-xs-10  shadow-lg" id="page">
-                <a href="/">
-                    <i class="fa fa-commenting-o fa-5x "></i>
-                    Chat
-                </a>
-             </div>
-            
-        </div>
-        <div class="row">
-            <div class="col-lg-5 col-md-5 col-sm-10 col-xs-10 shadow-lg" id="page">
-                <a href="/">
-                    <i class="fa fa-user fa-5x"></i>
-            StudentDetail
-                </a>
-             </div>
-             <div class="col-lg-5 col-md-5 col-sm-10 col-xs-10 shadow-lg" id="page">
-                <a href="/">
-                    <i class="fa fa-users fa-5x"></i>
-                    FacultyDetail
-                </a>
-             </div>
-            
-        </div>
-       </div>
+       <div class="container-fluid" >
+<app-adminlink></app-adminlink>
+ 
 </div>

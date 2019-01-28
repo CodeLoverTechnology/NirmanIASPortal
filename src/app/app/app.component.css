@@ -1,4 +1,37 @@
-/* You can add global styles to this file, and also import other style files */
+
+section:nth-of-type(1) {
+    background: #7B1FA2;
+}
+
+section:nth-of-type(2) {
+    background: #E1BEE7;
+}
+
+section:nth-of-type(3) {
+    background:#9C27B0;
+}
+
+section:nth-of-type(4) {
+    background: #E040FB;
+}
+
+section:nth-of-type(5) {
+    background: #757575;
+}
+
+section:nth-of-type(6) {
+    background: #BDBDBD;
+}
+
+section:nth-of-type(7) {
+    background: #512DA8;
+}
+
+section:nth-of-type(8){
+    background: #673AB7;
+}
+
+
 body {
     font-family: "Lato", sans-serif;
   }
@@ -10,7 +43,7 @@ body {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color:red;
+    background-color: red;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -36,7 +69,7 @@ body {
     font-size: 36px;
     margin-left: 50px;
   }
-/*   
+  
   #main {
     transition: margin-left .5s;
     padding: 16px;
@@ -46,13 +79,4 @@ body {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
-
-  @media screen and (max-width: 480px)  
-{
-    nav.navbar
-    {
-       margin: auto; /*or the margin that you need
-       position: fixed;
-       overflow: hidden;
-    }   
-} */
+  
