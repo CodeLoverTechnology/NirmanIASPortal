@@ -61,3 +61,15 @@ body {
        overflow: hidden;
     }   
 } */
+form.emp-form{
+  background-color: #dbdbdb;
+  border-radius: 4px;
+  padding: 10px;
+  }
+  div.validation-error{
+  color:red;
+  text-align: center
+  }
+  button:hover,a.btn:hover{
+  cursor: pointer;
+  }
