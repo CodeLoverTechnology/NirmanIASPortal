@@ -25,80 +25,39 @@
 
 <script type="text/javascript">
   $(document).ready(function(){
-  var MenuClick=false;
-  $("#SideMenu").click(function(){
-   if(MenuClick)
-    {
+  // var MenuClick=false;
+  // $("#SideMenu").click(function(){
+  //  if(MenuClick)
+  //   {
+  //     $("#mySidenav").attr("style","width:250px");
+  //     $("#main").attr("style","marginLeft:250px");
+  //     MenuClick=false;
+  //  }
+  //   else
+  //   {
+  //     $("#mySidenav").attr("style","width:0px");
+  //     $("#main").attr("style","marginLeft:0px");
+  //     MenuClick=true;
+  //   }
+  // });
+});
+
+function SideMenuShow(){
       $("#mySidenav").attr("style","width:250px");
       $("#main").attr("style","marginLeft:250px");
-      MenuClick=false;
    }
-    else
+    function SideMenuHide()
     {
       $("#mySidenav").attr("style","width:0px");
       $("#main").attr("style","marginLeft:0px");
-      MenuClick=true;
-    }
-  });
-});
-// function openNav1() {
-//   document.getElementById("mySidenav1").style.width = "20%";
-//   document.getElementById("main").style.marginLeft = "20%";
-//   document.getElementById("main").style.marginRight = "0";
-// //   document.getElementById("main").style.width = "100%";
-//   document.body.style.backgroundColor = "white";
-// }
-
-
-// function closeNav1() {
-//   document.getElementById("mySidenav1").style.width = "0";
-//   document.getElementById("main").style.marginLeft= "0";
-//   document.getElementById("main").styl.width = "100%";
-//   document.body.style.backgroundColor = "white";
-// }
-
-        // $('#sidebarCollapse').on('click', function () {
-        //     $('#sidebar, #content').toggleClass('active');
-        //     $('.collapse.in').toggleClass('in');
-        //     $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-        // });        
-   
-
-     
-//  (function () 
-//  {
-//     var po = document.createElement('script'); 
-//         po.type = 'text/javascript'; 
-//         po.async = true;
-//         po.src = 'https://apis.google.com/js/platform.js';
-//     var s = document.getElementsByTagName('script')[0]; 
-//         s.parentNode.insertBefore(po, s);
-// })();
-
-//       (function($) {
-//     "use strict";
-
-//     // manual carousel controls
-//     $('.next').click(function(){ $('.carousel').carousel('next');return false; });
-//     $('.prev').click(function(){ $('.carousel').carousel('prev');return false; });
+   }
+      function openForm() {
+        document.getElementById("myForm").style.display = "block";
+      }
     
-// })(jQuery);
-//       function openForm() {
-//         document.getElementById("myForm").style.display = "block";
-//       }
-    
-//    function closeForm() {
-//         document.getElementById("myForm").style.display = "none";
-//                       }
-//   function myFunction() {
-//             var x = document.getElementById("myLinks");
-//             if (x.style.display === "block") {
-//                 x.style.display = "none";
-//             } else {
-//                 x.style.display = "block";
-//             }
-//         }
-                     
+   function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+                      }
          function openNav() {
          document.getElementById("mySidenav1").style.width = "100%";
      }
