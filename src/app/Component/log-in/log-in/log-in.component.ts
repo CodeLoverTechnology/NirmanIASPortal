@@ -11,5 +11,14 @@ export class LogInComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }
+  let key = 'Item 1';
+  localStorage.setItem(key, 'Value');
+  let myItem = localStorage.getItem(key);
+  localStorage.setItem(key, 'New Value');
+// Create item:
+let myObj = { name: 'Skip', breed: 'Labrador' };
+localStorage.setItem(key, JSON.stringify(myObj));
+
+// Read item:
+let item = JSON.parse(localStorage.getItem(key));

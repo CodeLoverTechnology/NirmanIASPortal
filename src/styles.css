@@ -1,13 +1,75 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    font-family: "Lato", sans-serif;
+  }
+  
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color:rgb(247, 247, 247);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  #top{
+    margin-top:10%;
+  }
+  .sidenav a {
+    
+    padding: 8px 8px 8px 0px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #360101;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color:rgb(4, 18, 83);
+    /* background-color: rgb(83, 4, 4); */
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+/*   
+  #main {
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  @media screen and (max-width: 480px)  
+{
+    nav.navbar
+    {
+       margin: auto; /*or the margin that you need
+       position: fixed;
+       overflow: hidden;
+    }   
+} */
 form.emp-form{
-    background-color: #dbdbdb;
-    border-radius: 4px;
-    padding: 10px;
-}
-div.validation-error{
-    color:red;
-    text-align: center
-}
-button:hover,a.btn:hover{
-    cursor: pointer;
-}
+  background-color: #dbdbdb;
+  border-radius: 4px;
+  padding: 10px;
+  }
+  div.validation-error{
+  color:red;
+  text-align: center
+  }
+  button:hover,a.btn:hover{
+  cursor: pointer;
+  }

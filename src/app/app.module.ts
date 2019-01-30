@@ -17,6 +17,7 @@ import { ChatServicesService } from './Services/Chat/chat-services.service';
 import { LogInComponent } from './component/log-in/log-in/log-in.component';
 import { RegistrationComponent } from './component/registration/registration/registration.component';
 import { AdminComponent } from './component/admin/admin/admin.component';
+import { AdminlinkComponent } from './Component/admin/adminlink/adminlink.component';
 import { NIASHomeComponent } from './Component/niashome/niashome.component';
 import { GalleryNIASComponent } from './Component/gallery-nias/gallery-nias.component';
 import { VideoNIASComponent } from './Component/video-nias/video-nias.component';
@@ -46,6 +47,7 @@ import { UPSCPrelimsGSSyllabusComponent } from './Component/Courses/upsc-prelims
 import { CurrentAffairsComponent } from './Component/current-affairs/current-affairs.component';
 import { ClassNotesComponent } from './Component/class-notes/class-notes.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,6 +56,7 @@ import { ClassNotesComponent } from './Component/class-notes/class-notes.compone
     UpdateEnquiryComponent,
     DeleteEnquiryComponent,
     AboutUsComponent,
+    AdminlinkComponent,
     FooterComponent,
     LiveChatComponent,
     SideMenuComponent,

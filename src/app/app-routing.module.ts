@@ -20,11 +20,15 @@ import { CurrentAffairsComponent } from './Component/current-affairs/current-aff
 import { ClassNotesComponent } from './Component/class-notes/class-notes.component';
 
 import { InsertBannerComponent } from './component/Banner/insert-banner/insert-banner.component';
+import { AdminComponent } from './component/admin/admin/admin.component';
 const routes: Routes = [
   {path:"",component:NIASHomeComponent},
+  {path:"admin",component:AdminComponent},
+
   {path:"login",component:LogInComponent},
-  {path:"Enquiry",component:GetEnquiryComponent},
+  // {path:"Enquiry",component:GetEnquiryComponent},
   {path:"InsertEnquiry",component:InsertEnquiryComponent},
+  {path:"getEnquiry",component:GetEnquiryComponent},
   {path:"registration",component: RegistrationComponent},
   {path:"Aboutus",component:AboutUsComponent},
   {path:"Gallery",component:GalleryNIASComponent},
