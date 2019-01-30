@@ -18,6 +18,8 @@ import { UPSCGSMainsSyllabusComponent } from './Component/Courses/upsc-gs-mains-
 import { UPSCPrelimsGSSyllabusComponent } from './Component/Courses/upsc-prelims-gs-syllabus/upsc-prelims-gs-syllabus.component';
 import { CurrentAffairsComponent } from './Component/current-affairs/current-affairs.component';
 import { ClassNotesComponent } from './Component/class-notes/class-notes.component';
+
+import { InsertBannerComponent } from './component/Banner/insert-banner/insert-banner.component';
 const routes: Routes = [
   {path:"",component:NIASHomeComponent},
   {path:"login",component:LogInComponent},
@@ -37,6 +39,7 @@ const routes: Routes = [
   {path:"PrelimsGSSyllabus",component:UPSCPrelimsGSSyllabusComponent},
   {path:"CurrentAffairs",component:CurrentAffairsComponent},
   {path:"ClassNotes",component:ClassNotesComponent},
+  {path:"banner",component:InsertBannerComponent}
 
   // { path: '', redirectTo: '/', pathMatch:'full' }
   ];
