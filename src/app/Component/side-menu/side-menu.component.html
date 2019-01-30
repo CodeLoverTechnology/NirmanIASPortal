@@ -1,74 +1,57 @@
-<!-- <div class="navbar">
-    <a [routerLink]="['/']"><b>Home</b></a>
-    <a [routerLink]="['/Menu']"><b>Menu</b></a>
-    <a [routerLink]="['/niasinsert-enquiry']"><b>Enquiry</b></a>
-    <a [routerLink]="['/niasenquiry']"><b>Show Enquiry</b></a>
-    <a [routerLink]="['/Contact']"><b>Contact</b></a>
-    <a [routerLink]="['/Banner']"><b>Banner</b></a>
-    <button (click)="clickMe()"><b>Banner</b></button> 
-</div> -->
-
-<!-- <div id="mySidenav" class="sidenav"> 
-        
-        <nav id="sidebar">-->
-                <div class="row ">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="sidebar-header float-left" >
-               <img src="../assets/NirmanIAS_Logo.png" class="img-fluid img-thumbnail">
+<div class="row ">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <button class="fa fa-window-close p-2 float-right bg-danger text-white" onclick="SideMenuHide();" style="position: relative;float: right;"></button>
+                <div class="sidebar-header float-left">
+                        <img src="../assets/NirmanIAS_Logo.png" class="img-fluid img-thumbnail">
                 </div><br>
                 <ul class="list-unstyled ml-4" id="top">
-                  
-                    <li class="active shadow">
-                            <a [routerLink]="['/']" ><i class="fa fa-home" aria-hidden="true"></i> Home</a>
-                    </li>
-                            <li class="shadow">
-                        
-                            <a [routerLink]="['/Aboutus']"  ><i class="fa fa-lightbulb-o" aria-hidden="true"></i> About Us</a>               
-                    </li>
-                    <li class="shadow">
-                            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-book" aria-hidden="true"></i> Courses</a>
-                            <ul class="collapse list-unstyled" id="homeSubmenu">
-                                <li class="shadow">
-                                    <a [routerLink]="['/UPSC_Course']"  ><i class="fa fa-book" aria-hidden="true"></i>
-                                        UPSC Courses</a>
-                            </li>
-                            <li class="shadow">
-                                    <a [routerLink]="['/StatePCS']"  ><i class="fa fa-book" aria-hidden="true"></i>
-                                         State PCS</a>
-                            </li>
-                            <li class="shadow">
-                                    <a [routerLink]="['/TestSeries']"  ><i class="fa fa-book" aria-hidden="true"></i>
-                                        Test Series</a>
-                            </li>
-                        </ul>
-                    </li> 
-                    <li class="shadow">
-                            <a [routerLink]="['/']"  ><i class="fa fa-newspaper-o" aria-hidden="true"></i> Current Affairs</a>
-                    </li>
-                    <li class="shadow">
-                            <a [routerLink]="['/Books']"  ><i class="fa fa-align-center" aria-hidden="true"></i> Books</a>
-                    </li>
-                    <li class="shadow">
-                            <a [routerLink]="['/Gallery']"  ><i class="fa fa-picture-o" aria-hidden="true"></i> Gallery</a>
-                    </li>
-                    <li class="shadow">
-                            <a [routerLink]="['/Video']"  ><i class="fa fa-video-camera" aria-hidden="true"></i> Video</a>
-                    </li>
-                    <li class="shadow">
-                            <a [routerLink]="['/Contact']"  ><i class="fa fa-info-circle"  aria-hidden="true"></i> Contact</a>
-                    </li>
-                  </ul>
-            </div>   
-            </div>
-            <!-- </nav>
-            
-            
-      </div> -->
-      
-      <!-- <div id="main">
-        <h2>Sidenav Push Example</h2>
-        <p>Click on the element below to open the side navigation menu, and push this content to the right. Notice that we add a black see-through background-color to body when the sidenav is opened.</p>
-        <span style="font-size:30px;cursor:pointer" onclick="openNav()" onclick="closeNav()">&#9776; open</span>
-      </div> -->
 
+                        <li class="active shadow">
+                                <a [routerLink]="['/']"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                        </li>
+                        <li class="shadow">
 
+                                <a [routerLink]="['/Aboutus']"><i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                                        About Us</a>
+                        </li>
+                        <li class="shadow">
+                                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i
+                                                class="fa fa-book" aria-hidden="true"></i> Courses</a>
+                                <ul class="collapse list-unstyled" id="homeSubmenu">
+                                        <li class="shadow">
+                                                <a [routerLink]="['/UPSC_Course']"><i class="fa fa-book" aria-hidden="true"></i>
+                                                        UPSC Courses</a>
+                                        </li>
+                                        <li class="shadow">
+                                                <a [routerLink]="['/StatePCS']"><i class="fa fa-book" aria-hidden="true"></i>
+                                                        State PCS</a>
+                                        </li>
+                                        <li class="shadow">
+                                                <a [routerLink]="['/TestSeries']"><i class="fa fa-book" aria-hidden="true"></i>
+                                                        Test Series</a>
+                                        </li>
+                                </ul>
+                        </li>
+                        <li class="shadow">
+                                <a [routerLink]="['/CurrentAffairs']"><i class="fa fa-newspaper-o" aria-hidden="true"></i>
+                                        Current Affairs</a>
+                        </li>
+                        <li class="shadow">
+                                <a [routerLink]="['/Books']"><i class="fa fa-align-center" aria-hidden="true"></i>
+                                        Books</a>
+                        </li>
+                        <li class="shadow">
+                                <a [routerLink]="['/Gallery']"><i class="fa fa-picture-o" aria-hidden="true"></i>
+                                        Gallery</a>
+                        </li>
+                        <li class="shadow">
+                                <a [routerLink]="['/Video']"><i class="fa fa-video-camera" aria-hidden="true"></i>
+                                        Video</a>
+                        </li>
+                        <li class="shadow">
+                                <a [routerLink]="['/Contact']"><i class="fa fa-info-circle" aria-hidden="true"></i>
+                                        Contact</a>
+                        </li>
+                </ul>
+        </div>
+</div>
