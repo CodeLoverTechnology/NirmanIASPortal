@@ -9,7 +9,7 @@ templateUrl:'./insert-enquiry.component.html',
 styleUrls: ['./insert-enquiry.component.css']
 })
 export class InsertEnquiryComponent implements OnInit {
-privatevar_one:string;
+private var_one:string;
 enquiry= {} as EnquiryModel;
 
 constructor(private _service:EnquiryServiceService) { }

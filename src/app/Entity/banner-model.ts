@@ -1,9 +1,9 @@
 export class BannerModel {
     constructor  (
-        public BannerID   :string,
-        public BannerTitle    :string,
-        public BannerImagesPath:   string,
-        public SubTitle  :   string,
+        public BannerID:number,
+        public BannerTitle:string,
+        public BannerImagesPath:string,
+        public SubTitle:   string,
         public Remarks:string,
          public CreatedBy   :   string,
          public CreatedDate   : string,
