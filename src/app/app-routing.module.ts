@@ -21,6 +21,9 @@ import { ClassNotesComponent } from './Component/class-notes/class-notes.compone
 
 import { InsertBannerComponent } from './component/Banner/insert-banner/insert-banner.component';
 import { AdminComponent } from './component/admin/admin/admin.component';
+import { InsertBranchComponent } from './component/BranchMaster/insert-branch/insert-branch.component';
+import { GetBranchComponent } from './component/BranchMaster/get-branch/get-branch.component';
+import { GetBannerComponent } from './component/Banner/get-banner/get-banner.component';
 const routes: Routes = [
   {path:"",component:NIASHomeComponent},
   {path:"admin",component:AdminComponent},
@@ -43,7 +46,10 @@ const routes: Routes = [
   {path:"PrelimsGSSyllabus",component:UPSCPrelimsGSSyllabusComponent},
   {path:"CurrentAffairs",component:CurrentAffairsComponent},
   {path:"ClassNotes",component:ClassNotesComponent},
-  {path:"banner",component:InsertBannerComponent}
+  {path:"banner",component:InsertBannerComponent},
+  {path:"branch",component:InsertBranchComponent},
+  {path:"getbranch",component:GetBranchComponent},
+  {path:"getbanner",component:GetBannerComponent}
 
   // { path: '', redirectTo: '/', pathMatch:'full' }
   ];

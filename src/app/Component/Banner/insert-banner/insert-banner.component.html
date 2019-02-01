@@ -1,62 +1,37 @@
-<div class="container-fluid">
-  <form enctype="multipart/form-data" method="post" #BannerMaster="ngForm"(ngSubmit)="onSubmit()">
-    <div class="form-group">      <label>BannerID</label>
-      <input type="text" name="BannerID"
-      #BannerID="ngModel" class="form-control"  [(ngModel)]="BannerModel.BannerID"   >  
-           
- </div>
+<div class="container-fluid" style="max-width:300px;"> 
+  <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-5">
+          <img src="../assets/NirmanIAS_Logo.png" class="img-thumbnail">                       
+      </div>
+  </div>       
+  <form enctype="multipart/form-data"method="post"#BannerForm="ngForm"(ngSubmit)="onSubmit()">
+  <div class="form-group"><label>BannerID</label>
+  <input type="text" name="BannerID" #BannerID= "ngModel" required
+ class="form-control" [(ngModel)]="Banner.BannerID" >
+ <div class="validation-error" *ngIf="BannerID.invalid && BannerID.touched">BannerID is required.</div>
+  </div>
   <div class="form-group">
-      <label >BannerTitle </label>
-  <input type="text" name="BannerTitle"   #BannerTitle ="ngModel" class="form-control"  [(ngModel)]="BannerModel.BannerTitle "  >
-   
-   </div> 
+  <label>BannerTitle</label>
+  <input type="text" name="BannerTitle" #BannerTitle = "ngModel" required class="form-control"[(ngModel)]="Banner.BannerTitle ">
+  <div class="validation-error" *ngIf="BannerTitle.invalid && BannerTitle.touched">BannerTitle is required.</div>
+  </div>
   <div class="form-group">
-       <label>BannerImagesPath </label>
-      <input type="text" name="BannerImagesPath" #BannerImagesPath ="ngModel" class="form-control"
-      [(ngModel)]="BannerModel.BannerImagesPath " >
-           </div>
-       <div>
-       <label>SubTitle </label>
-       <textarea type="text" name="SubTitle "  #SubTitle ="ngModel" class="form-control" 
-        [(ngModel)]="BannerModel.SubTitle "></textarea>
-       
-       </div>
-       <div>
-        <label>Remarks</label>
-        <textarea type="text" name="Remarks"  #Remarks="ngModel" class="form-control" 
-         [(ngModel)]="BannerModel.Remarks"></textarea>
-       
-        </div>
-        <div>
-          <label>CreatedBy</label>
-          <textarea type="text" name="CreatedBy"  #CreatedBy="ngModel" class="form-control" 
-           [(ngModel)]="BannerModel.CreatedBy"></textarea>
-          
-          </div>
-          <div>
-            <label>CreatedDate</label>
-            <textarea type="text" name="CreatedDate"  #CreatedDate="ngModel" class="form-control" 
-             [(ngModel)]="BannerModel.CreatedDate"></textarea>
-            
-            </div>
-            <div>
-              <label>ModifiedBy</label>
-              <textarea type="text" name="ModifiedBy"  #ModifiedBy="ngModel" class="form-control" 
-               [(ngModel)]="BannerModel.ModifiedBy"></textarea>
-              
-              </div>
-              
-            <div>
-              <label>ModifiedDate</label>
-              <textarea type="text" name="ModifiedDate"  #ModifiedDate="ngModel" class="form-control" 
-               [(ngModel)]="BannerModel.ModifiedDate"></textarea>
-            
-              </div>
-              <div>
-                 <label>Active</label>
-                <textarea type="text" name="Active"  #Active ="ngModel" class="form-control" 
-                  [(ngModel)]="BannerModel.Active"></textarea>
-                    </div>
-          <button  type="submit"  class="btn btn-primary btn-lg m-3 ">Submit Now</button> 
-           </form>
+    <label>BannerImagesPath</label>
+    <input type="text" name="BannerImagesPath" #BannerImagesPath= "ngModel"  required class="form-control"[(ngModel)]="Banner.BannerImagesPath">
+    <div class="validation-error" *ngIf="BannerImagesPath.invalid && BannerImagesPath.touched">BranchAddress is required.</div>
+    </div>
+  <div class="form-group">
+  <label>SubTitle</label>
+  <input type="text" name="SubTitle"  class="form-control" required #SubTitle = "ngModel"
+  [(ngModel)]="Banner.SubTitle">
+  <div class="validation-error" *ngIf="SubTitle.invalid && SubTitle .touched">SubTitle is required.</div>
+  </div>
+  <div>
+  <label>Remarks</label>
+  <input type="text" name="Remarks" #Remarks = "ngModel"  required class="form-control"[(ngModel)]="Banner.Remarks">
+  <div class="validation-error" *ngIf="Remarks.invalid && Remarks .touched">Remarks is required.</div>
+  </div>
+ <button  [disabled]="!BannerForm.valid" type="submit"class="btn btn-primary btn-lg m-3 ">Submit Now</button>
+  
+  </form>
   </div>
