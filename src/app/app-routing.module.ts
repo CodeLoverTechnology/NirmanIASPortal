@@ -26,9 +26,6 @@ import { GetBranchComponent } from './component/BranchMaster/get-branch/get-bran
 import { GetBannerComponent } from './component/Banner/get-banner/get-banner.component';
 const routes: Routes = [
   {path:"",component:NIASHomeComponent},
-  {path:"admin",component:AdminComponent},
-
-  {path:"login",component:LogInComponent},
   // {path:"Enquiry",component:GetEnquiryComponent},
   {path:"InsertEnquiry",component:InsertEnquiryComponent},
   {path:"getEnquiry",component:GetEnquiryComponent},

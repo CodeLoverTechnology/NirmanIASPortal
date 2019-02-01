@@ -11,6 +11,7 @@ export class GetBranchComponent implements OnInit {
   public result:any;
   constructor(private _service:BranchMasterService) { }
 ngOnInit() {
+  alert("getBranchInfo ts File Fuction Called");
     this._service.getBranchInfo().subscribe(res=>this.result=res);
     (err:HttpErrorResponse)=>{
       if(err.error instanceof Error){
