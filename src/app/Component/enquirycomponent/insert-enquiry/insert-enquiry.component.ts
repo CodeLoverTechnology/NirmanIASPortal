@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EnquiryModel } from 'src/app/Entity/EnquiryModel';
 import { EnquiryServiceService } from 'src/app/Services/EnquiryServices/enquiry-service.service';
-import { HttpErrorResponse } from '@Angular/common/http';
+import { HttpClientModule } from '@Angular/common/http';
 
 @Component({
 selector:'app-insert-enquiry',
@@ -23,9 +23,9 @@ closeNav();
 alert('Dear Student Your Enquiry has Submited to NIRMAN IAS. We Well get back to you soon!!!...');
 this.enquiry;
 } ,
-(err:HttpErrorResponse)=>{
-if(err.error instanceof Error){
-alert("Server Side Error....!");
+(err:HttpClientModule)=>{
+if(err instanceof Error){
+alert("Server Side Error....!" + err.message);
 }else{
 alert("Client Side Error !");
 }

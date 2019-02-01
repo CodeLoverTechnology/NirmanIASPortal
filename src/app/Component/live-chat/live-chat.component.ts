@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ChatModel } from 'src/app/Entity/ChatModel';
 import { ChatServicesService } from 'src/app/Services/Chat/chat-services.service';
-import { HttpErrorResponse } from '@Angular/common/http';
+import { HttpClientModule } from '@Angular/common/http';
 
 
 @Component({
@@ -16,9 +16,9 @@ export class LiveChatComponent implements OnInit{
 constructor(private _service:ChatServicesService) { }
 ngOnInit(){ 
   this._service.getchatInfo().subscribe(res=>this.var_one=res);
-  (err:HttpErrorResponse)=>{
-    if(err.error instanceof Error){
-      console.log("Server Side Error");
+  (err:HttpClientModule)=>{
+    if(err instanceof Error){
+      console.log("Server Side Error"+ err.message);
     }else{
       console.log("Client Side Error  !");
     }
@@ -29,9 +29,9 @@ onSubmit()
   
 this._service.postchat(this.ChatModel).subscribe(
   result => console.log('Success !!!.',result),
-    (err:HttpErrorResponse)=>{
-   if(err.error instanceof Error){
-          console.log("Server Side Error....!");
+    (err:HttpClientModule)=>{
+   if(err instanceof Error){
+          console.log("Server Side Error....!"+err.message);
         }else{
           console.log("Client Side Error   !");
         }

@@ -4,32 +4,28 @@
             <img src="../assets/NirmanIAS_Logo.png" class="img-thumbnail">                       
         </div>
     </div>       
-    <form enctype="multipart/form-data"method="post"#EnquiryForm="ngForm"(ngSubmit)="onSubmit()">
+    <form enctype="multipart/form-data" method="post" #EnquiryForm="ngForm" (ngSubmit)="onSubmit()">
     <div class="form-group"><label>Name</label>
-    <input type="text"name="name"
-    #name="ngModel"class="form-control"[(ngModel)]="enquiry.name"placeholder="Enter Your Name"required>
-    <div class="validation-error"*ngIf="name.invalid && name.touched">This field is required.</div>
+    <input type="text" name="name" #name="ngModel" class="form-control" [(ngModel)]="enquiry.name" placeholder="Enter Your Name" required>
+    <div class="validation-error" *ngIf="name.invalid && name.touched">This field is required.</div>
     </div>
     <div class="form-group">
     <label>EmailID</label>
-    <input type="text" name="emailID" required #emailID ="ngModel"class="form-control"[(ngModel)]="enquiry.emailID"placeholder="EmailID">
+    <input type="text" name="emailID" required #emailID ="ngModel" class="form-control" [(ngModel)]="enquiry.emailID" placeholder="EmailID">
      
-    <div class="validation-error"*ngIf="emailID.invalid && emailID.touched">Email is invalid.</div>
+    <div class="validation-error" *ngIf="emailID.invalid && emailID.touched">Email is invalid.</div>
     </div>
     <div class="form-group">
     <label>ContactNo</label>
-    <input type="text"name="contactNo" minlength=10 maxlength=10 #contactNo = "ngModel" class="form-control"
-    [(ngModel)]="enquiry.contactNo"placeholder="Enter Mobile Number"required>
+    <input type="text" name="contactNo" minlength=10 maxlength=10 #contactNo = "ngModel" class="form-control" [(ngModel)]="enquiry.contactNo" placeholder="Enter Mobile Number" required>
     <div class="validation-error" *ngIf="contactNo.invalid && contactNo.touched">Mobile number required.</div>
     </div>
     <div>
     <label>Enquiry Message</label>
-    <textarea type="text"name="enquiryMessage"minlength="10"maxlength="250"#enquiryMessage ="ngModel"class="form-control"required
-    placeholder="Enquiry Message"[(ngModel)]="enquiry.enquiryMessage"></textarea>
-    <div class="validation-error"*ngIf="enquiryMessage.invalid && contactNo.touched">Enquiry Message is required.</div>
-     
+    <textarea type="text" name="enquiryMessage" minlength="10" maxlength="250" #enquiryMessage ="ngModel" class="form-control" required placeholder="Enquiry Message" [(ngModel)]="enquiry.enquiryMessage"></textarea>
+    <div class="validation-error" *ngIf="enquiryMessage.invalid && contactNo.touched">Enquiry Message is required.</div>     
     </div>
-    <button [disabled]="!EnquiryForm.valid"type="submit"class="btn btn-primary btn-lg m-3 ">Submit Now</button>
+    <button [disabled]="!EnquiryForm.valid" type="submit" class="btn btn-primary btn-lg m-3 ">Submit Now</button>
     <!-- </form> -->
     </form>
     </div>

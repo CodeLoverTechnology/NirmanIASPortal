@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@Angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -51,6 +52,7 @@ import { ClassNotesComponent } from './Component/class-notes/class-notes.compone
 @NgModule({
   declarations: [
     AppComponent,
+    // HttpClientModule,
     InsertEnquiryComponent,
     GetEnquiryComponent,
     UpdateEnquiryComponent,
