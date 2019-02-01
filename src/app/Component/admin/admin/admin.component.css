@@ -58,6 +58,7 @@ span {
     background: rgb(134, 10, 16);
     color: #fff;
     transition: all 0.3s;
+   
 }
 
 #sidebar.active {

@@ -46,8 +46,7 @@ import { UPSCGSMainsSyllabusComponent } from './Component/Courses/upsc-gs-mains-
 import { UPSCPrelimsGSSyllabusComponent } from './Component/Courses/upsc-prelims-gs-syllabus/upsc-prelims-gs-syllabus.component';
 import { CurrentAffairsComponent } from './Component/current-affairs/current-affairs.component';
 import { ClassNotesComponent } from './Component/class-notes/class-notes.component';
-
-
+import { AuthService } from './Services/auth.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -100,7 +99,7 @@ import { ClassNotesComponent } from './Component/class-notes/class-notes.compone
     AppRoutingModule,
     ReactiveFormsModule    
   ],
-   providers: [EnquiryServiceService,ChatServicesService],
+   providers: [EnquiryServiceService,ChatServicesService,AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

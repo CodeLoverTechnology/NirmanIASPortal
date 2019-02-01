@@ -21,10 +21,12 @@ import { ClassNotesComponent } from './Component/class-notes/class-notes.compone
 
 import { InsertBannerComponent } from './component/Banner/insert-banner/insert-banner.component';
 import { AdminComponent } from './component/admin/admin/admin.component';
+import { AdminlinkComponent } from './Component/admin/adminlink/adminlink.component';
+
 const routes: Routes = [
   {path:"",component:NIASHomeComponent},
   {path:"admin",component:AdminComponent},
-
+  {path:"adminlink",component:AdminlinkComponent},
   {path:"login",component:LogInComponent},
   // {path:"Enquiry",component:GetEnquiryComponent},
   {path:"InsertEnquiry",component:InsertEnquiryComponent},
