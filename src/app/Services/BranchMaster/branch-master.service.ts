@@ -15,6 +15,7 @@ export class BranchMasterService {
   
   
   public getBranchInfo():any{
+    alert("getBranchInfo Called");
     return this._http.get(this.BaseURL+"api/BranchMaster/BranchMasterList");
   }
 
