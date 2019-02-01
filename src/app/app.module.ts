@@ -47,6 +47,10 @@ import { UPSCGSMainsSyllabusComponent } from './Component/Courses/upsc-gs-mains-
 import { UPSCPrelimsGSSyllabusComponent } from './Component/Courses/upsc-prelims-gs-syllabus/upsc-prelims-gs-syllabus.component';
 import { CurrentAffairsComponent } from './Component/current-affairs/current-affairs.component';
 import { ClassNotesComponent } from './Component/class-notes/class-notes.component';
+import { BookContentPOLITYComponent } from './component/Books/book-content-polity/book-content-polity.component';
+import { BookContentEthicsComponent } from './component/Books/book-content-ethics/book-content-ethics.component';
+import { BookContentEnvironmentComponent } from './component/Books/book-content-environment/book-content-environment.component';
+import { BookContentEconomyComponent } from './component/Books/book-content-economy/book-content-economy.component';
 
 
 @NgModule({
@@ -93,7 +97,11 @@ import { ClassNotesComponent } from './Component/class-notes/class-notes.compone
     TestSeriesComponent,
     StatePCSCoursesComponent,
     CurrentAffairsComponent,
-    ClassNotesComponent
+    ClassNotesComponent,
+    BookContentPOLITYComponent,
+    BookContentEthicsComponent,
+    BookContentEnvironmentComponent,
+    BookContentEconomyComponent
   ],
   imports: [
     BrowserModule,
