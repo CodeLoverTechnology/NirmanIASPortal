@@ -8,7 +8,7 @@ import { BranchMaster } from 'src/app/Entity/branch-master';
 export class BranchMasterService {
 
  
-  BaseURL: string = "http://nias.codelovertechnology.com/api/";
+  BaseURL: string ="http://nias.codelovertechnology.com/api/";
  
   
   constructor(private _http:HttpClient){}

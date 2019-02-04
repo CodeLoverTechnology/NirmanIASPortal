@@ -51,6 +51,11 @@ import { BookContentPOLITYComponent } from './component/Books/book-content-polit
 import { BookContentEthicsComponent } from './component/Books/book-content-ethics/book-content-ethics.component';
 import { BookContentEnvironmentComponent } from './component/Books/book-content-environment/book-content-environment.component';
 import { BookContentEconomyComponent } from './component/Books/book-content-economy/book-content-economy.component';
+import { BranchMasterService } from './Services/BranchMaster/branch-master.service';
+import { CategoryMasterService } from './Services/CategoryMaster/category-master.service';
+import { CourseMasterService } from './Services/CourseMaster/course-master.service';
+import { BannerMasterService } from './Services/Banner/banner-master.service';
+import { MasterInfoServiceService } from './Services/MasterInfo/master-info-service.service';
 
 
 @NgModule({
@@ -110,7 +115,7 @@ import { BookContentEconomyComponent } from './component/Books/book-content-econ
     AppRoutingModule,
     ReactiveFormsModule    
   ],
-   providers: [EnquiryServiceService,ChatServicesService],
+   providers: [EnquiryServiceService,ChatServicesService,BranchMasterService,CategoryMasterService,CourseMasterService,BannerMasterService,MasterInfoServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
