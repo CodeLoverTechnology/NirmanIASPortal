@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { BannerMasterService } from 'src/app/Services/banner-master.service';
-import { HttpClientModule } from '@Angular/common/http';
+import { BannerMasterService } from 'src/app/Services/Banner/banner-master.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-get-banner',
