@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { EnquiryModel } from 'src/app/Entity/EnquiryModel';
-import { HttpClient,HttpClientModule, HttpRequest } from '@angular/common/http';
+import { HttpClient } from '@Angular/common/http';
 
 @Injectable({
   providedIn: 'root'

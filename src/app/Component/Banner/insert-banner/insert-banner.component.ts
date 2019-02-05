@@ -9,22 +9,25 @@ import { HttpErrorResponse } from '@angular/common/http';
   styleUrls: ['./insert-banner.component.css']
 })
 export class InsertBannerComponent implements OnInit {
-  private var_one:string;
   Banner = {} as BannerModel;
 
   constructor(private _service:BannerMasterService) { }
   ngOnInit(){ }
   onSubmit()
   {
-    this._service.postBannerMaster(this.Banner).subscribe(
-    result => console.log('Success !!!.',result),
-      (err:HttpErrorResponse)=>{
-     if(err.error instanceof Error){
-            console.log("Server Side Error....!");
-          }else{
-            console.log("Client Side Error   !");
-          }
-        })
-      console.log(this.Banner);
-    }}
+  var Result = this._service.postBannerMaster(this.Banner).subscribe(
+            result =>{
+              this.Banner =result ? result : undefined ;
+              this.Banner;              
+              } ,
+    (err:HttpErrorResponse)=>{
+   if(err.error instanceof Error){
+    console.log("Server Side Error....!");
+        }else{
+          console.log("Client Side Error   !");
+        }
+      })
+  
+  }
 
+}

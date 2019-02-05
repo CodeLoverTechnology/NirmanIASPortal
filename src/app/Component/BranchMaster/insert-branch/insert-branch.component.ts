@@ -11,21 +11,25 @@ import { HttpErrorResponse } from '@Angular/common/http';
 export class InsertBranchComponent implements OnInit {
 
   
-  Branch ={} as BranchMaster;
+  BranchMaster ={} as BranchMaster;
 
   constructor(private _service:BranchMasterService) { }
   ngOnInit(){ }
   onSubmit()
   {
-    
-  this._service.postBranchMaster(this.Branch).subscribe(
-    result => console.log('Success !!!.',result),
-      (err:HttpErrorResponse)=>{
-     if(err.error instanceof Error){
-            console.log("Server Side Error....!");
-          }else{
-            console.log("Client Side Error   !");
-          }
-        })
-      console.log(this.Branch);
-    }}
+  var Result = this._service.postBranchMaster(this.BranchMaster).subscribe(
+            result =>{
+              this.BranchMaster =result ? result : undefined ;
+              this.BranchMaster;              
+              } ,
+    (err:HttpErrorResponse)=>{
+   if(err.error instanceof Error){
+    console.log("Server Side Error....!");
+        }else{
+          console.log("Client Side Error   !");
+        }
+      })
+  
+  }
+
+}

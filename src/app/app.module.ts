@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
-
+import { HttpClientModule } from '@Angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -47,21 +46,14 @@ import { UPSCGSMainsSyllabusComponent } from './Component/Courses/upsc-gs-mains-
 import { UPSCPrelimsGSSyllabusComponent } from './Component/Courses/upsc-prelims-gs-syllabus/upsc-prelims-gs-syllabus.component';
 import { CurrentAffairsComponent } from './Component/current-affairs/current-affairs.component';
 import { ClassNotesComponent } from './Component/class-notes/class-notes.component';
-import { BookContentPOLITYComponent } from './component/Books/book-content-polity/book-content-polity.component';
-import { BookContentEthicsComponent } from './component/Books/book-content-ethics/book-content-ethics.component';
-import { BookContentEnvironmentComponent } from './component/Books/book-content-environment/book-content-environment.component';
-import { BookContentEconomyComponent } from './component/Books/book-content-economy/book-content-economy.component';
-import { BranchMasterService } from './Services/BranchMaster/branch-master.service';
-import { CategoryMasterService } from './Services/CategoryMaster/category-master.service';
-import { CourseMasterService } from './Services/CourseMaster/course-master.service';
-import { BannerMasterService } from './Services/Banner/banner-master.service';
-import { MasterInfoServiceService } from './Services/MasterInfo/master-info-service.service';
-
-
+import { AuthService } from './Services/auth.service';
+import { BookContentPOLITYComponent } from './Component/Books/book-content-polity/book-content-polity.component';
+import { BookContentEthicsComponent } from './Component/Books/book-content-ethics/book-content-ethics.component';
+import { BookContentEnvironmentComponent } from './Component/Books/book-content-environment/book-content-environment.component';
+import { BookContentEconomyComponent } from './Component/Books/book-content-economy/book-content-economy.component';
 @NgModule({
   declarations: [
     AppComponent,
-    // HttpClientModule,
     InsertEnquiryComponent,
     GetEnquiryComponent,
     UpdateEnquiryComponent,
@@ -115,7 +107,7 @@ import { MasterInfoServiceService } from './Services/MasterInfo/master-info-serv
     AppRoutingModule,
     ReactiveFormsModule    
   ],
-   providers: [EnquiryServiceService,ChatServicesService,BranchMasterService,CategoryMasterService,CourseMasterService,BannerMasterService,MasterInfoServiceService],
+   providers: [EnquiryServiceService,ChatServicesService,AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

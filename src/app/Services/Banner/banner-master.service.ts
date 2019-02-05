@@ -8,17 +8,18 @@ import { BannerModel } from 'src/app/Entity/banner-model';
 })
 export class BannerMasterService {
  
-  BaseURL: string = "http://nias.codelovertechnology.com/api/";
+  BaseURL: string = "http:// NIAS.codelovertechnology.com";
 
+  
   constructor(private _http:HttpClient){}
   
   
   public getBannerInfo():any{
-    return this._http.get(this.BaseURL+"Banner/BannerList");
+    return this._http.get(this.BaseURL+"api/Banner/BannerList");
   }
 
   public postBannerMaster(Banner : BannerModel){
-    return this._http.post<any>(this.BaseURL+"Banner/CreateBanner",Banner);
+    return this._http.post<any>(this.BaseURL+"api/Banner/CreateBanner",Banner);
   }
 }
 

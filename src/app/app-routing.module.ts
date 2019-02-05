@@ -21,15 +21,13 @@ import { ClassNotesComponent } from './Component/class-notes/class-notes.compone
 
 import { InsertBannerComponent } from './component/Banner/insert-banner/insert-banner.component';
 import { AdminComponent } from './component/admin/admin/admin.component';
-import { InsertBranchComponent } from './component/BranchMaster/insert-branch/insert-branch.component';
-import { GetBranchComponent } from './component/BranchMaster/get-branch/get-branch.component';
-import { GetBannerComponent } from './component/Banner/get-banner/get-banner.component';
-import { BookContentEthicsComponent } from './component/Books/book-content-ethics/book-content-ethics.component';
-import { BookContentEnvironmentComponent } from './component/Books/book-content-environment/book-content-environment.component';
-import { BookContentPOLITYComponent } from './component/Books/book-content-polity/book-content-polity.component';
-import { BookContentEconomyComponent } from './component/Books/book-content-economy/book-content-economy.component';
+import { AdminlinkComponent } from './Component/admin/adminlink/adminlink.component';
+
 const routes: Routes = [
   {path:"",component:NIASHomeComponent},
+  {path:"admin",component:AdminComponent},
+  {path:"adminlink",component:AdminlinkComponent},
+  {path:"login",component:LogInComponent},
   // {path:"Enquiry",component:GetEnquiryComponent},
   {path:"InsertEnquiry",component:InsertEnquiryComponent},
   {path:"getEnquiry",component:GetEnquiryComponent},
@@ -48,14 +46,11 @@ const routes: Routes = [
   {path:"CurrentAffairs",component:CurrentAffairsComponent},
   {path:"ClassNotes",component:ClassNotesComponent},
   {path:"banner",component:InsertBannerComponent},
-  {path:"branch",component:InsertBranchComponent},
-  {path:"getbranch",component:GetBranchComponent},
-  {path:"getbanner",component:GetBannerComponent},
-  {path:"EthicsBook",component:BookContentEthicsComponent },
-  {path : "EnvironmentBook", component:BookContentEnvironmentComponent},
-  {path : "POLITYBook", component:BookContentPOLITYComponent},
-  {path : "Economics", component:BookContentEconomyComponent},
-
+ // {path : "BranchList",component:GetBranchComponent},
+  //{path : "InsertBranch",component:InsertBranchComponent},
+  {path:"admin",component:AdminComponent},
+  {path:"login",component:LogInComponent},
+  
   // { path: '', redirectTo: '/', pathMatch:'full' }
   ];
 

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EnquiryModel } from 'src/app/Entity/EnquiryModel';
 import { EnquiryServiceService } from 'src/app/Services/EnquiryServices/enquiry-service.service';
-import { HttpClientModule } from '@Angular/common/http';
+import { HttpErrorResponse } from '@Angular/common/http';
 
 @Component({
 selector:'app-insert-enquiry',
@@ -9,7 +9,7 @@ templateUrl:'./insert-enquiry.component.html',
 styleUrls: ['./insert-enquiry.component.css']
 })
 export class InsertEnquiryComponent implements OnInit {
-private var_one:string;
+privatevar_one:string;
 enquiry= {} as EnquiryModel;
 
 constructor(private _service:EnquiryServiceService) { }
@@ -23,9 +23,9 @@ closeNav();
 alert('Dear Student Your Enquiry has Submited to NIRMAN IAS. We Well get back to you soon!!!...');
 this.enquiry;
 } ,
-(err:HttpClientModule)=>{
-if(err instanceof Error){
-alert("Server Side Error....!" + err.message);
+(err:HttpErrorResponse)=>{
+if(err.error instanceof Error){
+alert("Server Side Error....!");
 }else{
 alert("Client Side Error !");
 }

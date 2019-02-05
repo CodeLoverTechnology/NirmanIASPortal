@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BannerMasterService } from 'src/app/Services/Banner/banner-master.service';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpErrorResponse } from '@Angular/common/http';
 
 @Component({
   selector: 'app-get-banner',
@@ -13,9 +13,9 @@ export class GetBannerComponent implements OnInit {
   constructor(private _service:BannerMasterService) { }
 ngOnInit() {
     this._service.getBannerInfo().subscribe(res=>this.result=res);
-    (err:HttpClientModule)=>{
-      if(err instanceof Error){
-        console.log("Server Side Error !" +err.message);
+    (err:HttpErrorResponse)=>{
+      if(err.error instanceof Error){
+        console.log("Server Side Error !");
   }else{
       console.log("Client Side Error   !");
   }

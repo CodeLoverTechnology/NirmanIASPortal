@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ChatModel } from 'src/app/Entity/ChatModel';
 import { ChatServicesService } from 'src/app/Services/Chat/chat-services.service';
-import { HttpClientModule } from '@Angular/common/http';
+import { HttpErrorResponse } from '@Angular/common/http';
 
 
 @Component({
@@ -25,25 +25,23 @@ IsRead:false
 
 constructor(private _service:ChatServicesService) { }
 ngOnInit(){ 
-  
-
-  // this._service.getchatInfo().subscribe(res=>this.var_one=res);
-  // (err:HttpClientModule)=>{
-  //   if(err instanceof Error){
-  //     console.log("Server Side Error"+ err.message);
-  //   }else{
-  //     console.log("Client Side Error  !");
-  //   }
-  // }
+  this._service.getchatInfo().subscribe(res=>this.var_one=res);
+  (err:HttpErrorResponse)=>{
+    if(err.error instanceof Error){
+      console.log("Server Side Error");
+    }else{
+      console.log("Client Side Error  !");
+    }
+  }
 }
 onSubmit()
 {
   var Result :any;
   Result = this._service.postchat(this.ChatModel).subscribe(
   result => console.log('Success !!!.',result),
-    (err:HttpClientModule)=>{
-   if(err instanceof Error){
-          console.log("Server Side Error....!"+err.message);
+    (err:HttpErrorResponse)=>{
+   if(err.error instanceof Error){
+          console.log("Server Side Error....!");
         }else{
           console.log("Client Side Error   !" + err);
         }
