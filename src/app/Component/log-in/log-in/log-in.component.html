@@ -5,7 +5,13 @@
           <h1>Log In</h1>
       </div>
      <div class="card-body ">
-       <form class="form-horizontal">
+       
+            <!-- Username<input type="text" name="userid"/>
+            Password<input type="password" name="pswrd"/>
+            <input type="button" onclick="check(this.form)" value="Login"/>
+            <input type="reset" value="Cancel"/>
+        </form> -->
+       <form class="form-horizontal" name="login">
           <div class="form-group">
               <label for="fb"><B></B></label>
               <div class="input-group">
@@ -24,15 +30,16 @@
           </div>
      <div class="form-group">
             <label class="control-label" for="login"></label>
-            <input class="form-control" type="text"  id="login" placeholder="First Name" required>
+            <input class="form-control" type="text"  id="login" placeholder="First Name" required name="userid">
         </div>
        <div class="form-group">
           <label class="control-label"  for="user"></label>
-          <input class="form-control" class="form-control" type="password"  id="user" placeholder="Password" required>
+          <input class="form-control" class="form-control" type="password"  id="user" placeholder="Password"
+           required name="pswrd"/>
        </div> 
        <div class="form-group">
           <label class="control-label" for="login"></label>
-          <button class="btn btn-dark form-control" id="login" type="submit" routerLink="../adminlink"> Log in</button>  
+          <button class="btn btn-dark form-control" id="login" type="submit" onclick="check(this.form)"> Log in</button>  
           </div> 
          </form>
      </div>

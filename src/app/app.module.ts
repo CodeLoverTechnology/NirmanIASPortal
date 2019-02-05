@@ -51,6 +51,8 @@ import { BookContentPOLITYComponent } from './Component/Books/book-content-polit
 import { BookContentEthicsComponent } from './Component/Books/book-content-ethics/book-content-ethics.component';
 import { BookContentEnvironmentComponent } from './Component/Books/book-content-environment/book-content-environment.component';
 import { BookContentEconomyComponent } from './Component/Books/book-content-economy/book-content-economy.component';
+import { Home1Component } from './component/niashome/home1/home1.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -98,7 +100,8 @@ import { BookContentEconomyComponent } from './Component/Books/book-content-econ
     BookContentPOLITYComponent,
     BookContentEthicsComponent,
     BookContentEnvironmentComponent,
-    BookContentEconomyComponent
+    BookContentEconomyComponent,
+    Home1Component
   ],
   imports: [
     BrowserModule,

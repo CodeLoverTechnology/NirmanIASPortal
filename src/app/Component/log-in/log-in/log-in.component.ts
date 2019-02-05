@@ -10,6 +10,7 @@ export class LogInComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
 }
   let key = 'Item 1';
