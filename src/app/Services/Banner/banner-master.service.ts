@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@Angular/common/http';
-import { BannerModel } from '../Entity/banner-model';
+import { HttpClient } from '@angular/common/http';
+import { BannerModel } from 'src/app/Entity/banner-model';
+// import { BannerModel } from '../../Entity/banner-model';
 
 @Injectable({
   providedIn: 'root'

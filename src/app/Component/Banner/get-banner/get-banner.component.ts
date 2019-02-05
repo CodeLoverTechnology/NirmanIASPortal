@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BannerMasterService } from 'src/app/Services/banner-master.service';
+import { BannerMasterService } from 'src/app/Services/Banner/banner-master.service';
 import { HttpErrorResponse } from '@Angular/common/http';
 
 @Component({

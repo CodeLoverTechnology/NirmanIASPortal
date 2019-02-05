@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@Angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import {MasterInfoModel} from "../../Entity/master-info-model";
 
 @Injectable({

@@ -47,6 +47,10 @@ import { UPSCPrelimsGSSyllabusComponent } from './Component/Courses/upsc-prelims
 import { CurrentAffairsComponent } from './Component/current-affairs/current-affairs.component';
 import { ClassNotesComponent } from './Component/class-notes/class-notes.component';
 import { AuthService } from './Services/auth.service';
+import { BookContentPOLITYComponent } from './Component/Books/book-content-polity/book-content-polity.component';
+import { BookContentEthicsComponent } from './Component/Books/book-content-ethics/book-content-ethics.component';
+import { BookContentEnvironmentComponent } from './Component/Books/book-content-environment/book-content-environment.component';
+import { BookContentEconomyComponent } from './Component/Books/book-content-economy/book-content-economy.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -90,7 +94,11 @@ import { AuthService } from './Services/auth.service';
     TestSeriesComponent,
     StatePCSCoursesComponent,
     CurrentAffairsComponent,
-    ClassNotesComponent
+    ClassNotesComponent,
+    BookContentPOLITYComponent,
+    BookContentEthicsComponent,
+    BookContentEnvironmentComponent,
+    BookContentEconomyComponent
   ],
   imports: [
     BrowserModule,

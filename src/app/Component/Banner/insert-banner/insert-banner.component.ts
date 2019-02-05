@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BannerModel } from 'src/app/Entity/banner-model';
-import { BannerMasterService } from 'src/app/Services/banner-master.service';
-import { HttpErrorResponse } from '@Angular/common/http';
+import { BannerMasterService } from 'src/app/Services/Banner/banner-master.service';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-insert-banner',
