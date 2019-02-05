@@ -46,20 +46,21 @@ export class LiveChatComponent implements OnInit {
       var ChatList = null;
       var UserChatList = res.filter(chat => chat.userIP === this.chatModel.UserIP);
       UserChatList.forEach(function (value) {
+        var LineSpaceCode ="\r\n";
         if (ChatList === null) {
           if (value.replyMessage === null) {
-            ChatList = " \r\n User Message : " + value.chatMessage + "\r\n";
+            ChatList = "User Message : " + value.chatMessage + LineSpaceCode;
           }
           else {
-            ChatList = "Admin : " + value.replyMessage + " \r\n User Message : " + value.chatMessage + "\r\n";
+            ChatList = "Admin : " + value.replyMessage + LineSpaceCode+" User Message : " + value.chatMessage +LineSpaceCode ;
           }
         }
         else {
           if (value.replyMessage === null) {
-            ChatList += " \r\n User Message : " + value.chatMessage + "\r\n";
+            ChatList += LineSpaceCode+" User Message : " + value.chatMessage + LineSpaceCode;
           }
           else {
-            ChatList += "Admin : " + value.replyMessage + " \r\n User Message : " + value.chatMessage + "\r\n";
+            ChatList += "Admin : " + value.replyMessage + LineSpaceCode+" User Message : " + value.chatMessage + LineSpaceCode;
           }
         }
 
