@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ChatModel } from 'src/app/Entity/ChatModel';
 import { ChatServicesService } from 'src/app/Services/Chat/chat-services.service';
-import { HttpErrorResponse } from '@Angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @Component({
@@ -9,45 +9,73 @@ import { HttpErrorResponse } from '@Angular/common/http';
   templateUrl: './live-chat.component.html',
   styleUrls: ['./live-chat.component.css']
 })
-export class LiveChatComponent implements OnInit{
-  private var_one:string;
-  ChatModel = {
-    ChatMessage:"Hi",
-ReplyMessage:"NA",
-ReplyBy:"NA",
-CraatedBy:"Admin",
-CreatedDate:Date(),
-ModifiedBy:"Admin",
-ModifiedDate:Date(),
-Active:true,
-IsRead:false
+export class LiveChatComponent implements OnInit {
+  private UserChatList: any;
+  chatModel = {
+    UserIP: "192.168.1.1",
+    ReplyMessage: "Welcome To Nirman IAS Live Chat.",
+    IsRead: false
   } as ChatModel;
 
-constructor(private _service:ChatServicesService) { }
-ngOnInit(){ 
-  this._service.getchatInfo().subscribe(res=>this.var_one=res);
-  (err:HttpErrorResponse)=>{
-    if(err.error instanceof Error){
-      console.log("Server Side Error");
-    }else{
-      console.log("Client Side Error  !");
-    }
+  constructor(private _service: ChatServicesService) {
+
   }
-}
-onSubmit()
-{
-  var Result :any;
-  Result = this._service.postchat(this.ChatModel).subscribe(
-  result => console.log('Success !!!.',result),
-    (err:HttpErrorResponse)=>{
-   if(err.error instanceof Error){
+
+  ngOnInit() {
+
+  }
+  onSubmit() {
+    debugger;
+    this.chatModel.ReplyMessage = null;
+    var Result = this._service.postchat(this.chatModel).subscribe(
+      result => { //this.chatModel=result?result:undefined ;
+        this.GetChatListFromServer();
+        this.chatModel.ChatMessage=null;
+      },
+      (err: HttpClientModule) => {
+        if (err instanceof Error) {
           console.log("Server Side Error....!");
-        }else{
+        } else {
           console.log("Client Side Error   !" + err);
         }
       })
-    alert( "Service Response"+ Result);
-  }}
+  }
+
+  GetChatListFromServer() {
+    var ChatResult = this._service.getchatInfo().subscribe(res => {
+      var ChatList = null;
+      var UserChatList = res.filter(chat => chat.userIP === this.chatModel.UserIP);
+      UserChatList.forEach(function (value) {
+        if (ChatList === null) {
+          if (value.replyMessage === null) {
+            ChatList = " \r\n User Message : " + value.chatMessage + "\r\n";
+          }
+          else {
+            ChatList = "Admin : " + value.replyMessage + " \r\n User Message : " + value.chatMessage + "\r\n";
+          }
+        }
+        else {
+          if (value.replyMessage === null) {
+            ChatList += " \r\n User Message : " + value.chatMessage + "\r\n";
+          }
+          else {
+            ChatList += "Admin : " + value.replyMessage + " \r\n User Message : " + value.chatMessage + "\r\n";
+          }
+        }
+
+      });
+      this.chatModel.ReplyMessage = ChatList;
+    });
+    (err: HttpClientModule) => {
+      if (err instanceof Error) {
+        console.log("Server Side Error" + err.message);
+      } else {
+        console.log("Client Side Error  !");
+      }
+    }
+  }
+}
+
 
 
 

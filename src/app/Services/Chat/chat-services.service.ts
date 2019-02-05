@@ -6,27 +6,26 @@ import { ChatModel } from 'src/app/Entity/ChatModel';
   providedIn: 'root'
 })
 export class ChatServicesService {
-
-BaseURL: string = "http:// NIAS.codelovertechnology.com";
-
-// selectedEnquiry: {
-// UserChatID:number; 
-// ChatMessage :  string; 
-// UserIP :   string; 
-// ReplyMessage :   string;
-// ReplyBy :   string; };
-constructor(private _http:HttpClient){}
+  ipAddress: any;
+  BaseURL: string = "http://nias.codelovertechnology.com/api/";
+  constructor(private _http: HttpClient) { }
 
 
-public getchatInfo():any{
-  return this._http.get(this.BaseURL+"api/ChatMaster/ChatMasterList");
-}
+  public getchatInfo(): any {
+    return this._http.get(this.BaseURL + "ChatMaster/ChatMasterList");
+  }
 
-public postchat(ChatModel : ChatModel){
-  var ServiceResult: any;
-  alert("Chat Service Called : "+ ChatModel.ChatMessage + " IP : "+ChatModel.UserIP );
-  ServiceResult = this._http.post<any>(this.BaseURL+"api/ChatMaster/ChatMasterCreate",ChatModel);
-  alert("Service Responce From : "+ ServiceResult);
-  return ServiceResult;
-}
+  public postchat(chatModel: ChatModel) {
+    this.getIpAddress();
+    chatModel.UserIP = this.ipAddress.ip ;
+    return this._http.post<any>(this.BaseURL + "ChatMaster/ChatMasterCreate", chatModel);
+  }
+
+  public getIpAddress(): any {
+    this._http.get<{ ip: string }>('https://jsonip.com')
+      .subscribe(data => {
+        console.log('User Info : ', data);
+        this.ipAddress = data
+      })
+  }
 }
