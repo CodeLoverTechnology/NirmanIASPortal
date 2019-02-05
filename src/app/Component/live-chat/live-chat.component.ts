@@ -11,32 +11,44 @@ import { HttpClientModule } from '@Angular/common/http';
 })
 export class LiveChatComponent implements OnInit{
   private var_one:string;
-  ChatModel = {} as ChatModel;
+  ChatModel = {
+    ChatMessage:"Hi",
+ReplyMessage:"NA",
+ReplyBy:"NA",
+CraatedBy:"Admin",
+CreatedDate:Date(),
+ModifiedBy:"Admin",
+ModifiedDate:Date(),
+Active:true,
+IsRead:false
+  } as ChatModel;
 
 constructor(private _service:ChatServicesService) { }
 ngOnInit(){ 
-  this._service.getchatInfo().subscribe(res=>this.var_one=res);
-  (err:HttpClientModule)=>{
-    if(err instanceof Error){
-      console.log("Server Side Error"+ err.message);
-    }else{
-      console.log("Client Side Error  !");
-    }
-  }
+  
+
+  // this._service.getchatInfo().subscribe(res=>this.var_one=res);
+  // (err:HttpClientModule)=>{
+  //   if(err instanceof Error){
+  //     console.log("Server Side Error"+ err.message);
+  //   }else{
+  //     console.log("Client Side Error  !");
+  //   }
+  // }
 }
 onSubmit()
 {
-  
-this._service.postchat(this.ChatModel).subscribe(
+  var Result :any;
+  Result = this._service.postchat(this.ChatModel).subscribe(
   result => console.log('Success !!!.',result),
     (err:HttpClientModule)=>{
    if(err instanceof Error){
           console.log("Server Side Error....!"+err.message);
         }else{
-          console.log("Client Side Error   !");
+          console.log("Client Side Error   !" + err);
         }
       })
-    console.log(this.ChatModel);
+    alert( "Service Response"+ Result);
   }}
 
 

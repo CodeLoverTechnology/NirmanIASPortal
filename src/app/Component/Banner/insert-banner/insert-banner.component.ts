@@ -12,7 +12,6 @@ export class InsertBannerComponent implements OnInit {
   private var_one:string;
   Banner = {} as BannerModel;
 
-
   constructor(private _service:BannerMasterService) { }
   ngOnInit(){ }
   onSubmit()
