@@ -9,12 +9,12 @@ export class ChatServicesService {
 
 BaseURL: string = "http:// NIAS.codelovertechnology.com";
 
-selectedEnquiry: {
-UserChatID:number; 
-ChatMessage :  string; 
-UserIP :   string; 
-ReplyMessage :   string;
-ReplyBy :   string; };
+// selectedEnquiry: {
+// UserChatID:number; 
+// ChatMessage :  string; 
+// UserIP :   string; 
+// ReplyMessage :   string;
+// ReplyBy :   string; };
 constructor(private _http:HttpClient){}
 
 
@@ -23,5 +23,10 @@ public getchatInfo():any{
 }
 
 public postchat(ChatModel : ChatModel){
-  return this._http.post<any>(this.BaseURL+"api/ChatMaster/ChatMasterCreate",ChatModel);
-}}
+  var ServiceResult: any;
+  alert("Chat Service Called : "+ ChatModel.ChatMessage + " IP : "+ChatModel.UserIP );
+  ServiceResult = this._http.post<any>(this.BaseURL+"api/ChatMaster/ChatMasterCreate",ChatModel);
+  alert("Service Responce From : "+ ServiceResult);
+  return ServiceResult;
+}
+}
