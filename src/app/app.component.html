@@ -1,3 +1,4 @@
+<section>
 <div class="container-fluid">
 <div id="mySidenav" class="sidenav">
     <app-side-menu></app-side-menu>
@@ -55,12 +56,16 @@
         </form>
     </div>
 </nav>
-
+</section>
 <div id="main">
+    <section>
    <span id="SideMenu" style="font-size:30px;cursor:pointer;width: 40px;" 
    class="fixed-top text-white p-2 bg-primary" onclick="SideMenuShow();">&#9776;</span>
+</section>
     <router-outlet></router-outlet>
 </div>
+
+<section>
 <app-footer></app-footer>
 
 <!-- SocialIcon -->
@@ -92,3 +97,4 @@
                 </div>
         </div>
     <button type="button" class="MySidePopupBtn btn btn-primary" onclick="openNav()">Enquiry</button> 
+</section>
