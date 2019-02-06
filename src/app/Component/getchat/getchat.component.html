@@ -1,0 +1,37 @@
+<table class="table table-hover table-justified">
+  <thead>
+    <tr>
+    <th>UserChatID</th>
+      <th>ChatMessage</th>
+      <th>UserIP</th>
+      <th>ReplyMessage</th>
+      <th>ReplyBy</th>
+      <th>Remarks</th>
+      <th>IsRead</th>
+      <th>CraatedBy</th>
+      <th>CreatedDate </th>
+      <th>ModifiedBy</th>
+      <th>ModifiedDate</th>
+      <th>Active</th>
+    </tr>
+  </thead>
+  <tbody>
+        <tr *ngFor="let x of result">
+      <td>{{x.userChatID}}</td>
+        <td>{{x.chatMessage}}</td>
+        <td>{{x.userIP}}</td>
+        <td>{{x.replyMessage}}</td>
+        <td>{{x.replyBy}}</td>
+       <td>{{x.remarks}}</td>
+       <td>{{x.isRead}}</td> 
+       <td>{{x.craatedBy}}</td>
+       <td>{{x.createdDate}}</td> 
+       <td>{{x.modifiedBy}}</td>
+       <td>{{x.modifiedDate}}</td>
+       <td>{{x.active}}</td>    
+       </tr>
+       </tbody>
+       </table>
+       <a [routerLink]="['/putchat']"><b>Update</b></a>
+       <br><br>
+       <router-outlet></router-outlet>

@@ -27,6 +27,7 @@ import { BookContentEthicsComponent } from './component/Books/book-content-ethic
 import { BookContentEnvironmentComponent } from './component/Books/book-content-environment/book-content-environment.component';
 import { BookContentPOLITYComponent } from './component/Books/book-content-polity/book-content-polity.component';
 import { BookContentEconomyComponent } from './component/Books/book-content-economy/book-content-economy.component';
+import { GetchatComponent } from './Component/getchat/getchat.component';
 
 const routes: Routes = [
   {path:"",component:NIASHomeComponent},
@@ -61,6 +62,8 @@ const routes: Routes = [
   //{path : "InsertBranch",component:InsertBranchComponent},
   {path:"admin",component:AdminComponent},
   {path:"login",component:LogInComponent},
+  {path:"getchat",component:GetchatComponent}
+  
   
   // { path: '', redirectTo: '/', pathMatch:'full' }
   ];
