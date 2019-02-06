@@ -22,6 +22,7 @@ import { ClassNotesComponent } from './Component/class-notes/class-notes.compone
 import { InsertBannerComponent } from './component/Banner/insert-banner/insert-banner.component';
 import { AdminComponent } from './component/admin/admin/admin.component';
 import { AdminlinkComponent } from './Component/admin/adminlink/adminlink.component';
+import {GetchatComponent} from "./component/getchat/getchat.component";
 
 const routes: Routes = [
   {path:"",component:NIASHomeComponent},
@@ -50,6 +51,8 @@ const routes: Routes = [
   //{path : "InsertBranch",component:InsertBranchComponent},
   {path:"admin",component:AdminComponent},
   {path:"login",component:LogInComponent},
+  {path:"getchat",component:GetchatComponent}
+  
   
   // { path: '', redirectTo: '/', pathMatch:'full' }
   ];
