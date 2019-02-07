@@ -1,5 +1,7 @@
 <div class="wrapper">
+
         <!-- Sidebar  -->
+    
         <nav id="sidebar" >
             <div class="sidebar-header">
                 <h3>User</h3>
@@ -18,12 +20,12 @@
                 </a>
                         <ul class="collapse list-unstyled" id="pageSubmenu">
                             <li>
-                                <a  routerLink="./get-Enquiry">
+                                <a   [routerLink]="['admin/getEnquiry']">
                                  <i class="fa fa-eye" ></i>
                                   View</a>
                             </li>
                             <li>
-                                <a href="#" routerlink="./viewEnquiry">
+                                <a  [routerLink]="['admin/Gallery']" >
                                 <i class="fa fa-pencil"></i>      
                               Edit</a>
                             </li>
@@ -257,65 +259,8 @@
           </nav>
 
         <!-- Page Content  -->
-<div class="container-fluid">
-        <div class="row">
-                <div class="col-lg-5 col-md-5 col-sm-10 col-xs-10  shadow-lg " id="page">
-                   <a   routerLink="../getEnquiry">
-                         <i class="fa fa-eye fa-2x"></i>
-                         Enquiry
-                     </a>
-                 </div>
-                 <div class="col-lg-5 col-md-5 col-sm-10 col-xs-10  shadow-lg" id="page">
-                     <a >
-                         <i class="fa fa-book fa-2x"></i>
-                         Course                     
-                     </a>
-                 </div>
-              </div>
-                 <div class="row">
-                 <div class="col-lg-5 col-md-5 col-sm-10 col-xs-10  shadow-lg" id="page">
-                     <a >
-                         <i class="fa fa-sliders fa-2x"></i>
-                         Banner
-                     </a>
-                   </div>
-                   <div class="col-lg-5 col-md-5 col-sm-10 col-xs-10  shadow-lg" id="page">
-                     <a >
-                         <i class="fa fa-share-square fa-2x "></i>
-                         Social Media
-                   </a>
-                    </div>
-              </div>
-              
-              <div class="row">
-              <div class="col-lg-5 col-md-5 col-sm-10 col-xs-10  shadow-lg" id="page">
-                 <a href="/BranchList">
-                     <i class="fa fa-sign-out fa-2x "></i>
-                     Branch
-                 </a>
-              </div>
-              <div class="col-lg-5 col-md-5 col-sm-10 col-xs-10  shadow-lg" id="page">
-                 <a >
-                     <i class="fa fa-commenting-o fa-2x "></i>
-                     Chat
-                 </a>
-              </div>
-              
-              </div>
-              <div class="row">
-              <div class="col-lg-5 col-md-5 col-sm-10 col-xs-10 shadow-lg" id="page">
-                 <a >
-                     <i class="fa fa-user fa-2x"></i>
-              StudentDetail
-                 </a>
-              </div>
-              <div class="col-lg-5 col-md-5 col-sm-10 col-xs-10 shadow-lg" id="page">
-                 <a >
-                     <i class="fa fa-users fa-2x"></i>
-                     FacultyDetail
-                 </a>
-              </div>
-              
-              </div>
-              
-            </div>
+        <div class="container-fluid">
+    <router-outlet></router-outlet>
+  </div>    
+
+</div>
