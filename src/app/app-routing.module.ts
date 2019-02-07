@@ -1,4 +1,5 @@
 import { NgModule} from '@angular/core';
+
 import { Routes, RouterModule } from '@angular/router';
 import { GetEnquiryComponent } from './Component/enquirycomponent/get-enquiry/get-enquiry.component';
 import { InsertEnquiryComponent } from './Component/enquirycomponent/insert-enquiry/insert-enquiry.component';
@@ -23,11 +24,11 @@ import { ClassNotesComponent } from './Component/class-notes/class-notes.compone
 import { InsertBannerComponent } from './component/Banner/insert-banner/insert-banner.component';
 import { AdminComponent } from './component/admin/admin/admin.component';
 import { AdminlinkComponent } from './Component/admin/adminlink/adminlink.component';
-import { BookContentEthicsComponent } from './component/Books/book-content-ethics/book-content-ethics.component';
 import { BookContentEnvironmentComponent } from './component/Books/book-content-environment/book-content-environment.component';
 import { BookContentPOLITYComponent } from './component/Books/book-content-polity/book-content-polity.component';
 import { BookContentEconomyComponent } from './component/Books/book-content-economy/book-content-economy.component';
 import { GetchatComponent } from './Component/getchat/getchat.component';
+import { BookContentEthicsComponent } from './component/Books/book-content-ethics/book-content-ethics.component';
 
 const routes: Routes = [
   {path:"",component:NIASHomeComponent},

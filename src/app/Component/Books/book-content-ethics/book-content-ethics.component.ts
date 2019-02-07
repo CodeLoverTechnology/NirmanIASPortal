@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Componen, Component, OnInitt, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-book-content-ethics',
