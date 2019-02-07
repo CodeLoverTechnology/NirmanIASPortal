@@ -28,4 +28,10 @@ export class ChatServicesService {
         this.ipAddress = data
       })
   }
+   public putchatinfo(chatModel:ChatModel){
+     return this._http.put<any>(`this.BaseURL + "ChatMaster/ChatMasterUpdate"`,ChatModel);
+   }
+   public deletechat(chatModel:ChatModel){
+     return this._http.delete<any>(this.BaseURL + "ChatMaster/DeleteChatMaster",);
+   }
 }

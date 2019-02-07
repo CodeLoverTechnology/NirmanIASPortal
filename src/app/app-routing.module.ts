@@ -19,9 +19,15 @@ import { UPSCPrelimsGSSyllabusComponent } from './Component/Courses/upsc-prelims
 import { CurrentAffairsComponent } from './Component/current-affairs/current-affairs.component';
 import { ClassNotesComponent } from './Component/class-notes/class-notes.component';
 
+
 import { InsertBannerComponent } from './component/Banner/insert-banner/insert-banner.component';
 import { AdminComponent } from './component/admin/admin/admin.component';
 import { AdminlinkComponent } from './Component/admin/adminlink/adminlink.component';
+import { BookContentEthicsComponent } from './component/Books/book-content-ethics/book-content-ethics.component';
+import { BookContentEnvironmentComponent } from './component/Books/book-content-environment/book-content-environment.component';
+import { BookContentPOLITYComponent } from './component/Books/book-content-polity/book-content-polity.component';
+import { BookContentEconomyComponent } from './component/Books/book-content-economy/book-content-economy.component';
+import { GetchatComponent } from './Component/getchat/getchat.component';
 
 const routes: Routes = [
   {path:"",component:NIASHomeComponent},
@@ -46,10 +52,18 @@ const routes: Routes = [
   {path:"CurrentAffairs",component:CurrentAffairsComponent},
   {path:"ClassNotes",component:ClassNotesComponent},
   {path:"banner",component:InsertBannerComponent},
+  // {path:"getbanner",component:GetBannerComponentonent},
+  {path:"EthicsBook",component:BookContentEthicsComponent },
+  {path : "EnvironmentBook", component:BookContentEnvironmentComponent},
+  {path : "POLITYBook", component:BookContentPOLITYComponent},
+  {path : "Economics", component:BookContentEconomyComponent},
+
  // {path : "BranchList",component:GetBranchComponent},
   //{path : "InsertBranch",component:InsertBranchComponent},
   {path:"admin",component:AdminComponent},
   {path:"login",component:LogInComponent},
+  {path:"getchat",component:GetchatComponent}
+  
   
   // { path: '', redirectTo: '/', pathMatch:'full' }
   ];
