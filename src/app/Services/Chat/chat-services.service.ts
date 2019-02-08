@@ -29,9 +29,9 @@ export class ChatServicesService {
       })
   }
    public putchatinfo(chatModel:ChatModel){
-     return this._http.put<void>(this.BaseURL + "ChatMaster/ChatMasterUpdate", chatModel.UserChatID);
+     return this._http.put<any>(`this.BaseURL + "ChatMaster/ChatMasterUpdate"`,ChatModel);
    }
    public deletechat(chatModel:ChatModel){
-     return this._http.delete<any>(this.BaseURL + "ChatMaster/DeleteChatMaster"+ chatModel.UserChatID);
+     return this._http.delete<any>(this.BaseURL + "ChatMaster/DeleteChatMaster"+chatModel.UserChatID);
    }
 }

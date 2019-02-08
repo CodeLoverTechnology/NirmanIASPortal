@@ -30,6 +30,11 @@ $(document).ready(function(){
   $("section").hide("fast");
   });
 });
+$(document).ready(function(){
+  $("#hideBtnn").click(function(){
+  $("#hide").hide("fast");
+  });
+});
 
 // $(document).ready(function(){
 //  $(".showBtn").click(function(){
@@ -39,7 +44,13 @@ $(document).ready(function(){
 
 function check(form) {
   if(form.userid.value == "admin" && form.pswrd.value == "admin") {
-         window.open("http://localhost:4200/admin","_self") 
+         window.open("http://localhost:4200/admin","_self") &&
+       
+$(document).ready(function(){
+  $(".hideBtn").click(function(){
+  $("section").hide("fast");
+  });
+});
         }
       else {
           alert("Error Password or Username")
