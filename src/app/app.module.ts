@@ -55,6 +55,19 @@ import { BookContentEconomyComponent } from './Component/Books/book-content-econ
 import { Home1Component } from './component/niashome/home1/home1.component';
 import { GetchatComponent } from './component/getchat/getchat.component';
 import { PutchatComponent } from './component/putchat/putchat.component';
+import { BookContentSOCIALJUSTICEComponent } from './Component/books/book-content-social-justice/book-content-social-justice.component';
+import { BookContentScienceTechComponent } from './Component/books/book-content-science-tech/book-content-science-tech.component';
+import { BookContentPaperIIIComponent } from './Component/books/book-content-paper-iii/book-content-paper-iii.component';
+import { BookContentGeographyComponent } from './Component/books/book-content-geography/book-content-geography.component';
+import { BookContentGovernanceComponent } from './Component/books/book-content-governance/book-content-governance.component';
+import { BookContentHistoryComponent } from './Component/books/book-content-history/book-content-history.component';
+import { BookContentIndianSocietyComponent } from './Component/books/book-content-indian-society/book-content-indian-society.component';
+import { BookContentIndianSecurityComponent } from './Component/books/book-content-indian-security/book-content-indian-security.component';
+import { BookContentIndianIRComponent } from './Component/books/book-content-indian-ir/book-content-indian-ir.component';
+import { BookContentSociologyComponent } from './Component/Books/book-content-sociology/book-content-sociology.component';
+import { BookContentAgricultureEconomicComponent } from './Component/books/book-content-agriculture-economic/book-content-agriculture-economic.component';
+import { BookContentModernIndiaComponent } from './Component/books/book-content-modern-india/book-content-modern-india.component';
+
 
 @NgModule({
   declarations: [
@@ -106,7 +119,19 @@ import { PutchatComponent } from './component/putchat/putchat.component';
     BookContentEconomyComponent,
     Home1Component,
     GetchatComponent,
-    PutchatComponent
+    PutchatComponent,
+    BookContentSociologyComponent,
+    BookContentSOCIALJUSTICEComponent,
+    BookContentScienceTechComponent,
+    BookContentPaperIIIComponent,
+    BookContentGeographyComponent,
+    BookContentGovernanceComponent,
+    BookContentHistoryComponent,
+    BookContentIndianSocietyComponent,
+    BookContentIndianSecurityComponent,
+    BookContentIndianIRComponent,
+    BookContentAgricultureEconomicComponent,
+    BookContentModernIndiaComponent
   ],
   imports: [
     BrowserModule,

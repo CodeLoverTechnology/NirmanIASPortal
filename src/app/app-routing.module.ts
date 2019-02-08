@@ -31,6 +31,18 @@ import { GetchatComponent } from './component/getchat/getchat.component';
 import { BookContentEthicsComponent } from './Component/Books/book-content-ethics/book-content-ethics.component';
 import { NIASHomeComponent } from './Component/niashome/niashome.component';
 import { AdminComponent } from './component/admin/admin/admin.component';
+import { BookContentGovernanceComponent } from './Component/books/book-content-governance/book-content-governance.component';
+import { BookContentHistoryComponent } from './Component/books/book-content-history/book-content-history.component';
+import { BookContentIndianIRComponent } from './Component/books/book-content-indian-ir/book-content-indian-ir.component';
+import { BookContentIndianSecurityComponent } from './Component/books/book-content-indian-security/book-content-indian-security.component';
+import { BookContentIndianSocietyComponent } from './Component/books/book-content-indian-society/book-content-indian-society.component';
+import { BookContentPaperIIIComponent } from './Component/books/book-content-paper-iii/book-content-paper-iii.component';
+import { BookContentScienceTechComponent } from './Component/books/book-content-science-tech/book-content-science-tech.component';
+import { BookContentSOCIALJUSTICEComponent } from './Component/books/book-content-social-justice/book-content-social-justice.component';
+import { BookContentSociologyComponent } from './Component/Books/book-content-sociology/book-content-sociology.component';
+import { BookContentGeographyComponent } from './Component/books/book-content-geography/book-content-geography.component';
+import { BookContentAgricultureEconomicComponent } from './Component/books/book-content-agriculture-economic/book-content-agriculture-economic.component';
+import { BookContentModernIndiaComponent } from './Component/books/book-content-modern-india/book-content-modern-india.component';
 
 const routes: Routes = [
   {path:"",component:NIASHomeComponent},
@@ -65,7 +77,20 @@ const routes: Routes = [
   //{path : "InsertBranch",component:InsertBranchComponent},
   {path:"admin",component:AdminComponent},
   {path:"login",component:LogInComponent},
-  {path:"getchat",component:GetchatComponent}
+  {path:"getchat",component:GetchatComponent},
+
+  {path : "NIAS_Geography", component:BookContentGeographyComponent},
+  {path : "NIAS_Governance", component:BookContentGovernanceComponent},
+  {path : "NIAS_History", component:BookContentHistoryComponent},
+  {path : "NIAS_IndianIR", component:BookContentIndianIRComponent},
+  {path : "NIAS_IndianSecurity", component:BookContentIndianSecurityComponent},
+  {path : "NIAS_IndianSociety", component:BookContentIndianSocietyComponent},
+  {path : "NIAS_PaperIII", component:BookContentPaperIIIComponent},
+  {path : "NIAS_ScienceTech", component:BookContentScienceTechComponent},
+  {path : "NIAS_SOCIALJUSTICE", component:BookContentSOCIALJUSTICEComponent},
+  {path : "NIAS_Sociology", component:BookContentSociologyComponent},
+  {path : "NIAS_AgricultureEconomic", component:BookContentAgricultureEconomicComponent},
+  {path : "NIAS_ModernIndia", component:BookContentModernIndiaComponent},
   
   
   // { path: '', redirectTo: '/', pathMatch:'full' }
