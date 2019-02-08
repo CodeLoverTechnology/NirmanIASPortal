@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgModule } from '@angular/core';
 import { BannerModel } from 'src/app/Entity/banner-model';
 import { BannerMasterService } from 'src/app/Services/Banner/banner-master.service';
 import { HttpErrorResponse } from '@angular/common/http';

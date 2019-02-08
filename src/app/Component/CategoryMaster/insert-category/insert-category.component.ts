@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgModule } from '@angular/core';
 import { CategoryMaster } from 'src/app/Entity/category-master';
 import { CategoryMasterService } from 'src/app/Services/CategoryMaster/category-master.service';
 import { HttpErrorResponse } from '@Angular/common/http';

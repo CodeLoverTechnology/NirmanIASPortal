@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Component, OnInit, NgModule, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {MasterInfoModel} from "../../Entity/master-info-model";
 

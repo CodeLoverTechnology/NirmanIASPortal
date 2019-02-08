@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {ChatServicesService} from "../../Services/Chat/chat-services.service";
+import { ChatServicesService } from 'src/app/Services/Chat/chat-services.service';
 import { HttpClientModule } from '@angular/common/http';
-
 import { ChatModel } from 'src/app/Entity/ChatModel';
+
 @Component({
   selector: 'app-getchat',
   templateUrl: './getchat.component.html',

@@ -1,4 +1,4 @@
-import { NgModule} from '@angular/core';
+import { Component, OnInit, NgModule } from '@angular/core';
 
 import { Routes, RouterModule } from '@angular/router';
 import { GetEnquiryComponent } from './Component/enquirycomponent/get-enquiry/get-enquiry.component';
@@ -6,7 +6,7 @@ import { InsertEnquiryComponent } from './Component/enquirycomponent/insert-enqu
 import { LogInComponent } from './component/log-in/log-in/log-in.component';
 import { RegistrationComponent } from './component/registration/registration/registration.component';
 import { AboutUsComponent } from './Component/about-us/about-us.component';
-import { NIASHomeComponent } from './Component/niashome/niashome.component';
+// import { NIASHomeComponent } from './component/niashome/niashome.component';
 import { GalleryNIASComponent } from './Component/gallery-nias/gallery-nias.component';
 import { VideoNIASComponent } from './Component/video-nias/video-nias.component';
 import { ContactUsComponent } from './Component/contact-us/contact-us.component';
@@ -22,13 +22,15 @@ import { ClassNotesComponent } from './Component/class-notes/class-notes.compone
 
 
 import { InsertBannerComponent } from './component/Banner/insert-banner/insert-banner.component';
-import { AdminComponent } from './component/admin/admin/admin.component';
+// import { AdminComponent } from './Component/admin/admin/admin.component';
 import { AdminlinkComponent } from './Component/admin/adminlink/adminlink.component';
-import { BookContentEnvironmentComponent } from './component/Books/book-content-environment/book-content-environment.component';
-import { BookContentPOLITYComponent } from './component/Books/book-content-polity/book-content-polity.component';
-import { BookContentEconomyComponent } from './component/Books/book-content-economy/book-content-economy.component';
-import { GetchatComponent } from './Component/getchat/getchat.component';
-import { BookContentEthicsComponent } from './component/Books/book-content-ethics/book-content-ethics.component';
+import { BookContentEnvironmentComponent } from './Component/Books/book-content-environment/book-content-environment.component';
+import { BookContentPOLITYComponent } from './Component/Books/book-content-polity/book-content-polity.component';
+import { BookContentEconomyComponent } from './Component/Books/book-content-economy/book-content-economy.component';
+import { GetchatComponent } from './component/getchat/getchat.component';
+import { BookContentEthicsComponent } from './Component/Books/book-content-ethics/book-content-ethics.component';
+import { NIASHomeComponent } from './Component/niashome/niashome.component';
+import { AdminComponent } from './component/admin/admin/admin.component';
 
 const routes: Routes = [
   {path:"",component:NIASHomeComponent},

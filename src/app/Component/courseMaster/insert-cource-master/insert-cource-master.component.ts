@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgModule } from '@angular/core';
 import { CourseMaster } from 'src/app/Entity/course-master';
 import { CourseMasterService } from 'src/app/Services/CourseMaster/course-master.service';
 import { HttpErrorResponse } from '@Angular/common/http';
