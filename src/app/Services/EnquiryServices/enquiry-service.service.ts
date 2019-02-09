@@ -16,7 +16,7 @@ export class EnquiryServiceService {
     return this._http.get(this.BaseURL+"Enquiry/EnquiryList");
   }
 
-  public postEnquiry(enquiry : EnquiryModel){
+  public postEnquiry(enquiry : EnquiryModel):any{
     return this._http.post<any>(this.BaseURL+"Enquiry/CreateEnquiry",enquiry);
   }
 }

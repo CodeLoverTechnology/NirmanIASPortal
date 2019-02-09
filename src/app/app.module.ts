@@ -67,7 +67,9 @@ import { BookContentIndianIRComponent } from './Component/books/book-content-ind
 import { BookContentSociologyComponent } from './Component/Books/book-content-sociology/book-content-sociology.component';
 import { BookContentAgricultureEconomicComponent } from './Component/books/book-content-agriculture-economic/book-content-agriculture-economic.component';
 import { BookContentModernIndiaComponent } from './Component/books/book-content-modern-india/book-content-modern-india.component';
-
+import {NgBusyModule} from 'ng-busy';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -138,7 +140,10 @@ import { BookContentModernIndiaComponent } from './Component/books/book-content-
     HttpClientModule,
     FormsModule,
     AppRoutingModule,
-    ReactiveFormsModule    
+    ReactiveFormsModule,
+    NgBusyModule,
+    BrowserAnimationsModule,
+    NoopAnimationsModule
   ],
    providers: [EnquiryServiceService,ChatServicesService,AuthService],
   bootstrap: [AppComponent]

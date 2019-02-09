@@ -9,11 +9,11 @@ templateUrl:'./get-enquiry.component.html',
 styleUrls: ['./get-enquiry.component.css']
 })
 export class GetEnquiryComponent implements OnInit {
-
+    busy: Promise<any>;
 public result:any;
 constructor(private _service:EnquiryServiceService) { }
 ngOnInit() {
-this._service.getEnquiryInfo().subscribe(res=>this.result=res);
+    this.busy =this._service.getEnquiryInfo().subscribe(res=>this.result=res);
 (err:HttpErrorResponse)=>{
 if(err.error instanceof Error){
 console.log("Server Side Error !");
