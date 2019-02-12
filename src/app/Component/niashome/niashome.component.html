@@ -49,20 +49,20 @@
     <div class="row">
         <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 shadow img-thumbnail">
             <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/2LQE-eIqjlk" allow="accelerometer;gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/2LQE-eIqjlk"
+                    allow="accelerometer;gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 shadow img-thumbnail">
             <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Atzb3i0qsG0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Atzb3i0qsG0"
+                    allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 shadow img-thumbnail">
             <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/F0MfP3PSuKs" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/F0MfP3PSuKs"
+                    allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
 
         </div>
@@ -79,14 +79,16 @@
     <!-- <h2 class="bg-danger text-white text-center p-2">Resources</h2> -->
     <div class="row bg-secondary">
         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
-            <div class="card shadow p-2 m-1 img-thumbnail">
-                <div class="card-body">
-                    <img src="./assets/books-512.png" class="img-fluid" />
+            <a [routerLink]="['/CurrentAffairs']">
+                <div class="card shadow p-2 m-1 img-thumbnail">
+                    <div class="card-body">
+                        <img src="./assets/books-512.png" class="img-fluid" />
+                    </div>
+                    <div class="card-footer">
+                        <h4>Current Affairs</h4>
+                    </div>
                 </div>
-                <div class="card-footer">
-                    <h4>Current Affairs</h4>
-                </div>
-            </div>
+            </a>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
             <a [routerLink]="['/ClassNotes']">
@@ -130,9 +132,10 @@
                 <div class="card-footer">
                     <h4>UPSC Paper Solution</h4>
                 </div>
-                </div>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
+            <a [routerLink]="['/NIAS_TalksAndInterview']">
                 <div class="card shadow p-2 m-1 img-thumbnail">
                     <div class="card-body">
                         <img src="./assets/key.png" class="img-fluid" />
@@ -142,145 +145,147 @@
                     </div>
 
                 </div>
+            </a>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
+            <div class="card shadow p-2 m-1 img-thumbnail">
+                <div class="card-body">
+                    <img src="./assets/wifi.png" class="img-fluid" />
+                </div>
+                <div class="card-footer">
+                    <h4>Topper Answer Copy</h4>
+                </div>
 
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
+
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
+            <a [routerLink]="['/Magazine']">
                 <div class="card shadow p-2 m-1 img-thumbnail">
                     <div class="card-body">
-                        <img src="./assets/wifi.png" class="img-fluid" />
+                        <img src="./assets/NIAS_Magazine.JPG" class="img-fluid" />
                     </div>
                     <div class="card-footer">
-                        <h4>Topper Answer Copy</h4>
+                        <h4>Nirman Magazine</h4>
                     </div>
 
                 </div>
-
+            </a>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <h2 class="bg-danger text-white text-center p-2">Current Regular GS Batch</h2>
+            <table class="table table-hover table-striped">
+                <tr>
+                    <th>Subject</th>
+                    <th>Time</th>
+                    <th>Faculty</th>
+                </tr>
+                <tr>
+                    <td> Economics</td>
+                    <td>08:00 AM - 10:00 AM</td>
+                    <td>Mr. RAMESHWAR </td>
+                </tr>
+                <tr>
+                    <td>Indian Geography(Pre + Mains) </td>
+                    <td>10:00 AM - 12:30 PM</td>
+                    <td>Mr. AJIT SINGH</td>
+                </tr>
+                <tr>
+                    <td>Ethics</td>
+                    <td>03:00 PM - 05:30 PM</td>
+                    <td>Dr. KHURSHID ALAM</td>
+                </tr>
+                <tr>
+                    <td>History(Pre)</td>
+                    <td>06:00 PM - 08:30 PM</td>
+                    <td>KD SIR</td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <h2 class="bg-danger text-white text-center p-2">Current Optional Batch</h2>
+            <table class="table table-hover table-striped border-1">
+                <tr>
+                    <th>Subject</th>
+                    <th>Time</th>
+                    <th>Faculty</th>
+                </tr>
+                <tr>
+                    <td> History</td>
+                    <td>12:30 PM - 02:30 PM</td>
+                    <td>Dr. RAHEESH SINGH </td>
+                </tr>
+                <tr>
+                    <td>Geography </td>
+                    <td>12:30 PM - 02:30 PM</td>
+                    <td>Mr. AJIT SINGH</td>
+                </tr>
+                <tr>
+                    <td>Sociology</td>
+                    <td>03:00 PM -05:30 PM</td>
+                    <td>Mr. GAUTAM ANAND</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<!-- daily 7 weekly artical -->
+<div class="container-fluid">
+    <h2 class="bg-danger text-white text-center p-2">Daily & Weekly Articals</h2>
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
+            <div class=" shadow p-1 m-1 img-thumbnail">
+                <img class="img-fluid" src="./assets/7.jpg" alt="Carousel 1"><br>
+                <a href>What is Collegium System of Appointment of Judges?</a>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
-                <a [routerLink]="['/Magazine']">
-                    <div class="card shadow p-2 m-1 img-thumbnail">
-                        <div class="card-body">
-                            <img src="./assets/NIAS_Magazine.JPG" class="img-fluid" />
-                        </div>
-                        <div class="card-footer">
-                            <h4>Nirman Magazine</h4>
-                        </div>
-
-                    </div>
-                </a>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
+            <div class=" shadow p-1 m-1 img-thumbnail">
+                <img class="img-fluid" src="./assets/8.jpg" alt="Carousel 2"><br>
+                <a href>Krushak Assistance for Livelihood and Income Augmentation, KALIA.</a>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
+            <div class=" shadow p-1 m-1 img-thumbnail">
+                <img class="img-fluid" src="./assets/7.jpg" alt="Carousel 3"><br>
+                <a href>SC Dismisses pleas on Appointment of DGPs.</a>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
+            <div class=" shadow p-1 m-1 img-thumbnail">
+                <img class="img-fluid" src="./assets/10.jpg"><br>
+                <a href>DD Science and India Science launched.</a>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
+            <div class=" shadow p-1 m-1 img-thumbnail">
+                <img class="img-fluid" src="./assets/9.jpg" alt="Carousel 4"><br>
+                <a href>First human rights TV channel Launched.</a>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
+            <div class=" shadow p-1 m-1 img-thumbnail">
+                <img class="img-fluid" src="./assets/12.jpg" alt="Carousel 6"><br>
+                <a href>PM Inaugurates developmental Works in Kerala.</a>
             </div>
         </div>
     </div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <h2 class="bg-danger text-white text-center p-2">Current Regular GS Batch</h2>
-                <table class="table table-hover table-striped">
-                    <tr>
-                        <th>Subject</th>
-                        <th>Time</th>
-                        <th>Faculty</th>
-                    </tr>
-                    <tr>
-                        <td> Economics</td>
-                        <td>08:00 AM - 10:00 AM</td>
-                        <td>Mr. RAMESHWAR </td>
-                    </tr>
-                    <tr>
-                        <td>Indian Geography(Pre + Mains) </td>
-                        <td>10:00 AM - 12:30 PM</td>
-                        <td>Mr. AJIT SINGH</td>
-                    </tr>
-                    <tr>
-                        <td>Ethics</td>
-                        <td>03:00 PM - 05:30 PM</td>
-                        <td>Dr. KHURSHID ALAM</td>
-                    </tr>
-                    <tr>
-                        <td>History(Pre)</td>
-                        <td>06:00 PM - 08:30 PM</td>
-                        <td>KD SIR</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <h2 class="bg-danger text-white text-center p-2">Current Optional Batch</h2>
-                <table class="table table-hover table-striped border-1">
-                    <tr>
-                        <th>Subject</th>
-                        <th>Time</th>
-                        <th>Faculty</th>
-                    </tr>
-                    <tr>
-                        <td> History</td>
-                        <td>12:30 PM - 02:30 PM</td>
-                        <td>Dr. RAHEESH SINGH </td>
-                    </tr>
-                    <tr>
-                        <td>Geography </td>
-                        <td>12:30 PM - 02:30 PM</td>
-                        <td>Mr. AJIT SINGH</td>
-                    </tr>
-                    <tr>
-                        <td>Sociology</td>
-                        <td>03:00 PM -05:30 PM</td>
-                        <td>Mr. GAUTAM ANAND</td>
-                    </tr>
-                </table>
-            </div>
+</div>
+<!--ACHIEVEMENTS-->
+<div class="container-fluid">
+    <div class="row bg-secondary m-1">
+        <div class="h2 bg-danger text-center p-2 text-white container-fluid">Nirman IAS UPSC Result</div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <img src="./assets/NiasResult2018.png" title="Nirman IAS UPSC Result AIR Rank 2018"
+                class="img-fluid img-thumbnail p-2" />
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <img src="./assets/NIASResult2017.jpg" title="Nirman IAS UPSC Result AIR Rank 2017"
+                class="img-fluid img-thumbnail p-2" />
         </div>
     </div>
-    <!-- daily 7 weekly artical -->
-    <div class="container-fluid">
-        <h2 class="bg-danger text-white text-center p-2">Daily & Weekly Articals</h2>
-        <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
-                <div class=" shadow p-1 m-1 img-thumbnail">
-                    <img class="img-fluid" src="./assets/7.jpg" alt="Carousel 1"><br>
-                    <a href>What is Collegium System of Appointment of Judges?</a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
-                <div class=" shadow p-1 m-1 img-thumbnail">
-                    <img class="img-fluid" src="./assets/8.jpg" alt="Carousel 2"><br>
-                    <a href>Krushak Assistance for Livelihood and Income Augmentation, KALIA.</a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
-                <div class=" shadow p-1 m-1 img-thumbnail">
-                    <img class="img-fluid" src="./assets/7.jpg" alt="Carousel 3"><br>
-                    <a href>SC Dismisses pleas on Appointment of DGPs.</a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
-                <div class=" shadow p-1 m-1 img-thumbnail">
-                    <img class="img-fluid" src="./assets/10.jpg"><br>
-                    <a href>DD Science and India Science launched.</a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
-                <div class=" shadow p-1 m-1 img-thumbnail">
-                    <img class="img-fluid" src="./assets/9.jpg" alt="Carousel 4"><br>
-                    <a href>First human rights TV channel Launched.</a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
-                <div class=" shadow p-1 m-1 img-thumbnail">
-                    <img class="img-fluid" src="./assets/12.jpg" alt="Carousel 6"><br>
-                    <a href>PM Inaugurates developmental Works in Kerala.</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--ACHIEVEMENTS-->
-    <div class="container-fluid">
-        <div class="row bg-secondary m-1">
-            <div class="h2 bg-danger text-center p-2 text-white container-fluid">Nirman IAS UPSC Result</div>
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <img src="./assets/NiasResult2018.png" title="Nirman IAS UPSC Result AIR Rank 2018" class="img-fluid img-thumbnail p-2" />
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <img src="./assets/NIASResult2017.jpg" title="Nirman IAS UPSC Result AIR Rank 2017" class="img-fluid img-thumbnail p-2" />
-            </div>
-        </div>
-    </div>
+</div>

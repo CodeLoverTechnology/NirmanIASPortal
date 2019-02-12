@@ -70,6 +70,7 @@ import { BookContentModernIndiaComponent } from './Component/books/book-content-
 import {NgBusyModule} from 'ng-busy';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { TalksAndInterviewComponent } from './TalksAndInterview/TalksAndInterview.component';
 
 @NgModule({
   declarations: [
@@ -133,7 +134,8 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     BookContentIndianSecurityComponent,
     BookContentIndianIRComponent,
     BookContentAgricultureEconomicComponent,
-    BookContentModernIndiaComponent
+    BookContentModernIndiaComponent,
+    TalksAndInterviewComponent
   ],
   imports: [
     BrowserModule,
