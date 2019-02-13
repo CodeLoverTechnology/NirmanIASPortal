@@ -1,4 +1,4 @@
-<table class="table table-hover table-justified">
+<table class="table table-hover table-justified table-responsive-lg">
   <thead>
     <tr>
       <th>UserChatID</th>
@@ -15,7 +15,7 @@
       <th>Active</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody class="table-justified">
     <tr *ngFor="let x of result">
       <td>{{x.userChatID}}</td>
       <td>{{x.chatMessage}}</td>

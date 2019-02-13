@@ -1,41 +1,44 @@
+
+
 <div class="wrapper">
 
         <!-- Sidebar  -->
     
         <nav id="sidebar" >
             <div class="sidebar-header">
-                <h3>User</h3>
+                <button class=" btn hideBtn btn-outline-info">Admin</button>
             </div>
 
             <ul class="list-unstyled components">
                 <li class="active">
-                    <a href="#" >
+                    <a [routerLink]="['/admin']" >
                         <i class="fa fa-home"></i>
                         Home
                     </a>
                 </li>
                 <li>
-                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                   <i class="fa fa-eye"></i>Enquiry
                 </a>
-                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <ul class="collapse list-unstyled" id="homeSubmenu">
                             <li>
-                                <a   [routerLink]="['admin/getEnquiry']">
+                                <a  [routerLink]="['admin/getEnquiry']">
                                  <i class="fa fa-eye" ></i>
                                   View</a>
                             </li>
                             <li>
-                                <a  [routerLink]="['admin/Gallery']" >
+                                    <!-- [routerLink]="['admin/Gallery']" -->
+                                <a  >
                                 <i class="fa fa-pencil"></i>      
                               Edit</a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a >
                                   <i class="fa fa-upload"></i>       
                                 Update</a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a >
                                 <i class="fa fa-trash"></i> 
                                     Delete</a>
                             </li>
@@ -43,28 +46,28 @@
                    
                 </li>
                 <li>
-                        <a href="#pageSubmenu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                            <i class="fa fa-book"></i>
-                     Course
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <i class="fa fa-picture-o"></i>
+                     Gallery
                  </a>
-                 <ul class="collapse list-unstyled" id="pageSubmenu1">
+                 <ul class="collapse list-unstyled" id="pageSubmenu">
                         <li>
-                            <a href="#">
+                            <a [routerLink]="['admin/Gallery']" >
                              <i class="fa fa-eye"></i>
                               View</a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a >
                             <i class="fa fa-pencil"></i>      
                           Edit</a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a >
                               <i class="fa fa-upload"></i>       
                             Update</a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a >
                             <i class="fa fa-trash"></i> 
                                 Delete</a>
                         </li>
@@ -78,22 +81,22 @@
                     </a>
                     <ul class="collapse list-unstyled" id="bannerSubmenu">
                             <li>
-                                <a href="#">
+                                <a >
                                  <i class="fa fa-eye"></i>
                                   View</a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a >
                                 <i class="fa fa-pencil"></i>      
                               Edit</a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a >
                                   <i class="fa fa-upload"></i>       
                                 Update</a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a >
                                 <i class="fa fa-trash"></i> 
                                     Delete</a>
                             </li>
@@ -106,22 +109,22 @@
                     </a>
                     <ul class="collapse list-unstyled" id="pageSubmenu3">
                             <li>
-                                <a href="#">
+                                <a >
                                  <i class="fa fa-eye"></i>
                                   View</a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a >
                                 <i class="fa fa-pencil"></i>      
                               Edit</a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a >
                                   <i class="fa fa-upload"></i>       
                                 Update</a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a >
                                 <i class="fa fa-trash"></i> 
                                     Delete</a>
                             </li>
@@ -134,22 +137,22 @@
                     </a>
                     <ul class="collapse list-unstyled" id="pageSubmenu4">
                             <li>
-                                <a href="#">
+                                <a >
                                  <i class="fa fa-eye"></i>
                                   View</a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a >
                                 <i class="fa fa-pencil"></i>      
                               Edit</a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a >
                                   <i class="fa fa-upload"></i>       
                                 Update</a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a >
                                 <i class="fa fa-trash"></i> 
                                     Delete</a>
                             </li>
@@ -162,22 +165,22 @@
                     </a>
                     <ul class="collapse list-unstyled" id="pageSubmenu5">
                             <li>
-                                <a href="#">
+                                <a >
                                  <i class="fa fa-eye"></i>
                                   View</a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a >
                                 <i class="fa fa-pencil"></i>      
                               Edit</a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a >
                                   <i class="fa fa-upload"></i>       
                                 Update</a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a >
                                 <i class="fa fa-trash"></i> 
                                     Delete</a>
                             </li>
@@ -190,22 +193,22 @@
                     </a>
                     <ul class="collapse list-unstyled" id="pageSubmenu6">
                             <li>
-                                <a href="#">
+                                <a >
                                  <i class="fa fa-eye"></i>
                                   View</a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a >
                                 <i class="fa fa-pencil"></i>      
                               Edit</a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a >
                                   <i class="fa fa-upload"></i>       
                                 Update</a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a >
                                 <i class="fa fa-trash"></i> 
                                     Delete</a>
                             </li>
@@ -218,22 +221,22 @@
                     </a>
                     <ul class="collapse list-unstyled" id="pageSubmenu7">
                             <li>
-                                <a href="#">
+                                <a >
                                  <i class="fa fa-eye"></i>
                                   View</a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a >
                                 <i class="fa fa-pencil"></i>      
                               Edit</a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a >
                                   <i class="fa fa-upload"></i>       
                                 Update</a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a >
                                 <i class="fa fa-trash"></i> 
                                     Delete</a>
                             </li>
@@ -243,13 +246,13 @@
                     <i class="fa fa-caret-down"></i>
                   </button>
                   <div class="dropdown-container">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
+                    <a >Link 1</a>
+                    <a >Link 2</a>
+                    <a >Link 3</a>
                   </div>
                 </li> -->
                 <li>
-                    <a href="#">
+                    <a >
                         <i class="fa fa-sign-out"></i>
                       LogOut
                     </a>
@@ -259,8 +262,13 @@
           </nav>
 
         <!-- Page Content  -->
-        <div class="container-fluid">
+   <div class="container">
+       <div class="row">
+           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            
     <router-outlet></router-outlet>
-  </div>    
+   </div>       
+           </div>
+       </div>
 
 </div>
