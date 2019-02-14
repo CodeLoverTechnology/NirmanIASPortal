@@ -44,6 +44,7 @@ import { BookContentGeographyComponent } from './Component/books/book-content-ge
 import { BookContentAgricultureEconomicComponent } from './Component/books/book-content-agriculture-economic/book-content-agriculture-economic.component';
 import { BookContentModernIndiaComponent } from './Component/books/book-content-modern-india/book-content-modern-india.component';
 import { TalksAndInterviewComponent } from './TalksAndInterview/TalksAndInterview.component';
+import { SpecialClassesComponent } from './Component/special-classes/special-classes.component';
 
 const routes: Routes = [
   {path:"",component:NIASHomeComponent},
@@ -99,6 +100,7 @@ const routes: Routes = [
   {path : "NIAS_Sociology", component:BookContentSociologyComponent},
   {path : "NIAS_AgricultureEconomic", component:BookContentAgricultureEconomicComponent},
   {path : "NIAS_ModernIndia", component:BookContentModernIndiaComponent},
+  {path : "NIAS_SpecialClasses", component:SpecialClassesComponent},
   
   
   // { path: '', redirectTo: '/', pathMatch:'full' }

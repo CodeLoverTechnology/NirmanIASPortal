@@ -71,6 +71,7 @@ import {NgBusyModule} from 'ng-busy';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { TalksAndInterviewComponent } from './TalksAndInterview/TalksAndInterview.component';
+import { SpecialClassesComponent } from './Component/special-classes/special-classes.component';
 
 @NgModule({
   declarations: [
@@ -135,7 +136,8 @@ import { TalksAndInterviewComponent } from './TalksAndInterview/TalksAndIntervie
     BookContentIndianIRComponent,
     BookContentAgricultureEconomicComponent,
     BookContentModernIndiaComponent,
-    TalksAndInterviewComponent
+    TalksAndInterviewComponent,
+    SpecialClassesComponent
   ],
   imports: [
     BrowserModule,
