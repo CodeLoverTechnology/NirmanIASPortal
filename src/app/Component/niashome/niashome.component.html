@@ -8,9 +8,10 @@
         </div>
     </div>
 </div>
-<div class="row p-2 bg-primary text-white">
-        <marquee><b>Test series for UPSC Main Exam 2019 (Online,Offline)
-                Comprehensive All India Test Series for IAS Prellms & Mains -2019 </b></marquee>
+<div class="row p-2 " style="background-color: darkred;">
+        <marquee style="color:goldenrod;"><b>
+            <img src="../../../assets/new-animated-gif-4.gif" width="50" height="50" class="p-1"/> Test series for UPSC Main Exam 2019 (Online,Offline)
+                Comprehensive All India Test Series for IAS Prelims & Mains -2019 </b></marquee>
 </div>
 
 <!-- </div> -->
@@ -103,6 +104,7 @@
     </a>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
+                    <a [routerLink]="['/Books']"  >
                 <div class="card shadow p-2 m-1 img-thumbnail">
                     <div class="card-body">
                         <img src="./assets/NIAS_DLP_eLearning.png" class="img-fluid" />
@@ -111,9 +113,10 @@
                         <h5>Distance Learning Programme(DLP)</h5>
                     </div>
                 </div>
-    
+    </a>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
+                    <a [routerLink]="['/NIAS_TestYourSelf']"  >
                 <div class="card shadow p-2 m-1 img-thumbnail">
                     <div class="card-body">
                         <img src="./assets/info.png" class="img-fluid" />
@@ -122,6 +125,7 @@
                         <h5>Test Yourself(Previous Years Paper With Solutions)</h5>
                     </div>
                 </div>
+            </a> 
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
                 <a [routerLink]="['/NIAS_TalksAndInterview']">

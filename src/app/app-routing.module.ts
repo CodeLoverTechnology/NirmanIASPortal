@@ -45,6 +45,8 @@ import { BookContentAgricultureEconomicComponent } from './Component/books/book-
 import { BookContentModernIndiaComponent } from './Component/books/book-content-modern-india/book-content-modern-india.component';
 import { TalksAndInterviewComponent } from './TalksAndInterview/TalksAndInterview.component';
 import { SpecialClassesComponent } from './Component/special-classes/special-classes.component';
+import { NIASCourseFeeStrutureComponent } from './Component/Courses/nias-course-fee-struture/nias-course-fee-struture.component';
+import { TestYourSelfComponent } from './Component/test-your-self/test-your-self.component';
 
 const routes: Routes = [
   {path:"",component:NIASHomeComponent},
@@ -101,7 +103,8 @@ const routes: Routes = [
   {path : "NIAS_AgricultureEconomic", component:BookContentAgricultureEconomicComponent},
   {path : "NIAS_ModernIndia", component:BookContentModernIndiaComponent},
   {path : "NIAS_SpecialClasses", component:SpecialClassesComponent},
-  
+  {path : "NIAS_CourseFee", component:NIASCourseFeeStrutureComponent},
+  {path : "NIAS_TestYourSelf", component:TestYourSelfComponent},
   
   // { path: '', redirectTo: '/', pathMatch:'full' }
   ];
