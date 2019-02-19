@@ -9,7 +9,10 @@ import { HttpErrorResponse } from '@angular/common/http';
   styleUrls: ['./insert-banner.component.css']
 })
 export class InsertBannerComponent implements OnInit {
-  Banner = {} as BannerModel;
+  Banner = {
+BannerImagesPath:"NA"
+
+  } as BannerModel;
 
   constructor(private _service:BannerMasterService) { }
   ngOnInit(){ }

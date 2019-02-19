@@ -8,19 +8,18 @@ import { BranchMaster } from 'src/app/Entity/branch-master';
 export class BranchMasterService {
 
  
-  BaseURL: string = "http:// NIAS.codelovertechnology.com";
+  BaseURL: string = "http://NIAS.codelovertechnology.com/api/";
 
   
   constructor(private _http:HttpClient){}
   
   
   public getBranchInfo():any{
-    alert("getBranchInfo Called");
-    return this._http.get(this.BaseURL+"api/BranchMaster/BranchMasterList");
+    return this._http.get(this.BaseURL+"BranchMaster/BranchMasterList");
   }
 
   public postBranchMaster(BranchMaster : BranchMaster){
-    return this._http.post<any>(this.BaseURL+"api/BranchMaster/CreateBranch",BranchMaster);
+    return this._http.post<any>(this.BaseURL+"BranchMaster/CreateBranch",BranchMaster);
   }
 }
 

@@ -43,10 +43,13 @@ import { BookContentSociologyComponent } from './Component/Books/book-content-so
 import { BookContentGeographyComponent } from './Component/books/book-content-geography/book-content-geography.component';
 import { BookContentAgricultureEconomicComponent } from './Component/books/book-content-agriculture-economic/book-content-agriculture-economic.component';
 import { BookContentModernIndiaComponent } from './Component/books/book-content-modern-india/book-content-modern-india.component';
-import { TalksAndInterviewComponent } from './TalksAndInterview/TalksAndInterview.component';
+import { TalksAndInterviewComponent } from './Component/TalksAndInterview/TalksAndInterview.component';
 import { SpecialClassesComponent } from './Component/special-classes/special-classes.component';
 import { NIASCourseFeeStrutureComponent } from './Component/Courses/nias-course-fee-struture/nias-course-fee-struture.component';
 import { TestYourSelfComponent } from './Component/test-your-self/test-your-self.component';
+import { GetBranchComponent } from './component/BranchMaster/get-branch/get-branch.component';
+import { InsertBranchComponent } from './component/BranchMaster/insert-branch/insert-branch.component';
+import { GetBannerComponent } from './component/Banner/get-banner/get-banner.component';
 
 const routes: Routes = [
   {path:"",component:NIASHomeComponent},
@@ -78,15 +81,15 @@ const routes: Routes = [
   {path:"PrelimsGSSyllabus",component:UPSCPrelimsGSSyllabusComponent},
   {path:"CurrentAffairs",component:CurrentAffairsComponent},
   {path:"ClassNotes",component:ClassNotesComponent},
-// {path:"getbanner",component:GetBannerComponentonent},
+{path:"getbanner",component:GetBannerComponent},
   {path:"EthicsBook",component:BookContentEthicsComponent },
   {path : "EnvironmentBook", component:BookContentEnvironmentComponent},
   {path : "POLITYBook", component:BookContentPOLITYComponent},
   {path : "Economics", component:BookContentEconomyComponent},
   {path : "NIAS_TalksAndInterview", component:TalksAndInterviewComponent},
 
-// {path : "BranchList",component:GetBranchComponent},
-// {path : "InsertBranch",component:InsertBranchComponent},
+{path : "BranchList",component:GetBranchComponent},
+{path : "InsertBranch",component:InsertBranchComponent},
 // {path:"admin",component:AdminComponent},
 // // {path:"login",component:LogInComponent},
 //   {path:"getchat",component:GetchatComponent},  

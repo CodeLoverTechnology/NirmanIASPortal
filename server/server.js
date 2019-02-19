@@ -1,37 +1,26 @@
+var http = require('http');
+var formidable = require('formidable');
+var fs = require('fs');
+var port =8080;
 
-const express = require('express');
-const bodyParser = require('body-parser');
-const cors=require('cors');
-
-
-
-const PORT=4200;
-const app =express();
-
-app.use(bodyParser.json());
-
-app.use(cors);
-
-app.get('/',function(req,res){
-    res.send("Hello From Server, Port : 4200");
-})
-
-app.post('/EnquiryInfo',function(req,res){
-console.log(req.body);
-res.status(200).send({"message":"Data Received"});
-})
-
-app.use((req,res,next)=>{
-    res.header('Access-Control-Allow-Origin','http://nias.codelovertechnology.com');
-    res.header('Access-Control-Allow-Headers','Origin,x-Requested-with,Content-Type,Accept,Authorization');
-    if(req.method=='OPTIONS')
-    {
-        res.header('Access-Control-Allow-Methods','PUT,POST,GET,DELETE,PATCH');
-        return res.status(200).json({});
-    }
-    next();
-})
-
-app.listen(PORT,function(){
-    console.log("Server Running on  Localhost : "+ PORT);
-})
+http.createServer(function (req, res) {
+    if (req.url == '/fileupload') {
+        var form = new formidable.IncomingForm();
+        form.parse(req, function (err, fields, files) {
+          var oldpath = files.filetoupload.path;
+          var newpath = 'E:/Self/testProject/NodeServerExample/FileUploaded/' + files.filetoupload.name;
+          fs.copyFileSync(oldpath, newpath, function (err) {
+            if (err) throw err;
+            res.write('File uploaded and moved!');
+            res.end();
+          });
+        });
+      } else {
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.write('<form action="fileupload" method="post" enctype="multipart/form-data">');
+    res.write('<input type="file" name="filetoupload"><br>');
+    res.write('<input type="submit">');
+    res.write('</form>');
+    return res.end();
+      }
+  }).listen(port);
