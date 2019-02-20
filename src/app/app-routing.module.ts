@@ -20,6 +20,7 @@ import { UPSCPrelimsGSSyllabusComponent } from './Component/Courses/upsc-prelims
 import { CurrentAffairsComponent } from './Component/current-affairs/current-affairs.component';
 import { ClassNotesComponent } from './Component/class-notes/class-notes.component';
 
+import { GetBranchComponent } from './component/BranchMaster/get-branch/get-branch.component';
 
 import { InsertBannerComponent } from './component/Banner/insert-banner/insert-banner.component';
 // import { AdminComponent } from './Component/admin/admin/admin.component';
@@ -44,11 +45,14 @@ import { BookContentGeographyComponent } from './Component/books/book-content-ge
 import { BookContentAgricultureEconomicComponent } from './Component/books/book-content-agriculture-economic/book-content-agriculture-economic.component';
 import { BookContentModernIndiaComponent } from './Component/books/book-content-modern-india/book-content-modern-india.component';
 import { TalksAndInterviewComponent } from './TalksAndInterview/TalksAndInterview.component';
+import { GetSocialMediaComponent } from './component/SocialMediaMaster/get-social-media/get-social-media.component';
+import { InsertSocialMediaComponent } from './component/SocialMediaMaster/insert-social-media/insert-social-media.component';
+
 
 const routes: Routes = [
   {path:"",component:NIASHomeComponent},
-  //{path:"admin",component:AdminComponent},
-  //{path:"adminlink",component:AdminlinkComponent},
+  {path:"Get",component:GetSocialMediaComponent},
+  {path:"Insert",component:InsertSocialMediaComponent},
   {path:"login",component:LogInComponent},  
   {path:"admin",component:AdminComponent,children: 
   [
@@ -82,10 +86,10 @@ const routes: Routes = [
   {path : "Economics", component:BookContentEconomyComponent},
   {path : "NIAS_TalksAndInterview", component:TalksAndInterviewComponent},
 
-// {path : "BranchList",component:GetBranchComponent},
+ {path : "BranchList",component:GetBranchComponent},
 // {path : "InsertBranch",component:InsertBranchComponent},
 // {path:"admin",component:AdminComponent},
-// // {path:"login",component:LogInComponent},
+//  {path:"login",component:LogInComponent},
 //   {path:"getchat",component:GetchatComponent},  
   {path : "NIAS_Geography", component:BookContentGeographyComponent},
   {path : "NIAS_Governance", component:BookContentGovernanceComponent},

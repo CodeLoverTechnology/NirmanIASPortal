@@ -2,60 +2,60 @@
   <form enctype="multipart/form-data" method="post" #BannerMaster="ngForm"(ngSubmit)="onSubmit()">
     <div class="form-group">      <label>BannerID</label>
       <input type="text" name="BannerID"
-      #BannerID="ngModel" class="form-control"  [(ngModel)]="BannerModel.BannerID"   >  
+      #BannerID="ngModel" class="form-control"  [(ngModel)]="Banner.BannerID"   >  
            
  </div>
   <div class="form-group">
       <label >BannerTitle </label>
-  <input type="text" name="BannerTitle"   #BannerTitle ="ngModel" class="form-control"  [(ngModel)]="BannerModel.BannerTitle "  >
+  <input type="text" name="BannerTitle"   #BannerTitle ="ngModel" class="form-control"  [(ngModel)]="Banner.BannerTitle "  >
    
    </div> 
   <div class="form-group">
        <label>BannerImagesPath </label>
       <input type="text" name="BannerImagesPath" #BannerImagesPath ="ngModel" class="form-control"
-      [(ngModel)]="BannerModel.BannerImagesPath " >
+      [(ngModel)]="Banner.BannerImagesPath " >
            </div>
        <div>
        <label>SubTitle </label>
        <textarea type="text" name="SubTitle "  #SubTitle ="ngModel" class="form-control" 
-        [(ngModel)]="BannerModel.SubTitle "></textarea>
+        [(ngModel)]="Banner.SubTitle "></textarea>
        
        </div>
        <div>
         <label>Remarks</label>
         <textarea type="text" name="Remarks"  #Remarks="ngModel" class="form-control" 
-         [(ngModel)]="BannerModel.Remarks"></textarea>
+         [(ngModel)]="Banner.Remarks"></textarea>
        
         </div>
         <div>
           <label>CreatedBy</label>
           <textarea type="text" name="CreatedBy"  #CreatedBy="ngModel" class="form-control" 
-           [(ngModel)]="BannerModel.CreatedBy"></textarea>
+           [(ngModel)]="Banner.CreatedBy"></textarea>
           
           </div>
           <div>
             <label>CreatedDate</label>
             <textarea type="text" name="CreatedDate"  #CreatedDate="ngModel" class="form-control" 
-             [(ngModel)]="BannerModel.CreatedDate"></textarea>
+             [(ngModel)]="Banner.CreatedDate"></textarea>
             
             </div>
             <div>
               <label>ModifiedBy</label>
               <textarea type="text" name="ModifiedBy"  #ModifiedBy="ngModel" class="form-control" 
-               [(ngModel)]="BannerModel.ModifiedBy"></textarea>
+               [(ngModel)]="Banner.ModifiedBy"></textarea>
               
               </div>
               
             <div>
               <label>ModifiedDate</label>
               <textarea type="text" name="ModifiedDate"  #ModifiedDate="ngModel" class="form-control" 
-               [(ngModel)]="BannerModel.ModifiedDate"></textarea>
+               [(ngModel)]="Banner.ModifiedDate"></textarea>
             
               </div>
               <div>
                  <label>Active</label>
                 <textarea type="text" name="Active"  #Active ="ngModel" class="form-control" 
-                  [(ngModel)]="BannerModel.Active"></textarea>
+                  [(ngModel)]="Banner.Active"></textarea>
                     </div>
           <button  type="submit"  class="btn btn-primary btn-lg m-3 ">Submit Now</button> 
            </form>

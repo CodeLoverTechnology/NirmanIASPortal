@@ -9,29 +9,31 @@ import { SocialMediaServiceService } from 'src/app/Services/SocialMediaService/s
   styleUrls: ['./insert-social-media.component.css']
 })
 export class InsertSocialMediaComponent implements OnInit {
-
-
-  
+  busy: Promise<any>;
+  privatevar_one: string;  
   SocialMediaModel ={} as SocialMediaModel;
 
-constructor(private _service:SocialMediaServiceService) { }
+constructor(private _service: SocialMediaServiceService) { }
 ngOnInit(){ }
 onSubmit()
 {
-var Result = this._service.postSocialMedia(this.SocialMediaModel).subscribe(
-          result =>{
-            this.SocialMediaModel =result ? result : undefined ;
-            this.SocialMediaModel;              
+ var Result = this._service.postSocialMedia(this.SocialMediaModel).subscribe(
+           result =>{
+             this.SocialMediaModel =result ? result : undefined ;
+             this.SocialMediaModel;              
             } ,
-  (err:HttpErrorResponse)=>{
+            // this.busy = this._service.postSocialMedia(this.SocialMediaModel).subscribe(
+            //   result => this.SocialMediaModel = result);  
+(err:HttpErrorResponse)=>{
  if(err.error instanceof Error){
   console.log("Server Side Error....!");
-      }else{
+      }
+      else{
         console.log("Client Side Error   !");
       }
     })
 
-}
+  }
 
 }
 

@@ -1,4 +1,4 @@
-import { Component, OnInit, NgModule, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import { SocialMediaModel } from '../../Entity/SocialMediaModel';
 
@@ -9,6 +9,7 @@ export class SocialMediaServiceService {
 
   BaseURL: string = "http:// NIAS.codelovertechnology.com";
 
+  selectedEnquiry: { SocialMediaID: string; SocialMediaName: string; Address : string; Notes: string; };
   
   constructor(private _http:HttpClient){}
   

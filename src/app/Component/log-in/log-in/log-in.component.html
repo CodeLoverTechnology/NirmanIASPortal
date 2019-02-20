@@ -11,7 +11,7 @@
             <input type="button" onclick="check(this.form)" value="Login"/>
             <input type="reset" value="Cancel"/>
         </form> -->
-       <form class="form-horizontal" name="login">
+       <form class="form-horizontal" name="login" (submit)="loginUser($event)">
           <div class="form-group">
               <label for="fb"><B></B></label>
               <div class="input-group">
@@ -28,11 +28,11 @@
                 </a>
                   </div>
           </div>
-     <div class="form-group">
+          <div class="form-group">
             <label class="control-label" for="login"></label>
             <input class="form-control" type="text"  id="login" placeholder="First Name" required name="userid">
-        </div>
-       <div class="form-group">
+          </div>
+          <div class="form-group">
           <label class="control-label"  for="user"></label>
           <input class="form-control" class="form-control" type="password"  id="user" placeholder="Password"
            required name="pswrd"/>
