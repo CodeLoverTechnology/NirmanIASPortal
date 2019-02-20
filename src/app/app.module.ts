@@ -71,6 +71,9 @@ import {NgBusyModule} from 'ng-busy';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { TalksAndInterviewComponent } from './TalksAndInterview/TalksAndInterview.component';
+import { SpecialClassesComponent } from './Component/special-classes/special-classes.component';
+import { NIASCourseFeeStrutureComponent } from './Component/Courses/nias-course-fee-struture/nias-course-fee-struture.component';
+import { TestYourSelfComponent } from './Component/test-your-self/test-your-self.component';
 
 @NgModule({
   declarations: [
@@ -135,7 +138,10 @@ import { TalksAndInterviewComponent } from './TalksAndInterview/TalksAndIntervie
     BookContentIndianIRComponent,
     BookContentAgricultureEconomicComponent,
     BookContentModernIndiaComponent,
-    TalksAndInterviewComponent
+    TalksAndInterviewComponent,
+    SpecialClassesComponent,
+    NIASCourseFeeStrutureComponent,
+    TestYourSelfComponent
   ],
   imports: [
     BrowserModule,

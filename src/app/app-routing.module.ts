@@ -45,14 +45,12 @@ import { BookContentGeographyComponent } from './Component/books/book-content-ge
 import { BookContentAgricultureEconomicComponent } from './Component/books/book-content-agriculture-economic/book-content-agriculture-economic.component';
 import { BookContentModernIndiaComponent } from './Component/books/book-content-modern-india/book-content-modern-india.component';
 import { TalksAndInterviewComponent } from './TalksAndInterview/TalksAndInterview.component';
-import { GetSocialMediaComponent } from './component/SocialMediaMaster/get-social-media/get-social-media.component';
-import { InsertSocialMediaComponent } from './component/SocialMediaMaster/insert-social-media/insert-social-media.component';
-
+import { SpecialClassesComponent } from './Component/special-classes/special-classes.component';
+import { NIASCourseFeeStrutureComponent } from './Component/Courses/nias-course-fee-struture/nias-course-fee-struture.component';
+import { TestYourSelfComponent } from './Component/test-your-self/test-your-self.component';
 
 const routes: Routes = [
   {path:"",component:NIASHomeComponent},
-  {path:"Get",component:GetSocialMediaComponent},
-  {path:"Insert",component:InsertSocialMediaComponent},
   {path:"login",component:LogInComponent},  
   {path:"admin",component:AdminComponent,children: 
   [
@@ -103,7 +101,9 @@ const routes: Routes = [
   {path : "NIAS_Sociology", component:BookContentSociologyComponent},
   {path : "NIAS_AgricultureEconomic", component:BookContentAgricultureEconomicComponent},
   {path : "NIAS_ModernIndia", component:BookContentModernIndiaComponent},
-  
+  {path : "NIAS_SpecialClasses", component:SpecialClassesComponent},
+  {path : "NIAS_CourseFee", component:NIASCourseFeeStrutureComponent},
+  {path : "NIAS_TestYourSelf", component:TestYourSelfComponent},
   
   // { path: '', redirectTo: '/', pathMatch:'full' }
   ];

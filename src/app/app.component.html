@@ -1,35 +1,87 @@
 <section>
-<div class="container-fluid">
+<div class="row">
 <div id="mySidenav" class="sidenav">
     <app-side-menu></app-side-menu>
 </div>
 </div>
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary text-white">    
-    <a [routerLink]="['/']"  class="navbar-brand p-1 ml-4">NIRMAN IAS</a>
+<nav class="row navbar navbar-expand-lg navbar-dark bg-primary text-white text-center">    
+    <a [routerLink]="['/']"  class="navbar-brand p-1 ml-4" title="NIRMAN IAS Home"><i class="fa fa-home" aria-hidden="true"></i>&nbsp; NIRMAN IAS &nbsp; &nbsp; &nbsp; &nbsp;</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse text-uppercase" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
+    <div class="collapse navbar-collapse text-uppercase w-100 " id="navbarSupportedContent">
+        <ul class="navbar-nav">
             <li class="nav-item active">
                 <div class="col-lg-2 col-md-2 d-none d-sm-block text-right">
-                    <span><i class="fa fa-map-marker">&nbsp;&nbsp;Delhi(HeadOffice)</i></span> <br>
+                        <i class="fa fa-map-marker" data-toggle="tooltip" data-placement="bottom"  title="
+                    
+===============================
+Nirman IAS Head Office - Delhi
+===============================
+H.No : 996 1st Floor,
+Mukherjee Nagar,
+(Near Gandhi Vihar Bandh)
+Delhi-110009, India 
+
+ Info@nirmanias.com
+ nirmanias07@gmail.com
+ (+91) 11 4705-8219
+ (+91) 95406-76789
+ (+91) 97177-67797
+===============================
+
+                        ">&nbsp;&nbsp;Delhi</i>
                 </div>
             </li>
             <li class="nav-item">
                 <div class="col-lg-2 col-md-2  d-none d-sm-block">
-                    <span><i class="fa fa-map-marker ">&nbsp;&nbsp;Gwalior</i></span> <br>
+                        <i class="fa fa-map-marker" data-toggle="tooltip" data-placement="bottom"  title="
+===============================
+      Gwalior Nirman IAS
+===============================
+2/3 Aziz Complex, 
+New Khera Pati Colony 
+Phool Bagh Gwalior, (MP)- 474001 , India
+
+jaipurnias@nirmanias.com
+(+91) 97530-02277
+===============================
+                        ">&nbsp;&nbsp;Gwalior</i>
                 </div>
             </li>
             <li class="nav-item">
                 <div class="col-lg-2 col-md-2  d-none d-sm-block">
-                    <span><i class="fa fa-map-marker ">&nbsp;&nbsp;Jaipur</i></span> <br>
+                        <i class="fa fa-map-marker" data-toggle="tooltip" data-placement="bottom"  title="
+===============================
+       Jaipur Nirman IAS
+===============================
+Hindaun Heights 57,
+Riddhi Siddhi Gopalpura Bypass,
+Jaipur- 302019 , India
+
+gwaliornias@nirmanias.com
+(+91) 80942-25566
+(+91) 96805-13367
+===============================
+                        ">&nbsp;&nbsp;Jaipur</i>
                 </div>
             </li>
             <li class="nav-item">
                 <div class="col-lg-2 col-md-2  d-none d-sm-block">
-                    <span><i class="fa fa-map-marker ">&nbsp;&nbsp;Prayagraj</i></span><br>
+                        <i class="fa fa-map-marker" data-toggle="tooltip" data-placement="bottom"  title="
+===============================
+      Prayagraj Nirman IAS
+===============================
+10/14, Elgin Road, 
+Civil Line, Prayagraj(Allahabad)
+Utter Pradesh (U.P.)- 211001 , India
+
+ nirmaniasald@gmail.com
+ prayagrajnias@nirmanias.com
+ (+91) 99844-74888
+===============================
+                         ">&nbsp;&nbsp;Prayagraj</i>
                 </div>
             </li>
             <li class="nav-item">
@@ -40,14 +92,16 @@
                 </div>
             </li>
             <li class="nav-item">
-                <div class="col-lg-2 col-md-2  d-none d-sm-block p-1 text-center">
-                    <a class="btn-info mt-2 p-2" href=""><small>हिंदी</small></a>
-                    <a class="btn-info active p-2  mt-1" href=""><small>ENG</small></a>
+                <div class="col-lg-2 col-md-2  col-sm-12 col-xs-12 text-center">
+                        
+                    <!-- <a class="btn-info mt-2 p-2" href=""><small>हिंदी</small></a>
+                    <a class="btn-info active p-2  mt-1" href=""><small>ENG</small></a> -->
                 </div>
             </li>
         </ul>
-        <form class="form-inline p-1 my-lg-0">
-                <div class="input-group mb-1">
+        &nbsp; &nbsp; &nbsp; &nbsp;
+        <form class="form-inline float-right">
+                <div class="input-group">
                         <input type="text" class="form-control" placeholder="Search.." aria-label="Search" aria-describedby="basic-addon2">
                         <div class="input-group-append">
                           <span class="fa fa-search btn btn-danger" id="Search" title="Search"></span>
@@ -59,8 +113,8 @@
 </section>
 <div id="main">
     <section>
-   <span id="SideMenu" style="font-size:30px;cursor:pointer;width: 40px;" 
-   class="fixed-top text-white p-2 bg-primary" onclick="SideMenuShow();">&#9776;</span>
+   <span id="SideMenu" style="font-size:28px;cursor:pointer;width: 35px;" 
+   class="fixed-top text-white p-1 bg-primary" onclick="SideMenuShow();">&#9776;</span>
 </section>
     <router-outlet></router-outlet>
 </div>
