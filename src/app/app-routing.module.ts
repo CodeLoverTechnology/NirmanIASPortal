@@ -19,8 +19,11 @@ import { UPSCGSMainsSyllabusComponent } from './Component/Courses/upsc-gs-mains-
 import { UPSCPrelimsGSSyllabusComponent } from './Component/Courses/upsc-prelims-gs-syllabus/upsc-prelims-gs-syllabus.component';
 import { CurrentAffairsComponent } from './Component/current-affairs/current-affairs.component';
 import { ClassNotesComponent } from './Component/class-notes/class-notes.component';
-
+import {GetSocialMediaComponent} from "./Component/SocialMediaMaster/get-social-media/get-social-media.component";
 import { GetBranchComponent } from './component/BranchMaster/get-branch/get-branch.component';
+import { GetBannerComponent } from './component/Banner/get-banner/get-banner.component';
+import { GetMasterinfoComponent } from './component/MasterInfo/get-masterinfo/get-masterinfo.component';
+import { InsertSocialMediaComponent } from './component/SocialMediaMaster/insert-social-media/insert-social-media.component';
 
 import { InsertBannerComponent } from './component/Banner/insert-banner/insert-banner.component';
 // import { AdminComponent } from './Component/admin/admin/admin.component';
@@ -48,6 +51,7 @@ import { TalksAndInterviewComponent } from './TalksAndInterview/TalksAndIntervie
 import { SpecialClassesComponent } from './Component/special-classes/special-classes.component';
 import { NIASCourseFeeStrutureComponent } from './Component/Courses/nias-course-fee-struture/nias-course-fee-struture.component';
 import { TestYourSelfComponent } from './Component/test-your-self/test-your-self.component';
+import { from } from 'rxjs';
 
 const routes: Routes = [
   {path:"",component:NIASHomeComponent},
@@ -61,11 +65,11 @@ const routes: Routes = [
     {path:"admin/getchat",component:GetchatComponent},     
     {path:'',component:AdminlinkComponent},
   ]},
-//{path:"Enquiry",component:GetEnquiryComponent},
+  {path:"Getmaster",component:GetMasterinfoComponent},
   {path:"InsertEnquiry",component:InsertEnquiryComponent},
   {path:"registration",component: RegistrationComponent},
   {path:"Aboutus",component:AboutUsComponent},
-  //{path:"Gallery",component:GalleryNIASComponent},
+  {path:"Getbanner",component:GetBannerComponent},
   {path:"Video",component:VideoNIASComponent},
   {path:"Contact",component:ContactUsComponent},
   {path:"Magazine",component:MagazineListComponent},
@@ -77,7 +81,7 @@ const routes: Routes = [
   {path:"PrelimsGSSyllabus",component:UPSCPrelimsGSSyllabusComponent},
   {path:"CurrentAffairs",component:CurrentAffairsComponent},
   {path:"ClassNotes",component:ClassNotesComponent},
-// {path:"getbanner",component:GetBannerComponentonent},
+ {path:"get-socialmedia",component:GetSocialMediaComponent},
   {path:"EthicsBook",component:BookContentEthicsComponent },
   {path : "EnvironmentBook", component:BookContentEnvironmentComponent},
   {path : "POLITYBook", component:BookContentPOLITYComponent},
@@ -85,7 +89,7 @@ const routes: Routes = [
   {path : "NIAS_TalksAndInterview", component:TalksAndInterviewComponent},
 
  {path : "BranchList",component:GetBranchComponent},
-// {path : "InsertBranch",component:InsertBranchComponent},
+{path : "InsertSocialmedia",component:InsertSocialMediaComponent},
 // {path:"admin",component:AdminComponent},
 //  {path:"login",component:LogInComponent},
 //   {path:"getchat",component:GetchatComponent},  

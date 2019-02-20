@@ -5,7 +5,8 @@
         </div>
     </div>       
     <form enctype="multipart/form-data"method="post"#EnquiryForm="ngForm"(ngSubmit)="onSubmit()">
-    <div class="form-group"><label>Name</label>
+    <div class="form-group">
+        <label>Name</label>
     <input type="text"name="name"
     #name="ngModel"class="form-control"[(ngModel)]="enquiry.name"placeholder="Enter Your Name"required>
     <div class="validation-error"*ngIf="name.invalid && name.touched">This field is required.</div>

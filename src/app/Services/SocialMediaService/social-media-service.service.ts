@@ -7,9 +7,9 @@ import { SocialMediaModel } from '../../Entity/SocialMediaModel';
 })
 export class SocialMediaServiceService {
 
-  BaseURL: string = "http:// NIAS.codelovertechnology.com";
+  BaseURL: string = "http://NIAS.codelovertechnology.com/";
 
-  selectedEnquiry: { SocialMediaID: string; SocialMediaName: string; Address : string; Notes: string; };
+  selectedMedia: { SocialMediaID: string; SocialMediaName: string; Address : string; Notes: string; };
   
   constructor(private _http:HttpClient){}
   
@@ -18,7 +18,7 @@ export class SocialMediaServiceService {
     return this._http.get(this.BaseURL+"api/SocialMediaMasters/SocialMediaMastersList");
   }
 
-  public postSocialMedia(SocialMediaModel : SocialMediaModel){
-    return this._http.post<any>(this.BaseURL+"api/SocialMediaMasters/CreateSocialMediaMasters",SocialMediaModel);
+  public postSocialMedia(socialMediaModel : SocialMediaModel):any{
+    return this._http.post<any>(this.BaseURL+"api/SocialMediaMasters/CreateSocialMediaMasters",socialMediaModel);
   }
 }

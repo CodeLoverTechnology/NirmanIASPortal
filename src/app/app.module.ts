@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 // import { NgModule } from '@angular/core';
-import { Component, OnInit, NgModule } from '@angular/core';
+import {  NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -29,7 +29,7 @@ import { UPSCCoursesComponent } from './Component/Courses/upsc-courses/upsc-cour
 import { StatePCSCoursesComponent } from './Component/Courses/state-pcs-courses/state-pcs-courses.component';
 import { TestSeriesComponent } from './Component/Courses/test-series/test-series.component';
 import { InsertSubCategoryComponent } from './component/SubCategory/insert-sub-category/insert-sub-category.component';
-import { GetSocialMediaComponent } from './component/SocialMediaMaster/get-social-media/get-social-media.component';
+import { GetSocialMediaComponent } from './Component/SocialMediaMaster/get-social-media/get-social-media.component';
 import { InsertSocialMediaComponent } from './component/SocialMediaMaster/insert-social-media/insert-social-media.component';
 
 import { GetMasterinfoComponent } from './component/MasterInfo/get-masterinfo/get-masterinfo.component';
@@ -55,6 +55,7 @@ import { BookContentEconomyComponent } from './Component/Books/book-content-econ
 import { Home1Component } from './component/niashome/home1/home1.component';
 import { GetchatComponent } from './component/getchat/getchat.component';
 import { PutchatComponent } from './component/putchat/putchat.component';
+import {SocialMediaServiceService} from "./Services/SocialMediaService/social-media-service.service";
 import { BookContentSOCIALJUSTICEComponent } from './Component/books/book-content-social-justice/book-content-social-justice.component';
 import { BookContentScienceTechComponent } from './Component/books/book-content-science-tech/book-content-science-tech.component';
 import { BookContentPaperIIIComponent } from './Component/books/book-content-paper-iii/book-content-paper-iii.component';
@@ -153,7 +154,7 @@ import { TestYourSelfComponent } from './Component/test-your-self/test-your-self
     BrowserAnimationsModule,
     NoopAnimationsModule
   ],
-   providers: [EnquiryServiceService,ChatServicesService,AuthService],
+   providers: [EnquiryServiceService,ChatServicesService,AuthService,SocialMediaServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

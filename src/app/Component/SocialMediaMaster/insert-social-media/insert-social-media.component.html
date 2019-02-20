@@ -3,56 +3,56 @@
     <div class="form-group">     
        <label>SocialMediaID </label>
       <input type="text" name="SocialMediaID "
-      #SocialMediaID ="ngModel" class="form-control"  [(ngModel)]="SocialMediaModel .SocialMediaID"  required >  
+      #SocialMediaID="ngModel" class="form-control"  [(ngModel)]="socialMediaModel.SocialMediaID"  required >  
   <div class="validation-error" *ngIf="SocialMediaID.invalid && SocialMediaID.touched">This field is required.</div>          
  </div>
  
   <div class="form-group">
       <label >SocialMediaName </label>
-  <input type="text" name="SocialMediaName " required  #SocialMediaName  ="ngModel" class="form-control"  [(ngModel)]="SocialMediaModel.SocialMediaName "  >
+  <input type="text" name="SocialMediaName " required  #SocialMediaName="ngModel" class="form-control"  [(ngModel)]="socialMediaModel.SocialMediaName "  >
   
   <div class="validation-error" *ngIf="SocialMediaName.invalid && SocialMediaName.touched">This field is required.</div>
    </div> 
   <div class="form-group">
        <label>Address </label>
-      <input type="text" name="Address " #Address  ="ngModel" class="form-control"
-      [(ngModel)]="SocialMediaModel.Address " required>
+      <input type="text" name="Address " #Address="ngModel" class="form-control"
+      [(ngModel)]="socialMediaModel.Address " required>
       <div class="validation-error" *ngIf="Address.invalid && Address.touched">This field is required.</div>
            </div>
        <div>
        <label>Notes </label>
        <textarea type="text" name="Notes "  #Notes  ="ngModel" class="form-control" required
-        [(ngModel)]="SocialMediaModel.Notes "></textarea>
+        [(ngModel)]="socialMediaModel.Notes "></textarea>
        <div class="validation-error" *ngIf="Notes.invalid && Notes.touched">This field is required.</div>
        </div>
        <div>
         <label>CreatedBy </label>
         <textarea type="text" name="CreatedBy "  #CreatedBy  ="ngModel" class="form-control" required
-         [(ngModel)]="SocialMediaModel.CreatedBy "></textarea>
+         [(ngModel)]="socialMediaModel.CreatedBy "></textarea>
         <div class="validation-error" *ngIf="CreatedBy .invalid && CreatedBy .touched">This field is required.</div>
         </div>
         <div>
           <label>CreatedDate </label>
           <textarea type="text" name="CreatedDate "  #CreatedDate  ="ngModel" class="form-control" required
-           [(ngModel)]="SocialMediaModel.CreatedDate "></textarea>
+           [(ngModel)]="socialMediaModel.CreatedDate "></textarea>
           <div class="validation-error" *ngIf="CreatedDate .invalid && CreatedDate .touched">This field is required.</div>
           </div>
           <div>
             <label>ModifiedBy </label>
             <textarea type="text" name="ModifiedBy "  #ModifiedBy  ="ngModel" class="form-control" required
-             [(ngModel)]="SocialMediaModel.ModifiedBy "></textarea>
+             [(ngModel)]="socialMediaModel.ModifiedBy "></textarea>
             <div class="validation-error" *ngIf="ModifiedBy .invalid && ModifiedBy .touched">This field is required.</div>
             </div>
             <div>
               <label>ModifiedDate </label>
               <textarea type="text" name="ModifiedDate "  #ModifiedDate  ="ngModel" class="form-control" required
-               [(ngModel)]="SocialMediaModel.ModifiedDate "></textarea>
+               [(ngModel)]="socialMediaModel.ModifiedDate "></textarea>
               <div class="validation-error" *ngIf="ModifiedDate .invalid && ModifiedDate .touched">This field is required.</div>
               </div>
                   <div>
                     <label>Active</label>
                     <textarea type="text" name="Active"  #Active ="ngModel" class="form-control" required
-                     [(ngModel)]="SocialMediaModel.Active"></textarea>
+                     [(ngModel)]="socialMediaModel.Active"></textarea>
                     <div class="validation-error" *ngIf="Active.invalid && Active.touched">This field is required.</div>
                     </div>
           <button [disabled]="!SocialMediaMastersForm.valid" type="submit"  class="btn btn-primary btn-lg m-3 ">Submit Now</button> 

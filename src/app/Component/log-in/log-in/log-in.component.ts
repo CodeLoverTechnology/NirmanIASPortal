@@ -10,7 +10,7 @@ export class LogInComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console log(event); 
+    console.log(event);
     
   }
 }

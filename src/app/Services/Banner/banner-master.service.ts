@@ -8,8 +8,9 @@ import { BannerModel } from 'src/app/Entity/banner-model';
 })
 export class BannerMasterService {
  
-  BaseURL: string = "http:// NIAS.codelovertechnology.com";
+  BaseURL: string = "http://NIAS.codelovertechnology.com/";
 
+  selectedBanner: { BannerID: string; BannerTitle : string; BannerImagesPath : string; SubTitle: string; Remarks: string;};
   
   constructor(private _http:HttpClient){}
   

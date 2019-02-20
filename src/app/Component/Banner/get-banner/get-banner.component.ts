@@ -10,7 +10,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 export class GetBannerComponent implements OnInit {
 
   public result: any;
-  constructor(private _service: BannerMasterService) { }
+  constructor(private _service:BannerMasterService) { }
   ngOnInit() {
     this._service.getBannerInfo().subscribe(res => this.result = res);
     (err: HttpErrorResponse) => {
