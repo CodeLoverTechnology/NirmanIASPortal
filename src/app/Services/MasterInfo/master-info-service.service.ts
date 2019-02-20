@@ -7,7 +7,10 @@ import {MasterInfoModel} from "../../Entity/master-info-model";
 })
 export class MasterInfoServiceService {
 
-  BaseURL: string = "http:// NIAS.codelovertechnology.com";
+  BaseURL: string = "http://NIAS.codelovertechnology.com/";
+
+  selectedMaster: { MasterID: string; MasterValue: string; MasterTable: string; Sequence: string;};
+  
 
   constructor(private _http:HttpClient){}
   

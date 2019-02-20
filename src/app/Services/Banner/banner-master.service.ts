@@ -10,6 +10,7 @@ export class BannerMasterService {
  
   BaseURL: string = "http://NIAS.codelovertechnology.com/api/";
 
+  selectedBanner: { BannerID: string; BannerTitle : string; BannerImagesPath : string; SubTitle: string; Remarks: string;};
   
   constructor(private _http:HttpClient){}
   

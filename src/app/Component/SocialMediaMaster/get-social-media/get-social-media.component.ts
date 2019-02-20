@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SubCategoryMasterService } from 'src/app/Services/SubCategoryService/sub-category-master.service';
+import { SocialMediaServiceService } from "../../../Services/SocialMediaService/social-media-service.service";
 import { HttpErrorResponse } from '@Angular/common/http';
 
 @Component({
@@ -10,9 +10,9 @@ import { HttpErrorResponse } from '@Angular/common/http';
 export class GetSocialMediaComponent implements OnInit {
 
   public result:any;
-  constructor(private _service:SubCategoryMasterService) { }
+  constructor(private _service:SocialMediaServiceService) { }
 ngOnInit() {
-    this._service.getsubcategoryInfo().subscribe(res=>this.result=res);
+    this._service.getSocialMediaInfo().subscribe(res=>this.result=res);
     (err:HttpErrorResponse)=>{
       if(err.error instanceof Error){
         console.log("Server Side Error !");
