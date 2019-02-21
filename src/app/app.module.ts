@@ -72,7 +72,7 @@ import { BookContentModernIndiaComponent } from './Component/books/book-content-
 import {NgBusyModule} from 'ng-busy';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { TalksAndInterviewComponent } from './TalksAndInterview/TalksAndInterview.component';
+
 import { SpecialClassesComponent } from './Component/special-classes/special-classes.component';
 import { NIASCourseFeeStrutureComponent } from './Component/Courses/nias-course-fee-struture/nias-course-fee-struture.component';
 import { TestYourSelfComponent } from './Component/test-your-self/test-your-self.component';
@@ -164,7 +164,7 @@ import { DeleteCurrentAffairsComponent } from './Component/CurrentAffairs/delete
     BookContentIndianIRComponent,
     BookContentAgricultureEconomicComponent,
     BookContentModernIndiaComponent,
-    TalksAndInterviewComponent,
+    //TalksAndInterviewComponent,
     SpecialClassesComponent,
     NIASCourseFeeStrutureComponent,
     TestYourSelfComponent,
@@ -200,7 +200,7 @@ import { DeleteCurrentAffairsComponent } from './Component/CurrentAffairs/delete
     ReactiveFormsModule,
     NgBusyModule,
     BrowserAnimationsModule,
-    NoopAnimationsModule
+    NoopAnimationsModule 
   ],
    providers: [EnquiryServiceService,ChatServicesService,AuthService,SocialMediaServiceService],
   bootstrap: [AppComponent]
