@@ -51,6 +51,7 @@ import { TalksAndInterviewComponent } from './TalksAndInterview/TalksAndIntervie
 import { SpecialClassesComponent } from './Component/special-classes/special-classes.component';
 import { NIASCourseFeeStrutureComponent } from './Component/Courses/nias-course-fee-struture/nias-course-fee-struture.component';
 import { TestYourSelfComponent } from './Component/test-your-self/test-your-self.component';
+import {GetSubCategoryComponent } from './Component/SubCategory/get-sub-category/get-sub-category.component';
 import { from } from 'rxjs';
 
 const routes: Routes = [
@@ -92,7 +93,7 @@ const routes: Routes = [
 {path : "InsertSocialmedia",component:InsertSocialMediaComponent},
 // {path:"admin",component:AdminComponent},
 //  {path:"login",component:LogInComponent},
-//   {path:"getchat",component:GetchatComponent},  
+ {path:"get-subcategory",component:GetSubCategoryComponent },  
   {path : "NIAS_Geography", component:BookContentGeographyComponent},
   {path : "NIAS_Governance", component:BookContentGovernanceComponent},
   {path : "NIAS_History", component:BookContentHistoryComponent},

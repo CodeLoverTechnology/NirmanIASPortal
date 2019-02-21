@@ -29,6 +29,7 @@ import { UPSCCoursesComponent } from './Component/Courses/upsc-courses/upsc-cour
 import { StatePCSCoursesComponent } from './Component/Courses/state-pcs-courses/state-pcs-courses.component';
 import { TestSeriesComponent } from './Component/Courses/test-series/test-series.component';
 import { InsertSubCategoryComponent } from './component/SubCategory/insert-sub-category/insert-sub-category.component';
+import { GetSubCategoryComponent } from './Component/SubCategory/get-sub-category/get-sub-category.component';
 import { GetSocialMediaComponent } from './Component/SocialMediaMaster/get-social-media/get-social-media.component';
 import { InsertSocialMediaComponent } from './component/SocialMediaMaster/insert-social-media/insert-social-media.component';
 
@@ -75,6 +76,29 @@ import { TalksAndInterviewComponent } from './TalksAndInterview/TalksAndIntervie
 import { SpecialClassesComponent } from './Component/special-classes/special-classes.component';
 import { NIASCourseFeeStrutureComponent } from './Component/Courses/nias-course-fee-struture/nias-course-fee-struture.component';
 import { TestYourSelfComponent } from './Component/test-your-self/test-your-self.component';
+import { GetBatchDetailsComponent } from './Component/BatchDetails/get-batch-details/get-batch-details.component';
+import { InsertBatchDetailsComponent } from './Component/BatchDetails/insert-batch-details/insert-batch-details.component';
+import { UpdateBatchDetailsComponent } from './Component/BatchDetails/update-batch-details/update-batch-details.component';
+import { DeleteBatchDetailsComponent } from './Component/BatchDetails/delete-batch-details/delete-batch-details.component';
+
+import { GetBatchTopicDetailsComponent } from './Component/BatchTopicDetails/get-batch-topic-details/get-batch-topic-details.component';
+import { InsertBatchTopicDetailsComponent } from './Component/BatchTopicDetails/insert-batch-topic-details/insert-batch-topic-details.component';
+import { UpdateBatchTopicDetailsComponent } from './Component/BatchTopicDetails/update-batch-topic-details/update-batch-topic-details.component';
+import { DeleteBatchTopicDetailsComponent } from './Component/BatchTopicDetails/delete-batch-topic-details/delete-batch-topic-details.component';
+import { GetVideoLectureComponent } from './Component/VideoLectures/get-video-lecture/get-video-lecture.component';
+import { InsertVideoLectureComponent } from './Component/VideoLectures/insert-video-lecture/insert-video-lecture.component';
+import { UpdateVideoLectureComponent } from './Component/VideoLectures/update-video-lecture/update-video-lecture.component';
+import { DeleteVideoLectureComponent } from './Component/VideoLectures/delete-video-lecture/delete-video-lecture.component';
+import { GetNirmanresultMasterComponent } from './Component/NirmanResultMaster/get-nirmanresult-master/get-nirmanresult-master.component';
+import { InsertNirmanresultMasterComponent } from './Component/NirmanResultMaster/insert-nirmanresult-master/insert-nirmanresult-master.component';
+import { UpdateNirmanresultMasterComponent } from './Component/NirmanResultMaster/update-nirmanresult-master/update-nirmanresult-master.component';
+import { DeleteNirmanresultMasterComponent } from './Component/NirmanResultMaster/delete-nirmanresult-master/delete-nirmanresult-master.component';
+import { GetCurrentAffairsComponent } from './Component/CurrentAffairs/get-current-affairs/get-current-affairs.component';
+//import { InsertGetCurrentAffairsComponent } from './Component/CurrentAffairs/insert-get-current-affairs/insert-get-current-affairs.component';
+import { InsertCurrentAffairsComponent } from './Component/CurrentAffairs/insert-current-affairs/insert-current-affairs.component';
+import { UpdatCurrentAffairsComponent } from './Component/CurrentAffairs/updat-current-affairs/updat-current-affairs.component';
+import { UpdateCurrentAffairsComponent } from './Component/CurrentAffairs/update-current-affairs/update-current-affairs.component';
+import { DeleteCurrentAffairsComponent } from './Component/CurrentAffairs/delete-current-affairs/delete-current-affairs.component';
 
 @NgModule({
   declarations: [
@@ -88,6 +112,7 @@ import { TestYourSelfComponent } from './Component/test-your-self/test-your-self
     FooterComponent,
     LiveChatComponent,
     SideMenuComponent,
+    GetSubCategoryComponent,
     LogInComponent,
     RegistrationComponent,
     AdminComponent,
@@ -142,7 +167,30 @@ import { TestYourSelfComponent } from './Component/test-your-self/test-your-self
     TalksAndInterviewComponent,
     SpecialClassesComponent,
     NIASCourseFeeStrutureComponent,
-    TestYourSelfComponent
+    TestYourSelfComponent,
+    GetBatchDetailsComponent,
+    InsertBatchDetailsComponent,
+    UpdateBatchDetailsComponent,
+    DeleteBatchDetailsComponent,
+   
+    GetBatchTopicDetailsComponent,
+    InsertBatchTopicDetailsComponent,
+    UpdateBatchTopicDetailsComponent,
+    DeleteBatchTopicDetailsComponent,
+    GetVideoLectureComponent,
+    InsertVideoLectureComponent,
+    UpdateVideoLectureComponent,
+    DeleteVideoLectureComponent,
+    GetNirmanresultMasterComponent,
+    InsertNirmanresultMasterComponent,
+    UpdateNirmanresultMasterComponent,
+    DeleteNirmanresultMasterComponent,
+    GetCurrentAffairsComponent,
+  
+    InsertCurrentAffairsComponent,
+    UpdatCurrentAffairsComponent,
+    UpdateCurrentAffairsComponent,
+    DeleteCurrentAffairsComponent
   ],
   imports: [
     BrowserModule,
