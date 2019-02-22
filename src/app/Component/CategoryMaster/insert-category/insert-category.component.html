@@ -1,63 +1,46 @@
 <div class="container-fluid">
-  <form enctype="multipart/form-data" method="post" #CategoryMaster="ngForm"(ngSubmit)="onSubmit()">
-    <div class="form-group">      <label>CategoryID</label>
-      <input type="text" name="CategoryID"
-      #CategoryID="ngModel" class="form-control"  [(ngModel)]="CategoryMaster.CategoryID"  required >  
-  <div class="validation-error" *ngIf="CategoryID.invalid && CategoryID  .touched">This field is required.</div>          
- </div>
-  <div class="form-group">
-      <label >CategoryCode</label>
-  <input type="text" name="CategoryCode" required  #CategoryCode="ngModel" class="form-control"  [(ngModel)]="CategoryMaster.CategoryCode"  >
-   <div class="validation-error" *ngIf="CategoryCode  .invalid && CategoryCode  .touched">This field is required.</div>
-   </div> 
-  <div class="form-group">
-       <label>CategoryName</label>
-      <input type="text" name="CategoryName" #CategoryName="ngModel" class="form-control"
-      [(ngModel)]="CategoryMaster.CategoryName" required>
-      <div class="validation-error" *ngIf="CategoryName .invalid && CategoryName.touched">This field is required.</div>
-           </div>
-       <div>
-       <label>Description</label>
-       <textarea type="text" name="Description"  #Description="ngModel" class="form-control" required
-        [(ngModel)]="CategoryMaster.Description"></textarea>
-       <div class="validation-error" *ngIf="Description .invalid && Description .touched">This field is required.</div>
-       </div>
-       <div>
-        <label>Sequence</label>
-        <textarea type="text" name="Sequence"  #Sequence="ngModel" class="form-control" required
-         [(ngModel)]="CategoryMaster.Sequence"></textarea>
-        <div class="validation-error" *ngIf="Sequence.invalid && Sequence.touched">This field is required.</div>
-        </div>
-        <div>
-          <label>CreatedBy</label>
-          <textarea type="text" name="CreatedBy"  #CreatedBy="ngModel" class="form-control" required
-           [(ngModel)]="CategoryMaster.CreatedBy"></textarea>
-          <div class="validation-error" *ngIf="CreatedBy .invalid && CreatedBy .touched">This field is required.</div>
-          </div>
-          <div>
-            <label>CreatedDate</label>
-            <textarea type="text" name="CreatedDate"  #CreatedDate="ngModel" class="form-control" required
-             [(ngModel)]="CategoryMaster.CreatedDate"></textarea>
-            <div class="validation-error" *ngIf="CreatedDate  .invalid && CreatedDate  .touched">This field is required.</div>
-            </div>
-            <div>
-              <label>ModifiedBy  </label>
-              <textarea type="text" name="ModifiedBy"  #ModifiedBy="ngModel" class="form-control" required
-               [(ngModel)]="CategoryMaster.ModifiedBy"></textarea>
-              <div class="validation-error" *ngIf="ModifiedBy  .invalid && ModifiedBy  .touched">This field is required.</div>
-              </div>
-            <div>
-              <label>ModifiedDate </label>
-              <textarea type="text" name="ModifiedDate"  #ModifiedDate="ngModel" class="form-control" required
-               [(ngModel)]="CategoryMaster.ModifiedDate "></textarea>
-              <div class="validation-error" *ngIf="ModifiedDate .invalid && ModifiedDate .touched">This field is required.</div>
-              </div>
-                  <div>
-                    <label>Active</label>
-                    <textarea type="text" name="Active"  #Active ="ngModel" class="form-control" required
-                     [(ngModel)]="CategoryMaster.Active"></textarea>
-                    <div class="validation-error" *ngIf="Active.invalid && Active.touched">This field is required.</div>
-                    </div>
-          <button [disabled]="!CategoryMaster.valid" type="submit"  class="btn btn-primary btn-lg m-3 ">Submit Now</button> 
-           </form>
+  <h1>Nirman IAS CategoryMaster </h1>
+  <form #CategoryForm="ngForm"(ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>CategoryID</label>
+      <input type="text" name="CategoryID" class="form-control" [(ngModel)]="Category.CategoryID">
+    </div>
+    <div class="form-group">
+      <label>CategoryCode</label>
+      <input type="text" name="CategoryCode" class="form-control" [(ngModel)]="Category.CategoryCode">
+    </div>
+    <div class="form-group">
+      <label>CategoryName</label>
+      <input type="text" name="CategoryName" class="form-control" [(ngModel)]="Category.CategoryName">
+    </div>
+    <div>
+    <label>Description</label>
+    <textarea type="text" name="Description" class="form-control" [(ngModel)]="Category.Description"></textarea>
+    </div>
+    <div>
+      <label>Sequence</label>
+      <textarea type="text" name="Sequence" class="form-control" [(ngModel)]="Category.Sequence"></textarea>
+    </div>
+    <div class="form-group">
+      <label>CreatedBy</label>
+      <input type="text" name="createdBy" class="form-control" [(ngModel)]="Category.createdBy">
+    </div>
+    <div class="form-group">
+      <label>CreatedDate</label>
+      <input type="text" name="createdDate" class="form-control" [(ngModel)]="Category.createdDate">
+    </div>
+    <div class="form-group">
+      <label>ModifiedBy</label>
+      <input type="text" name="modifiedBy" class="form-control" [(ngModel)]="Category.modifiedBy">
+    </div>
+    <div class="form-group">
+      <label>ModifiedDate</label>
+      <input type="text" name="modifiedDate" class="form-control" [(ngModel)]="Category.modifiedDate">
+    </div>
+    <div class="form-group">
+      <label>Active</label>
+      <input type="boolean" name="active" class="form-control" [(ngModel)]="Category.active">
+    </div>
+    <button type="submit"  class="btn btn-primary btn-lg ml-2">Submit Now</button>
+    </form>
   </div>

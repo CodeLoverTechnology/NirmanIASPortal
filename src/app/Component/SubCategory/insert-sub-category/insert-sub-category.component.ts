@@ -24,9 +24,9 @@ onSubmit()
               } ,
     (err:HttpErrorResponse)=>{
    if(err.error instanceof Error){
-    console.log("Server Side Error....!");
+    console.log("Client Side Error....!");
         }else{
-          console.log("Client Side Error   !");
+          console.log("Server Side Error....!");
         }
       })
 

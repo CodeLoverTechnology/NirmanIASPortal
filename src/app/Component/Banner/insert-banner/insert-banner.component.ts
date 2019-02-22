@@ -15,19 +15,15 @@ export class InsertBannerComponent implements OnInit {
   ngOnInit(){ }
   onSubmit()
   {
-  var Result = this._service.postBannerMaster(this.Banner).subscribe(
-            result =>{
-              this.Banner =result ? result : undefined ;
-              this.Banner;              
-              } ,
-    (err:HttpErrorResponse)=>{
-   if(err.error instanceof Error){
-    console.log("Server Side Error....!");
-        }else{
-          console.log("Client Side Error   !");
-        }
-      })
-  
-  }
-
-}
+    
+  this._service.postBanner(this.Banner).subscribe(
+    result => console.log('Success !!!.',result),
+      (err:HttpErrorResponse)=>{
+     if(err.error instanceof Error){
+            console.log("Client Side Error....!");
+          }else{
+            console.log("Server Side Error   !");
+          }
+        })
+      console.log(this.Banner);
+    }}

@@ -20,9 +20,9 @@ export class InsertEnquiryComponent implements OnInit {
             result => this.enquiry = result);
         (err: HttpErrorResponse) => {
             if (err.error instanceof Error) {
-                console.log("Server Side Error....!");
+                console.log("Client Side Error....!");
             } else {
-                console.log("Client Side Error !");
+                console.log("Server Side Error...!");
             }
         };
         alert('Dear Student Your Enquiry has Submited to NIRMAN IAS. We Well get back to you soon!!!...Enquiry ID : ' + this.enquiry["enquiryID"]);

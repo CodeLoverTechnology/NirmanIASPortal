@@ -1,70 +1,50 @@
 <div class="container-fluid">
-  <form enctype="multipart/form-data" method="post" #BranchMaster="ngForm"(ngSubmit)="onSubmit()">
-    <div class="form-group">      <label>BranchCode</label>
-      <input type="text" name="BranchCode"
-      #BranchCode="ngModel" class="form-control"  [(ngModel)]="BranchMaster.BranchCode"  required >  
-  <div class="validation-error" *ngIf="BranchCode .invalid && BranchCode  .touched">This field is required.</div>          
- </div>
-  <div class="form-group">
-      <label >BranchName</label>
-  <input type="text" name="BranchName" required  #BranchName="ngModel" class="form-control"  [(ngModel)]="BranchMaster.BranchName"  >
-   <div class="validation-error" *ngIf="BranchName .invalid && BranchName .touched">This field is required.</div>
-   </div> 
-  <div class="form-group">
-       <label>BranchAddress</label>
-      <input type="text" name="BranchAddress" #BranchAddress="ngModel" class="form-control"
-      [(ngModel)]="BranchMaster.BranchAddress" required>
-      <div class="validation-error" *ngIf="BranchAddress  .invalid && BranchAddress  .touched">This field is required.</div>
-           </div>
-       <div>
-       <label>ContactNo</label>
-       <textarea type="text" name="ContactNo"  #ContactNo="ngModel" class="form-control" required
-        [(ngModel)]="BranchMaster.ContactNo"></textarea>
-       <div class="validation-error" *ngIf="ContactNo .invalid && ContactNo .touched">This field is required.</div>
-       </div>
-       <div>
-        <label>EmailID </label>
-        <textarea type="text" name="EmailID"  #EmailID="ngModel" class="form-control" required
-         [(ngModel)]="BranchMaster.EmailID"></textarea>
-        <div class="validation-error" *ngIf="EmailID  .invalid && EmailID  .touched">This field is required.</div>
-        </div>
-       <div>
-        <label>Remarks</label>
-        <textarea type="text" name="Remarks"  #Remarks="ngModel" class="form-control" required
-         [(ngModel)]="BranchMaster.Remarks"></textarea>
-        <div class="validation-error" *ngIf="Remarks.invalid && Remarks  .touched">This field is required.</div>
-        </div>
-        <div>
-          <label>CreatedBy</label>
-          <textarea type="text" name="CreatedBy"  #CreatedBy="ngModel" class="form-control" required
-           [(ngModel)]="BranchMaster.CreatedBy"></textarea>
-          <div class="validation-error" *ngIf="CreatedBy .invalid && CreatedBy .touched">This field is required.</div>
-          </div>
-          <div>
-            <label>CreatedDate</label>
-            <textarea type="text" name="CreatedDate"  #CreatedDate="ngModel" class="form-control" required
-             [(ngModel)]="BranchMaster.CreatedDate"></textarea>
-            <div class="validation-error" *ngIf="CreatedDate  .invalid && CreatedDate  .touched">This field is required.</div>
-            </div>
-            <div>
-              <label>ModifiedBy</label>
-              <textarea type="text" name="ModifiedBy"  #ModifiedBy="ngModel" class="form-control" required
-               [(ngModel)]="BranchMaster.ModifiedBy"></textarea>
-              <div class="validation-error" *ngIf="ModifiedBy.invalid && ModifiedBy  .touched">This field is required.</div>
-              </div>
-              
-            <div>
-              <label>ModifiedDate</label>
-              <textarea type="text" name="ModifiedDate"  #ModifiedDate="ngModel" class="form-control" required
-               [(ngModel)]="BranchMaster.ModifiedDate"></textarea>
-              <div class="validation-error" *ngIf="ModifiedDate .invalid && ModifiedDate .touched">This field is required.</div>
-              </div>
-                  <div>
-                    <label>Active</label>
-                    <textarea type="text" name="Active"  #Active ="ngModel" class="form-control" required
-                     [(ngModel)]="BranchMaster.Active"></textarea>
-                    <div class="validation-error" *ngIf="Active.invalid && Active.touched">This field is required.</div>
-                    </div>
-          <button [disabled]="!BranchMaster.valid" type="submit"  class="btn btn-primary btn-lg m-3 ">Submit Now</button> 
-           </form>
+  <h1>Nirman IAS Branch </h1>
+  <form #BannerForm="ngForm"(ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>BranchCode</label>
+      <input type="text" name="BranchCode" class="form-control" [(ngModel)]="Branch.BranchCode">
+    </div>
+    <div class="form-group">
+      <label>BranchName</label>
+      <input type="text" name="BranchName" class="form-control" [(ngModel)]="Branch.BranchName">
+    </div>
+    <div class="form-group">
+      <label>BranchAddress</label>
+      <input type="text" name="BranchAddress" class="form-control" [(ngModel)]="Branch.BranchAddress">
+    </div>
+    <div>
+    <label>ContactNo</label>
+    <textarea type="text" name="ContactNo" class="form-control" [(ngModel)]="Branch.ContactNo"></textarea>
+    </div>
+    <div>
+      <label>EmailID</label>
+      <textarea type="text" name="EmailID" class="form-control" [(ngModel)]="Branch.EmailID"></textarea>
+    </div>
+    <div class="form-group">
+      <label>Remarks</label>
+      <input type="text" name="Remarks" class="form-control" [(ngModel)]="Branch.Remarks">
+    </div>
+    <div class="form-group">
+      <label>CreatedBy</label>
+      <input type="text" name="createdBy" class="form-control" [(ngModel)]="Branch.createdBy">
+    </div>
+    <div class="form-group">
+      <label>CreatedDate</label>
+      <input type="text" name="createdDate" class="form-control" [(ngModel)]="Branch.createdDate">
+    </div>
+    <div class="form-group">
+      <label>ModifiedBy</label>
+      <input type="text" name="modifiedBy" class="form-control" [(ngModel)]="Branch.modifiedBy">
+    </div>
+    <div class="form-group">
+      <label>ModifiedDate</label>
+      <input type="text" name="modifiedDate" class="form-control" [(ngModel)]="Branch.modifiedDate">
+    </div>
+    <div class="form-group">
+      <label>Active</label>
+      <input type="boolean" name="active" class="form-control" [(ngModel)]="Branch.active">
+    </div>
+    <button type="submit"  class="btn btn-primary btn-lg ml-2">Submit Now</button>
+    </form>
   </div>

@@ -1,6 +1,6 @@
-import { Component, OnInit, NgModule } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BranchMasterService } from 'src/app/Services/BranchMaster/branch-master.service';
-import { HttpErrorResponse } from '@Angular/common/http';
+import {HttpErrorResponse} from "@angular/common/http";
 
 @Component({
   selector: 'app-get-branch',
@@ -9,19 +9,17 @@ import { HttpErrorResponse } from '@Angular/common/http';
 })
 export class GetBranchComponent implements OnInit {
   public result:any;
-  constructor(private _service:BranchMasterService) { }
-ngOnInit() {
-  alert("getBranchInfo ts File Fuction Called");
-    this._service.getBranchInfo().subscribe(res=>this.result=res);
+  constructor( private _service:BranchMasterService) { }
+
+  ngOnInit() {
+   this._service.getbranchInfo().subscribe(res=>this.result=res);
     (err:HttpErrorResponse)=>{
-      if(err.error instanceof Error){
-        console.log("Server Side Error !");
-  }else{
-      console.log("Client Side Error   !");
-  }
-}
-}
-
-}
-
-
+    if(err.error instanceof Error){
+    console.log("Server Side Error !");
+    }else{
+    console.log("Client Side Error !");
+    }
+    }
+    }
+    }
+  

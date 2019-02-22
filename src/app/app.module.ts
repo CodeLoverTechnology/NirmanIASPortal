@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 // import { NgModule } from '@angular/core';
-import { Component, OnInit, NgModule } from '@angular/core';
+import { 
+   NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -29,20 +30,18 @@ import { UPSCCoursesComponent } from './Component/Courses/upsc-courses/upsc-cour
 import { StatePCSCoursesComponent } from './Component/Courses/state-pcs-courses/state-pcs-courses.component';
 import { TestSeriesComponent } from './Component/Courses/test-series/test-series.component';
 import { InsertSubCategoryComponent } from './component/SubCategory/insert-sub-category/insert-sub-category.component';
-import { GetSocialMediaComponent } from './component/SocialMediaMaster/get-social-media/get-social-media.component';
-import { InsertSocialMediaComponent } from './component/SocialMediaMaster/insert-social-media/insert-social-media.component';
-
+import { GetSocialMediaComponent } from './Component/SocialMediaMaster/get-social-media/get-social-media.component';
+import {InsertBannerComponent} from "./Component/Banner/insert-banner/insert-banner.component";
+import {InsertCategoryComponent} from "./Component/CategoryMaster/insert-category/insert-category.component";
+import {InsertBranchComponent} from "./Component/BranchMaster/insert-branch/insert-branch.component";
 import { GetMasterinfoComponent } from './component/MasterInfo/get-masterinfo/get-masterinfo.component';
 import { InsertMasterinfoComponent } from './component/MasterInfo/insert-masterinfo/insert-masterinfo.component';
-import { GetCourceMasterComponent } from './component/courseMaster/get-cource-master/get-cource-master.component';
-import { InsertCourceMasterComponent } from './component/courseMaster/insert-cource-master/insert-cource-master.component';
-
-import { GetCategoryComponent } from './component/CategoryMaster/get-category/get-category.component';
-import { InsertCategoryComponent } from './component/CategoryMaster/insert-category/insert-category.component';
+import { GetCourceMasterComponent } from './Component/courseMaster/get-cource-master/get-cource-master.component';
+import {CourseMasterService} from "./Services/CourseMaster/course-master.service";
+import { GetCategoryComponent } from './Component/CategoryMaster/get-category/get-category.component';
 import { GetBranchComponent } from './component/BranchMaster/get-branch/get-branch.component';
-import { InsertBranchComponent } from './component/BranchMaster/insert-branch/insert-branch.component';
-import { GetBannerComponent } from './component/Banner/get-banner/get-banner.component';
-import { InsertBannerComponent } from './component/Banner/insert-banner/insert-banner.component';
+import { GetBannerComponent } from './Component/Banner/get-banner/get-banner.component';
+import {BannerMasterService} from "./Services/Banner/banner-master.service";
 import { UPSCGSMainsSyllabusComponent } from './Component/Courses/upsc-gs-mains-syllabus/upsc-gs-mains-syllabus.component';
 import { UPSCPrelimsGSSyllabusComponent } from './Component/Courses/upsc-prelims-gs-syllabus/upsc-prelims-gs-syllabus.component';
 import { CurrentAffairsComponent } from './Component/current-affairs/current-affairs.component';
@@ -74,6 +73,16 @@ import { TalksAndInterviewComponent } from './TalksAndInterview/TalksAndIntervie
 import { SpecialClassesComponent } from './Component/special-classes/special-classes.component';
 import { NIASCourseFeeStrutureComponent } from './Component/Courses/nias-course-fee-struture/nias-course-fee-struture.component';
 import { TestYourSelfComponent } from './Component/test-your-self/test-your-self.component';
+import {InsertCourceMasterComponent} from "./Component/courseMaster/insert-cource-master/insert-cource-master.component";
+import {  
+  MatButtonModule, MatMenuModule, MatDatepickerModule,MatNativeDateModule , MatIconModule, MatCardModule, MatSidenavModule,MatFormFieldModule,  
+  MatInputModule, MatTooltipModule, MatToolbarModule  
+} from '@angular/material';
+ import {BranchMasterService} from "./Services/BranchMaster/branch-master.service";
+ import {CategoryMasterService} from "./Services/CategoryMaster/category-master.service";
+ import { MatRadioModule } from '@angular/material/radio';
+ import {SocialMediaServiceService} from "./Services/SocialMediaService/social-media-service.service";
+ import {InsertSocialMediaComponent} from "./Component/SocialMediaMaster/insert-social-media/insert-social-media.component";
 
 @NgModule({
   declarations: [
@@ -85,11 +94,13 @@ import { TestYourSelfComponent } from './Component/test-your-self/test-your-self
     AboutUsComponent,
     AdminlinkComponent,
     FooterComponent,
+    InsertBranchComponent,
     LiveChatComponent,
     SideMenuComponent,
     LogInComponent,
     RegistrationComponent,
     AdminComponent,
+    InsertCategoryComponent,
     NIASHomeComponent,
     GalleryNIASComponent,
     VideoNIASComponent,
@@ -97,21 +108,18 @@ import { TestYourSelfComponent } from './Component/test-your-self/test-your-self
     MagazineListComponent,
     BookListComponent,
     UPSCCoursesComponent,
+    InsertSocialMediaComponent,
+    InsertCourceMasterComponent,
     StatePCSCoursesComponent,
     TestSeriesComponent,
     InsertSubCategoryComponent,
     GetSocialMediaComponent,
-    InsertSocialMediaComponent,
     GetMasterinfoComponent,
     InsertMasterinfoComponent,
     GetCourceMasterComponent,
-    InsertCourceMasterComponent,
     GetCategoryComponent,
-    InsertCategoryComponent,
     GetBranchComponent,
-    InsertBranchComponent,
     GetBannerComponent,
-    InsertBannerComponent,
     UPSCGSMainsSyllabusComponent,
     UPSCPrelimsGSSyllabusComponent,
     UPSCCoursesComponent,
@@ -119,6 +127,7 @@ import { TestYourSelfComponent } from './Component/test-your-self/test-your-self
     StatePCSCoursesComponent,
     CurrentAffairsComponent,
     ClassNotesComponent,
+    InsertBannerComponent,
     BookContentPOLITYComponent,
     BookContentEthicsComponent,
     BookContentEnvironmentComponent,
@@ -151,9 +160,10 @@ import { TestYourSelfComponent } from './Component/test-your-self/test-your-self
     ReactiveFormsModule,
     NgBusyModule,
     BrowserAnimationsModule,
-    NoopAnimationsModule
+    NoopAnimationsModule, MatButtonModule, MatMenuModule, MatDatepickerModule,MatNativeDateModule , MatIconModule, MatCardModule, MatSidenavModule,MatFormFieldModule,  
+    MatInputModule, MatTooltipModule, MatToolbarModule,MatRadioModule,
   ],
-   providers: [EnquiryServiceService,ChatServicesService,AuthService],
+   providers: [EnquiryServiceService,ChatServicesService,AuthService,MatDatepickerModule,HttpClientModule,BranchMasterService,BannerMasterService,CategoryMasterService,CourseMasterService,SocialMediaServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

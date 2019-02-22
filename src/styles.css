@@ -2,7 +2,8 @@
 /* body {
     font-family: "Lato", sans-serif;
   } */
-  
+  @import '@angular/material/prebuilt-themes/indigo-pink.css';
+
   .sidenav {
     height: 100%;
     width: 0;
@@ -73,3 +74,5 @@ form.emp-form{
   button:hover,a.btn:hover{
   cursor: pointer;
   }
+
+  

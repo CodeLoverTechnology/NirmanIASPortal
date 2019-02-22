@@ -1,64 +1,46 @@
 <div class="container-fluid">
-  <form enctype="multipart/form-data" method="post" #CourseMaster="ngForm"(ngSubmit)="onSubmit()">
-    <div class="form-group">      <label>CourseID</label>
-      <input type="text" name="CourseID"
-      #CourseID="ngModel" class="form-control"[(ngModel)]="CourseMaster.CourseID  "  required >  
-  <div class="validation-error" *ngIf="CourseID.invalid && CourseID .touched">This field is required.</div>          
- </div>
-  <div class="form-group">
-      <label >CourseType</label>
-  <input type="text" name="CourseType" required  #CourseType="ngModel" class="form-control"  [(ngModel)]="CourseMaster.CourseType">
-  <div class="validation-error" *ngIf="CourseType .invalid && CourseType .touched">This field is required.</div>
-   </div> 
-  <div class="form-group">
-       <label>CourseCode</label>
-      <input type="text" name="CourseCode" #CourseCode="ngModel" class="form-control"
-      [(ngModel)]="CourseMaster.CourseCode" required>
-      <div class="validation-error" *ngIf="CourseCode  .invalid && CourseCode  .touched">This field is required.</div>
-           </div>
-       <div class="form-group">
-       <label>CourseName</label>
-       <textarea type="text" name="CourseName"  #CourseName="ngModel" class="form-control" required
-        [(ngModel)]="CourseMaster.CourseName   "></textarea>
-       <div class="validation-error" *ngIf="CourseName.invalid && CourseName.touched">This field is required.</div>
-       </div>
-       <div class="form-group">
-        <label>Remarks  </label>
-        <textarea type="text" name="Remarks"  #Remarks="ngModel" class="form-control" required
-         [(ngModel)]="CourseMaster.Remarks  "></textarea>
-        <div class="validation-error" *ngIf="Remarks.invalid && Remarks  .touched">This field is required.</div>
-        </div>
-        <div class="form-group">
-          <label>CreatedBy</label>
-          <textarea type="text" name="CreatedBy"  #CreatedBy="ngModel" class="form-control" required
-           [(ngModel)]="CourseMaster.CreatedBy"></textarea>
-          <div class="validation-error" *ngIf="CreatedBy .invalid && CreatedBy .touched">This field is required.</div>
-          </div>
-          <div class="form-group">
-            <label>CreatedDate  </label>
-            <textarea type="text" name="CreatedDate"  #CreatedDate="ngModel" class="form-control" required
-             [(ngModel)]="CourseMaster.CreatedDate"></textarea>
-            <div class="validation-error" *ngIf="CreatedDate.invalid && CreatedDate  .touched">This field is required.</div>
-            </div>
-            <div class="form-group">
-              <label>ModifiedBy</label>
-              <textarea type="text" name="ModifiedBy"  #ModifiedBy="ngModel" class="form-control" required
-               [(ngModel)]="CourseMaster.ModifiedBy"></textarea>
-              <div class="validation-error" *ngIf="ModifiedBy.invalid && ModifiedBy  .touched">This field is required.</div>
-              </div>
-            
-            <div class="form-group">
-              <label>ModifiedDate </label>
-              <textarea type="text" name="ModifiedDate"  #ModifiedDate="ngModel" class="form-control" required
-               [(ngModel)]="CourseMaster.ModifiedDate"></textarea>
-              <div class="validation-error" *ngIf="ModifiedDate .invalid && ModifiedDate .touched">This field is required.</div>
-              </div>
-                  <div class="form-group">
-                    <label>Active</label>
-                    <textarea type="text" name="Active"  #Active ="ngModel" class="form-control" required
-                     [(ngModel)]="CourseMaster.Active"></textarea>
-                    <div class="validation-error" *ngIf="Active.invalid && Active.touched">This field is required.</div>
-                    </div>
-          <button [disabled]="!CourseMaster.valid" type="submit"  class="btn btn-primary btn-lg m-3 ">Submit Now</button> 
-  </form>
+  <h1>Nirman IAS CategoryMaster </h1>
+  <form #CourceForm="ngForm"(ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>CourseID</label>
+      <input type="text" name="CourseID" class="form-control" [(ngModel)]="Category.CourseID">
+    </div>
+    <div class="form-group">
+      <label>CourseType</label>
+      <input type="text" name="CourseType" class="form-control" [(ngModel)]="Category.CourseType">
+    </div>
+    <div class="form-group">
+      <label>CourseCode</label>
+      <input type="text" name="CourseCode" class="form-control" [(ngModel)]="Category.CourseCode">
+    </div>
+    <div>
+    <label>CourseName</label>
+    <textarea type="text" name="CourseName" class="form-control" [(ngModel)]="Category.CourseName"></textarea>
+    </div>
+    <div>
+      <label>Remarks</label>
+      <textarea type="text" name="Remarks" class="form-control" [(ngModel)]="Category.Remarks"></textarea>
+    </div>
+    <div class="form-group">
+      <label>CreatedBy</label>
+      <input type="text" name="CreatedBy" class="form-control" [(ngModel)]="Category.CreatedBy">
+    </div>
+    <div class="form-group">
+      <label>CreatedDate</label>
+      <input type="text" name="CreatedDate" class="form-control" [(ngModel)]="Category.CreatedDate">
+    </div>
+    <div class="form-group">
+      <label>ModifiedBy</label>
+      <input type="text" name="ModifiedBy" class="form-control" [(ngModel)]="Category.ModifiedBy">
+    </div>
+    <div class="form-group">
+      <label>ModifiedDate</label>
+      <input type="text" name="ModifiedDate" class="form-control" [(ngModel)]="Category.ModifiedDate">
+    </div>
+    <div class="form-group">
+      <label>Active</label>
+      <input type="boolean" name="Active" class="form-control" [(ngModel)]="Category.Active">
+    </div>
+    <button type="submit"  class="btn btn-primary btn-lg ml-2">Submit Now</button>
+    </form>
   </div>

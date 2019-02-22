@@ -1,4 +1,4 @@
-import { Component, OnInit, NgModule } from '@angular/core';
+import {  NgModule } from '@angular/core';
 
 import { Routes, RouterModule } from '@angular/router';
 import { GetEnquiryComponent } from './Component/enquirycomponent/get-enquiry/get-enquiry.component';
@@ -14,14 +14,13 @@ import { MagazineListComponent } from './component/Magazine/magazine-list/magazi
 import { BookListComponent } from './component/Books/book-list/book-list.component';
 import { UPSCCoursesComponent } from './Component/Courses/upsc-courses/upsc-courses.component';
 import { StatePCSCoursesComponent } from './Component/Courses/state-pcs-courses/state-pcs-courses.component';
+import {InsertCourceMasterComponent} from "./Component/courseMaster/insert-cource-master/insert-cource-master.component";
 import { TestSeriesComponent } from './Component/Courses/test-series/test-series.component';
 import { UPSCGSMainsSyllabusComponent } from './Component/Courses/upsc-gs-mains-syllabus/upsc-gs-mains-syllabus.component';
 import { UPSCPrelimsGSSyllabusComponent } from './Component/Courses/upsc-prelims-gs-syllabus/upsc-prelims-gs-syllabus.component';
 import { CurrentAffairsComponent } from './Component/current-affairs/current-affairs.component';
 import { ClassNotesComponent } from './Component/class-notes/class-notes.component';
-
-
-import { InsertBannerComponent } from './component/Banner/insert-banner/insert-banner.component';
+import {GetBannerComponent} from "./Component/Banner/get-banner/get-banner.component";
 // import { AdminComponent } from './Component/admin/admin/admin.component';
 import { AdminlinkComponent } from './Component/admin/adminlink/adminlink.component';
 import { BookContentEnvironmentComponent } from './Component/Books/book-content-environment/book-content-environment.component';
@@ -47,7 +46,14 @@ import { TalksAndInterviewComponent } from './TalksAndInterview/TalksAndIntervie
 import { SpecialClassesComponent } from './Component/special-classes/special-classes.component';
 import { NIASCourseFeeStrutureComponent } from './Component/Courses/nias-course-fee-struture/nias-course-fee-struture.component';
 import { TestYourSelfComponent } from './Component/test-your-self/test-your-self.component';
-
+import {GetBranchComponent} from "./component/BranchMaster/get-branch/get-branch.component";
+import {GetCategoryComponent} from "./Component/CategoryMaster/get-category/get-category.component";
+import {GetCourceMasterComponent} from "./Component/courseMaster/get-cource-master/get-cource-master.component";
+import {GetSocialMediaComponent} from "./Component/SocialMediaMaster/get-social-media/get-social-media.component";
+import {InsertBranchComponent} from "./Component/BranchMaster/insert-branch/insert-branch.component";
+import {InsertBannerComponent} from "./Component/Banner/insert-banner/insert-banner.component";
+import {InsertCategoryComponent} from "./Component/CategoryMaster/insert-category/insert-category.component";
+import {InsertSocialMediaComponent} from "./Component/SocialMediaMaster/insert-social-media/insert-social-media.component";
 const routes: Routes = [
   {path:"",component:NIASHomeComponent},
   //{path:"admin",component:AdminComponent},
@@ -58,7 +64,6 @@ const routes: Routes = [
     // {path:" ",component:AdminlinkComponent},
     {path:"admin/getEnquiry",component:GetEnquiryComponent},
     {path:"admin/Gallery",component:GalleryNIASComponent},  
-    {path:"admin/banner",component:InsertBannerComponent},
     {path:"admin/getchat",component:GetchatComponent},     
     {path:'',component:AdminlinkComponent},
   ]},
@@ -78,15 +83,16 @@ const routes: Routes = [
   {path:"PrelimsGSSyllabus",component:UPSCPrelimsGSSyllabusComponent},
   {path:"CurrentAffairs",component:CurrentAffairsComponent},
   {path:"ClassNotes",component:ClassNotesComponent},
-// {path:"getbanner",component:GetBannerComponentonent},
   {path:"EthicsBook",component:BookContentEthicsComponent },
   {path : "EnvironmentBook", component:BookContentEnvironmentComponent},
   {path : "POLITYBook", component:BookContentPOLITYComponent},
   {path : "Economics", component:BookContentEconomyComponent},
   {path : "NIAS_TalksAndInterview", component:TalksAndInterviewComponent},
-
+  {path:"insertBanner",component:InsertBannerComponent},
+  {path:"insertCategory",component:InsertCategoryComponent},
 // {path : "BranchList",component:GetBranchComponent},
-// {path : "InsertBranch",component:InsertBranchComponent},
+ {path : "insertBranch",component:InsertBranchComponent},
+ {path:"insertsocialmedia",component:InsertSocialMediaComponent},
 // {path:"admin",component:AdminComponent},
 // // {path:"login",component:LogInComponent},
 //   {path:"getchat",component:GetchatComponent},  
@@ -95,6 +101,7 @@ const routes: Routes = [
   {path : "NIAS_History", component:BookContentHistoryComponent},
   {path : "NIAS_IndianIR", component:BookContentIndianIRComponent},
   {path : "NIAS_IndianSecurity", component:BookContentIndianSecurityComponent},
+  {path:"insertCource",component:InsertCourceMasterComponent},
   {path : "NIAS_IndianSociety", component:BookContentIndianSocietyComponent},
   {path : "NIAS_PaperIII", component:BookContentPaperIIIComponent},
   {path : "NIAS_ScienceTech", component:BookContentScienceTechComponent},
@@ -105,6 +112,11 @@ const routes: Routes = [
   {path : "NIAS_SpecialClasses", component:SpecialClassesComponent},
   {path : "NIAS_CourseFee", component:NIASCourseFeeStrutureComponent},
   {path : "NIAS_TestYourSelf", component:TestYourSelfComponent},
+  {path:"get-branch",component:GetBranchComponent},
+  {path:"get-banner",component:GetBannerComponent},
+  {path:"get-categorymaster",component:GetCategoryComponent},
+  {path:"get-courcemaster",component:GetCourceMasterComponent},
+  {path:"get-socialmedia",component:GetSocialMediaComponent}
   
   // { path: '', redirectTo: '/', pathMatch:'full' }
   ];

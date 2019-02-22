@@ -1,32 +1,34 @@
-<table class="table table-hover table-justified">
-  <thead>
+<div [ngBusy]="busy">
+  <table class="table table-hover table-dark ">
+    <thead>
     <tr>
     <th>BranchCode</th>
-      <th>BranchName  </th>
-      <th>BranchAddress  </th>
-      <th>ContactNo  </th>
-      <th>EmailID  </th>
-      <th>Remarks </th>
-      <th>CreatedBy </th>
-      <th>CreatedDate </th>
-      <th>ModifiedBy</th>
-      <th>ModifiedDate</th>
-      <th>Active</th>
+    <th>BranchName</th>
+    <th>BranchAddress</th>
+    <th>ContactNo</th>
+    <th>EmailID</th>
+    <th>Remarks</th>
+    <th>CreatedBy</th>
+    <th>CreatedDate</th>
+    <th>ModifiedBy</th>
+    <th>ModifiedDate</th>
+    <th>Active</th>
     </tr>
-  </thead>
-  <tbody>
-        <tr *ngFor="let x of result">
-      <td>{{x.BranchCode }}</td>
-        <td>{{x.BranchName }}</td>
-        <td>{{x.BranchAddress }}</td>
-        <td>{{x.ContactNo }}</td>
-        <td>{{x.EmailID }}</td>
-        <td>{{x.Remarks  }}</td>
-       <td>{{x.CreatedBy}}</td>
-       <td>{{x.CreatedDate}}</td> 
-       <td>{{x.ModifiedBy}}</td>
-       <td>{{x.ModifiedDate}}</td> 
-       <td>{{x.Active}}</td>    
-       </tr>
-       </tbody>
-       </table>
+    </thead>
+    <tbody>
+    <tr *ngFor="let x of result">
+    <td>{{x.branchCode}}</td>
+    <td>{{x.branchName}}</td>
+    <td>{{x.branchAddress}}</td>
+    <td>{{x.contactNo}}</td>
+    <td>{{x.emailID}}</td>
+    <td>{{x.remarks}}</td>
+    <td>{{x.createdBy}}</td>
+    <td>{{x.createdDate}}</td>
+    <td>{{x.modifiedBy}}</td>
+    <td>{{x.modifiedDate}}</td>
+    <td>{{x.active}}</td>
+    </tr>
+    </tbody>
+    </table>
+  </div>

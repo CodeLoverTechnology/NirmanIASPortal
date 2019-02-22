@@ -1,28 +1,37 @@
-<table class="table table-hover table-justified">
+<table class="table table-hover table-dark ">
   <thead>
-    <tr>
-    <th>SocialMediaID </th>
-      <th>SocialMediaName </th>
-      <th>Address </th>
-      <th>Notes </th>
-      <th>CreatedBy </th>
-      <th>CreatedDate </th>
-      <th>ModifiedBy </th>
-      <th>ModifiedDate </th>
-      <th>Active</th>
-    </tr>
+  <tr>
+  <th>SocialMediaID</th>
+  <th>SocialMediaName</th>
+  <th>Address</th>
+  <th>Notes</th>
+  <th>CreatedBy</th>
+  <th>CreatedDate</th>
+  <th>ModifiedBy</th>
+  <th>ModifiedDate</th>
+  <th>Active</th>
+  <th>Edit</th>
+  <th>Delete</th>
+      </tr>
   </thead>
   <tbody>
-        <tr *ngFor="let x of result">
-      <td>{{x.SocialMediaID}}</td>
-        <td>{{x.SocialMediaName }}</td>
-        <td>{{x.Address }}</td>
-        <td>{{x.Notes }}</td>
-        <td>{{x.CreatedBy }}</td>
-       <td>{{x.CreatedDate }}</td>
-       <td>{{x.ModifiedBy }}</td> 
-       <td>{{x.ModifiedDate }}</td>
-       <td>{{x.Active}}</td>    
-       </tr>
-       </tbody>
-       </table>
+  <tr *ngFor="let x of result">
+  <td>{{x.SocialMediaID}}</td>
+  <td>{{x.SocialMediaName}}</td>
+  <td>{{x.Address}}</td>
+  <td>{{x.Notes}}</td>
+  <td>{{x.CreatedBy}}</td>
+  <td>{{x.CreatedDate}}</td>
+  <td>{{x.ModifiedBy}}</td>
+  <td>{{x.ModifiedDate}}</td>
+  <td>{{x.Active}}</td>
+  <td>  
+      <button type="button" class="btn btn-info" matTooltip="Click Edit Button"(click)="loadEmployeeToEdit(employee.SocialMediaID)">Edit</button>   
+    </td>  
+    <td>  
+      <button type="button" class="btn btn-danger" matTooltip="Click Delete Button" (click)="deleteEmployee(employee.SocialMediaID)">Delete</button>  
+    </td>
+  </tr>
+  </tbody>
+  </table>
+

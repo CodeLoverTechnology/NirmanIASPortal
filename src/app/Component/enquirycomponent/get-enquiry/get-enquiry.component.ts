@@ -1,4 +1,3 @@
-
 import { Component, OnInit } from '@angular/core';
 import { EnquiryServiceService } from 'src/app/Services/EnquiryServices/enquiry-service.service';
 import { HttpErrorResponse } from '@angular/common/http';

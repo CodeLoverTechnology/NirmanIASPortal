@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { SubCategoryMasterService } from 'src/app/Services/SubCategoryService/sub-category-master.service';
-import { HttpErrorResponse } from '@Angular/common/http';
+import { SocialMediaServiceService } from '../../../Services/SocialMediaService/social-media-service.service';
+import { FormBuilder, Validators } from '@angular/forms';  
+import { Observable } from 'rxjs';
+import {SocialMediaModel} from "../../../Entity/SocialMediaModel";
 
 @Component({
   selector: 'app-get-social-media',
@@ -8,19 +10,14 @@ import { HttpErrorResponse } from '@Angular/common/http';
   styleUrls: ['./get-social-media.component.css']
 })
 export class GetSocialMediaComponent implements OnInit {
-
-  public result:any;
-  constructor(private _service:SubCategoryMasterService) { }
+  
+  allEmployees: Observable<SocialMediaModel[]>; 
+ 
+  constructor( private formbulider: FormBuilder,private employeeService:SocialMediaServiceService) { }
 ngOnInit() {
-    this._service.getsubcategoryInfo().subscribe(res=>this.result=res);
-    (err:HttpErrorResponse)=>{
-      if(err.error instanceof Error){
-        console.log("Server Side Error !");
-  }else{
-      console.log("Client Side Error   !");
+  }
+  loadALLChat() {
+    this.allEmployees = this.employeeService.getAllEmployee();
   }
 }
-}
 
-
-}

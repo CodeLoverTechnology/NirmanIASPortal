@@ -1,62 +1,46 @@
 <div class="container-fluid">
-  <form enctype="multipart/form-data" method="post" #BannerMaster="ngForm"(ngSubmit)="onSubmit()">
-    <div class="form-group">      <label>BannerID</label>
-      <input type="text" name="BannerID"
-      #BannerID="ngModel" class="form-control"  [(ngModel)]="BannerModel.BannerID"   >  
-           
- </div>
-  <div class="form-group">
-      <label >BannerTitle </label>
-  <input type="text" name="BannerTitle"   #BannerTitle ="ngModel" class="form-control"  [(ngModel)]="BannerModel.BannerTitle "  >
-   
-   </div> 
-  <div class="form-group">
-       <label>BannerImagesPath </label>
-      <input type="text" name="BannerImagesPath" #BannerImagesPath ="ngModel" class="form-control"
-      [(ngModel)]="BannerModel.BannerImagesPath " >
-           </div>
-       <div>
-       <label>SubTitle </label>
-       <textarea type="text" name="SubTitle "  #SubTitle ="ngModel" class="form-control" 
-        [(ngModel)]="BannerModel.SubTitle "></textarea>
-       
-       </div>
-       <div>
-        <label>Remarks</label>
-        <textarea type="text" name="Remarks"  #Remarks="ngModel" class="form-control" 
-         [(ngModel)]="BannerModel.Remarks"></textarea>
-       
-        </div>
-        <div>
-          <label>CreatedBy</label>
-          <textarea type="text" name="CreatedBy"  #CreatedBy="ngModel" class="form-control" 
-           [(ngModel)]="BannerModel.CreatedBy"></textarea>
-          
-          </div>
-          <div>
-            <label>CreatedDate</label>
-            <textarea type="text" name="CreatedDate"  #CreatedDate="ngModel" class="form-control" 
-             [(ngModel)]="BannerModel.CreatedDate"></textarea>
-            
-            </div>
-            <div>
-              <label>ModifiedBy</label>
-              <textarea type="text" name="ModifiedBy"  #ModifiedBy="ngModel" class="form-control" 
-               [(ngModel)]="BannerModel.ModifiedBy"></textarea>
-              
-              </div>
-              
-            <div>
-              <label>ModifiedDate</label>
-              <textarea type="text" name="ModifiedDate"  #ModifiedDate="ngModel" class="form-control" 
-               [(ngModel)]="BannerModel.ModifiedDate"></textarea>
-            
-              </div>
-              <div>
-                 <label>Active</label>
-                <textarea type="text" name="Active"  #Active ="ngModel" class="form-control" 
-                  [(ngModel)]="BannerModel.Active"></textarea>
-                    </div>
-          <button  type="submit"  class="btn btn-primary btn-lg m-3 ">Submit Now</button> 
-           </form>
+  <h1>Nirman IAS Banner </h1>
+  <form #BannerForm="ngForm"(ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>BannerID</label>
+      <input type="text" name="BannerID" class="form-control" [(ngModel)]="Banner.BannerID">
+    </div>
+    <div class="form-group">
+      <label>BannerTitle</label>
+      <input type="text" name="BannerTitle" class="form-control" [(ngModel)]="Banner.BannerTitle">
+    </div>
+    <div class="form-group">
+      <label>BannerImagesPath</label>
+      <input type="text" name="BannerImagesPath" class="form-control" [(ngModel)]="Banner.BannerImagesPath">
+    </div>
+    <div>
+    <label>SubTitle</label>
+    <textarea type="text" name="SubTitle" class="form-control" [(ngModel)]="Banner.SubTitle"></textarea>
+    </div>
+    <div>
+      <label>Remarks</label>
+      <textarea type="text" name="Remarks" class="form-control" [(ngModel)]="Banner.Remarks"></textarea>
+    </div>
+    <div class="form-group">
+      <label>CreatedBy</label>
+      <input type="text" name="CreatedBy" class="form-control" [(ngModel)]="Banner.CreatedBy">
+    </div>
+    <div class="form-group">
+      <label>CreatedDate</label>
+      <input type="text" name="CreatedDate" class="form-control" [(ngModel)]="Banner.CreatedDate">
+    </div>
+    <div class="form-group">
+      <label>ModifiedBy</label>
+      <input type="text" name="ModifiedBy" class="form-control" [(ngModel)]="Banner.ModifiedBy">
+    </div>
+    <div class="form-group">
+      <label>ModifiedDate</label>
+      <input type="text" name="ModifiedDate" class="form-control" [(ngModel)]="enquiry.ModifiedDate">
+    </div>
+    <div class="form-group">
+      <label>Active</label>
+      <input type="boolean" name="Active" class="form-control" [(ngModel)]="enquiry.Active">
+    </div>
+    <button type="submit"  class="btn btn-primary btn-lg ml-2">Submit Now</button>
+    </form>
   </div>
