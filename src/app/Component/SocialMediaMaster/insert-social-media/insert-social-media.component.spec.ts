@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import {ReactiveFormsModule} from '@angular/forms';
 import { InsertSocialMediaComponent } from './insert-social-media.component';
 
 describe('InsertSocialMediaComponent', () => {
@@ -8,7 +8,8 @@ describe('InsertSocialMediaComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ InsertSocialMediaComponent ]
+      declarations: [ InsertSocialMediaComponent ],
+      imports: [ReactiveFormsModule],  
     })
     .compileComponents();
   }));

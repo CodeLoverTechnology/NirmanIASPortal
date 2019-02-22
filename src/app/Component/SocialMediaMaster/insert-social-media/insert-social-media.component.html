@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <form enctype="multipart/form-data" method="post" #SocialMediaMastersForm="ngForm"(ngSubmit)="onSubmit()" [ngBusy]="busy">
+ <form enctype="multipart/form-data" method="post" #SocialMediaForm="ngForm"(ngSubmit)="onFormSubmit()" [ngBusy]="busy">
     <div class="form-group">     
        <label>SocialMediaID </label>
       <input type="text" name="SocialMediaID "
@@ -56,5 +56,95 @@
                     <div class="validation-error" *ngIf="Active.invalid && Active.touched">This field is required.</div>
                     </div>
           <button [disabled]="!SocialMediaMastersForm.valid" type="submit"  class="btn btn-primary btn-lg m-3 ">Submit Now</button> 
-           </form>
+           </form> 
   </div>
+  <!-- <h1>insert social media</h1>
+  <p *ngIf="datasaved" ngClass="Success">Record Save Successfully!!</p>
+  <form [FormGroup]="SocialMediaForm" (ngSubmit)="onFormSubmit()">
+    <table>
+      <tr>
+        <td>SocialMediaName:</td>
+        <td>
+          <input formControlName="SocialMediaName">
+        </td>
+      </tr>
+      <tr>
+        <td>Address:</td>
+        <td>
+          <input formControlName="Address">
+        </td>
+      </tr>
+      <tr>
+        <td>Notes:</td>
+        <td>
+          <input formControlName="Notes">
+        </td>
+      </tr>
+      <tr>
+        <td>CreatedBy:</td>
+        <td>
+          <input formControlName="CreatedBy">
+        </td>
+      </tr>
+      <tr>
+        <td>CreatedDate:</td>
+        <td>
+          <input formControlName="CreatedDate">
+        </td>
+      </tr>
+      <tr>
+        <td>ModifiedBy:</td>
+        <td>
+          <input formControlName="ModifiedBy">
+        </td>
+      </tr>
+      <tr>
+        <td>ModifiedDate:</td>
+        <td>
+          <input formControlName="ModifiedDate">
+        </td>
+      </tr>
+      <tr>
+        <td>Active:</td>
+        <td>
+          <input formControlName="Active">
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <button [disabled]="SocialMediaForm.invalid">Submit</button>
+
+        </td>
+      </tr>
+    </table>
+  </form> -->
+  <h1>View</h1>
+ <table>
+  <thead>
+      <tr>
+      <th>SocialMediaID </th>
+        <th>SocialMediaName </th>
+        <th>Address </th>
+        <th>Notes </th>
+        <th>CreatedBy </th>
+        <th>CreatedDate </th>
+        <th>ModifiedBy </th>
+        <th>ModifiedDate </th>
+        <th>Active</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr *ngFor="let x of allsocialmedias | async">
+        <td>{{x.socialMediaID}}</td>
+          <td>{{x.socialMediaName }}</td>
+          <td>{{x.address }}</td>
+          <td>{{x.notes }}</td>
+          <td>{{x.createdBy }}</td>
+         <td>{{x.createdDate }}</td>
+         <td>{{x.modifiedBy }}</td> 
+         <td>{{x.modifiedDate }}</td>
+         <td>{{x.active}}</td>    
+         </tr>
+         </tbody>
+         </table>
+ 
