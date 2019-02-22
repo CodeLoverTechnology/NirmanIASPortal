@@ -1,3 +1,67 @@
-<p>
-  insert-batch-details works!
-</p>
+<div class="container-fluid" style="max-width:300px;" [ngBusy]="busy">
+  <form enctype="multipart/form-data" method="post" #batchDetailsForm="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Batch For</label>
+      <input type="text" name="BatchFor" class="form-control" #BatchFor ="ngModel" [(ngModel)]="batchDetails.BatchFor"  placeholder="Enter Batch For" required>
+      <div class="validation-error" *ngIf="BatchFor.invalid && BatchFor.touched">This field is required.</div>
+    </div>
+    <div class="form-group">
+      <label>Batch Code</label>
+      <input type="text" name="BatchCode" #BatchCode ="ngModel" required class="form-control" [(ngModel)]="batchDetails.BatchCode"
+        placeholder="EmailID">
+
+      <div class="validation-error" *ngIf="BatchCode.invalid && BatchCode.touched">Batch Code is invalid.</div>
+    </div>
+    <div class="form-group">
+      <label>Subject</label>
+      <input type="text" name="Subject"  #Subject ="ngModel" class="form-control" [(ngModel)]="batchDetails.Subject"
+        placeholder="Enter Subject" required>
+      <div class="validation-error" *ngIf="Subject.invalid && Subject.touched">Subject required.</div>
+    </div>
+
+    <div class="form-group">
+      <label>Time</label>
+      <input type="text" name="Time" #Time ="ngModel" class="form-control" [(ngModel)]="batchDetails.Time" placeholder="Enter Time"
+        required>
+      <div class="validation-error" *ngIf="Time.invalid && Time.touched">Time required.</div>
+    </div>
+
+    <div class="form-group">
+      <label>Faculty</label>
+      <input type="text" name="Faculty" #Faculty ="ngModel" class="form-control" [(ngModel)]="batchDetails.Faculty"
+        placeholder="Enter Faculty" required>
+      <div class="validation-error" *ngIf="Faculty.invalid && Faculty.touched">Faculty required.</div>
+    </div>
+
+    <div class="form-group">
+      <label>Batch Start Date</label>
+      <input type="text" name="BatchStartDate" #BatchStartDate ="ngModel" class="form-control" [(ngModel)]="batchDetails.BatchStartDate"
+        placeholder="Enter BatchStartDate" required>
+      <div class="validation-error" *ngIf="BatchStartDate.invalid && BatchStartDate.touched">Batch Start Date required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Batch End Date</label>
+      <input type="text" name="BatchEndDate" #BatchEndDate ="ngModel"  class="form-control" [(ngModel)]="batchDetails.BatchEndDate"
+        placeholder="Enter Batch End Date" required>
+      <div class="validation-error" *ngIf="BatchEndDate.invalid && BatchEndDate.touched">Batch End Date required.</div>
+    </div>
+    <div class="form-group">
+      <label>Total Students</label>
+      <input type="text" name="TotalStudents" #TotalStudents ="ngModel"  class="form-control" [(ngModel)]="batchDetails.TotalStudents"
+        placeholder="Enter Total Students" required>
+      <div class="validation-error" *ngIf="TotalStudents.invalid && TotalStudents.touched">Total Students required.
+      </div>
+    </div>
+    <div>
+      <label>Remarks</label>
+      <textarea type="text" name="Remarks" #Remarks ="ngModel"  minlength="10" maxlength="250" class="form-control" required
+        placeholder="Remarks Message" [(ngModel)]="batchDetails.Remarks"></textarea>
+      <div class="validation-error" *ngIf="Remarks.invalid && Remarks.touched">Remarks Message is required.</div>
+
+    </div>
+    <button [disabled]="!batchDetailsForm.valid" type="submit" class="btn btn-primary btn-lg m-3 ">Submit Now</button>
+    <!-- </form> -->
+  </form>
+</div>

@@ -53,6 +53,7 @@ import { NIASCourseFeeStrutureComponent } from './Component/Courses/nias-course-
 import { TestYourSelfComponent } from './Component/test-your-self/test-your-self.component';
 import {GetSubCategoryComponent } from './Component/SubCategory/get-sub-category/get-sub-category.component';
 import { from } from 'rxjs';
+import { InsertBatchDetailsComponent } from './Component/BatchDetails/insert-batch-details/insert-batch-details.component';
 
 const routes: Routes = [
   {path:"",component:NIASHomeComponent},
@@ -109,6 +110,7 @@ const routes: Routes = [
   {path : "NIAS_SpecialClasses", component:SpecialClassesComponent},
   {path : "NIAS_CourseFee", component:NIASCourseFeeStrutureComponent},
   {path : "NIAS_TestYourSelf", component:TestYourSelfComponent},
+  {path : "InsertBatchInfo", component:InsertBatchDetailsComponent},
   
   // { path: '', redirectTo: '/', pathMatch:'full' }
   ];
