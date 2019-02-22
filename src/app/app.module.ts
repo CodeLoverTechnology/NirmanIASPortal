@@ -99,6 +99,8 @@ import { InsertCurrentAffairsComponent } from './Component/CurrentAffairs/insert
 import { UpdatCurrentAffairsComponent } from './Component/CurrentAffairs/updat-current-affairs/updat-current-affairs.component';
 import { UpdateCurrentAffairsComponent } from './Component/CurrentAffairs/update-current-affairs/update-current-affairs.component';
 import { DeleteCurrentAffairsComponent } from './Component/CurrentAffairs/delete-current-affairs/delete-current-affairs.component';
+import { TalksAndInterviewComponent } from './Component/TalksAndInterview/TalksAndInterview.component';
+import { CourseDetailsComponent } from './Component/mppcs/course-details/course-details.component';
 
 @NgModule({
   declarations: [
@@ -164,7 +166,7 @@ import { DeleteCurrentAffairsComponent } from './Component/CurrentAffairs/delete
     BookContentIndianIRComponent,
     BookContentAgricultureEconomicComponent,
     BookContentModernIndiaComponent,
-    //TalksAndInterviewComponent,
+    TalksAndInterviewComponent,
     SpecialClassesComponent,
     NIASCourseFeeStrutureComponent,
     TestYourSelfComponent,
@@ -190,7 +192,8 @@ import { DeleteCurrentAffairsComponent } from './Component/CurrentAffairs/delete
     InsertCurrentAffairsComponent,
     UpdatCurrentAffairsComponent,
     UpdateCurrentAffairsComponent,
-    DeleteCurrentAffairsComponent
+    DeleteCurrentAffairsComponent,
+    CourseDetailsComponent
   ],
   imports: [
     BrowserModule,
