@@ -7,18 +7,18 @@ import {CategoryMaster} from "../../Entity/category-master";
 })
 export class CategoryMasterService {
 
-  BaseURL: string = "http:// NIAS.codelovertechnology.com";
+  BaseURL: string = "http:// NIAS.codelovertechnology.com/api/";
 
   
   constructor(private _http:HttpClient){}
   
   
   public getCategoryMasterInfo():any{
-    return this._http.get(this.BaseURL+"api/CategoryMaster/CategoryMastersList");
+    return this._http.get(this.BaseURL+"CategoryMaster/CategoryMastersList");
   }
 
   public postCategoryMaster(CategoryMaster : CategoryMaster){
-    return this._http.post<any>(this.BaseURL+"api/CategoryMaster/CreateCategoryMaster",CategoryMaster);
+    return this._http.post<any>(this.BaseURL+"CategoryMaster/CreateCategoryMaster",CategoryMaster);
   }
 }
 
