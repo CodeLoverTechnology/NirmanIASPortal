@@ -80,7 +80,7 @@ import { GetBatchDetailsComponent } from './Component/BatchDetails/get-batch-det
 import { InsertBatchDetailsComponent } from './Component/BatchDetails/insert-batch-details/insert-batch-details.component';
 import { UpdateBatchDetailsComponent } from './Component/BatchDetails/update-batch-details/update-batch-details.component';
 import { DeleteBatchDetailsComponent } from './Component/BatchDetails/delete-batch-details/delete-batch-details.component';
-
+import {TalksAndInterviewComponent} from './Component/TalksAndInterview/TalksAndInterview.component';
 import { GetBatchTopicDetailsComponent } from './Component/BatchTopicDetails/get-batch-topic-details/get-batch-topic-details.component';
 import { InsertBatchTopicDetailsComponent } from './Component/BatchTopicDetails/insert-batch-topic-details/insert-batch-topic-details.component';
 import { UpdateBatchTopicDetailsComponent } from './Component/BatchTopicDetails/update-batch-topic-details/update-batch-topic-details.component';
@@ -99,8 +99,16 @@ import { InsertCurrentAffairsComponent } from './Component/CurrentAffairs/insert
 import { UpdatCurrentAffairsComponent } from './Component/CurrentAffairs/updat-current-affairs/updat-current-affairs.component';
 import { UpdateCurrentAffairsComponent } from './Component/CurrentAffairs/update-current-affairs/update-current-affairs.component';
 import { DeleteCurrentAffairsComponent } from './Component/CurrentAffairs/delete-current-affairs/delete-current-affairs.component';
+<<<<<<< HEAD
 import { TalksAndInterviewComponent } from './Component/TalksAndInterview/TalksAndInterview.component';
 import { CourseDetailsComponent } from './Component/mppcs/course-details/course-details.component';
+=======
+import { from } from 'rxjs';
+import { GetFacultyMasterComponent } from './component/FacultyMaster/get-faculty-master/get-faculty-master.component';
+import { InsertFacultyMasterComponent } from './component/FacultyMaster/insert-faculty-master/insert-faculty-master.component';
+import { UpdateFacultyMasterComponent } from './component/FacultyMaster/update-faculty-master/update-faculty-master.component';
+import { DeleteFacultyMasterComponent } from './component/FacultyMaster/delete-faculty-master/delete-faculty-master.component';
+>>>>>>> a9c3916f4a0e9ca3ac836c7b20dcacc741900579
 
 @NgModule({
   declarations: [
@@ -160,6 +168,7 @@ import { CourseDetailsComponent } from './Component/mppcs/course-details/course-
     BookContentPaperIIIComponent,
     BookContentGeographyComponent,
     BookContentGovernanceComponent,
+    TalksAndInterviewComponent,
     BookContentHistoryComponent,
     BookContentIndianSocietyComponent,
     BookContentIndianSecurityComponent,
@@ -193,7 +202,14 @@ import { CourseDetailsComponent } from './Component/mppcs/course-details/course-
     UpdatCurrentAffairsComponent,
     UpdateCurrentAffairsComponent,
     DeleteCurrentAffairsComponent,
+<<<<<<< HEAD
     CourseDetailsComponent
+=======
+    GetFacultyMasterComponent,
+    InsertFacultyMasterComponent,
+    UpdateFacultyMasterComponent,
+    DeleteFacultyMasterComponent
+>>>>>>> a9c3916f4a0e9ca3ac836c7b20dcacc741900579
   ],
   imports: [
     BrowserModule,

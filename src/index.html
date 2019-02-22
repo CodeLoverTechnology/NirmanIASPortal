@@ -46,24 +46,21 @@ $(document).ready(function(){
 
 function check(form) {
   if(form.userid.value == "admin" && form.pswrd.value == "admin") {
-         window.open("https://nirmanias.com/admin","_self") &&
-       
+         window.open("https://nirmanias.com/admin","_self")
+  }
+  else{
+     alert("Error Password or Username")
+      }
+ }
 $(document).ready(function(){
   $(".hideBtn").click(function(){
-  $("section").hide("fast");
+  $("section").hide("fast");                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
   });
 });
-        }
-      else {
-          alert("Error Password or Username")
-      }
-      
-  }
 
   
-    
-  $(document).ready(function(){
-    // $('[data-toggle="tooltip"]').tooltip();
+  //$(document).ready(function(){
+  // $('[data-toggle="tooltip"]').tooltip();
   // var MenuClick=false;
   // $("#SideMenu").click(function(){
   //  if(MenuClick)
@@ -79,7 +76,7 @@ $(document).ready(function(){
   //     MenuClick=true;
   //   }
   // });
-});
+  //});
 
 function SideMenuShow(){
       $("#mySidenav").attr("style","width:250px");
