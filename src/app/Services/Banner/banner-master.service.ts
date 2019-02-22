@@ -11,13 +11,19 @@ export class BannerMasterService{
  
   BaseURL: string = "http://NIAS.codelovertechnology.com/api/";
 
+  selectedBanner: { BannerID: string; BannerTitle : string; BannerImagesPath : string; SubTitle: string; Remarks: string;};
   
   constructor(private http:HttpClient){}
   
   
- public getBannerInfo():any{
-   return this.http.get(this.BaseURL + "Banner/BannerList");
- }
+  public getBannerInfo():any{
+    return this._http.get(this.BaseURL+"Banner/BannerList");
+  }
+
+  public postBannerMaster(Banner : BannerModel){
+    return this._http.post<any>(this.BaseURL+"Banner/CreateBanner",Banner);
+  }
+}
 
   getEmployeeById(BannerID :string): Observable<BannerModel> {  
     return this.http.get<BannerModel>(this.BaseURL + "Banner/BannerDetails/" + BannerID);  

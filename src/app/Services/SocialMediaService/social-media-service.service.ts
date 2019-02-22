@@ -10,6 +10,7 @@ export class SocialMediaServiceService {
 
   BaseURL: string = "http://NIAS.codelovertechnology.com";
 
+  selectedMedia: { SocialMediaID: string; SocialMediaName: string; Address : string; Notes: string; };
   
   constructor(private http:HttpClient){}
   

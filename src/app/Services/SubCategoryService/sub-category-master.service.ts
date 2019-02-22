@@ -1,4 +1,4 @@
-import { Component, OnInit, NgModule, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import { SubCategoryMaster } from '../../Entity/sub-category-master';
 
@@ -7,8 +7,11 @@ import { SubCategoryMaster } from '../../Entity/sub-category-master';
 })
 export class SubCategoryMasterService {
 
-  BaseURL: string = "http:// NIAS.codelovertechnology.com";
+  BaseURL: string = "http://NIAS.codelovertechnology.com/";
 
+  
+  selectedSubCategory: { SubCategoryID: number; CategoryID:number; SubCategoryCode : string; SubCategoryName: string; SubCatDescription:string; Sequence:number;};
+  
    
   constructor(private _http:HttpClient){}
   

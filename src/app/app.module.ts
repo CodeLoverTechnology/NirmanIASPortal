@@ -54,6 +54,7 @@ import { BookContentEconomyComponent } from './Component/Books/book-content-econ
 import { Home1Component } from './component/niashome/home1/home1.component';
 import { GetchatComponent } from './component/getchat/getchat.component';
 import { PutchatComponent } from './component/putchat/putchat.component';
+import {SocialMediaServiceService} from "./Services/SocialMediaService/social-media-service.service";
 import { BookContentSOCIALJUSTICEComponent } from './Component/books/book-content-social-justice/book-content-social-justice.component';
 import { BookContentScienceTechComponent } from './Component/books/book-content-science-tech/book-content-science-tech.component';
 import { BookContentPaperIIIComponent } from './Component/books/book-content-paper-iii/book-content-paper-iii.component';
@@ -69,7 +70,7 @@ import { BookContentModernIndiaComponent } from './Component/books/book-content-
 import {NgBusyModule} from 'ng-busy';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { TalksAndInterviewComponent } from './TalksAndInterview/TalksAndInterview.component';
+
 import { SpecialClassesComponent } from './Component/special-classes/special-classes.component';
 import { NIASCourseFeeStrutureComponent } from './Component/Courses/nias-course-fee-struture/nias-course-fee-struture.component';
 import { TestYourSelfComponent } from './Component/test-your-self/test-your-self.component';
@@ -97,6 +98,7 @@ import {
     InsertBranchComponent,
     LiveChatComponent,
     SideMenuComponent,
+    GetSubCategoryComponent,
     LogInComponent,
     RegistrationComponent,
     AdminComponent,
@@ -141,16 +143,44 @@ import {
     BookContentPaperIIIComponent,
     BookContentGeographyComponent,
     BookContentGovernanceComponent,
+    TalksAndInterviewComponent,
     BookContentHistoryComponent,
     BookContentIndianSocietyComponent,
     BookContentIndianSecurityComponent,
     BookContentIndianIRComponent,
     BookContentAgricultureEconomicComponent,
     BookContentModernIndiaComponent,
-    TalksAndInterviewComponent,
+    //TalksAndInterviewComponent,
     SpecialClassesComponent,
     NIASCourseFeeStrutureComponent,
-    TestYourSelfComponent
+    TestYourSelfComponent,
+    GetBatchDetailsComponent,
+    InsertBatchDetailsComponent,
+    UpdateBatchDetailsComponent,
+    DeleteBatchDetailsComponent,
+   
+    GetBatchTopicDetailsComponent,
+    InsertBatchTopicDetailsComponent,
+    UpdateBatchTopicDetailsComponent,
+    DeleteBatchTopicDetailsComponent,
+    GetVideoLectureComponent,
+    InsertVideoLectureComponent,
+    UpdateVideoLectureComponent,
+    DeleteVideoLectureComponent,
+    GetNirmanresultMasterComponent,
+    InsertNirmanresultMasterComponent,
+    UpdateNirmanresultMasterComponent,
+    DeleteNirmanresultMasterComponent,
+    GetCurrentAffairsComponent,
+  
+    InsertCurrentAffairsComponent,
+    UpdatCurrentAffairsComponent,
+    UpdateCurrentAffairsComponent,
+    DeleteCurrentAffairsComponent,
+    GetFacultyMasterComponent,
+    InsertFacultyMasterComponent,
+    UpdateFacultyMasterComponent,
+    DeleteFacultyMasterComponent
   ],
   imports: [
     BrowserModule,

@@ -42,7 +42,7 @@ import { BookContentSociologyComponent } from './Component/Books/book-content-so
 import { BookContentGeographyComponent } from './Component/books/book-content-geography/book-content-geography.component';
 import { BookContentAgricultureEconomicComponent } from './Component/books/book-content-agriculture-economic/book-content-agriculture-economic.component';
 import { BookContentModernIndiaComponent } from './Component/books/book-content-modern-india/book-content-modern-india.component';
-import { TalksAndInterviewComponent } from './TalksAndInterview/TalksAndInterview.component';
+import { TalksAndInterviewComponent } from './Component/TalksAndInterview/TalksAndInterview.component';
 import { SpecialClassesComponent } from './Component/special-classes/special-classes.component';
 import { NIASCourseFeeStrutureComponent } from './Component/Courses/nias-course-fee-struture/nias-course-fee-struture.component';
 import { TestYourSelfComponent } from './Component/test-your-self/test-your-self.component';
@@ -54,10 +54,10 @@ import {InsertBranchComponent} from "./Component/BranchMaster/insert-branch/inse
 import {InsertBannerComponent} from "./Component/Banner/insert-banner/insert-banner.component";
 import {InsertCategoryComponent} from "./Component/CategoryMaster/insert-category/insert-category.component";
 import {InsertSocialMediaComponent} from "./Component/SocialMediaMaster/insert-social-media/insert-social-media.component";
+import {GetMasterinfoComponent} from "./Component/MasterInfo/get-masterinfo/get-masterinfo.component";
+import{GetSubCategoryComponent} from "./Component/SubCategory/get-sub-category/get-sub-category.component";
 const routes: Routes = [
   {path:"",component:NIASHomeComponent},
-  //{path:"admin",component:AdminComponent},
-  //{path:"adminlink",component:AdminlinkComponent},
   {path:"login",component:LogInComponent},  
   {path:"admin",component:AdminComponent,children: 
   [
@@ -67,11 +67,11 @@ const routes: Routes = [
     {path:"admin/getchat",component:GetchatComponent},     
     {path:'',component:AdminlinkComponent},
   ]},
-//{path:"Enquiry",component:GetEnquiryComponent},
+  {path:"Getmaster",component:GetMasterinfoComponent},
   {path:"InsertEnquiry",component:InsertEnquiryComponent},
   {path:"registration",component: RegistrationComponent},
   {path:"Aboutus",component:AboutUsComponent},
-  //{path:"Gallery",component:GalleryNIASComponent},
+  {path:"Getbanner",component:GetBannerComponent},
   {path:"Video",component:VideoNIASComponent},
   {path:"Contact",component:ContactUsComponent},
   {path:"Magazine",component:MagazineListComponent},
@@ -94,8 +94,8 @@ const routes: Routes = [
  {path : "insertBranch",component:InsertBranchComponent},
  {path:"insertsocialmedia",component:InsertSocialMediaComponent},
 // {path:"admin",component:AdminComponent},
-// // {path:"login",component:LogInComponent},
-//   {path:"getchat",component:GetchatComponent},  
+//  {path:"login",component:LogInComponent},
+ {path:"get-subcategory",component:GetSubCategoryComponent },  
   {path : "NIAS_Geography", component:BookContentGeographyComponent},
   {path : "NIAS_Governance", component:BookContentGovernanceComponent},
   {path : "NIAS_History", component:BookContentHistoryComponent},
