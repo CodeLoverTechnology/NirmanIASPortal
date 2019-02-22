@@ -1,150 +1,25 @@
 <div class="container-fluid">
- <form enctype="multipart/form-data" method="post" #SocialMediaForm="ngForm"  (ngSubmit)="onFormSubmit()" [ngBusy]="busy">
-    <div class="form-group">     
-       <label>SocialMediaID </label>
-      <input type="text" name="SocialMediaID "
-      #SocialMediaID="ngModel" class="form-control"  [(ngModel)]="socialMediaModel.SocialMediaID"  required >  
-  <div class="validation-error" *ngIf="SocialMediaID.invalid && SocialMediaID.touched">This field is required.</div>          
- </div>
+ <form enctype="multipart/form-data" method="post" #SocialMediaForm="ngForm"  (ngSubmit)="onFormSubmit()">
+   
  
   <div class="form-group">
       <label >SocialMediaName </label>
-  <input type="text" name="SocialMediaName " required  #SocialMediaName="ngModel" class="form-control"  [(ngModel)]="socialMediaModel.SocialMediaName "  >
+  <input type="text" name="SocialMediaName" required  #SocialMediaName="ngModel" class="form-control"  [(ngModel)]="socialmedia.SocialMediaName"  >
   
   <div class="validation-error" *ngIf="SocialMediaName.invalid && SocialMediaName.touched">This field is required.</div>
    </div> 
   <div class="form-group">
        <label>Address </label>
-      <input type="text" name="Address " #Address="ngModel" class="form-control"
-      [(ngModel)]="socialMediaModel.Address " required>
+      <input type="text" name="Address" #Address="ngModel" class="form-control"
+      [(ngModel)]="socialmedia.Address" required>
       <div class="validation-error" *ngIf="Address.invalid && Address.touched">This field is required.</div>
            </div>
        <div>
        <label>Notes </label>
-       <textarea type="text" name="Notes "  #Notes  ="ngModel" class="form-control" required
-        [(ngModel)]="socialMediaModel.Notes "></textarea>
+       <textarea type="text" name="Notes"  #Notes="ngModel" class="form-control" required [(ngModel)]="socialmedia.Notes"></textarea>
        <div class="validation-error" *ngIf="Notes.invalid && Notes.touched">This field is required.</div>
        </div>
-       <div>
-        <label>CreatedBy </label>
-        <textarea type="text" name="CreatedBy "  #CreatedBy  ="ngModel" class="form-control" required
-         [(ngModel)]="socialMediaModel.CreatedBy "></textarea>
-        <div class="validation-error" *ngIf="CreatedBy .invalid && CreatedBy .touched">This field is required.</div>
-        </div>
-        <div>
-          <label>CreatedDate </label>
-          <textarea type="text" name="CreatedDate "  #CreatedDate  ="ngModel" class="form-control" required
-           [(ngModel)]="socialMediaModel.CreatedDate "></textarea>
-          <div class="validation-error" *ngIf="CreatedDate .invalid && CreatedDate .touched">This field is required.</div>
-          </div>
-          <div>
-            <label>ModifiedBy </label>
-            <textarea type="text" name="ModifiedBy "  #ModifiedBy  ="ngModel" class="form-control" required
-             [(ngModel)]="socialMediaModel.ModifiedBy "></textarea>
-            <div class="validation-error" *ngIf="ModifiedBy .invalid && ModifiedBy .touched">This field is required.</div>
-            </div>
-            <div>
-              <label>ModifiedDate </label>
-              <textarea type="text" name="ModifiedDate "  #ModifiedDate  ="ngModel" class="form-control" required
-               [(ngModel)]="socialMediaModel.ModifiedDate "></textarea>
-              <div class="validation-error" *ngIf="ModifiedDate .invalid && ModifiedDate .touched">This field is required.</div>
-              </div>
-                  <div>
-                    <label>Active</label>
-                    <textarea type="text" name="Active"  #Active ="ngModel" class="form-control" required
-                     [(ngModel)]="socialMediaModel.Active"></textarea>
-                    <div class="validation-error" *ngIf="Active.invalid && Active.touched">This field is required.</div>
-                    </div>
-          <button [disabled]="!SocialMediaMastersForm.valid" type="submit"  class="btn btn-primary btn-lg m-3 ">Submit Now</button> 
+        <button [disabled]="!SocialMediaMastersForm.valid" type="submit"  class="btn btn-primary btn-lg m-3">Submit Now</button> 
            </form> 
   </div>
-  <!-- <h1>insert social media</h1>
-  <p *ngIf="datasaved" ngClass="Success">Record Save Successfully!!</p>
-  <form [FormGroup]="SocialMediaForm" (ngSubmit)="onFormSubmit()">
-    <table>
-      <tr>
-        <td>SocialMediaName:</td>
-        <td>
-          <input formControlName="SocialMediaName">
-        </td>
-      </tr>
-      <tr>
-        <td>Address:</td>
-        <td>
-          <input formControlName="Address">
-        </td>
-      </tr>
-      <tr>
-        <td>Notes:</td>
-        <td>
-          <input formControlName="Notes">
-        </td>
-      </tr>
-      <tr>
-        <td>CreatedBy:</td>
-        <td>
-          <input formControlName="CreatedBy">
-        </td>
-      </tr>
-      <tr>
-        <td>CreatedDate:</td>
-        <td>
-          <input formControlName="CreatedDate">
-        </td>
-      </tr>
-      <tr>
-        <td>ModifiedBy:</td>
-        <td>
-          <input formControlName="ModifiedBy">
-        </td>
-      </tr>
-      <tr>
-        <td>ModifiedDate:</td>
-        <td>
-          <input formControlName="ModifiedDate">
-        </td>
-      </tr>
-      <tr>
-        <td>Active:</td>
-        <td>
-          <input formControlName="Active">
-        </td>
-      </tr>
-      <tr>
-        <td colspan="2">
-          <button [disabled]="SocialMediaForm.invalid">Submit</button>
-
-        </td>
-      </tr>
-    </table>
-  </form> -->
-  <h1>View</h1>
- <table>
-  <thead>
-      <tr>
-      <th>SocialMediaID </th>
-        <th>SocialMediaName </th>
-        <th>Address </th>
-        <th>Notes </th>
-        <th>CreatedBy </th>
-        <th>CreatedDate </th>
-        <th>ModifiedBy </th>
-        <th>ModifiedDate </th>
-        <th>Active</th>
-      </tr>
-    </thead>
-    <tbody>
-          <tr *ngFor="let x of allsocialmedias | async">
-        <td>{{x.socialMediaID}}</td>
-          <td>{{x.socialMediaName }}</td>
-          <td>{{x.address }}</td>
-          <td>{{x.notes }}</td>
-          <td>{{x.createdBy }}</td>
-         <td>{{x.createdDate }}</td>
-         <td>{{x.modifiedBy }}</td> 
-         <td>{{x.modifiedDate }}</td>
-         <td>{{x.active}}</td>    
-         </tr>
-         </tbody>
-         </table>
- 
+  
