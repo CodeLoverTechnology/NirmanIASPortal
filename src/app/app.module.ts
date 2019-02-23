@@ -35,8 +35,8 @@ import { InsertSocialMediaComponent } from './component/SocialMediaMaster/insert
 
 import { GetMasterinfoComponent } from './component/MasterInfo/get-masterinfo/get-masterinfo.component';
 import { InsertMasterinfoComponent } from './component/MasterInfo/insert-masterinfo/insert-masterinfo.component';
-import { GetCourceMasterComponent } from './component/courseMaster/get-cource-master/get-cource-master.component';
-import { InsertCourceMasterComponent } from './component/courseMaster/insert-cource-master/insert-cource-master.component';
+import { GetCourceMasterComponent } from './Component/courseMaster/get-cource-master/get-cource-master.component';
+import { InsertCourceMasterComponent } from './Component/courseMaster/insert-cource-master/insert-cource-master.component';
 
 import { GetCategoryComponent } from './component/CategoryMaster/get-category/get-category.component';
 import { InsertCategoryComponent } from './Component/CategoryMaster/insert-category/insert-category.component';
@@ -110,6 +110,7 @@ import { InsertFacultyMasterComponent } from './component/FacultyMaster/insert-f
 import { UpdateFacultyMasterComponent } from './component/FacultyMaster/update-faculty-master/update-faculty-master.component';
 import { DeleteFacultyMasterComponent } from './component/FacultyMaster/delete-faculty-master/delete-faculty-master.component';
 import {CategoryMasterService} from "./Services/CategoryMaster/category-master.service";
+import {CourseMasterService} from "./Services/CourseMaster/course-master.service";
 @NgModule({
   declarations: [
     AppComponent,
@@ -219,7 +220,7 @@ import {CategoryMasterService} from "./Services/CategoryMaster/category-master.s
     NoopAnimationsModule,
     
   ],
-   providers: [EnquiryServiceService,ChatServicesService,AuthService,SocialMediaServiceService,CategoryMasterService,BannerMasterService],
+   providers: [EnquiryServiceService,ChatServicesService,AuthService,SocialMediaServiceService,CategoryMasterService,BannerMasterService,CourseMasterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

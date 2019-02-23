@@ -57,6 +57,8 @@ import { InsertBatchDetailsComponent } from './Component/BatchDetails/insert-bat
 import {GetCategoryComponent} from "./component/CategoryMaster/get-category/get-category.component";
 import {InsertCategoryComponent} from "./Component/CategoryMaster/insert-category/insert-category.component";
 import {GetBatchDetailsComponent} from "./Component/BatchDetails/get-batch-details/get-batch-details.component";
+import {InsertCourceMasterComponent} from "./Component/courseMaster/insert-cource-master/insert-cource-master.component";
+import {GetCourceMasterComponent} from "./Component/courseMaster/get-cource-master/get-cource-master.component";
 
 
 const routes: Routes = [
@@ -117,7 +119,9 @@ const routes: Routes = [
   {path : "InsertBatchInfo", component:InsertBatchDetailsComponent},
   {path :"insert-category",component:InsertCategoryComponent},
   {path :"get-batchdetails",component:GetBatchDetailsComponent},
-  {path:"insert-banner",component:InsertBannerComponent}
+  {path:"insert-banner",component:InsertBannerComponent},
+  {path:"insert-course",component:InsertCourceMasterComponent},
+  {path:"get-course",component:GetCourceMasterComponent}
   // { path: '', redirectTo: '/', pathMatch:'full' }
   ];
 

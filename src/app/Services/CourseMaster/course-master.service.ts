@@ -7,8 +7,9 @@ import {CourseMaster} from "../../Entity/course-master";
 export class CourseMasterService {
 
 
-    BaseURL: string = "http:// NIAS.codelovertechnology.com";
+    BaseURL: string = "http://NIAS.codelovertechnology.com/";
   
+    selectedCource: { CourseID: number; CourseType : string; CourseCode : string; CourseName: string; Remarks: string;};
     constructor(private _http:HttpClient){}
     
     
@@ -16,8 +17,8 @@ export class CourseMasterService {
       return this._http.get(this.BaseURL+"api/CourseMaster/CourseMasterList");
     }
   
-    public postCourseMasterInfo(CourseMaster : CourseMaster){
-      return this._http.post<any>(this.BaseURL+"api/CourseMaster/CourseMasterCreate",CourseMaster);
+    public postCourseMasterInfo(Course : CourseMaster){
+      return this._http.post<any>(this.BaseURL+"api/CourseMaster/CourseMasterCreate",Course);
     }
   }
 

@@ -10,26 +10,22 @@ import { HttpErrorResponse } from '@Angular/common/http';
 })
 export class InsertCourceMasterComponent implements OnInit {
 
-  CourseMaster ={} as CourseMaster;
+  Course ={} as CourseMaster;
 
   constructor(private _service:CourseMasterService) { }
   ngOnInit(){ }
-  onSubmit()
-  {
-  var Result = this._service.postCourseMasterInfo(this.CourseMaster).subscribe(
-            result =>{
-              this.CourseMaster =result ? result : undefined ;
-              this.CourseMaster;              
-              } ,
+  onFormSubmit()
+{
+  
+this._service.postCourseMasterInfo(this.Course).subscribe(
+  result => console.log('Success !!!.',result),
     (err:HttpErrorResponse)=>{
    if(err.error instanceof Error){
-    console.log("Server Side Error....!");
+          console.log("Server Side Error....!");
         }else{
           console.log("Client Side Error   !");
         }
       })
-  
-  }
-  
+    console.log(this.Course);
+  }}
 
-}
