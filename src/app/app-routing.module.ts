@@ -59,6 +59,7 @@ import {InsertCategoryComponent} from "./Component/CategoryMaster/insert-categor
 import {GetBatchDetailsComponent} from "./Component/BatchDetails/get-batch-details/get-batch-details.component";
 import {InsertCourceMasterComponent} from "./Component/courseMaster/insert-cource-master/insert-cource-master.component";
 import {GetCourceMasterComponent} from "./Component/courseMaster/get-cource-master/get-cource-master.component";
+import {InsertBranchComponent} from "./component/BranchMaster/insert-branch/insert-branch.component";
 
 
 const routes: Routes = [
@@ -96,7 +97,7 @@ const routes: Routes = [
   {path : "Economics", component:BookContentEconomyComponent},
   {path : "NIAS_TalksAndInterview", component:TalksAndInterviewComponent},
   {path:"get-category", component:GetCategoryComponent},
- {path : "BranchList",component:GetBranchComponent},
+ {path : "get-BranchList",component:GetBranchComponent},
 {path : "InsertSocialmedia",component:InsertSocialMediaComponent},
 // {path:"admin",component:AdminComponent},
 //  {path:"login",component:LogInComponent},
@@ -121,7 +122,8 @@ const routes: Routes = [
   {path :"get-batchdetails",component:GetBatchDetailsComponent},
   {path:"insert-banner",component:InsertBannerComponent},
   {path:"insert-course",component:InsertCourceMasterComponent},
-  {path:"get-course",component:GetCourceMasterComponent}
+  {path:"get-course",component:GetCourceMasterComponent},
+  {path:"insert-branch",component:InsertBranchComponent}
   // { path: '', redirectTo: '/', pathMatch:'full' }
   ];
 

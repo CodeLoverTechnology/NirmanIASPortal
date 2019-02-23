@@ -111,6 +111,7 @@ import { UpdateFacultyMasterComponent } from './component/FacultyMaster/update-f
 import { DeleteFacultyMasterComponent } from './component/FacultyMaster/delete-faculty-master/delete-faculty-master.component';
 import {CategoryMasterService} from "./Services/CategoryMaster/category-master.service";
 import {CourseMasterService} from "./Services/CourseMaster/course-master.service";
+import {BranchMasterService} from "./Services/BranchMaster/branch-master.service";
 @NgModule({
   declarations: [
     AppComponent,
@@ -220,7 +221,7 @@ import {CourseMasterService} from "./Services/CourseMaster/course-master.service
     NoopAnimationsModule,
     
   ],
-   providers: [EnquiryServiceService,ChatServicesService,AuthService,SocialMediaServiceService,CategoryMasterService,BannerMasterService,CourseMasterService],
+   providers: [EnquiryServiceService,ChatServicesService,AuthService,SocialMediaServiceService,CategoryMasterService,BannerMasterService,CourseMasterService,BranchMasterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
