@@ -93,7 +93,9 @@ import { GetNirmanresultMasterComponent } from './Component/NirmanResultMaster/g
 import { InsertNirmanresultMasterComponent } from './Component/NirmanResultMaster/insert-nirmanresult-master/insert-nirmanresult-master.component';
 import { UpdateNirmanresultMasterComponent } from './Component/NirmanResultMaster/update-nirmanresult-master/update-nirmanresult-master.component';
 import { DeleteNirmanresultMasterComponent } from './Component/NirmanResultMaster/delete-nirmanresult-master/delete-nirmanresult-master.component';
+import {BannerMasterService} from "./Services/Banner/banner-master.service";
 import { GetCurrentAffairsComponent } from './Component/CurrentAffairs/get-current-affairs/get-current-affairs.component';
+
 //import { InsertGetCurrentAffairsComponent } from './Component/CurrentAffairs/insert-get-current-affairs/insert-get-current-affairs.component';
 import { InsertCurrentAffairsComponent } from './Component/CurrentAffairs/insert-current-affairs/insert-current-affairs.component';
 import { UpdatCurrentAffairsComponent } from './Component/CurrentAffairs/updat-current-affairs/updat-current-affairs.component';
@@ -217,7 +219,7 @@ import {CategoryMasterService} from "./Services/CategoryMaster/category-master.s
     NoopAnimationsModule,
     
   ],
-   providers: [EnquiryServiceService,ChatServicesService,AuthService,SocialMediaServiceService,CategoryMasterService],
+   providers: [EnquiryServiceService,ChatServicesService,AuthService,SocialMediaServiceService,CategoryMasterService,BannerMasterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -67,7 +67,7 @@ const routes: Routes = [
     // {path:" ",component:AdminlinkComponent},
     {path:"admin/getEnquiry",component:GetEnquiryComponent},
     {path:"admin/Gallery",component:GalleryNIASComponent},  
-    {path:"admin/banner",component:InsertBannerComponent},
+    //{path:"insert-banner",component:InsertBannerComponent},
     {path:"admin/getchat",component:GetchatComponent},     
     {path:'',component:AdminlinkComponent},
   ]},
@@ -75,7 +75,7 @@ const routes: Routes = [
   {path:"InsertEnquiry",component:InsertEnquiryComponent},
   {path:"registration",component: RegistrationComponent},
   {path:"Aboutus",component:AboutUsComponent},
-  {path:"Getbanner",component:GetBannerComponent},
+  {path:"get-banner",component:GetBannerComponent},
   {path:"Video",component:VideoNIASComponent},
   {path:"Contact",component:ContactUsComponent},
   {path:"Magazine",component:MagazineListComponent},
@@ -116,7 +116,8 @@ const routes: Routes = [
   {path : "NIAS_TestYourSelf", component:TestYourSelfComponent},
   {path : "InsertBatchInfo", component:InsertBatchDetailsComponent},
   {path :"insert-category",component:InsertCategoryComponent},
-  {path :"get-batchdetails",component:GetBatchDetailsComponent}
+  {path :"get-batchdetails",component:GetBatchDetailsComponent},
+  {path:"insert-banner",component:InsertBannerComponent}
   // { path: '', redirectTo: '/', pathMatch:'full' }
   ];
 

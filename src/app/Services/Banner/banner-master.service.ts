@@ -20,7 +20,7 @@ export class BannerMasterService {
 
   public postBannerDetails(banner : BannerModel):any{
     debugger;
-    return this._http.post<any>(this.BaseURL+"Banner/CreateBanne",banner);
+    return this._http.post<any>(this.BaseURL+"Banner/CreateBanner",banner);
   }
 }
 
