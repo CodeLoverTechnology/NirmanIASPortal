@@ -1,4 +1,4 @@
-import { Component, OnInit, NgModule } from '@angular/core';
+import {  NgModule } from '@angular/core';
 
 import { Routes, RouterModule } from '@angular/router';
 import { GetEnquiryComponent } from './Component/enquirycomponent/get-enquiry/get-enquiry.component';
@@ -54,6 +54,10 @@ import { TestYourSelfComponent } from './Component/test-your-self/test-your-self
 import {GetSubCategoryComponent } from './Component/SubCategory/get-sub-category/get-sub-category.component';
 import { from } from 'rxjs';
 import { InsertBatchDetailsComponent } from './Component/BatchDetails/insert-batch-details/insert-batch-details.component';
+import {GetCategoryComponent} from "./component/CategoryMaster/get-category/get-category.component";
+import {InsertCategoryComponent} from "./Component/CategoryMaster/insert-category/insert-category.component";
+import {GetBatchDetailsComponent} from "./Component/BatchDetails/get-batch-details/get-batch-details.component";
+
 
 const routes: Routes = [
   {path:"",component:NIASHomeComponent},
@@ -89,7 +93,7 @@ const routes: Routes = [
   {path : "POLITYBook", component:BookContentPOLITYComponent},
   {path : "Economics", component:BookContentEconomyComponent},
   {path : "NIAS_TalksAndInterview", component:TalksAndInterviewComponent},
-  
+  {path:"get-category", component:GetCategoryComponent},
  {path : "BranchList",component:GetBranchComponent},
 {path : "InsertSocialmedia",component:InsertSocialMediaComponent},
 // {path:"admin",component:AdminComponent},
@@ -111,7 +115,8 @@ const routes: Routes = [
   {path : "NIAS_CourseFee", component:NIASCourseFeeStrutureComponent},
   {path : "NIAS_TestYourSelf", component:TestYourSelfComponent},
   {path : "InsertBatchInfo", component:InsertBatchDetailsComponent},
-  
+  {path :"insert-category",component:InsertCategoryComponent},
+  {path :"get-batchdetails",component:GetBatchDetailsComponent}
   // { path: '', redirectTo: '/', pathMatch:'full' }
   ];
 

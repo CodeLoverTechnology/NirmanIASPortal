@@ -1,3 +1,43 @@
-<p>
-  get-batch-details works!
-</p>
+<table class="table table-hover table-justified">
+  <thead>
+    <tr>
+    <th>BatchID </th>
+      <th>BatchFor  </th>
+      <th>BatchCode  </th>
+      <th>Subject  </th>
+      <th>Time  </th>
+      <th>Faculty </th>
+      <th>BatchStartDate </th>
+      <th>BatchEndDate</th>
+      <th>TotalStudents</th>
+      <th>Remarks</th>
+      <th>CreatedBy </th>
+      <th>CreatedDate</th>
+      <th>ModifiedBy</th>
+      <th>ModifiedDate</th>
+      <th>Active</th>
+      <th>IsNew</th>
+    </tr>
+  </thead>
+  <tbody>
+        <tr *ngFor="let x of result">
+      <td>{{x.batchID }}</td>
+        <td>{{x.batchFor }}</td>
+        <td>{{x.batchCode }}</td>
+        <td>{{x.subject }}</td>
+        <td>{{x.time }}</td>
+       <td>{{x.faculty}}</td>
+       <td>{{x.batchStartDate}}</td> 
+       <td>{{x.batchEndDate}}</td>
+       <td>{{x.totalStudents}}</td>
+       <td>{{x.remarks}}</td> 
+       <td>{{x.createdBy}}</td>  
+       <td>{{x.createdDate }}</td>
+       <td>{{x.modifiedBy}}</td>
+       <td>{{x.modifiedDate}}</td> 
+       <td>{{x.active}}</td>
+       <td>{{x.isNew}}</td> 
+         
+       </tr>
+       </tbody>
+       </table>

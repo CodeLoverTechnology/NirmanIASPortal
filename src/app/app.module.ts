@@ -39,7 +39,7 @@ import { GetCourceMasterComponent } from './component/courseMaster/get-cource-ma
 import { InsertCourceMasterComponent } from './component/courseMaster/insert-cource-master/insert-cource-master.component';
 
 import { GetCategoryComponent } from './component/CategoryMaster/get-category/get-category.component';
-import { InsertCategoryComponent } from './component/CategoryMaster/insert-category/insert-category.component';
+import { InsertCategoryComponent } from './Component/CategoryMaster/insert-category/insert-category.component';
 import { GetBranchComponent } from './component/BranchMaster/get-branch/get-branch.component';
 import { InsertBranchComponent } from './component/BranchMaster/insert-branch/insert-branch.component';
 import { GetBannerComponent } from './component/Banner/get-banner/get-banner.component';
@@ -107,7 +107,7 @@ import { GetFacultyMasterComponent } from './component/FacultyMaster/get-faculty
 import { InsertFacultyMasterComponent } from './component/FacultyMaster/insert-faculty-master/insert-faculty-master.component';
 import { UpdateFacultyMasterComponent } from './component/FacultyMaster/update-faculty-master/update-faculty-master.component';
 import { DeleteFacultyMasterComponent } from './component/FacultyMaster/delete-faculty-master/delete-faculty-master.component';
-
+import {CategoryMasterService} from "./Services/CategoryMaster/category-master.service";
 @NgModule({
   declarations: [
     AppComponent,
@@ -214,9 +214,10 @@ import { DeleteFacultyMasterComponent } from './component/FacultyMaster/delete-f
     ReactiveFormsModule,
     NgBusyModule,
     BrowserAnimationsModule,
-    NoopAnimationsModule 
+    NoopAnimationsModule,
+    
   ],
-   providers: [EnquiryServiceService,ChatServicesService,AuthService,SocialMediaServiceService],
+   providers: [EnquiryServiceService,ChatServicesService,AuthService,SocialMediaServiceService,CategoryMasterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

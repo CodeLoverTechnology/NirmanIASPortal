@@ -14,13 +14,13 @@ export class BannerMasterService {
   
   constructor(private _http:HttpClient){}
   
-  
   public getBannerInfo():any{
     return this._http.get(this.BaseURL+"Banner/BannerList");
   }
 
-  public postBannerMaster(Banner : BannerModel){
-    return this._http.post<any>(this.BaseURL+"Banner/CreateBanner",Banner);
+  public postBannerDetails(banner : BannerModel):any{
+    debugger;
+    return this._http.post<any>(this.BaseURL+"Banner/CreateBanne",banner);
   }
 }
 

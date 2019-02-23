@@ -11,25 +11,31 @@ import { HttpErrorResponse } from '@Angular/common/http';
 export class InsertCategoryComponent implements OnInit {
 
   
-  CategoryMaster ={} as CategoryMaster;
-
+  category = {} as CategoryMaster;
+  Result: any;
   constructor(private _service:CategoryMasterService) { }
   ngOnInit(){ }
-  onSubmit()
-  {
-  var Result = this._service.postCategoryMaster(this.CategoryMaster).subscribe(
-            result =>{
-              this.CategoryMaster =result ? result : undefined ;
-              this.CategoryMaster;              
-              } ,
-    (err:HttpErrorResponse)=>{
-   if(err.error instanceof Error){
-    console.log("Server Side Error....!");
-        }else{
-          console.log("Client Side Error   !");
-        }
-      })
-  
+  onFormSubmit() {
+    this._service.createCategoryMaster(this.category).subscribe(
+      res => this.Result = res);
+     (err: HttpErrorResponse) => {
+    if (err.error instanceof Error) {
+      console.log("Server Side Error....!");
+    } else {
+      console.log("Client Side Error !");
+    }
+    this.getcategoryinfo();
+  };
+}
+   
+    
+
+
+
+  getcategoryinfo() {
+    this.Result= this._service.getCategoryMaster();
   }
+
+
 
 }

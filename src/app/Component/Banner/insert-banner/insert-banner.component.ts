@@ -18,7 +18,7 @@ BannerImagesPath:"NA"
   ngOnInit(){ }
   onSubmit()
   {
-  var Result = this._service.postBannerMaster(this.Banner).subscribe(
+  var Result = this._service.postBannerDetails(this.Banner).subscribe(
             result =>{
               this.Banner =result ? result : undefined ;
               this.Banner;              
