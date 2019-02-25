@@ -9,7 +9,7 @@ export class CurrentAffairsService {
 
   BaseURL: string = "http://nias.codelovertechnology.com/api/";
   selectedCurrent: {  CurrentAffairsID: number; Category: string; SubCategory: string; Title: string;  Summary: string;
-     PDFPath: string; CurrentAffairsImgPath: string; IsNew : boolean;  NoOfView: string;  SpecialRemarks:  string; };
+     PDFPath: string; CurrentAffairsImgPath: string; IsNew : boolean;  NoOfView: number;  SpecialRemarks:  string; };
   
   constructor(private _http:HttpClient){}
   

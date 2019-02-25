@@ -61,6 +61,8 @@ import {InsertCourceMasterComponent} from "./Component/courseMaster/insert-courc
 import {GetCourceMasterComponent} from "./Component/courseMaster/get-cource-master/get-cource-master.component";
 import { GetCurrentAffairsComponent } from './Component/CurrentAffairs/get-current-affairs/get-current-affairs.component';
 import { InsertCurrentAffairsComponent } from './Component/CurrentAffairs/insert-current-affairs/insert-current-affairs.component';
+import { GetVideoLectureComponent } from './Component/VideoLectures/get-video-lecture/get-video-lecture.component';
+import { InsertVideoLectureComponent } from './Component/VideoLectures/insert-video-lecture/insert-video-lecture.component';
 
 
 const routes: Routes = [
@@ -126,7 +128,9 @@ const routes: Routes = [
   {path:"get-course",component:GetCourceMasterComponent},
   // { path: '', redirectTo: '/', pathMatch:'full' }
   {path:"insert-current",component:InsertCurrentAffairsComponent},
-  {path:"get-current",component:GetCurrentAffairsComponent}
+  {path:"get-current",component:GetCurrentAffairsComponent},
+  {path:"insert-VideoLecture",component:InsertVideoLectureComponent},
+  {path:"get-VideoLecture",component:GetVideoLectureComponent}
     
 ];
 
