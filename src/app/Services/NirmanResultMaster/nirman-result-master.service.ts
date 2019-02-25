@@ -13,10 +13,10 @@ export class NirmanResultMasterService {
   
   
   public getNirmanResultsInfo():any{
-    return this._http.get(this.BaseURL+"NirmanResultMasters/NirmanResultMastersList ");
+    return this._http.get(this.BaseURL+"NirmanResultMasters/NirmanResultMastersList");
   }
 
-  public postNirmanResults(Result : NirmanResultMasters){
-    return this._http.post<any>(this.BaseURL+"NirmanResultMasters/CreateNirmanResultMasters",Result);
+  public postNirmanResults(Results : NirmanResultMasters){
+    return this._http.post<any>(this.BaseURL+"NirmanResultMasters/CreateNirmanResultMasters",Results);
   }
 }
