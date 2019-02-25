@@ -19,13 +19,12 @@ export class CurrentAffairsService {
     let options={
       headers:httpheaders
     };
-    debugger;
     return this._http.post<CurrentAffairsMasters>(this.BaseURL+"CurrentAffairsMasters/CreateCurrentAffairsMasters",Current,options);
   }
   
   
    getCurrentAffairsInfo():any{
-    return this._http.get(this.BaseURL+"CurrentAffairsMasters/CurrentAffairsMastersList ");
+    return this._http.get(this.BaseURL+"CurrentAffairsMasters/CurrentAffairsMastersList");
   }
 
    postCurrentAffairs(Current: CurrentAffairsMasters):any{
