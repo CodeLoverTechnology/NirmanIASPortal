@@ -63,6 +63,9 @@ import { GetCurrentAffairsComponent } from './Component/CurrentAffairs/get-curre
 import { InsertCurrentAffairsComponent } from './Component/CurrentAffairs/insert-current-affairs/insert-current-affairs.component';
 import { GetVideoLectureComponent } from './Component/VideoLectures/get-video-lecture/get-video-lecture.component';
 import { InsertVideoLectureComponent } from './Component/VideoLectures/insert-video-lecture/insert-video-lecture.component';
+import { InsertBranchComponent } from './Component/BranchMaster/insert-branch/insert-branch.component';
+import { InsertNirmanresultMasterComponent } from './Component/NirmanResultMaster/insert-nirmanresult-master/insert-nirmanresult-master.component';
+import { GetNirmanresultMasterComponent } from './Component/NirmanResultMaster/get-nirmanresult-master/get-nirmanresult-master.component';
 
 
 const routes: Routes = [
@@ -100,7 +103,7 @@ const routes: Routes = [
   {path : "Economics", component:BookContentEconomyComponent},
   {path : "NIAS_TalksAndInterview", component:TalksAndInterviewComponent},
   {path:"get-category", component:GetCategoryComponent},
- {path : "BranchList",component:GetBranchComponent},
+ {path : "get-BranchList",component:GetBranchComponent},
 {path : "InsertSocialmedia",component:InsertSocialMediaComponent},
 // {path:"admin",component:AdminComponent},
 //  {path:"login",component:LogInComponent},
@@ -126,6 +129,9 @@ const routes: Routes = [
   {path:"insert-banner",component:InsertBannerComponent},
   {path:"insert-course",component:InsertCourceMasterComponent},
   {path:"get-course",component:GetCourceMasterComponent},
+  {path:"insert-branch",component:InsertBranchComponent},
+  {path:"insert-nirmanresult",component:InsertNirmanresultMasterComponent},
+  {path:"get-nirmanresult",component:GetNirmanresultMasterComponent},
   // { path: '', redirectTo: '/', pathMatch:'full' }
   {path:"insert-current",component:InsertCurrentAffairsComponent},
   {path:"get-current",component:GetCurrentAffairsComponent},

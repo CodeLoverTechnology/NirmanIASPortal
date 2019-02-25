@@ -9,9 +9,9 @@ export class NirmanResultMasters{
   public  CandiateReview : string,
   public  Remarks : string,
   public  CreatedBy : string,
-  public  CreatedDate :Date,
+  public  CreatedDate :string,
   public  ModifiedBy : string,
-  public ModifiedDate :Date,
+  public ModifiedDate :string,
   public Active: boolean,
   public  IsNew : boolean
     ){}

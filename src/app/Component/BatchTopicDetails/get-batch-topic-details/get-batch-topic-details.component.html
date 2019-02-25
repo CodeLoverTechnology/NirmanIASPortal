@@ -1,3 +1,40 @@
-<p>
-  get-batch-topic-details works!
-</p>
+<table class="table table-hover table-justified">
+  <thead>
+    <tr>
+    <th>BatchTopicID</th>
+      <th>BatchID   </th>
+      <th>TopicDate   </th>
+      <th>Topic   </th>
+      <th>TopicSummary </th>
+      <th>Location </th>
+      <th>FacultyID </th>
+      <th>TpoicPicPath</th>
+      <th>IsNew</th>
+      <th>Remarks</th>
+      <th>CreatedBy </th>
+      <th>CreatedDate </th>
+      <th>ModifiedBy</th>
+      <th>ModifiedDate</th>
+      <th>Active</th>
+    </tr>
+  </thead>
+  <tbody>
+        <tr *ngFor="let x of result">
+      <td>{{x.batchTopicID}}</td>
+        <td>{{x.batchID  }}</td>
+        <td>{{x.topicDate  }}</td>
+        <td>{{x.topic  }}</td>
+        <td>{{x.topicSummary  }}</td>
+        <td>{{x.location}}</td>
+       <td>{{x.facultyID}}</td>
+       <td>{{x.tpoicPicPath}}</td> 
+       <td>{{x.isNew}}</td>
+       <td>{{x.remarks}}</td> 
+       <td>{{x.createdBy}}</td>
+       <td>{{x.createdDate}}</td>
+       <td>{{x.modifiedBy}}</td>
+       <td>{{x.modifiedDate}}</td>
+       <td>{{x.active}}</td>    
+       </tr>
+       </tbody>
+       </table>

@@ -1,3 +1,38 @@
-<p>
-  get-nirmanresult-master works!
-</p>
+<table class="table table-hover table-justified">
+  <thead>
+    <tr>
+    <th>ResultID</th>
+      <th>ExamName  </th>
+      <th>ExamYear  </th>
+      <th>CandidateName  </th>
+      <th>CandidateRank  </th>
+      <th>CandiatePicPath </th>
+      <th>CandiateReview </th>
+      <th>Remarks </th>
+      <th>CreatedBy</th>
+      <th>CreatedDate</th>
+      <th>ModifiedBy</th>
+      <th>ModifiedDate</th>
+      <th>Active</th>
+      <th>IsNew</th>
+    </tr>
+  </thead>
+  <tbody>
+        <tr *ngFor="let x of result">
+      <td>{{x.resultID }}</td>
+        <td>{{x.examName }}</td>
+        <td>{{x.examYear }}</td>
+        <td>{{x.candidateName }}</td>
+        <td>{{x.candidateRank }}</td>
+        <td>{{x.candiatePicPath  }}</td>
+       <td>{{x.candiateReview}}</td>
+       <td>{{x.remarks}}</td> 
+       <td>{{x.createdBy}}</td>
+       <td>{{x.createdDate}}</td> 
+       <td>{{x.modifiedBy}}</td>
+       <td>{{x.modifiedDate}}</td>
+       <td>{{x.active}}</td> 
+       <td>{{x.isNew}}</td>    
+       </tr>
+       </tbody>
+       </table>
