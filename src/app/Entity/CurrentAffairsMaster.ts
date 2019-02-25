@@ -1,9 +1,9 @@
 export class CurrentAffairsMasters{
     constructor(
         public CurrentAffairsID :number,
-        public Category         :string,
-        public SubCategory      :string,
-        public Title            :string,
+        public Category:string,
+        public SubCategory:string,
+        public Title:string,
         public Summary: string,
         public PDFPath: string,
         public CurrentAffairsImgPath: string,

@@ -22,7 +22,7 @@ export class InsertSocialMediaComponent implements OnInit {
 
 
      onFormSubmit() {
-    this._service.createSocialMedia(this.socialmedia).subscribe(
+    this._service.postSocialMedia(this.socialmedia).subscribe(
       res => this.Result = res);
      (err: HttpErrorResponse) => {
     if (err.error instanceof Error) {

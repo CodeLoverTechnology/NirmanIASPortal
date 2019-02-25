@@ -16,15 +16,19 @@ export class InsertCurrentAffairsComponent implements OnInit {
   ngOnInit() { }
 
   onFormSubmit() {
-    this._service.createCurrentAffairs(this.Current).subscribe(
+   debugger;
+    this._service.postCurrentAffairs(this.Current).subscribe(
       res => this.Result = res);
      (err: HttpErrorResponse) => {
     if (err.error instanceof Error) {
-      console.log("Server Side Error....!");
+      
+      alert(' server error');
+      //console.log("Server Side Error....!");
     } else {
-      console.log("Client Side Error !");
+      alert('Client error');
+      //console.log("Client Side Error !");
     }
-    this.getCurrent();
+    //this.getCurrent();
   };
   }
   getCurrent() {

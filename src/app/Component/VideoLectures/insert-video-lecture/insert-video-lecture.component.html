@@ -1,3 +1,52 @@
-<p>
-  insert-video-lecture works!
-</p>
+
+<div class="container-fluid">
+  <form enctype="multipart/form-data" method="post" #CurrentAffairsForm="ngForm"  (ngSubmit)="onFormSubmit()">
+    
+  
+   <div class="form-group">
+       <label >VideoType </label>
+   <input type="text" name="VideoType" required  #VideoType="ngModel" class="form-control"  [(ngModel)]="Lecture.VideoType"  >
+   
+   <div class="validation-error" *ngIf="VideoType.invalid && VideoType.touched">This field is required.</div>
+    </div> 
+   <div class="form-group">
+        <label>VideoTitle  </label>
+       <input type="text" name="VideoTitle " #VideoTitle ="ngModel" class="form-control"
+       [(ngModel)]="Lecture.VideoTitle " required>
+       <div class="validation-error" *ngIf="VideoTitle .invalid && VideoTitle .touched">This field is required.</div>
+            </div>
+             <div class="form-group">
+        <label>VideoCategory </label>
+       <input type="text" name="VideoCategory" #VideoCategory="ngModel" class="form-control"
+       [(ngModel)]="Lecture.VideoCategory" required>
+       <div class="validation-error" *ngIf="VideoCategory.invalid && VideoCategory.touched">This field is required.</div>
+            </div>
+         <div class="form-group">
+        <label>VideoPath </label>
+       <input type="text" name="VideoPath" #VideoPath="ngModel" class="form-control"
+       [(ngModel)]="Lecture.VideoPath" required>
+       <div class="validation-error" *ngIf="VideoPath.invalid && VideoPath.touched">This field is required.</div>
+            </div>
+       <div class="form-group">
+        <label>Faculty </label>
+       <input type="text" name="Faculty" #Faculty="ngModel" class="form-control"
+       [(ngModel)]="Lecture.Faculty" required>
+       <div class="validation-error" *ngIf="Faculty.invalid && Faculty.touched">This field is required.</div>
+            </div>
+              <div class="form-group">
+        <label>NoOfViews </label>
+       <input type="text" name="NoOfViews" #NoOfViews="ngModel" class="form-control"
+       [(ngModel)]="Lecture.NoOfViews" required>
+       <div class="validation-error" *ngIf="NoOfViews.invalid && NoOfViews.touched">This field is required.</div>
+      </div>
+      <div class="form-group">
+        <label>Description </label>
+       <input type="text" name="Description" #Description="ngModel" class="form-control"
+       [(ngModel)]="Lecture.Description" required>
+       <div class="validation-error" *ngIf="Description.invalid && Description.touched">This field is required.</div>
+            </div>
+       
+         <button [disabled]="!CurrentAffairsForm.valid" type="submit"  class="btn btn-primary btn-lg m-3">Submit Now</button> 
+            </form> 
+   </div>
+   

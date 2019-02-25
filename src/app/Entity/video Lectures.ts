@@ -10,9 +10,9 @@ export class  VideoLectures
     public  NoOfViews: number,
     public  Description :String,
     public  CreatedBy :String,
-    public  CreatedDate :Date,
+    public  CreatedDate :String,
     public  ModifiedBy :String,
-    public  ModifiedDate :Date,
+    public  ModifiedDate :String,
     public Active :boolean,
     ){}
    }

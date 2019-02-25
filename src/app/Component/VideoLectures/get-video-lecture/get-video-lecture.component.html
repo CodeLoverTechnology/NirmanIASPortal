@@ -1,3 +1,36 @@
-<p>
-  get-video-lecture works!
-</p>
+<table class="table table-hover table-justified">
+  <thead>
+    <tr>
+      <th>VideoID</th>
+      <th>VideoType </th>
+      <th>VideoTitle </th>
+      <th>VideoCategory</th>
+      <th>VideoPath</th>
+      <th>Faculty</th>
+      <th>NoOfViews</th>
+      <th>Description</th>
+      <th>CreatedBy </th>
+      <th>CreatedDate </th>
+      <th>ModifiedBy </th>
+      <th>ModifiedDate </th>
+      <th>Active</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let x of result">
+      <td>{{x.videoID}}</td>
+      <td>{{x.videoType }}</td>
+      <td>{{x.videoTitle }}</td>
+      <td>{{x.videoCategory}}</td>
+      <td>{{x.videoPath}}</td>
+      <td>{{x.faculty}}</td>
+      <td>{{x.noOfViews}}</td>
+      <td>{{x.description}}</td>
+      <td>{{x.createdBy }}</td>
+      <td>{{x.createdDate }}</td>
+      <td>{{x.modifiedBy }}</td> 
+      <td>{{x.modifiedDate }}</td>
+      <td>{{x.active}}</td>    
+    </tr>
+       </tbody>
+       </table>
