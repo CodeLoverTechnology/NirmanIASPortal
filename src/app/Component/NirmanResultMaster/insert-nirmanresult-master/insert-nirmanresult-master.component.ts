@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+import {NirmanResultMasterService} from "../../../Services/NirmanResultMaster/nirman-result-master.service";
+import {NirmanResultMasters} from "../../../Entity/NirmanResultMaster";
+import {HttpErrorResponse} from "@angular/common/http";
 @Component({
   selector: 'app-insert-nirmanresult-master',
   templateUrl: './insert-nirmanresult-master.component.html',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InsertNirmanresultMasterComponent implements OnInit {
 
-  constructor() { }
+  Results = {} as NirmanResultMasters;
 
-  ngOnInit() {
-  }
-
-}
+  constructor(private _service:NirmanResultMasterService) { }
+  ngOnInit(){ }
+  onFormSubmit()
+  {
+    this._service.postNirmanResults(this.Results).subscribe(
+   result => console.log('Success !!!.',result),
+      (err:HttpErrorResponse)=>{
+     if(err.error instanceof Error){
+            console.log("Server Side Error....!");
+          }else{
+            console.log("Client Side Error   !");
+          }
+        })
+      console.log(this.Results);
+    }}

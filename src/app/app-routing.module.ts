@@ -60,6 +60,8 @@ import {GetBatchDetailsComponent} from "./Component/BatchDetails/get-batch-detai
 import {InsertCourceMasterComponent} from "./Component/courseMaster/insert-cource-master/insert-cource-master.component";
 import {GetCourceMasterComponent} from "./Component/courseMaster/get-cource-master/get-cource-master.component";
 import {InsertBranchComponent} from "./component/BranchMaster/insert-branch/insert-branch.component";
+import {InsertNirmanresultMasterComponent} from "./Component/NirmanResultMaster/insert-nirmanresult-master/insert-nirmanresult-master.component";
+import {GetNirmanresultMasterComponent} from "./Component/NirmanResultMaster/get-nirmanresult-master/get-nirmanresult-master.component";
 
 
 const routes: Routes = [
@@ -123,7 +125,9 @@ const routes: Routes = [
   {path:"insert-banner",component:InsertBannerComponent},
   {path:"insert-course",component:InsertCourceMasterComponent},
   {path:"get-course",component:GetCourceMasterComponent},
-  {path:"insert-branch",component:InsertBranchComponent}
+  {path:"insert-branch",component:InsertBranchComponent},
+  {path:"insert-nirmanresult",component:InsertNirmanresultMasterComponent},
+  {path:"get-nirmanresult",component:GetNirmanresultMasterComponent}
   // { path: '', redirectTo: '/', pathMatch:'full' }
   ];
 
