@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { BranchMasterService } from './branch-master.service';
+import { BranchMasterService } from "./branch-master.service";
 
 describe('BranchMasterService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
