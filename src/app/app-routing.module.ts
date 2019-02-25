@@ -64,6 +64,8 @@ import {InsertNirmanresultMasterComponent} from "./Component/NirmanResultMaster/
 import {GetNirmanresultMasterComponent} from "./Component/NirmanResultMaster/get-nirmanresult-master/get-nirmanresult-master.component";
 import {InsertCurrentAffairsComponent} from "./Component/CurrentAffairs/insert-current-affairs/insert-current-affairs.component";
 import {GetCurrentAffairsComponent} from "./Component/CurrentAffairs/get-current-affairs/get-current-affairs.component";
+import {InsertBatchTopicDetailsComponent} from "./Component/BatchTopicDetails/insert-batch-topic-details/insert-batch-topic-details.component";
+import {GetBatchTopicDetailsComponent} from "./Component/BatchTopicDetails/get-batch-topic-details/get-batch-topic-details.component";
 
 const routes: Routes = [
   {path:"",component:NIASHomeComponent},
@@ -131,8 +133,9 @@ const routes: Routes = [
   {path:"get-nirmanresult",component:GetNirmanresultMasterComponent},
   // { path: '', redirectTo: '/', pathMatch:'full' }
   {path:"insert-current",component:InsertCurrentAffairsComponent},
-  {path:"get-current",component:GetCurrentAffairsComponent}
-    
+  {path:"get-current",component:GetCurrentAffairsComponent},
+  {path:"get-batchdetail",component:InsertBatchTopicDetailsComponent},
+  {path:"insert-batchdetail",component:GetBatchTopicDetailsComponent}
 ];
 
 @NgModule({

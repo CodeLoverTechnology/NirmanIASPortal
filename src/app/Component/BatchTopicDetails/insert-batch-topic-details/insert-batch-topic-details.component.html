@@ -1,3 +1,60 @@
-<p>
-  insert-batch-topic-details works!
-</p>
+<div class="container-fluid">
+  <form enctype="multipart/form-data" method="post" #BatchTopicForm="ngForm"  (ngSubmit)="onFormSubmit()">
+    
+  
+   <div class="form-group">
+       <label >BatchTopicID </label>
+   <input type="text" name="BatchTopicID" required  #BatchTopicID="ngModel" class="form-control"  [(ngModel)]="batchTopic.BatchTopicID"  >
+   
+   <div class="validation-error" *ngIf="BatchTopicID.invalid && BatchTopicID.touched">This field is required.</div>
+    </div> 
+   <div class="form-group">
+        <label>BatchID </label>
+       <input type="text" name="BatchID" #BatchID="ngModel" class="form-control"
+       [(ngModel)]="batchTopic.BatchID" required>
+       <div class="validation-error" *ngIf="BatchID.invalid && BatchID.touched">This field is required.</div>
+            </div>
+        <div>
+        <label>TopicDate </label>
+        <input type="text" name="TopicDate"  #TopicDate="ngModel" class="form-control" required [(ngModel)]="batchTopic.TopicDate">
+        <div class="validation-error" *ngIf="TopicDate.invalid && TopicDate.touched">This field is required.</div>
+        </div>
+        <div>
+          <label>Topic </label>
+          <input type="text" name="Topic"  #Topic="ngModel" class="form-control" required [(ngModel)]="batchTopic.Topic">
+          <div class="validation-error" *ngIf="Topic.invalid && Topic.touched">This field is required.</div>
+          </div>
+          <div>
+            <label>TopicSummary </label>
+            <input type="text" name="TopicSummary"  #TopicSummary="ngModel" class="form-control" required [(ngModel)]="batchTopic.TopicSummary">
+            <div class="validation-error" *ngIf="TopicSummary.invalid && TopicSummary.touched">This field is required.</div>
+            </div>
+            <div>
+              <label>Location </label>
+              <input type="text" name="Location"  #Location="ngModel" class="form-control" required [(ngModel)]="batchTopic.Location">
+              <div class="validation-error" *ngIf="Location.invalid && Location.touched">This field is required.</div>
+              </div>
+              <div>
+                <label>FacultyID </label>
+                <input type="text" name="FacultyID"  #FacultyID="ngModel" class="form-control" required [(ngModel)]="batchTopic.FacultyID">
+                <div class="validation-error" *ngIf="FacultyID.invalid && FacultyID.touched">This field is required.</div>
+                </div>
+                <div>
+                  <label>TpoicPicPath </label>
+                  <input type="text" name="TpoicPicPath"  #TpoicPicPath="ngModel" class="form-control" required [(ngModel)]="batchTopic.TpoicPicPath">
+                  <div class="validation-error" *ngIf="TpoicPicPath.invalid && TpoicPicPath.touched">This field is required.</div>
+                  </div>
+                  <div>
+                    <label>IsNew </label>
+                    <input type="text" name="IsNew"  #IsNew="ngModel" class="form-control" required [(ngModel)]="batchTopic.IsNew">
+                    <div class="validation-error" *ngIf="IsNew.invalid && IsNew.touched">This field is required.</div>
+                    </div>
+                    <div>
+                      <label>Remarks </label>
+                      <input type="text" name="Remarks"  #Remarks="ngModel" class="form-control" required [(ngModel)]="batchTopic.Remarks">
+                      <div class="validation-error" *ngIf="Remarks.invalid && Remarks.touched">This field is required.</div>
+                      </div>
+         <button [disabled]="!BatchTopicForm.valid" type="submit"  class="btn btn-primary btn-lg m-3">Submit Now</button> 
+            </form> 
+   </div>
+   

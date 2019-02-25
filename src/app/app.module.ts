@@ -112,6 +112,8 @@ import { DeleteFacultyMasterComponent } from './component/FacultyMaster/delete-f
 import {CategoryMasterService} from "./Services/CategoryMaster/category-master.service";
 import {CourseMasterService} from "./Services/CourseMaster/course-master.service";
 import {BranchMasterService} from "./Services/BranchMaster/branch-master.service";
+import {BatchTopicDetailsService} from "./Services/BatchTopicDetails/batch-topic-details.service";
+import {NirmanResultMasterService} from "./Services/NirmanResultMaster/nirman-result-master.service";
 @NgModule({
   declarations: [
     AppComponent,
@@ -221,7 +223,7 @@ import {BranchMasterService} from "./Services/BranchMaster/branch-master.service
     NoopAnimationsModule,
     
   ],
-   providers: [EnquiryServiceService,ChatServicesService,AuthService,SocialMediaServiceService,CategoryMasterService,BannerMasterService,CourseMasterService,BranchMasterService],
+   providers: [EnquiryServiceService,ChatServicesService,AuthService,SocialMediaServiceService,CategoryMasterService,BannerMasterService,CourseMasterService,BranchMasterService,BatchTopicDetailsService,NirmanResultMasterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
