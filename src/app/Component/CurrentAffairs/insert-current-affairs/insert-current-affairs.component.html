@@ -42,7 +42,7 @@
        <div class="validation-error" *ngIf="IsNew.invalid && IsNew.touched">This field is required.</div>
    </div>
    <div>
-    <label>NoOfView </label>
+    <label>NoOfView</label>
       <textarea type="text" name="NoOfView"  #NoOfView="ngModel" class="form-control" required [(ngModel)]="Current.NoOfView"></textarea>
        <div class="validation-error" *ngIf="NoOfView.invalid && NoOfView.touched">This field is required.</div>
    </div>
@@ -52,7 +52,6 @@
         <div class="validation-error" *ngIf="SpecialRemarks.invalid && SpecialRemarks.touched">This field is required.</div>
    </div>
                 
-  <button [disabled]="!CurrentMastersForm.valid" type="submit"  class="btn btn-primary btn-lg m-3">Submit Now</button> 
+  <button [disabled]="!CurrentAffairsForm.valid" type="submit"  class="btn btn-primary btn-lg m-3">Submit Now</button> 
 </form> 
    </div>
-   
