@@ -1,3 +1,58 @@
-<p>
-  insert-current-affairs works!
-</p>
+<div class="container-fluid">
+  <form enctype="multipart/form-data" method="post" #CurrentAffairsForm="ngForm"  (ngSubmit)="onFormSubmit()">
+    <div class="form-group">
+        <label >CurrentAffairsID</label>
+       <input type="text" name="CurrentAffairsID" required  #CurrentAffairsID ="ngModel" class="form-control"  [(ngModel)]="Current.CurrentAffairsID "  >
+        <div class="validation-error" *ngIf="CurrentAffairsID .invalid && CurrentAffairsID .touched">This field is required.</div>
+        </div>
+    <div class="form-group">
+    <label >Category</label>
+   <input type="text" name="Category" required  #Category ="ngModel" class="form-control"  [(ngModel)]="Current.Category "  >
+    <div class="validation-error" *ngIf="Category .invalid && Category .touched">This field is required.</div>
+    </div> 
+   <div class="form-group">
+        <label>SubCategory</label>
+       <input type="text" name="SubCategory " #SubCategory ="ngModel" class="form-control"
+       [(ngModel)]="socialmedia.SubCategory " required>
+       <div class="validation-error" *ngIf="SubCategory .invalid && SubCategory .touched">This field is required.</div>
+            </div>
+            <div>
+                <label>Title </label>
+                <textarea type="text" name="Title"  #Title="ngModel" class="form-control" required [(ngModel)]="socialmedia.Title"></textarea>
+                <div class="validation-error" *ngIf="Title.invalid && Title.touched">This field is required.</div>
+                </div>
+        <div>
+        <label>Summary </label>
+        <textarea type="text" name="Summary"  #Summary="ngModel" class="form-control" required [(ngModel)]="socialmedia.Summary"></textarea>
+        <div class="validation-error" *ngIf="Summary.invalid && Summary.touched">This field is required.</div>
+        </div>
+        <div>
+          <label>PDFPath </label>
+          <textarea type="text" name="PDFPath"  #PDFPath="ngModel" class="form-control" required [(ngModel)]="socialmedia.PDFPath"></textarea>
+          <div class="validation-error" *ngIf="PDFPath.invalid && PDFPath.touched">This field is required.</div>
+          </div>
+          <div>
+            <label>CurrentAffairsImgPath </label>
+            <textarea type="text" name="CurrentAffairsImgPath"  #CurrentAffairsImgPath="ngModel" class="form-control" required [(ngModel)]="socialmedia.CurrentAffairsImgPath"></textarea>
+            <div class="validation-error" *ngIf="CurrentAffairsImgPath.invalid && CurrentAffairsImgPath.touched">This field is required.</div>
+            </div>
+            <div>
+              <label>IsNew  </label>
+              <textarea type="text" name="IsNew "  #IsNew ="ngModel" class="form-control" required [(ngModel)]="socialmedia.IsNew "></textarea>
+              <div class="validation-error" *ngIf="IsNew .invalid && IsNew .touched">This field is required.</div>
+              </div>
+              <div>
+                <label>NoOfView </label>
+                <textarea type="text" name="NoOfView"  #NoOfView="ngModel" class="form-control" required [(ngModel)]="socialmedia.NoOfView"></textarea>
+                <div class="validation-error" *ngIf="NoOfView.invalid && NoOfView.touched">This field is required.</div>
+                </div>
+                <div>
+                  <label>SpecialRemarks </label>
+                  <textarea type="text" name="SpecialRemarks"  #SpecialRemarks="ngModel" class="form-control" required [(ngModel)]="socialmedia.SpecialRemarks"></textarea>
+                  <div class="validation-error" *ngIf="SpecialRemarks.invalid && SpecialRemarks.touched">This field is required.</div>
+                  </div>
+                
+         <button [disabled]="!SocialMediaMastersForm.valid" type="submit"  class="btn btn-primary btn-lg m-3">Submit Now</button> 
+            </form> 
+   </div>
+   

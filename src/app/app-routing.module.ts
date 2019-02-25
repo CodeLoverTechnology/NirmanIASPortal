@@ -59,6 +59,8 @@ import {InsertCategoryComponent} from "./Component/CategoryMaster/insert-categor
 import {GetBatchDetailsComponent} from "./Component/BatchDetails/get-batch-details/get-batch-details.component";
 import {InsertCourceMasterComponent} from "./Component/courseMaster/insert-cource-master/insert-cource-master.component";
 import {GetCourceMasterComponent} from "./Component/courseMaster/get-cource-master/get-cource-master.component";
+import { GetCurrentAffairsComponent } from './Component/CurrentAffairs/get-current-affairs/get-current-affairs.component';
+import { InsertCurrentAffairsComponent } from './Component/CurrentAffairs/insert-current-affairs/insert-current-affairs.component';
 
 
 const routes: Routes = [
@@ -121,9 +123,12 @@ const routes: Routes = [
   {path :"get-batchdetails",component:GetBatchDetailsComponent},
   {path:"insert-banner",component:InsertBannerComponent},
   {path:"insert-course",component:InsertCourceMasterComponent},
-  {path:"get-course",component:GetCourceMasterComponent}
+  {path:"get-course",component:GetCourceMasterComponent},
   // { path: '', redirectTo: '/', pathMatch:'full' }
-  ];
+  {path:"insert-current",component:InsertCurrentAffairsComponent},
+  {path:"get-current",component:GetCurrentAffairsComponent}
+    
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes) ],
