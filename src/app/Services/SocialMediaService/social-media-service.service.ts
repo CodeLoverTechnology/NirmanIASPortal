@@ -14,15 +14,15 @@ export class SocialMediaServiceService {
   
   constructor(private _http:HttpClient){}
   
-  createSocialMedia(socialmedia:SocialMediaModel):Observable<SocialMediaModel>{
+  // createSocialMedia(socialmedia:SocialMediaModel):Observable<SocialMediaModel>{
 
-    let httpheaders= new HttpHeaders().set('Content-Type','application/json');
-    let options={
-      headers:httpheaders
-    };
-    debugger;
-    return this._http.post<SocialMediaModel>(this.BaseURL+"api/SocialMediaMasters/CreateSocialMediaMasters",socialmedia,options);
-  }
+  //   let httpheaders= new HttpHeaders().set('Content-Type','application/json');
+  //   let options={
+  //     headers:httpheaders
+  //   };
+  //   debugger;
+  //   return this._http.post<SocialMediaModel>(this.BaseURL+"api/SocialMediaMasters/CreateSocialMediaMasters",socialmedia,options);
+  // }
   
   
   public getSocialMediaInfo():any{

@@ -63,9 +63,9 @@ import { GetCurrentAffairsComponent } from './Component/CurrentAffairs/get-curre
 import { InsertCurrentAffairsComponent } from './Component/CurrentAffairs/insert-current-affairs/insert-current-affairs.component';
 import { GetVideoLectureComponent } from './Component/VideoLectures/get-video-lecture/get-video-lecture.component';
 import { InsertVideoLectureComponent } from './Component/VideoLectures/insert-video-lecture/insert-video-lecture.component';
-import { InsertBranchComponent } from './Component/BranchMaster/insert-branch/insert-branch.component';
-import { InsertNirmanresultMasterComponent } from './Component/NirmanResultMaster/insert-nirmanresult-master/insert-nirmanresult-master.component';
+import { InsertBranchComponent } from './component/BranchMaster/insert-branch/insert-branch.component';
 import { GetNirmanresultMasterComponent } from './Component/NirmanResultMaster/get-nirmanresult-master/get-nirmanresult-master.component';
+import { InsertNirmanresultMasterComponent } from './Component/NirmanResultMaster/insert-nirmanresult-master/insert-nirmanresult-master.component';
 
 
 const routes: Routes = [

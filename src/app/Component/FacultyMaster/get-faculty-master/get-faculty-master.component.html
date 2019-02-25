@@ -1,3 +1,36 @@
-<p>
-  get-faculty-master works!
-</p>
+<table class="table table-hover table-justified">
+    <thead>
+      <tr>
+          <th>FacultyID</th>
+          <th>FacultyName</th>
+          <th>Subject </th>
+          <th>RefeenceName</th>
+          <th>Address</th>
+          <th>EmailID</th>
+          <th>ContactNo</th>
+          <th>Remarks   </th>
+          <th>CreatedBy   </th>
+          <th>CreatedDate   </th>
+          <th>ModifiedBy  </th>
+          <th>ModifiedDate  </th>
+          <th>Active </th>
+          </tr>
+      </thead>
+    <tbody>
+        <tr *ngFor="let x of result">
+          <td>{{x.facultyID}}</td>
+          <td>{{x.facultyName}}</td>
+          <td>{{x.subject }}</td>
+          <td>{{x.refeenceName}}</td>
+          <td>{{x.address}}</td>
+          <td>{{x.emailID}}</td>
+          <td>{{x.contactNo}}</td>
+          <td>{{x.remarks}}</td>
+          <td>{{x.createdBy}}</td>
+          <td>{{x.createdDate}}</td>
+          <td>{{x.modifiedBy}}</td>
+          <td>{{x.modifiedDate}}</td>
+          <td>{{x.active}}</td>
+         </tr>   
+    </tbody>      
+</table>

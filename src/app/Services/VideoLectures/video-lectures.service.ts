@@ -8,9 +8,9 @@ import { VideoLectures } from '../../Entity/video Lectures';
 })
 export class VideoLecturesService {
 
-  BaseURL: string = "http://NIAS.codelovertechnology.com/";
+  BaseURL: string = "http://NIAS.codelovertechnology.com/api/";
 
-  selectedLecture: { VideoID: number; VideoType :number; VideoTitle: string; VideoCategory: number;  VideoPath: String; Faculty: number; NoOfViews: number; Description: String; };
+  //selectedLecture: { VideoID: number; VideoType :number; VideoTitle: string; VideoCategory: number;  VideoPath: String; Faculty: number; NoOfViews: number; Description: String; };
   
 
   constructor(private _http:HttpClient) { }
@@ -19,6 +19,7 @@ export class VideoLecturesService {
       return this._http.get(this.BaseURL+"VideoLectures/VideoLecturesList");
     }
     public postLecture(Lectures : VideoLectures):any{
+      debugger;
       return this._http.post<any>(this.BaseURL+"VideoLectures/CreateVideoLectures",Lectures);
     }
 }
