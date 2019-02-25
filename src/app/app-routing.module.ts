@@ -62,7 +62,8 @@ import {GetCourceMasterComponent} from "./Component/courseMaster/get-cource-mast
 import {InsertBranchComponent} from "./component/BranchMaster/insert-branch/insert-branch.component";
 import {InsertNirmanresultMasterComponent} from "./Component/NirmanResultMaster/insert-nirmanresult-master/insert-nirmanresult-master.component";
 import {GetNirmanresultMasterComponent} from "./Component/NirmanResultMaster/get-nirmanresult-master/get-nirmanresult-master.component";
-
+import {InsertCurrentAffairsComponent} from "./Component/CurrentAffairs/insert-current-affairs/insert-current-affairs.component";
+import {GetCurrentAffairsComponent} from "./Component/CurrentAffairs/get-current-affairs/get-current-affairs.component";
 
 const routes: Routes = [
   {path:"",component:NIASHomeComponent},
@@ -127,9 +128,12 @@ const routes: Routes = [
   {path:"get-course",component:GetCourceMasterComponent},
   {path:"insert-branch",component:InsertBranchComponent},
   {path:"insert-nirmanresult",component:InsertNirmanresultMasterComponent},
-  {path:"get-nirmanresult",component:GetNirmanresultMasterComponent}
+  {path:"get-nirmanresult",component:GetNirmanresultMasterComponent},
   // { path: '', redirectTo: '/', pathMatch:'full' }
-  ];
+  {path:"insert-current",component:InsertCurrentAffairsComponent},
+  {path:"get-current",component:GetCurrentAffairsComponent}
+    
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes) ],
