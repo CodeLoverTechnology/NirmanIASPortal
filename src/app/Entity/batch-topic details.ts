@@ -6,7 +6,7 @@ export class BatchTopicDetails{
     public  Topic:string,
     public  TopicSummary:string ,
     public  Location:string ,
-    public  FacultyID:string,
+    public  FacultyID:number,
     public  TpoicPicPath:string,
     public  IsNew:boolean,    
     public  Remarks:string,

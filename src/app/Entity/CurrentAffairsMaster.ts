@@ -8,7 +8,7 @@ export class CurrentAffairsMasters{
         public PDFPath: string,
         public CurrentAffairsImgPath: string,
         public IsNew : boolean,
-        public NoOfView: string,
+        public NoOfView: number,
         public SpecialRemarks   :   string,
         public CreatedBy   :   string,
         public CreatedDate   : string,

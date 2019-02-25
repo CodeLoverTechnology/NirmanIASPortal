@@ -9,27 +9,21 @@ import {HttpErrorResponse} from "@angular/common/http";
   styleUrls: ['./insert-sub-category.component.css']
 })
 export class InsertSubCategoryComponent implements OnInit {
-  private var_one:string;
-  
-    SubCategoryMaster ={} as SubCategoryMaster;
+    SubCategory = {} as SubCategoryMaster;
 
 constructor(private _service:SubCategoryMasterService) { }
 ngOnInit(){ }
-onSubmit()
+onFormSubmit()
 {
- var Result = this._service.postsubcategory(this.SubCategoryMaster).subscribe(
-            result =>{
-              this.SubCategoryMaster =result ? result : undefined ;
-              this.SubCategoryMaster;              
-              } ,
+  this._service.postsubcategory(this.SubCategory).subscribe(
+  result => console.log('Success !!!.',result),
     (err:HttpErrorResponse)=>{
    if(err.error instanceof Error){
-    console.log("Server Side Error....!");
+          console.log("Server Side Error....!");
         }else{
           console.log("Client Side Error   !");
         }
       })
+    console.log(this.SubCategory);
+  }}
 
-  }
-
-}

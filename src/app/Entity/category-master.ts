@@ -4,7 +4,7 @@ export class CategoryMaster {
         public CategoryCode  :string,
         public CategoryName  :   string,
         public Description  :   string,
-        public Sequence  :   string,
+        public Sequence  :   number,
          public CreatedBy  :   string,
          public CreatedDate  : string,
          public ModifiedBy :   string,

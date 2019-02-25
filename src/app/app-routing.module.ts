@@ -66,6 +66,7 @@ import {InsertCurrentAffairsComponent} from "./Component/CurrentAffairs/insert-c
 import {GetCurrentAffairsComponent} from "./Component/CurrentAffairs/get-current-affairs/get-current-affairs.component";
 import {InsertBatchTopicDetailsComponent} from "./Component/BatchTopicDetails/insert-batch-topic-details/insert-batch-topic-details.component";
 import {GetBatchTopicDetailsComponent} from "./Component/BatchTopicDetails/get-batch-topic-details/get-batch-topic-details.component";
+import {InsertSubCategoryComponent} from "./component/SubCategory/insert-sub-category/insert-sub-category.component";
 
 const routes: Routes = [
   {path:"",component:NIASHomeComponent},
@@ -134,8 +135,9 @@ const routes: Routes = [
   // { path: '', redirectTo: '/', pathMatch:'full' }
   {path:"insert-current",component:InsertCurrentAffairsComponent},
   {path:"get-current",component:GetCurrentAffairsComponent},
-  {path:"get-batchdetail",component:InsertBatchTopicDetailsComponent},
-  {path:"insert-batchdetail",component:GetBatchTopicDetailsComponent}
+  {path:"insert-batchdetail",component:InsertBatchTopicDetailsComponent},
+  {path:"get-batchdetail",component:GetBatchTopicDetailsComponent},
+  {path:"insert-subcategory",component:InsertSubCategoryComponent}
 ];
 
 @NgModule({

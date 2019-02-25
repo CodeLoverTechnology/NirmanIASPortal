@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { EnquiryModel } from 'src/app/Entity/EnquiryModel';
 import { HttpClient } from '@angular/common/http';
 import { BatchDetails } from 'src/app/Entity/batch-details';
 

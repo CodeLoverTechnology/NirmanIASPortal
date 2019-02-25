@@ -1,7 +1,7 @@
 export class CourseMaster {
     constructor(
         public CourseID :number,
-        public CourseType  :string,
+        public CourseType  :number,
         public CourseCode   :   string,
         public CourseName   :   string,
         public Remarks   :   string,

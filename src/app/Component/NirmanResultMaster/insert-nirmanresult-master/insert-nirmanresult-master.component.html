@@ -1,11 +1,11 @@
 <div class="container-fluid">
   <form enctype="multipart/form-data" method="post" #NirmanResultForm="ngForm"  (ngSubmit)="onFormSubmit()">
-     <div class="form-group">
+     <!-- <div class="form-group">
        <label >ResultID </label>
    <input type="text" name="ResultID" required  #ResultID="ngModel" class="form-control"  [(ngModel)]="Results.ResultID">
    
    <div class="validation-error" *ngIf="ResultID.invalid && ResultID.touched">This field is required.</div>
-    </div> 
+    </div>  -->
    <div class="form-group">
         <label>ExamName </label>
        <input type="text" name="ExamName" #ExamName="ngModel" class="form-control"
@@ -42,7 +42,7 @@
                   <textarea type="text" name="Remarks"  #Remarks="ngModel" class="form-control"  [(ngModel)]="Results.Remarks"></textarea>
                   <div class="validation-error" *ngIf="Remarks.invalid && Remarks.touched">This field is required.</div>
                   </div>
-                  <div>
+                  <!-- <div>
                     <label>CreatedBy</label>
                     <textarea type="text" name="CreatedBy"  #CreatedBy="ngModel" class="form-control" required [(ngModel)]="Results.CreatedBy"></textarea>
                     <div class="validation-error" *ngIf="CreatedBy.invalid && CreatedBy.touched">This field is required.</div>
@@ -66,8 +66,8 @@
                             <label>Active</label>
                             <textarea type="text" name="Active"  #Active="ngModel" class="form-control" required [(ngModel)]="Results.Active"></textarea>
                             <div class="validation-error" *ngIf="Active.invalid && Active.touched">This field is required.</div>
-                            </div>
-                            <div>
+                            </div>-->
+                            <div> 
                               <label>IsNew</label>
                               <textarea type="text" name="IsNew"  #IsNew="ngModel" class="form-control" required [(ngModel)]="Results.IsNew"></textarea>
                               <div class="validation-error" *ngIf="IsNew.invalid && IsNew.touched">This field is required.</div>

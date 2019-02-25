@@ -7,20 +7,17 @@ import { SubCategoryMaster } from '../../Entity/sub-category-master';
 })
 export class SubCategoryMasterService {
 
-  BaseURL: string = "http://NIAS.codelovertechnology.com/";
+  BaseURL: string = "http://NIAS.codelovertechnology.com/api/";
 
-  
-  selectedSubCategory: { SubCategoryID: number; CategoryID:number; SubCategoryCode : string; SubCategoryName: string; SubCatDescription:string; Sequence:number;};
-  
    
   constructor(private _http:HttpClient){}
   
   
   public getsubcategoryInfo():any{
-    return this._http.get(this.BaseURL+"api/SubCategoryMaster/SubCategoryMasterList");
+    return this._http.get(this.BaseURL+"SubCategoryMaster/SubCategoryMasterList");
   }
 
-  public postsubcategory(SubCategoryMaster: SubCategoryMaster){
-    return this._http.post<any>(this.BaseURL+"api/SubCategoryMaster/CreateSubCategoryMaster",SubCategoryMaster);
+  public postsubcategory(SubCategory: SubCategoryMaster){
+    return this._http.post<any>(this.BaseURL+"SubCategoryMaster/CreateSubCategoryMaster",SubCategory);
   }
 }

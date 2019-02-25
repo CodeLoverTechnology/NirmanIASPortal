@@ -3,7 +3,7 @@ export class MasterInfoModel {
         public MasterID  :number,
         public MasterValue   :string,
         public MasterTable    :   string,
-        public Sequence    :   string,
+        public Sequence    : number,
         public CreatedBy    :   string,
          public CreatedDate   :   string,
          public ModifiedBy   : string,

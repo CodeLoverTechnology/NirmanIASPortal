@@ -2,18 +2,18 @@
   <form enctype="multipart/form-data" method="post" #BatchTopicForm="ngForm"  (ngSubmit)="onFormSubmit()">
     
   
-   <div class="form-group">
+   <!-- <div class="form-group">
        <label >BatchTopicID </label>
    <input type="text" name="BatchTopicID" required  #BatchTopicID="ngModel" class="form-control"  [(ngModel)]="batchTopic.BatchTopicID"  >
    
    <div class="validation-error" *ngIf="BatchTopicID.invalid && BatchTopicID.touched">This field is required.</div>
-    </div> 
+    </div> -->
    <div class="form-group">
         <label>BatchID </label>
        <input type="text" name="BatchID" #BatchID="ngModel" class="form-control"
        [(ngModel)]="batchTopic.BatchID" required>
        <div class="validation-error" *ngIf="BatchID.invalid && BatchID.touched">This field is required.</div>
-            </div>
+            </div> 
         <div>
         <label>TopicDate </label>
         <input type="text" name="TopicDate"  #TopicDate="ngModel" class="form-control" required [(ngModel)]="batchTopic.TopicDate">

@@ -1,6 +1,6 @@
 export class BannerModel {
     constructor  (
-        public BannerID   :string,
+        public BannerID   :number,
         public BannerTitle    :string,
         public BannerImagesPath:   string,
         public SubTitle  :   string,

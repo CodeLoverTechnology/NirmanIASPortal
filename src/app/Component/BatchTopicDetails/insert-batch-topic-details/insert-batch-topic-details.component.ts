@@ -15,7 +15,7 @@ batchTopic = {} as BatchTopicDetails;
   }
   onFormSubmit()
   {
-    
+    debugger;
   this._service.postBatchdetail(this.batchTopic).subscribe(
     result => console.log('Success !!!.',result),
       (err:HttpErrorResponse)=>{

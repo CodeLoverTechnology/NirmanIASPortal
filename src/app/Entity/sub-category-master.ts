@@ -1,5 +1,3 @@
-import { DatePipe } from "@angular/common";
-
 export class SubCategoryMaster {
     constructor(
        public SubCategoryID:number,
@@ -9,9 +7,9 @@ export class SubCategoryMaster {
        public SubCatDescription:string,
        public Sequence:number,
        public CreatedBy:string,
-       public CreatedDate:DatePipe,
+       public CreatedDate:Date,
        public ModifiedBy:string,
-       public ModifiedDate:DatePipe,
+       public ModifiedDate:Date,
        public Active:boolean
   ){}
 }

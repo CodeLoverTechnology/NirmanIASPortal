@@ -2,12 +2,13 @@
   <form enctype="multipart/form-data" method="post" #CategoryForm="ngForm"  (ngSubmit)="onFormSubmit()">
     
   
-   <div class="form-group">
+   <!-- <div class="form-group">
        <label >CategoryID </label>
-   <input type="text" name="CategoryID" required  #CategoryID="ngModel" class="form-control"  [(ngModel)]="category.CategoryID"  >
+   <input type="text" name="CategoryID"   #CategoryID="ngModel" class="form-control"  [(ngModel)]="category.CategoryID"  >
    
    <div class="validation-error" *ngIf="CategoryID.invalid && CategoryID.touched">This field is required.</div>
-    </div> 
+    </div>  -->
+    
    <div class="form-group">
         <label>CategoryCode </label>
        <input type="text" name="CategoryCode" #CategoryCode="ngModel" class="form-control"

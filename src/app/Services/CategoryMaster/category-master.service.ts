@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class CategoryMasterService {
 
-  BaseURL: string = "http://NIAS.codelovertechnology.com/";
+  BaseURL: string = "http://NIAS.codelovertechnology.com/api/";
 
   selectedCategory: { CategoryID: number; CategoryCode: string; CategoryName : string; Description: string; Sequence: string;};
   
@@ -20,16 +20,14 @@ export class CategoryMasterService {
       headers:httpheaders
     };
     debugger;
-    return this._http.post<CategoryMaster>(this.BaseURL+"api/CategoryMaster/CreateCategoryMaster",CategoryMaster,options);
+    return this._http.post<CategoryMaster>(this.BaseURL+"CategoryMaster/CreateCategoryMaster",category,options);
   }
   
   
   public getCategoryMaster():any{
-    return this._http.get(this.BaseURL+"api/CategoryMaster/CategoryMastersList");
+    return this._http.get(this.BaseURL+"CategoryMaster/CategoryMastersList");
   }
 
-  public postCategoryMaster(category : CategoryMaster):any{
-    return this._http.post<any>(this.BaseURL+"api/CategoryMaster/CreateCategoryMaster",category);
-  }
+  
 }
 

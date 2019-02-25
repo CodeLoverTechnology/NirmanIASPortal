@@ -114,6 +114,9 @@ import {CourseMasterService} from "./Services/CourseMaster/course-master.service
 import {BranchMasterService} from "./Services/BranchMaster/branch-master.service";
 import {BatchTopicDetailsService} from "./Services/BatchTopicDetails/batch-topic-details.service";
 import {NirmanResultMasterService} from "./Services/NirmanResultMaster/nirman-result-master.service";
+import {SubCategoryMasterService} from "./Services/SubCategoryService/sub-category-master.service";
+import {BatchDetailsService} from "./Services/BatchDetails/batch-details.service";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -223,7 +226,7 @@ import {NirmanResultMasterService} from "./Services/NirmanResultMaster/nirman-re
     NoopAnimationsModule,
     
   ],
-   providers: [EnquiryServiceService,ChatServicesService,AuthService,SocialMediaServiceService,CategoryMasterService,BannerMasterService,CourseMasterService,BranchMasterService,BatchTopicDetailsService,NirmanResultMasterService],
+   providers: [EnquiryServiceService,ChatServicesService,AuthService,SocialMediaServiceService,CategoryMasterService,BannerMasterService,CourseMasterService,BranchMasterService,BatchTopicDetailsService,NirmanResultMasterService,SubCategoryMasterService,BatchDetailsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

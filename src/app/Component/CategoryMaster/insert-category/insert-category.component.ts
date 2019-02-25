@@ -16,6 +16,7 @@ export class InsertCategoryComponent implements OnInit {
   constructor(private _service:CategoryMasterService) { }
   ngOnInit(){ }
   onFormSubmit() {
+    debugger;
     this._service.createCategoryMaster(this.category).subscribe(
       res => this.Result = res);
      (err: HttpErrorResponse) => {
