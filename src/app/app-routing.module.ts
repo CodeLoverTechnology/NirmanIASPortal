@@ -1,5 +1,4 @@
 import {  NgModule } from '@angular/core';
-
 import { Routes, RouterModule } from '@angular/router';
 import { GetEnquiryComponent } from './Component/enquirycomponent/get-enquiry/get-enquiry.component';
 import { InsertEnquiryComponent } from './Component/enquirycomponent/insert-enquiry/insert-enquiry.component';
@@ -135,8 +134,8 @@ const routes: Routes = [
   // { path: '', redirectTo: '/', pathMatch:'full' }
   {path:"insert-current",component:InsertCurrentAffairsComponent},
   {path:"get-current",component:GetCurrentAffairsComponent},
-  {path:"insert-batchdetail",component:InsertBatchTopicDetailsComponent},
-  {path:"get-batchdetail",component:GetBatchTopicDetailsComponent},
+  {path:"insert-batchtopicdetail",component:InsertBatchTopicDetailsComponent},
+  {path:"get-batchtopicdetail",component:GetBatchTopicDetailsComponent},
   {path:"insert-subcategory",component:InsertSubCategoryComponent}
 ];
 

@@ -8,16 +8,15 @@ import {HttpErrorResponse} from "@angular/common/http";
   styleUrls: ['./insert-batch-topic-details.component.css']
 })
 export class InsertBatchTopicDetailsComponent implements OnInit {
-batchTopic = {} as BatchTopicDetails;
-  constructor(private _service:BatchTopicDetailsService) { }
+  BatchTopic = {} as BatchTopicDetails;
 
-  ngOnInit() {
-  }
+  constructor(private _service:BatchTopicDetailsService) { }
+  ngOnInit(){ }
   onFormSubmit()
   {
     debugger;
-  this._service.postBatchdetail(this.batchTopic).subscribe(
-    result => console.log('Success !!!.',result),
+    this._service.postBatchdetail(this.BatchTopic).subscribe(
+   result => console.log('Success !!!.',result),
       (err:HttpErrorResponse)=>{
      if(err.error instanceof Error){
             console.log("Server Side Error....!");
@@ -25,6 +24,6 @@ batchTopic = {} as BatchTopicDetails;
             console.log("Client Side Error   !");
           }
         })
-      console.log(this.batchTopic);
+        debugger;
+      console.log(this.BatchTopic);
     }}
-
