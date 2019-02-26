@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FacultyMasterService } from "../../../Services/FacultyMaster/faculty-master.service";
+import { HttpErrorResponse } from '@Angular/common/http';
+
 
 @Component({
   selector: 'app-get-faculty-master',
@@ -6,10 +9,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./get-faculty-master.component.css']
 })
 export class GetFacultyMasterComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+  public result:any;
+  constructor(private _service:FacultyMasterService) { }
+ngOnInit() {
+    this._service.getFacultyMasterInfo().subscribe(res=>this.result=res);
+    (err:HttpErrorResponse)=>{
+      if(err.error instanceof Error){
+        console.log("Server Side Error !");
+  }else{
+      console.log("Client Side Error   !");
   }
-
+}
+}
 }
