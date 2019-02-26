@@ -16,7 +16,17 @@ export class EnquiryServiceService {
     return this._http.get(this.BaseURL+"Enquiry/EnquiryList");
   }
 
+  public getEnquiryById(enquiryID: number):any{
+    return this._http.get(this.BaseURL + "api/SocialMediaMasters/SocialMediaMastersDetails/{id}" + enquiryID);
+  }
   public postEnquiry(enquiry : EnquiryModel):any{
     return this._http.post<any>(this.BaseURL+"Enquiry/CreateEnquiry",enquiry);
+  }
+
+   public  updateEnquiry(Enquiry : EnquiryModel):any{
+  return this._http.put<any>(this.BaseURL + "Enquiry/UpdateEnquiry" + Enquiry.enquiryID,Enquiry);
+  }
+  public  deleteEnquiry(EnquiryID: number):any {
+    return this._http.delete<any>(this.BaseURL + "Enquiry/DeleteEnquiry/{id}" + EnquiryID);
   }
 }

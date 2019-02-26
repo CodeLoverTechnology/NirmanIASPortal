@@ -1,3 +1,35 @@
-<p>
-  update-enquiry works!
-</p>
+<div class="col-md-6 user-container">
+  <h2 class="text-center">Edit User</h2>
+  <div class="container-fluid" style="max-width:300px;" [ngBusy]="busy"> 
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-5">
+            <img src="../assets/NirmanIAS_Logo.png" class="img-thumbnail">                       
+        </div>
+    </div>       
+    <form enctype="multipart/form-data"method="post"#UpdateForm="ngForm"(ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label>Name</label>
+    <input type="text"name="name"
+    #name="ngModel"class="form-control"[(ngModel)]="enquiryid.name"placeholder="Enter Your Name" readonly="true">
+    <div class="validation-error"*ngIf="name.invalid && name.touched">This field is required.</div>
+    </div>
+    <div class="form-group">
+    <label>EmailID</label>
+    <input type="text" name="emailID" required #emailID ="ngModel"class="form-control"[(ngModel)]="enquiryid.emailID"placeholder="EmailID">
+     
+    <div class="validation-error"*ngIf="emailID.invalid && emailID.touched">Email is invalid.</div>
+    </div>
+    <div class="form-group">
+    <label>ContactNo</label>
+    <input type="text"name="contactNo" minlength=10 maxlength=10 #contactNo = "ngModel" class="form-control"
+    [(ngModel)]="enquiryid.contactNo" placeholder="Enter Mobile Number"required>
+    <div class="validation-error" *ngIf="contactNo.invalid && contactNo.touched">Mobile number required.</div>
+    </div>
+    <div>
+    <label>Enquiry Message</label>
+    <textarea type="text"name="enquiryMessage" minlength="10" maxlength="250" #enquiryMessage ="ngModel"class="form-control"required
+    placeholder="Enquiry Message"[(ngModel)]="enquiryid.enquiryMessage"></textarea>
+    </div>
+  <button [disabled]="!EnquiryForm.valid" class="btn btn-success">Update</button>
+  </form>
+</div>

@@ -24,6 +24,9 @@
   <td>{{x.createdBy}}</td>
   <td>{{x.createdDate}}</td>
   <td>{{x.active}}</td>
+  <td><button class="btn btn-danger" (click)="deleteEnquiry(enquiryID)"> Delete</button></td>
+  <td><button class="btn btn-success" (click)="editEnquiry(enquiryID)" style="margin-left: 20px;"> Edit</button></td>  
+  
   </tr>
   </tbody>
   </table>

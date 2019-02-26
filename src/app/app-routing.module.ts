@@ -71,7 +71,7 @@ import { GetFacultyMasterComponent } from './component/FacultyMaster/get-faculty
 import { InsertFacultyMasterComponent } from './component/FacultyMaster/insert-faculty-master/insert-faculty-master.component';
 import { GetVideoLectureComponent } from './Component/VideoLectures/get-video-lecture/get-video-lecture.component';
 import { InsertVideoLectureComponent } from './Component/VideoLectures/insert-video-lecture/insert-video-lecture.component';
-
+import { UpdateEnquiryComponent } from './Component/enquirycomponent/update-enquiry/update-enquiry.component';
 const routes: Routes = [
   {path:"",component:NIASHomeComponent},
   {path:"login",component:LogInComponent},  
@@ -81,7 +81,8 @@ const routes: Routes = [
     {path:"admin/getEnquiry",component:GetEnquiryComponent},
     {path:"admin/Gallery",component:GalleryNIASComponent},  
     //{path:"insert-banner",component:InsertBannerComponent},
-    {path:"admin/getchat",component:GetchatComponent},     
+    {path:"admin/getchat",component:GetchatComponent},
+    {path: "admin/update-enquiry",component:UpdateEnquiryComponent},
     {path:'',component:AdminlinkComponent},
   ]},
   {path:"Getmaster",component:GetMasterinfoComponent},
@@ -146,6 +147,7 @@ const routes: Routes = [
   {path:"insert-facultyMaster",component:InsertFacultyMasterComponent},
   {path:"get-VideoLecture",component:GetVideoLectureComponent},
   {path:"insert-VideoLecture",component:InsertVideoLectureComponent}
+  
 ];
 
 @NgModule({
