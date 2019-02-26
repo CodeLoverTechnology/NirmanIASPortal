@@ -1,9 +1,9 @@
 export class FacultyMaster{
     constructor(
-        public FacultyID :number,
-        public FacultyName     :string,
-        public Subject    :string,
-        public RefeenceName           :string,
+        public FacultyID   :number,
+        public FacultyName :string,
+        public Subject     :string,
+        public RefeenceName:string,
         public Address: string,
         public EmailID: string,
         public ContactNo: string,

@@ -10,10 +10,7 @@ export class VideoLecturesService {
 
   BaseURL: string = "http://NIAS.codelovertechnology.com/api/";
 
-  //selectedLecture: { VideoID: number; VideoType :number; VideoTitle: string; VideoCategory: number;  VideoPath: String; Faculty: number; NoOfViews: number; Description: String; };
-  
-
-  constructor(private _http:HttpClient) { }
+   constructor(private _http:HttpClient) { }
   
     public getLectureInfo():any{
       return this._http.get(this.BaseURL+"VideoLectures/VideoLecturesList");

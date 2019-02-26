@@ -66,6 +66,10 @@ import {GetCurrentAffairsComponent} from "./Component/CurrentAffairs/get-current
 import {InsertBatchTopicDetailsComponent} from "./Component/BatchTopicDetails/insert-batch-topic-details/insert-batch-topic-details.component";
 import {GetBatchTopicDetailsComponent} from "./Component/BatchTopicDetails/get-batch-topic-details/get-batch-topic-details.component";
 import {InsertSubCategoryComponent} from "./component/SubCategory/insert-sub-category/insert-sub-category.component";
+import { GetFacultyMasterComponent } from './component/FacultyMaster/get-faculty-master/get-faculty-master.component';
+import { InsertFacultyMasterComponent } from './component/FacultyMaster/insert-faculty-master/insert-faculty-master.component';
+import { GetVideoLectureComponent } from './Component/VideoLectures/get-video-lecture/get-video-lecture.component';
+import { InsertVideoLectureComponent } from './Component/VideoLectures/insert-video-lecture/insert-video-lecture.component';
 
 const routes: Routes = [
   {path:"",component:NIASHomeComponent},
