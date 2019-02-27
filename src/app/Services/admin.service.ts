@@ -18,14 +18,6 @@ export class AdminService {
  }
 }
 
-  // check(form): boolean{
-  //     if(form.userid.value == "admin" && form.pswrd.value == "admin") {
-  //          return true;
-  //     }
-  //     else{
-  //        alert("Error Password or Username")
-  //         }
-  //    }
 
 
 
