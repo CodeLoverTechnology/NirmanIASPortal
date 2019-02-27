@@ -115,7 +115,7 @@ const routes: Routes = [
 {path : "InsertSocialmedia",component:InsertSocialMediaComponent},
 // {path:"admin",component:AdminComponent},
 //  {path:"login",component:LogInComponent},
- {path:"get-subcategory",component:GetSubCategoryComponent },
+  {path : "get-subcategory",component:GetSubCategoryComponent },
   {path : "NIAS_Geography", component:BookContentGeographyComponent},
   {path : "NIAS_Governance", component:BookContentGovernanceComponent},
   {path : "NIAS_History", component:BookContentHistoryComponent},

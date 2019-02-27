@@ -116,10 +116,15 @@ import {BatchTopicDetailsService} from "./Services/BatchTopicDetails/batch-topic
 import {NirmanResultMasterService} from "./Services/NirmanResultMaster/nirman-result-master.service";
 import {SubCategoryMasterService} from "./Services/SubCategoryService/sub-category-master.service";
 import {BatchDetailsService} from "./Services/BatchDetails/batch-details.service";
-import { TopersAnswerCopyListComponent } from './Component/TopersAnswerCopy/topers-answer-copy-list/topers-answer-copy-list.component';
-import { TopersAnswerCopyForIndividualComponent } from './Component/TopersAnswerCopy/topers-answer-copy-for-individual/topers-answer-copy-for-individual.component';
-import {ActivateGuard} from "./activate.guard";
+import { GetImagevediosComponent } from './component/imagevedios/get-imagevedios/get-imagevedios.component';
+import { InsertImagevediosComponent } from './component/imagevedios/insert-imagevedios/insert-imagevedios.component';
+import { GetStudentmasterComponent } from './component/student-master/get-studentmaster/get-studentmaster.component';
+import { InsertStudentmasterComponent } from './component/student-master/insert-studentmaster/insert-studentmaster.component';
+import { GetUsermasterComponent } from './component/user-master/get-usermaster/get-usermaster.component';
+import { InsertUsermasterComponent } from './component/user-master/insert-usermaster/insert-usermaster.component';
+import {ActivateGuard} from "src/app/activate.guard";
 import {AdminService} from "./Services/admin.service";
+
 
 @NgModule({
   declarations: [
@@ -218,8 +223,13 @@ import {AdminService} from "./Services/admin.service";
     InsertFacultyMasterComponent,
     UpdateFacultyMasterComponent,
     DeleteFacultyMasterComponent,
-    TopersAnswerCopyListComponent,
-    TopersAnswerCopyForIndividualComponent
+    GetImagevediosComponent,
+    InsertImagevediosComponent,
+    GetStudentmasterComponent,
+    InsertStudentmasterComponent,
+    GetUsermasterComponent,
+    InsertUsermasterComponent,
+    
   ],
   imports: [
     BrowserModule,

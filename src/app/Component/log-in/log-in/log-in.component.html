@@ -4,13 +4,7 @@
        <div class="card-header text-center text-white bg-danger">
           <h1>Log In</h1>
       </div>
-     <div class="card-body ">
-       
-            <!-- Username<input type="text" name="userid"/>
-            Password<input type="password" name="pswrd"/>
-            <input type="button" onclick="check(this.form)" value="Login"/>
-            <input type="reset" value="Cancel"/>
-        </form> -->
+     <div class="card-body ">     
        <form class="form-horizontal" name="login" (submit)="loginUser($event)">
           <div class="form-group">
               <label for="fb"><B></B></label>
@@ -42,8 +36,7 @@
           <div class="input-group">
           <!-- <button class="btn btn-dark form-control hideBtn" id="login" type="submit" routerLink="../admin" [routerLink]="['/admin']"> Log in</button>   -->
          <button class="btn btn-dark form-control" (click)="check(u1.value,p1.value)" type="submit" >Log In</button>  
-<!-- <button class="btn btn-dark form-control" class="hideBtn" id="login" onclick="check(this.form)">Log In</button><br> -->
-        </div> 
+ </div> 
 
       </div>
          </form>
@@ -65,13 +58,6 @@
     </div>
     <br>
     <br>
-  <!--
-    <h1>{{ usermodel.NewsID }}  details </h1><br>
   
-    <div class="login">
-      Usernmae : <input type="text" [(ngModel)]="usermodel.NewsID"/>
-      Password : <input type="text" [(ngModel)]="usermodel.NewsTitle"/>
-      <input type="button" value="Click Me" (click)="login()" />
-    </div> -->
   
   
