@@ -116,6 +116,8 @@ import {BatchTopicDetailsService} from "./Services/BatchTopicDetails/batch-topic
 import {NirmanResultMasterService} from "./Services/NirmanResultMaster/nirman-result-master.service";
 import {SubCategoryMasterService} from "./Services/SubCategoryService/sub-category-master.service";
 import {BatchDetailsService} from "./Services/BatchDetails/batch-details.service";
+import { TopersAnswerCopyListComponent } from './Component/TopersAnswerCopy/topers-answer-copy-list/topers-answer-copy-list.component';
+import { TopersAnswerCopyForIndividualComponent } from './Component/TopersAnswerCopy/topers-answer-copy-for-individual/topers-answer-copy-for-individual.component';
 
 @NgModule({
   declarations: [
@@ -213,7 +215,9 @@ import {BatchDetailsService} from "./Services/BatchDetails/batch-details.service
     GetFacultyMasterComponent,
     InsertFacultyMasterComponent,
     UpdateFacultyMasterComponent,
-    DeleteFacultyMasterComponent
+    DeleteFacultyMasterComponent,
+    TopersAnswerCopyListComponent,
+    TopersAnswerCopyForIndividualComponent
   ],
   imports: [
     BrowserModule,
