@@ -72,19 +72,21 @@ import { InsertFacultyMasterComponent } from './component/FacultyMaster/insert-f
 import { GetVideoLectureComponent } from './Component/VideoLectures/get-video-lecture/get-video-lecture.component';
 import { InsertVideoLectureComponent } from './Component/VideoLectures/insert-video-lecture/insert-video-lecture.component';
 import { UpdateEnquiryComponent } from './Component/enquirycomponent/update-enquiry/update-enquiry.component';
+import { ActivateGuard} from './activate.guard';
 const routes: Routes = [
   {path:"",component:NIASHomeComponent},
-  {path:"login",component:LogInComponent},  
-  {path:"admin",component:AdminComponent,children: 
-  [
-    // {path:" ",component:AdminlinkComponent},
-    {path:"admin/getEnquiry",component:GetEnquiryComponent},
-    {path:"admin/Gallery",component:GalleryNIASComponent},  
-    //{path:"insert-banner",component:InsertBannerComponent},
-    {path:"admin/getchat",component:GetchatComponent},
-    {path: "admin/update-enquiry",component:UpdateEnquiryComponent},
+  {path:"login",component:LogInComponent},
+  {path:"admin",component:AdminComponent,canActivate:[ActivateGuard],children:
+ [
+     {path:" ",component:AdminlinkComponent},
+     {path:"admin/getEnquiry",component:GetEnquiryComponent},
+     {path:"admin/Gallery",component:GalleryNIASComponent},
+  //   //{path:"insert-banner",component:InsertBannerComponent},
+     {path:"admin/getchat",component:GetchatComponent},
+     {path: "admin/update-enquiry",component:UpdateEnquiryComponent},
     {path:'',component:AdminlinkComponent},
   ]},
+ // {path:"admin",component:AdminComponent,canActivate:[ActivateGuard]},
   {path:"Getmaster",component:GetMasterinfoComponent},
   {path:"InsertEnquiry",component:InsertEnquiryComponent},
   {path:"registration",component: RegistrationComponent},
@@ -112,7 +114,7 @@ const routes: Routes = [
 {path : "InsertSocialmedia",component:InsertSocialMediaComponent},
 // {path:"admin",component:AdminComponent},
 //  {path:"login",component:LogInComponent},
- {path:"get-subcategory",component:GetSubCategoryComponent },  
+ {path:"get-subcategory",component:GetSubCategoryComponent },
   {path : "NIAS_Geography", component:BookContentGeographyComponent},
   {path : "NIAS_Governance", component:BookContentGovernanceComponent},
   {path : "NIAS_History", component:BookContentHistoryComponent},
@@ -147,7 +149,7 @@ const routes: Routes = [
   {path:"insert-facultyMaster",component:InsertFacultyMasterComponent},
   {path:"get-VideoLecture",component:GetVideoLectureComponent},
   {path:"insert-VideoLecture",component:InsertVideoLectureComponent}
-  
+
 ];
 
 @NgModule({
