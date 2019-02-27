@@ -124,6 +124,8 @@ import { GetUsermasterComponent } from './component/user-master/get-usermaster/g
 import { InsertUsermasterComponent } from './component/user-master/insert-usermaster/insert-usermaster.component';
 import {ActivateGuard} from "src/app/activate.guard";
 import {AdminService} from "./Services/admin.service";
+import { TopersAnswerCopyListComponent } from './Component/TopersAnswerCopy/topers-answer-copy-list/topers-answer-copy-list.component';
+import { TopersAnswerCopyForIndividualComponent } from './Component/TopersAnswerCopy/topers-answer-copy-for-individual/topers-answer-copy-for-individual.component';
 
 
 @NgModule({
@@ -229,6 +231,8 @@ import {AdminService} from "./Services/admin.service";
     InsertStudentmasterComponent,
     GetUsermasterComponent,
     InsertUsermasterComponent,
+    TopersAnswerCopyListComponent,
+    TopersAnswerCopyForIndividualComponent 
     
   ],
   imports: [
