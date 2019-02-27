@@ -141,7 +141,12 @@ const routes: Routes = [
   {path:"get-current",component:GetCurrentAffairsComponent},
   {path:"insert-batchtopicdetail",component:InsertBatchTopicDetailsComponent},
   {path:"get-batchtopicdetail",component:GetBatchTopicDetailsComponent},
-  {path:"insert-subcategory",component:InsertSubCategoryComponent}
+  {path:"insert-subcategory",component:InsertSubCategoryComponent},
+  {path:"get-faculity",component:GetFacultyMasterComponent},
+  {path:"insert-faculity",component:InsertFacultyMasterComponent},
+  {path:"get-videolecture",component:GetVideoLectureComponent},
+  {path:"insert-vediolecture",component:InsertVideoLectureComponent}
+
 ];
 
 @NgModule({
