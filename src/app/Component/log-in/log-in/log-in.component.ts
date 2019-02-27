@@ -1,27 +1,32 @@
 import { Component, OnInit } from '@angular/core';
-
+import {Router} from '@angular/router';
+import { AdminService } from '../../../Services/admin.service';
 @Component({
   selector: 'app-log-in',
   templateUrl: './log-in.component.html',
-  styleUrls: ['./log-in.component.css']
+  styleUrls: ['./log-in.component.css'],
+  providers: [AdminService]
 })
 export class LogInComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router, private _service : AdminService) { }
 
   ngOnInit() {
-    console.log(event);
-    
   }
+loginUser(event){
+  event.preventDefault()
+  console.log(event)
 }
 
-//   let key = 'Item 1';
-//   localStorage.setItem(key, 'Value');
-//   let myItem = localStorage.getItem(key);
-//   localStorage.setItem(key, 'New Value');
-// // Create item:
-// let myObj = { name: 'Skip', breed: 'Labrador' };
-// localStorage.setItem(key, JSON.stringify(myObj));
-
-// // Read item:
-// let item = JSON.parse(localStorage.getItem(key));
+  check(username: string, password : string)
+  {
+    var output = this._service.checkusernameandpassword(username,password);
+    if(output ==true)
+    {
+      this.router.navigate(['/admin']);
+    }else{
+      alert("Invalid username or password");
+      //this.router.navigate(['/login']);
+    }
+  }
+}

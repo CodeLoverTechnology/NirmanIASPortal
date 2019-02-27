@@ -122,7 +122,8 @@ import { GetStudentmasterComponent } from './component/student-master/get-studen
 import { InsertStudentmasterComponent } from './component/student-master/insert-studentmaster/insert-studentmaster.component';
 import { GetUsermasterComponent } from './component/user-master/get-usermaster/get-usermaster.component';
 import { InsertUsermasterComponent } from './component/user-master/insert-usermaster/insert-usermaster.component';
-
+import {ActivateGuard} from "src/app/activate.guard";
+import {AdminService} from "./Services/admin.service";
 
 
 @NgModule({
@@ -241,7 +242,7 @@ import { InsertUsermasterComponent } from './component/user-master/insert-userma
     NoopAnimationsModule,
     
   ],
-   providers: [EnquiryServiceService,ChatServicesService,AuthService,SocialMediaServiceService,CategoryMasterService,BannerMasterService,CourseMasterService,BranchMasterService,BatchTopicDetailsService,NirmanResultMasterService,SubCategoryMasterService,BatchDetailsService],
+   providers: [ActivateGuard, AdminService, EnquiryServiceService,ChatServicesService,AuthService,SocialMediaServiceService,CategoryMasterService,BannerMasterService,CourseMasterService,BranchMasterService,BatchTopicDetailsService,NirmanResultMasterService,SubCategoryMasterService,BatchDetailsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
