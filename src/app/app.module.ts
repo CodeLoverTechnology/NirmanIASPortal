@@ -116,6 +116,14 @@ import {BatchTopicDetailsService} from "./Services/BatchTopicDetails/batch-topic
 import {NirmanResultMasterService} from "./Services/NirmanResultMaster/nirman-result-master.service";
 import {SubCategoryMasterService} from "./Services/SubCategoryService/sub-category-master.service";
 import {BatchDetailsService} from "./Services/BatchDetails/batch-details.service";
+import { GetImagevediosComponent } from './component/imagevedios/get-imagevedios/get-imagevedios.component';
+import { InsertImagevediosComponent } from './component/imagevedios/insert-imagevedios/insert-imagevedios.component';
+import { GetStudentmasterComponent } from './component/student-master/get-studentmaster/get-studentmaster.component';
+import { InsertStudentmasterComponent } from './component/student-master/insert-studentmaster/insert-studentmaster.component';
+import { GetUsermasterComponent } from './component/user-master/get-usermaster/get-usermaster.component';
+import { InsertUsermasterComponent } from './component/user-master/insert-usermaster/insert-usermaster.component';
+
+
 
 @NgModule({
   declarations: [
@@ -213,7 +221,14 @@ import {BatchDetailsService} from "./Services/BatchDetails/batch-details.service
     GetFacultyMasterComponent,
     InsertFacultyMasterComponent,
     UpdateFacultyMasterComponent,
-    DeleteFacultyMasterComponent
+    DeleteFacultyMasterComponent,
+    GetImagevediosComponent,
+    InsertImagevediosComponent,
+    GetStudentmasterComponent,
+    InsertStudentmasterComponent,
+    GetUsermasterComponent,
+    InsertUsermasterComponent,
+    
   ],
   imports: [
     BrowserModule,
