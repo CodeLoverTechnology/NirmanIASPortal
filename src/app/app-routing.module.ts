@@ -72,6 +72,8 @@ import { GetVideoLectureComponent } from './Component/VideoLectures/get-video-le
 import { InsertVideoLectureComponent } from './Component/VideoLectures/insert-video-lecture/insert-video-lecture.component';
 import { UpdateEnquiryComponent } from './Component/enquirycomponent/update-enquiry/update-enquiry.component';
 import { ActivateGuard} from './activate.guard';
+import { TopersAnswerCopyListComponent } from './Component/TopersAnswerCopy/topers-answer-copy-list/topers-answer-copy-list.component';
+import { TopersAnswerCopyForIndividualComponent } from './Component/TopersAnswerCopy/topers-answer-copy-for-individual/topers-answer-copy-for-individual.component';
 const routes: Routes = [
   {path:"",component:NIASHomeComponent},
   {path:"login",component:LogInComponent},
@@ -147,8 +149,10 @@ const routes: Routes = [
   {path:"get-facultyMaster",component:GetFacultyMasterComponent},
   {path:"insert-facultyMaster",component:InsertFacultyMasterComponent},
   {path:"get-VideoLecture",component:GetVideoLectureComponent},
-  {path:"insert-VideoLecture",component:InsertVideoLectureComponent}
+  {path:"insert-VideoLecture",component:InsertVideoLectureComponent},
 
+  {path:"TopersAnswerCopyList",component:TopersAnswerCopyListComponent},
+  {path:"TopersAnswerCopyForIndividual",component:TopersAnswerCopyForIndividualComponent}
 ];
 
 @NgModule({
