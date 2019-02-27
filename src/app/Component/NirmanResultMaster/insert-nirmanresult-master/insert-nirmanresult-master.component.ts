@@ -15,6 +15,7 @@ export class InsertNirmanresultMasterComponent implements OnInit {
   ngOnInit(){ }
   onFormSubmit()
   {
+    debugger;
     this._service.postNirmanResults(this.Results).subscribe(
    result => console.log('Success !!!.',result),
       (err:HttpErrorResponse)=>{
@@ -23,6 +24,7 @@ export class InsertNirmanresultMasterComponent implements OnInit {
           }else{
             console.log("Client Side Error   !");
           }
-        })
+        }) 
+        debugger;
       console.log(this.Results);
     }}

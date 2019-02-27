@@ -29,19 +29,19 @@
                   </div>
           </div>
           <div class="form-group">
-            <label class="control-label" for="login"></label>
-            <input class="form-control" type="text"  id="login" placeholder="First Name" required name="userid">
+            <label class="control-label" for="username"></label>
+            <input class="form-control" type="text"  id="username" #u1 placeholder="First Name" required name="username">
           </div>
           <div class="form-group">
-          <label class="control-label"  for="user"></label>
-          <input class="form-control" class="form-control" type="password"  id="user" placeholder="Password"
-           required name="pswrd"/>
+          <label class="control-label"  for="password"></label>
+          <input class="form-control" class="form-control" type="password" #p1  id="password" placeholder="Password"
+           required name="password"/>
        </div> 
        <div class="form-group">
           <label class="control-label" for="login"></label>
           <div class="input-group">
-          <!-- <button class="btn btn-dark form-control hideBtn" id="login" type="submit"  [routerLink]="['/admin']"> Log in</button>   -->
-         <button class="btn btn-dark form-control hideBtn" onclick="check(this.form)">Log In</button>  
+          <!-- <button class="btn btn-dark form-control hideBtn" id="login" type="submit" routerLink="../admin" [routerLink]="['/admin']"> Log in</button>   -->
+         <button class="btn btn-dark form-control" (click)="check(u1.value,p1.value)" type="submit" >Log In</button>  
 <!-- <button class="btn btn-dark form-control" class="hideBtn" id="login" onclick="check(this.form)">Log In</button><br> -->
         </div> 
 

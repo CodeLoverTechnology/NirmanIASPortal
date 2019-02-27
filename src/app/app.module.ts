@@ -118,6 +118,8 @@ import {SubCategoryMasterService} from "./Services/SubCategoryService/sub-catego
 import {BatchDetailsService} from "./Services/BatchDetails/batch-details.service";
 import { TopersAnswerCopyListComponent } from './Component/TopersAnswerCopy/topers-answer-copy-list/topers-answer-copy-list.component';
 import { TopersAnswerCopyForIndividualComponent } from './Component/TopersAnswerCopy/topers-answer-copy-for-individual/topers-answer-copy-for-individual.component';
+import {ActivateGuard} from "./activate.guard";
+import {AdminService} from "./Services/admin.service";
 
 @NgModule({
   declarations: [
@@ -230,7 +232,7 @@ import { TopersAnswerCopyForIndividualComponent } from './Component/TopersAnswer
     NoopAnimationsModule,
     
   ],
-   providers: [EnquiryServiceService,ChatServicesService,AuthService,SocialMediaServiceService,CategoryMasterService,BannerMasterService,CourseMasterService,BranchMasterService,BatchTopicDetailsService,NirmanResultMasterService,SubCategoryMasterService,BatchDetailsService],
+   providers: [ActivateGuard, AdminService, EnquiryServiceService,ChatServicesService,AuthService,SocialMediaServiceService,CategoryMasterService,BannerMasterService,CourseMasterService,BranchMasterService,BatchTopicDetailsService,NirmanResultMasterService,SubCategoryMasterService,BatchDetailsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

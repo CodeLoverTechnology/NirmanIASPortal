@@ -1,5 +1,4 @@
 import {  NgModule } from '@angular/core';
-
 import { Routes, RouterModule } from '@angular/router';
 import { GetEnquiryComponent } from './Component/enquirycomponent/get-enquiry/get-enquiry.component';
 import { InsertEnquiryComponent } from './Component/enquirycomponent/insert-enquiry/insert-enquiry.component';
@@ -72,19 +71,21 @@ import { InsertFacultyMasterComponent } from './component/FacultyMaster/insert-f
 import { GetVideoLectureComponent } from './Component/VideoLectures/get-video-lecture/get-video-lecture.component';
 import { InsertVideoLectureComponent } from './Component/VideoLectures/insert-video-lecture/insert-video-lecture.component';
 import { UpdateEnquiryComponent } from './Component/enquirycomponent/update-enquiry/update-enquiry.component';
+import { ActivateGuard} from './activate.guard';
 const routes: Routes = [
   {path:"",component:NIASHomeComponent},
-  {path:"login",component:LogInComponent},  
-  {path:"admin",component:AdminComponent,children: 
-  [
-    // {path:" ",component:AdminlinkComponent},
-    {path:"admin/getEnquiry",component:GetEnquiryComponent},
-    {path:"admin/Gallery",component:GalleryNIASComponent},  
-    //{path:"insert-banner",component:InsertBannerComponent},
-    {path:"admin/getchat",component:GetchatComponent},
-    {path: "admin/update-enquiry",component:UpdateEnquiryComponent},
+  {path:"login",component:LogInComponent},
+  {path:"admin",component:AdminComponent,canActivate:[ActivateGuard],children:
+ [
+     {path:" ",component:AdminlinkComponent},
+     {path:"admin/getEnquiry",component:GetEnquiryComponent},
+     {path:"admin/Gallery",component:GalleryNIASComponent},
+  //   //{path:"insert-banner",component:InsertBannerComponent},
+     {path:"admin/getchat",component:GetchatComponent},
+     {path: "admin/update-enquiry",component:UpdateEnquiryComponent},
     {path:'',component:AdminlinkComponent},
   ]},
+ // {path:"admin",component:AdminComponent,canActivate:[ActivateGuard]},
   {path:"Getmaster",component:GetMasterinfoComponent},
   {path:"InsertEnquiry",component:InsertEnquiryComponent},
   {path:"registration",component: RegistrationComponent},
@@ -112,7 +113,7 @@ const routes: Routes = [
 {path : "InsertSocialmedia",component:InsertSocialMediaComponent},
 // {path:"admin",component:AdminComponent},
 //  {path:"login",component:LogInComponent},
- {path:"get-subcategory",component:GetSubCategoryComponent },  
+ {path:"get-subcategory",component:GetSubCategoryComponent },
   {path : "NIAS_Geography", component:BookContentGeographyComponent},
   {path : "NIAS_Governance", component:BookContentGovernanceComponent},
   {path : "NIAS_History", component:BookContentHistoryComponent},
@@ -140,14 +141,14 @@ const routes: Routes = [
   // { path: '', redirectTo: '/', pathMatch:'full' }
   {path:"insert-current",component:InsertCurrentAffairsComponent},
   {path:"get-current",component:GetCurrentAffairsComponent},
-  {path:"insert-batchdetail",component:InsertBatchTopicDetailsComponent},
-  {path:"get-batchdetail",component:GetBatchTopicDetailsComponent},
+  {path:"insert-batchtopicdetail",component:InsertBatchTopicDetailsComponent},
+  {path:"get-batchtopicdetail",component:GetBatchTopicDetailsComponent},
   {path:"insert-subcategory",component:InsertSubCategoryComponent},
   {path:"get-facultyMaster",component:GetFacultyMasterComponent},
   {path:"insert-facultyMaster",component:InsertFacultyMasterComponent},
   {path:"get-VideoLecture",component:GetVideoLectureComponent},
   {path:"insert-VideoLecture",component:InsertVideoLectureComponent}
-  
+
 ];
 
 @NgModule({
