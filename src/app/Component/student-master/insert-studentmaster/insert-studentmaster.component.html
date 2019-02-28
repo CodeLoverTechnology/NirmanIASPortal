@@ -1,3 +1,60 @@
-<p>
-  insert-studentmaster works!
-</p>
+<div class="container-fluid">
+  <form enctype="multipart/form-data" method="post" #StudentForm="ngForm"  (ngSubmit)="onFormSubmit()">
+     
+   <div class="form-group">
+        <label>StudentName </label>
+       <input type="text" name="StudentName" #StudentName="ngModel" class="form-control"
+       [(ngModel)]="student.StudentName" required>
+       <div class="validation-error" *ngIf="StudentName.invalid && StudentName.touched">This field is required.</div>
+            </div>
+        <div>
+        <label>Address</label>
+        <textarea type="text" name="Address"  #Address="ngModel" class="form-control" required [(ngModel)]="student.Address"></textarea>
+        <div class="validation-error" *ngIf="Address.invalid && Address.touched">This field is required.</div>
+        </div>
+        <div>
+          <label>Course</label>
+          <input type="text" name="Course"  #Course="ngModel" class="form-control" required [(ngModel)]="student.Course">
+          <div class="validation-error" *ngIf="Course.invalid && Course.touched">This field is required.</div>
+          </div>
+          <div>
+            <label>ContactNo</label>
+            <input type="text" name="ContactNo"  #ContactNo="ngModel" class="form-control" required [(ngModel)]="student.ContactNo">
+            <div class="validation-error" *ngIf="ContactNo.invalid && ContactNo.touched">This field is required.</div>
+            </div>
+            <div>
+              <label>EmailID</label>
+              <input type="text" name="EmailID"  #EmailID="ngModel" class="form-control"  [(ngModel)]="student.EmailID">
+              <div class="validation-error" *ngIf="EmailID.invalid && EmailID.touched">This field is required.</div>
+              </div>
+              <div>
+                <label>AdmissionDate</label>
+                <input type="text" name="AdmissionDate"  #AdmissionDate="ngModel" class="form-control"  [(ngModel)]="student.AdmissionDate">
+                <div class="validation-error" *ngIf="AdmissionDate.invalid && AdmissionDate.touched">This field is required.</div>
+                </div>
+                <div>
+                  <label>ValidityStartDate</label>
+                  <input type="text" name="ValidityStartDate"  #ValidityStartDate="ngModel" class="form-control"  [(ngModel)]="student.ValidityStartDate">
+                  <div class="validation-error" *ngIf="ValidityStartDate.invalid && ValidityStartDate.touched">This field is required.</div>
+                  </div>
+                  <div>
+                    <label>ValidityEndDate</label>
+                    <input type="text" name="ValidityEndDate"  #ValidityEndDate="ngModel" class="form-control"  [(ngModel)]="student.ValidityEndDate">
+                    <div class="validation-error" *ngIf="ValidityEndDate.invalid && ValidityEndDate.touched">This field is required.</div>
+                    </div>
+                    <div>
+                      <label>Branch</label>
+                      <input type="text" name="Branch"  #Branch="ngModel" class="form-control"  [(ngModel)]="student.Branch">
+                      <div class="validation-error" *ngIf="Branch.invalid && Branch.touched">This field is required.</div>
+                      </div>
+               
+                   <div> 
+                   <label>Remarks</label>
+                  <input type="text" name="Remarks"  #Remarks="ngModel" class="form-control" required [(ngModel)]="student.Remarks">
+                  <div class="validation-error" *ngIf="Remarks.invalid && Remarks.touched">This field is required.</div>
+                              </div>
+
+         <button [disabled]="!StudentForm.valid" type="submit"  class="btn btn-primary btn-lg m-3">Submit Now</button> 
+            </form> 
+   </div>
+   

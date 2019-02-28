@@ -116,14 +116,19 @@ import {BatchTopicDetailsService} from "./Services/BatchTopicDetails/batch-topic
 import {NirmanResultMasterService} from "./Services/NirmanResultMaster/nirman-result-master.service";
 import {SubCategoryMasterService} from "./Services/SubCategoryService/sub-category-master.service";
 import {BatchDetailsService} from "./Services/BatchDetails/batch-details.service";
-import { GetImagevediosComponent } from './component/imagevedios/get-imagevedios/get-imagevedios.component';
-import { InsertImagevediosComponent } from './component/imagevedios/insert-imagevedios/insert-imagevedios.component';
-import { GetStudentmasterComponent } from './component/student-master/get-studentmaster/get-studentmaster.component';
-import { InsertStudentmasterComponent } from './component/student-master/insert-studentmaster/insert-studentmaster.component';
-import { GetUsermasterComponent } from './component/user-master/get-usermaster/get-usermaster.component';
-import { InsertUsermasterComponent } from './component/user-master/insert-usermaster/insert-usermaster.component';
+import {GetImagevediosComponent} from "./Component/imagevedios/get-imagevedios/get-imagevedios.component";
+import { InsertImagevediosComponent } from './Component/imagevedios/insert-imagevedios/insert-imagevedios.component';
+import { GetStudentmasterComponent } from './Component/student-master/get-studentmaster/get-studentmaster.component';
+import { InsertStudentmasterComponent } from './Component/student-master/insert-studentmaster/insert-studentmaster.component';
+import { GetUsermasterComponent } from './Component/user-master/get-usermaster/get-usermaster.component';
+import { InsertUsermasterComponent } from './Component/user-master/insert-usermaster/insert-usermaster.component';
 import {ActivateGuard} from "src/app/activate.guard";
 import {AdminService} from "./Services/admin.service";
+import {ImagevediosService} from "./Services/ImageVedios/imagevedios.service";
+import {StudentmasterService} from "./Services/StudentMaster/studentmaster.service";
+import {UsermasterService} from "./Services/UserMaster/usermaster.service";
+import {NotificationmasterService} from "./Services/NotificationMaster/notificationmaster.service";
+
 
 
 @NgModule({
@@ -242,7 +247,7 @@ import {AdminService} from "./Services/admin.service";
     NoopAnimationsModule,
     
   ],
-   providers: [ActivateGuard, AdminService, EnquiryServiceService,ChatServicesService,AuthService,SocialMediaServiceService,CategoryMasterService,BannerMasterService,CourseMasterService,BranchMasterService,BatchTopicDetailsService,NirmanResultMasterService,SubCategoryMasterService,BatchDetailsService],
+   providers: [ActivateGuard, AdminService, EnquiryServiceService,ChatServicesService,AuthService,SocialMediaServiceService,CategoryMasterService,BannerMasterService,CourseMasterService,BranchMasterService,BatchTopicDetailsService,NirmanResultMasterService,SubCategoryMasterService,BatchDetailsService,ImagevediosService,StudentmasterService,UsermasterService,NotificationmasterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

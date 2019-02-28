@@ -1,3 +1,42 @@
-<p>
-  get-studentmaster works!
-</p>
+<table class="table table-hover table-justified">
+  <thead>
+    <tr>
+    <th>StudentCode</th>
+      <th>StudentName  </th>
+      <th>Address  </th>
+      <th>Course  </th>
+      <th>ContactNo  </th>
+      <th>EmailID </th>
+      <th>AdmissionDate </th>
+      <th>ValidityStartDate </th>
+      <th>ValidityEndDate</th>
+      <th>Branch</th>
+      <th>Remarks</th>
+      <th>CreatedBy</th>
+      <th>CreatedDate</th>
+      <th>ModifiedBy</th>
+      <th>ModifiedDate</th>
+      <th>Active</th>
+    </tr>
+  </thead>
+  <tbody>
+        <tr *ngFor="let x of result">
+      <td>{{x.studentCode }}</td>
+        <td>{{x.studentName }}</td>
+        <td>{{x.address }}</td>
+        <td>{{x.course }}</td>
+        <td>{{x.contactNo }}</td>
+        <td>{{x.emailID  }}</td>
+       <td>{{x.admissionDate}}</td>
+       <td>{{x.validityStartDate}}</td> 
+       <td>{{x.validityEndDate}}</td>
+       <td>{{x.branch}}</td> 
+       <td>{{x.remarks}}</td>
+       <td>{{x.createdBy}}</td>
+       <td>{{x.createdDate}}</td> 
+       <td>{{x.modifiedBy}}</td>  
+       <td>{{x.modifiedDate}}</td> 
+       <td>{{x.active}}</td>   
+       </tr>
+       </tbody>
+       </table>
