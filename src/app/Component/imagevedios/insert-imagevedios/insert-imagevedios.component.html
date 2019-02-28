@@ -1,3 +1,56 @@
-<p>
-  insert-imagevedios works!
-</p>
+<div class="container-fluid">
+  <form enctype="multipart/form-data" method="post" #ImageForm="ngForm"  (ngSubmit)="onFormSubmit()">
+
+    <div class="form-group">
+      <label>Category </label>
+     <input type="text" name="Category" #Category="ngModel" class="form-control"
+     [(ngModel)]="image.Category" required>
+     <div class="validation-error" *ngIf="Category.invalid && Category.touched">This field is required.</div>
+          </div>
+     
+   <div class="form-group">
+        <label>FileName </label>
+       <input type="text" name="FileName" #FileName="ngModel" class="form-control"
+       [(ngModel)]="image.FileName" required>
+       <div class="validation-error" *ngIf="FileName.invalid && FileName.touched">This field is required.</div>
+            </div>
+        <div>
+        <label>FileType</label>
+        <textarea type="text" name="FileType"  #FileType="ngModel" class="form-control" required [(ngModel)]="image.FileType"></textarea>
+        <div class="validation-error" *ngIf="FileType.invalid && FileType.touched">This field is required.</div>
+        </div>
+        <div>
+          <label>FileUploadForPage</label>
+          <input type="text" name="FileUploadForPage"  #FileUploadForPage="ngModel" class="form-control" required [(ngModel)]="image.FileUploadForPage">
+          <div class="validation-error" *ngIf="FileUploadForPage.invalid && FileUploadForPage.touched">This field is required.</div>
+          </div>
+          <div>
+            <label>Title</label>
+            <input type="text" name="Title"  #Title="ngModel" class="form-control" required [(ngModel)]="image.Title">
+            <div class="validation-error" *ngIf="Title.invalid && Title.touched">This field is required.</div>
+            </div>
+            <div>
+              <label>FileImagePath</label>
+              <input type="text" name="FileImagePath"  #FileImagePath="ngModel" class="form-control"  [(ngModel)]="image.FileImagePath">
+              <div class="validation-error" *ngIf="FileImagePath.invalid && FileImagePath.touched">This field is required.</div>
+              </div>
+              <div>
+                <label>VideoFilePathOrLink</label>
+                <input type="text" name="VideoFilePathOrLink"  #VideoFilePathOrLink="ngModel" class="form-control"  [(ngModel)]="image.VideoFilePathOrLink">
+                <div class="validation-error" *ngIf="VideoFilePathOrLink.invalid && VideoFilePathOrLink.touched">This field is required.</div>
+                </div>
+                <div>
+                  <label>Remarks</label>
+                  <input type="text" name="Remarks"  #Remarks="ngModel" class="form-control"  [(ngModel)]="image.Remarks">
+                  <div class="validation-error" *ngIf="Remarks.invalid && Remarks.touched">This field is required.</div>
+                  </div>
+                  <div>
+                    <label>IsNew</label>
+                    <input type="text" name="IsNew"  #IsNew="ngModel" class="form-control"  [(ngModel)]="image.IsNew">
+                    <div class="validation-error" *ngIf="IsNew.invalid && IsNew.touched">This field is required.</div>
+                    </div>
+                    
+         <button [disabled]="!ImageForm.valid" type="submit"  class="btn btn-primary btn-lg m-3">Submit Now</button> 
+            </form> 
+   </div>
+   

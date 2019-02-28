@@ -76,6 +76,8 @@ import {InsertStudentmasterComponent} from "./Component/student-master/insert-st
 import {GetStudentmasterComponent} from "./Component/student-master/get-studentmaster/get-studentmaster.component";
 import {GetUsermasterComponent} from "./Component/user-master/get-usermaster/get-usermaster.component";
 import {InsertUsermasterComponent} from "./Component/user-master/insert-usermaster/insert-usermaster.component";
+import {GetImagevediosComponent} from "./Component/imagevedios/get-imagevedios/get-imagevedios.component";
+import {InsertImagevediosComponent} from "./Component/imagevedios/insert-imagevedios/insert-imagevedios.component";
 const routes: Routes = [
   {path:"",component:NIASHomeComponent},
   {path:"login",component:LogInComponent},
@@ -155,7 +157,9 @@ const routes: Routes = [
   {path:"get-studentmaster",component:GetStudentmasterComponent},
   {path:"insert-studentmaster",component:InsertStudentmasterComponent},
   {path:"get-usermaster",component:GetUsermasterComponent},
-  {path:"insert-usermaster",component:InsertUsermasterComponent}
+  {path:"insert-usermaster",component:InsertUsermasterComponent},
+  {path:"get-imagevedio",component:GetImagevediosComponent},
+  {path:"insert-imagevedio",component:InsertImagevediosComponent}
 ];
 
 @NgModule({

@@ -1,3 +1,40 @@
-<p>
-  get-imagevedios works!
-</p>
+<table class="table table-hover table-justified">
+  <thead>
+    <tr>
+    <th>FileID</th>
+      <th>Category</th>
+      <th>FileName</th>
+      <th>FileType</th>
+      <th>FileUploadForPage</th>
+      <th>Title</th>
+      <th>FileImagePath </th>
+      <th>VideoFilePathOrLink </th>
+      <th>Remarks</th>
+      <th>IsNew</th>
+      <th>CreatedBy</th>
+      <th>CreatedDate</th>
+      <th>ModifiedBy</th>
+      <th>ModifiedDate</th>
+      <th>Active</th>
+    </tr>
+  </thead>
+  <tbody>
+        <tr *ngFor="let x of result">
+      <td>{{x.fileID }}</td>
+        <td>{{x.category }}</td>
+        <td>{{x.fileName }}</td>
+        <td>{{x.fileType }}</td>
+        <td>{{x.fileUploadForPage }}</td>
+        <td>{{x.title  }}</td>
+       <td>{{x.fileImagePath}}</td>
+       <td>{{x.videoFilePathOrLink}}</td> 
+       <td>{{x.remarks}}</td>
+       <td>{{x.isNew}}</td> 
+       <td>{{x.createdBy}}</td>
+       <td>{{x.createdDate}}</td>
+       <td>{{x.modifiedBy}}</td>
+       <td>{{x.modifiedDate}}</td>
+       <td>{{x.active}}</td>     
+       </tr>
+       </tbody>
+       </table>

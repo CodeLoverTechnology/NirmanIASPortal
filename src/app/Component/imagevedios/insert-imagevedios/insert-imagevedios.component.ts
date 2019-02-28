@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+import {Imagevedios} from "../../../Entity/imagevedios";
+import {ImagevediosService} from "../../../Services/ImageVedios/imagevedios.service";
+import {HttpErrorResponse} from "@angular/common/http";
 @Component({
   selector: 'app-insert-imagevedios',
   templateUrl: './insert-imagevedios.component.html',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InsertImagevediosComponent implements OnInit {
 
-  constructor() { }
+  image = {} as Imagevedios;
 
-  ngOnInit() {
-  }
+  constructor(private _service:ImagevediosService) { }
+  ngOnInit(){ }
+  onFormSubmit()
+  {
+    debugger;
+    this._service.postImagevedios(this.image).subscribe(
+   result => console.log('Success !!!.',result),
+      (err:HttpErrorResponse)=>{
+     if(err.error instanceof Error){
+            console.log("Server Side Error....!");
+          }else{
+            console.log("Client Side Error   !");
+          }
+        }) 
+        debugger;
+      console.log(this.image);
+    }}
 
-}
