@@ -1,3 +1,35 @@
-<p>
-  get-usermaster works!
-</p>
+<table class="table table-hover table-justified">
+  <thead>
+    <tr>
+    <th>UserID</th>
+      <th>UserEmailID</th>
+      <th>UserName</th>
+      <th>ContactNo</th>
+      <th>Department</th>
+      <th>Designation</th>
+      <th>Remarks</th>
+      <th>CreatedBy</th>
+      <th>CreatedDate</th>
+      <th>ModifiedBy</th>
+      <th>ModifiedDate</th>
+      <th>Active</th>
+    </tr>
+  </thead>
+  <tbody>
+        <tr *ngFor="let x of result">
+      <td>{{x.userID }}</td>
+        <td>{{x.userEmailID }}</td>
+        <td>{{x.userName }}</td>
+        <td>{{x.contactNo }}</td>
+        <td>{{x.department }}</td>
+        <td>{{x.designation  }}</td>
+       <td>{{x.remarks}}</td>
+       <td>{{x.createdBy}}</td>
+       <td>{{x.createdDate}}</td> 
+       <td>{{x.modifiedBy}}</td>
+       <td>{{x.modifiedDate}}</td>
+       <td>{{x.active}}</td> 
+       <td>{{x.isNew}}</td>    
+       </tr>
+       </tbody>
+       </table>

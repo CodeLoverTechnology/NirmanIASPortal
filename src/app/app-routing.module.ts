@@ -74,6 +74,8 @@ import { UpdateEnquiryComponent } from './Component/enquirycomponent/update-enqu
 import { ActivateGuard} from './activate.guard';
 import {InsertStudentmasterComponent} from "./Component/student-master/insert-studentmaster/insert-studentmaster.component";
 import {GetStudentmasterComponent} from "./Component/student-master/get-studentmaster/get-studentmaster.component";
+import {GetUsermasterComponent} from "./Component/user-master/get-usermaster/get-usermaster.component";
+import {InsertUsermasterComponent} from "./Component/user-master/insert-usermaster/insert-usermaster.component";
 const routes: Routes = [
   {path:"",component:NIASHomeComponent},
   {path:"login",component:LogInComponent},
@@ -151,7 +153,9 @@ const routes: Routes = [
   {path:"get-VideoLecture",component:GetVideoLectureComponent},
   {path:"insert-VideoLecture",component:InsertVideoLectureComponent},
   {path:"get-studentmaster",component:GetStudentmasterComponent},
-  {path:"insert-studentmaster",component:InsertStudentmasterComponent}
+  {path:"insert-studentmaster",component:InsertStudentmasterComponent},
+  {path:"get-usermaster",component:GetUsermasterComponent},
+  {path:"insert-usermaster",component:InsertUsermasterComponent}
 ];
 
 @NgModule({

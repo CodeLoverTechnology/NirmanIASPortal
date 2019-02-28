@@ -1,5 +1,12 @@
 <div class="container-fluid">
   <form enctype="multipart/form-data" method="post" #StudentForm="ngForm"  (ngSubmit)="onFormSubmit()">
+
+    <div class="form-group">
+      <label>StudentCode </label>
+     <input type="text" name="StudentCode" #StudentCode="ngModel" class="form-control"
+     [(ngModel)]="student.StudentCode" required>
+     <div class="validation-error" *ngIf="StudentCode.invalid && StudentCode.touched">This field is required.</div>
+          </div>
      
    <div class="form-group">
         <label>StudentName </label>
