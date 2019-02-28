@@ -128,7 +128,8 @@ import {ImagevediosService} from "./Services/ImageVedios/imagevedios.service";
 import {StudentmasterService} from "./Services/StudentMaster/studentmaster.service";
 import {UsermasterService} from "./Services/UserMaster/usermaster.service";
 import {NotificationmasterService} from "./Services/NotificationMaster/notificationmaster.service";
-
+import {TopersAnswerCopyListComponent} from "./Component/TopersAnswerCopy/topers-answer-copy-list/topers-answer-copy-list.component";
+import {TopersAnswerCopyForIndividualComponent} from "./Component/TopersAnswerCopy/topers-answer-copy-for-individual/topers-answer-copy-for-individual.component";
 
 
 @NgModule({
@@ -234,6 +235,8 @@ import {NotificationmasterService} from "./Services/NotificationMaster/notificat
     InsertStudentmasterComponent,
     GetUsermasterComponent,
     InsertUsermasterComponent,
+    TopersAnswerCopyListComponent,
+    TopersAnswerCopyForIndividualComponent 
     
   ],
   imports: [
