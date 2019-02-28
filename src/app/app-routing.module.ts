@@ -78,6 +78,8 @@ import {GetUsermasterComponent} from "./Component/user-master/get-usermaster/get
 import {InsertUsermasterComponent} from "./Component/user-master/insert-usermaster/insert-usermaster.component";
 import {GetImagevediosComponent} from "./Component/imagevedios/get-imagevedios/get-imagevedios.component";
 import {InsertImagevediosComponent} from "./Component/imagevedios/insert-imagevedios/insert-imagevedios.component";
+import {GetNotifictionmasterComponent} from "./Component/notification-master/get-notifictionmaster/get-notifictionmaster.component";
+import {InsertNotifictionmasterComponent} from "./Component/notification-master/insert-notifictionmaster/insert-notifictionmaster.component";
 const routes: Routes = [
   {path:"",component:NIASHomeComponent},
   {path:"login",component:LogInComponent},
@@ -159,7 +161,9 @@ const routes: Routes = [
   {path:"get-usermaster",component:GetUsermasterComponent},
   {path:"insert-usermaster",component:InsertUsermasterComponent},
   {path:"get-imagevedio",component:GetImagevediosComponent},
-  {path:"insert-imagevedio",component:InsertImagevediosComponent}
+  {path:"insert-imagevedio",component:InsertImagevediosComponent},
+  {path:"get-notification",component:GetNotifictionmasterComponent},
+  {path:"insert-notification",component:InsertNotifictionmasterComponent}
 ];
 
 @NgModule({

@@ -1,0 +1,41 @@
+<div class="container-fluid">
+  <form enctype="multipart/form-data" method="post" #NotificationmasterForm="ngForm"  (ngSubmit)="onFormSubmit()">
+
+    <div class="form-group">
+      <label>Category </label>
+     <input type="text" name="Category" #Category="ngModel" class="form-control"
+     [(ngModel)]="notification.Category" required>
+     <div class="validation-error" *ngIf="Category.invalid && Category.touched">This field is required.</div>
+          </div>
+     
+   <div class="form-group">
+        <label>Notification </label>
+       <input type="text" name="Notification" #Notification="ngModel" class="form-control"
+       [(ngModel)]="notification.Notification" required>
+       <div class="validation-error" *ngIf="Notification.invalid && Notification.touched">This field is required.</div>
+            </div>
+        <div>
+        <label>Description</label>
+        <textarea type="text" name="Description"  #Description="ngModel" class="form-control" required [(ngModel)]="notification.Description"></textarea>
+        <div class="validation-error" *ngIf="Description.invalid && Description.touched">This field is required.</div>
+        </div>
+        <div>
+          <label>ImagePath</label>
+          <input type="text" name="ImagePath"  #ImagePath="ngModel" class="form-control" required [(ngModel)]="notification.ImagePath">
+          <div class="validation-error" *ngIf="ImagePath.invalid && ImagePath.touched">This field is required.</div>
+          </div>
+          <div>
+            <label>MoreDetailsFilePath</label>
+            <input type="text" name="MoreDetailsFilePath"  #Title="ngModel" class="form-control" required [(ngModel)]="notification.MoreDetailsFilePath">
+            <div class="validation-error" *ngIf="MoreDetailsFilePath.invalid && MoreDetailsFilePath.touched">This field is required.</div>
+            </div>
+            <div>
+              <label>IsNew</label>
+              <input type="text" name="IsNew"  #IsNew="ngModel" class="form-control"  [(ngModel)]="notification.IsNew">
+              <div class="validation-error" *ngIf="IsNew.invalid && IsNew.touched">This field is required.</div>
+              </div>
+             
+                    <button [disabled]="!NotificationmasterForm.valid" type="submit"  class="btn btn-primary btn-lg m-3">Submit Now</button> 
+            </form> 
+   </div>
+   
