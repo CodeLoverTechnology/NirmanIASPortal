@@ -1,5 +1,6 @@
 export class StudentMaster {
     constructor(
+        public StudentID : number,
         public StudentCode : string,
         public StudentName : string,
         public Address  : string,

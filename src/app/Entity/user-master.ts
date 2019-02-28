@@ -1,5 +1,6 @@
 export class UserMaster {
     constructor(
+        public UserID : number,
         public UserEmailID : string,
         public UserName  : string,
         public ContactNo  : string,
