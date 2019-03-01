@@ -1,20 +1,21 @@
-<!-- <form action="#" enctype="multipart/form-data" method="post" name="LiveChat" id="LiveChat" #LiveChat="ngForm" (ngSubmit)="SendMessageToServer()"> -->
-<form enctype="form-data" method="post"  #myForm="ngForm" (ngSubmit)="onSubmit()">
+<form enctype="multipart/form-data" method="post" #myForm="ngForm" (ngSubmit)="onSubmit()">
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-3" style="position:fixed;">
-    <i class="fa fa-comments fa-5x open-button" style="color:darkblue;" onclick="openForm()" title="Nirman IAS Academy Live Chat"></i>
+    <i class="fa fa-comments fa-5x open-button" style="color:darkblue;" onclick="openForm()"
+      title="Nirman IAS Academy Live Chat"></i>
     <div class="chat-popup" id="myForm">
       <div class="form-container">
-        <div class="">
-          <i class="fa fa-times-circle-o text-danger img-thumbnail rounded" onclick="closeForm()" aria-hidden="true" style="position: absolute;margin-top:-27px;margin-left: -15px;"> </i>
+          <i class="fa fa-times-circle-o text-danger img-thumbnail rounded" onclick="closeForm()" aria-hidden="true"
+            style="position: absolute;margin-top:-27px;margin-left: -15px;"> </i>
           <img src="./assets/NirmanIAS_Logo.png" class="img-fluid" />
           <hr>
-        <div placeholder="Converstation Message" id="ReplyMessage" name="ReplyMessage" [(ngModel)]="chatModel.ReplyMessage" style="height: 150px; width: 100%;overflow-y: scroll;">
+          <div placeholder="Converstation Message" name="ReplyMessage" #ReplyMessage="ngModel"
+            [(ngModel)]="chatModel.ReplyMessage" style="height: 150px; width: 100%;overflow-y: scroll;">
             {{chatModel.ReplyMessage}}
           </div>
-                    <hr>
+          <hr>
           <div class="input-group mb-3">
-            <!-- <input type="text" id="txtUserIP" name="txtUserIP" [(ngModel)]="ChatModel.UserIP" class="form-control" value="172.168.19.1" /> -->
-            <input type="text" id="txtChatMessage" name="txtChatMessage" [(ngModel)]="chatModel.ChatMessage" class="form-control" placeholder="Typeing..." />
+            <input type="text" name="txtChatMessage" #txtChatMessage="ngModel" [(ngModel)]="chatModel.ChatMessage"
+              class="form-control" placeholder="Typeing..." />
             <div class="input-group-append">
               <button type="submit" class="fa fa-arrow-circle-o-right fa-2x rounded shadow"></button>
             </div>
@@ -23,5 +24,4 @@
         </div>
       </div>
     </div>
-  </div>
 </form>

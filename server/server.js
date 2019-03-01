@@ -1,7 +1,20 @@
 var http = require('http');
 var formidable = require('formidable');
 var fs = require('fs');
+const cors = require('cors');
+var corsOptions = {
+  origin: '*',
+  optionsSuccessStatus: 200
+};
 var port =8080;
+
+http.use(cors(corsOptions));
+const upload = require('./upload');
+http.post('/upload', upload);
+
+http.listen(port, () => {
+  console.log('Server started!');
+});
 
 http.createServer(function (req, res) {
     if (req.url == '/fileupload') {

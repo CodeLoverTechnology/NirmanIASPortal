@@ -7,7 +7,7 @@ import {HttpErrorResponse} from "@angular/common/http";
   styleUrls: ['./get-batch-details.component.css']
 })
 export class GetBatchDetailsComponent implements OnInit {
-public Result:string;
+public Result:any;
   constructor(private _service:BatchDetailsService) { }
 
   ngOnInit() {
