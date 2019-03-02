@@ -26,7 +26,7 @@
           </div>
           <div>
             <label>MoreDetailsFilePath</label>
-            <input type="text" name="MoreDetailsFilePath"  #Title="ngModel" class="form-control" required [(ngModel)]="notification.MoreDetailsFilePath">
+            <input type="text" name="MoreDetailsFilePath"  #MoreDetailsFilePath="ngModel" class="form-control" required [(ngModel)]="notification.MoreDetailsFilePath">
             <div class="validation-error" *ngIf="MoreDetailsFilePath.invalid && MoreDetailsFilePath.touched">This field is required.</div>
             </div>
             <div>

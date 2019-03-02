@@ -130,8 +130,8 @@ import {UsermasterService} from "./Services/UserMaster/usermaster.service";
 import {NotificationmasterService} from "./Services/NotificationMaster/notificationmaster.service";
 import {TopersAnswerCopyListComponent} from "./Component/TopersAnswerCopy/topers-answer-copy-list/topers-answer-copy-list.component";
 import {TopersAnswerCopyForIndividualComponent} from "./Component/TopersAnswerCopy/topers-answer-copy-for-individual/topers-answer-copy-for-individual.component";
-import { GetNotifictionmasterComponent } from './component/notification-master/get-notifictionmaster/get-notifictionmaster.component';
-import { InsertNotifictionmasterComponent } from './component/notification-master/insert-notifictionmaster/insert-notifictionmaster.component';
+import { GetNotifictionmasterComponent } from './Component/notification-master/get-notifictionmaster/get-notifictionmaster.component';
+import { InsertNotifictionmasterComponent } from './Component/notification-master/insert-notifictionmaster/insert-notifictionmaster.component';
 
 
 @NgModule({
