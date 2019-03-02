@@ -80,6 +80,9 @@ import {GetImagevediosComponent} from "./Component/imagevedios/get-imagevedios/g
 import {InsertImagevediosComponent} from "./Component/imagevedios/insert-imagevedios/insert-imagevedios.component";
 import {GetNotifictionmasterComponent} from "./Component/notification-master/get-notifictionmaster/get-notifictionmaster.component";
 import {InsertNotifictionmasterComponent} from "./Component/notification-master/insert-notifictionmaster/insert-notifictionmaster.component";
+import { TopersAnswerCopyListComponent } from './Component/TopersAnswerCopy/topers-answer-copy-list/topers-answer-copy-list.component';
+import { TopersAnswerCopyForIndividualComponent } from './Component/TopersAnswerCopy/topers-answer-copy-for-individual/topers-answer-copy-for-individual.component';
+import { UpdateBatchDetailsComponent } from './Component/BatchDetails/update-batch-details/update-batch-details.component';
 const routes: Routes = [
   {path:"",component:NIASHomeComponent},
   {path:"login",component:LogInComponent},
@@ -88,9 +91,13 @@ const routes: Routes = [
      {path:" ",component:AdminlinkComponent},
      {path:"admin/getEnquiry",component:GetEnquiryComponent},
      {path:"admin/Gallery",component:GalleryNIASComponent},
-  //   //{path:"insert-banner",component:InsertBannerComponent},
+     {path:"admin/get-facultyMaster",component:GetFacultyMasterComponent},
      {path:"admin/getchat",component:GetchatComponent},
      {path: "admin/update-enquiry",component:UpdateEnquiryComponent},
+     {path:"admin/BranchList", component:GetBranchComponent},
+     {path:"admin/GetStudentmaster", component:GetStudentmasterComponent},
+     {path:"admin/GetBannerList", component:GetBannerComponent},
+     {path:"admin/GetSocialMediaList", component:GetSocialMediaComponent},
     {path:'',component:AdminlinkComponent},
   ]},
  // {path:"admin",component:AdminComponent,canActivate:[ActivateGuard]},
@@ -163,7 +170,10 @@ const routes: Routes = [
   {path:"get-imagevedio",component:GetImagevediosComponent},
   {path:"insert-imagevedio",component:InsertImagevediosComponent},
   {path:"get-notification",component:GetNotifictionmasterComponent},
-  {path:"insert-notification",component:InsertNotifictionmasterComponent}
+  {path:"insert-notification",component:InsertNotifictionmasterComponent},
+  {path: "TopersAnswerCopyList",component:TopersAnswerCopyListComponent},
+  {path: "TopersAnswerCopyForIndividual",component:TopersAnswerCopyForIndividualComponent},
+  { path:"UpdateBatchDetails",component:UpdateBatchDetailsComponent}
 ];
 
 @NgModule({

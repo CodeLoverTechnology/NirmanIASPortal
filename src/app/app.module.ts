@@ -127,7 +127,6 @@ import {AdminService} from "./Services/admin.service";
 import {ImagevediosService} from "./Services/ImageVedios/imagevedios.service";
 import {StudentmasterService} from "./Services/StudentMaster/studentmaster.service";
 import {UsermasterService} from "./Services/UserMaster/usermaster.service";
-import {NotificationmasterService} from "./Services/NotificationMaster/notificationmaster.service";
 import {TopersAnswerCopyListComponent} from "./Component/TopersAnswerCopy/topers-answer-copy-list/topers-answer-copy-list.component";
 import {TopersAnswerCopyForIndividualComponent} from "./Component/TopersAnswerCopy/topers-answer-copy-for-individual/topers-answer-copy-for-individual.component";
 import { GetNotifictionmasterComponent } from './Component/notification-master/get-notifictionmaster/get-notifictionmaster.component';
@@ -239,8 +238,8 @@ import { InsertNotifictionmasterComponent } from './Component/notification-maste
     InsertUsermasterComponent,
     TopersAnswerCopyListComponent,
     TopersAnswerCopyForIndividualComponent,
-    GetNotifictionmasterComponent,
-    InsertNotifictionmasterComponent 
+    InsertNotifictionmasterComponent,
+    GetNotifictionmasterComponent
     
   ],
   imports: [
@@ -254,7 +253,15 @@ import { InsertNotifictionmasterComponent } from './Component/notification-maste
     NoopAnimationsModule,
     
   ],
-   providers: [ActivateGuard, AdminService, EnquiryServiceService,ChatServicesService,AuthService,SocialMediaServiceService,CategoryMasterService,BannerMasterService,CourseMasterService,BranchMasterService,BatchTopicDetailsService,NirmanResultMasterService,SubCategoryMasterService,BatchDetailsService,ImagevediosService,StudentmasterService,UsermasterService,NotificationmasterService],
+   providers: [ActivateGuard, AdminService, 
+    EnquiryServiceService,ChatServicesService,
+    AuthService,SocialMediaServiceService,
+    CategoryMasterService,BannerMasterService,
+    CourseMasterService,BranchMasterService,
+    BatchTopicDetailsService,NirmanResultMasterService,
+    SubCategoryMasterService,BatchDetailsService,
+    ImagevediosService,StudentmasterService,
+    UsermasterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
