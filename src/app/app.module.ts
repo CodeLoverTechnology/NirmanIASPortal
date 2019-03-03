@@ -131,6 +131,7 @@ import {TopersAnswerCopyListComponent} from "./Component/TopersAnswerCopy/topers
 import {TopersAnswerCopyForIndividualComponent} from "./Component/TopersAnswerCopy/topers-answer-copy-for-individual/topers-answer-copy-for-individual.component";
 import { GetNotifictionmasterComponent } from './Component/notification-master/get-notifictionmaster/get-notifictionmaster.component';
 import { InsertNotifictionmasterComponent } from './Component/notification-master/insert-notifictionmaster/insert-notifictionmaster.component';
+import { PrintedMaterialListComponent } from './Component/PrintedMaterial/printed-material-list/printed-material-list.component';
 
 
 @NgModule({
@@ -239,7 +240,8 @@ import { InsertNotifictionmasterComponent } from './Component/notification-maste
     TopersAnswerCopyListComponent,
     TopersAnswerCopyForIndividualComponent,
     InsertNotifictionmasterComponent,
-    GetNotifictionmasterComponent
+    GetNotifictionmasterComponent,
+    PrintedMaterialListComponent
     
   ],
   imports: [

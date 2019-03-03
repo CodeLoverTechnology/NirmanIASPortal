@@ -83,6 +83,7 @@ import {InsertNotifictionmasterComponent} from "./Component/notification-master/
 import { TopersAnswerCopyListComponent } from './Component/TopersAnswerCopy/topers-answer-copy-list/topers-answer-copy-list.component';
 import { TopersAnswerCopyForIndividualComponent } from './Component/TopersAnswerCopy/topers-answer-copy-for-individual/topers-answer-copy-for-individual.component';
 import { UpdateBatchDetailsComponent } from './Component/BatchDetails/update-batch-details/update-batch-details.component';
+import { PrintedMaterialListComponent } from './Component/PrintedMaterial/printed-material-list/printed-material-list.component';
 const routes: Routes = [
   {path:"",component:NIASHomeComponent},
   {path:"login",component:LogInComponent},
@@ -173,7 +174,10 @@ const routes: Routes = [
   {path:"insert-notification",component:InsertNotifictionmasterComponent},
   {path: "TopersAnswerCopyList",component:TopersAnswerCopyListComponent},
   {path: "TopersAnswerCopyForIndividual",component:TopersAnswerCopyForIndividualComponent},
-  { path:"UpdateBatchDetails",component:UpdateBatchDetailsComponent}
+  { path:"UpdateBatchDetails",component:UpdateBatchDetailsComponent},
+
+  { path:"PrintedMaterialList",component:PrintedMaterialListComponent}
+
 ];
 
 @NgModule({
