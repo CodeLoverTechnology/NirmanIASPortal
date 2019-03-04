@@ -97,7 +97,7 @@ const routes: Routes = [
      {path: "admin/update-enquiry",component:UpdateEnquiryComponent},
      {path:"admin/BranchList", component:GetBranchComponent},
      {path:"admin/GetStudentmaster", component:GetStudentmasterComponent},
-     {path:"admin/GetBannerList", component:GetBannerComponent},
+    //  {path:"admin/GetBannerList", component:GetBannerComponent},
      {path:"admin/GetSocialMediaList", component:GetSocialMediaComponent},
     {path:'',component:AdminlinkComponent},
   ]},

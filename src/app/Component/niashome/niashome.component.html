@@ -315,7 +315,17 @@
 </div>
 <!-- daily 7 weekly artical -->
 <div class="container-fluid">
-    <h2 class="bg-danger text-white text-center p-2">Daily & Weekly Articals</h2>
+    <div class="row bg-danger text-white" >
+        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                <h2 class="text-center p-2">Daily & Weekly Articals</h2>
+            </div>        
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <a [routerLink]="['/CurrentAffairs']">
+                    <div class="text-right text-white p-4">View More</div>
+                </a>
+            </div>
+        </div>
+    
     <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
                     <div class=" shadow p-1 m-1 img-thumbnail">

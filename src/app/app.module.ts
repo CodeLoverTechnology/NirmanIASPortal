@@ -42,6 +42,7 @@ import { GetCategoryComponent } from './component/CategoryMaster/get-category/ge
 import { InsertCategoryComponent } from './Component/CategoryMaster/insert-category/insert-category.component';
 import { GetBranchComponent } from './component/BranchMaster/get-branch/get-branch.component';
 import { InsertBranchComponent } from './component/BranchMaster/insert-branch/insert-branch.component';
+// import { GetBannerComponent } from './component/Banner/get-banner/get-banner.component';
 import { GetBannerComponent } from './component/Banner/get-banner/get-banner.component';
 import { InsertBannerComponent } from './component/Banner/insert-banner/insert-banner.component';
 import { UPSCGSMainsSyllabusComponent } from './Component/Courses/upsc-gs-mains-syllabus/upsc-gs-mains-syllabus.component';
@@ -132,6 +133,7 @@ import {TopersAnswerCopyForIndividualComponent} from "./Component/TopersAnswerCo
 import { GetNotifictionmasterComponent } from './Component/notification-master/get-notifictionmaster/get-notifictionmaster.component';
 import { InsertNotifictionmasterComponent } from './Component/notification-master/insert-notifictionmaster/insert-notifictionmaster.component';
 import { PrintedMaterialListComponent } from './Component/PrintedMaterial/printed-material-list/printed-material-list.component';
+
 
 
 @NgModule({
@@ -241,7 +243,8 @@ import { PrintedMaterialListComponent } from './Component/PrintedMaterial/printe
     TopersAnswerCopyForIndividualComponent,
     InsertNotifictionmasterComponent,
     GetNotifictionmasterComponent,
-    PrintedMaterialListComponent
+    PrintedMaterialListComponent,
+    
     
   ],
   imports: [

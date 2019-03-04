@@ -1,3 +1,4 @@
+<!-- <div class="ng-view" autoscroll="true"></div> -->
 <section>
 <div class="row">
 <div id="mySidenav" class="sidenav">
@@ -116,7 +117,7 @@ Utter Pradesh (U.P.)- 211001 , India
    <span id="SideMenu" style="font-size:28px;cursor:pointer;width: 35px;" 
    class="fixed-top text-white p-1 bg-primary" onclick="SideMenuShow();">&#9776;</span>
 </section>
-    <router-outlet></router-outlet>
+    <router-outlet (activate)="onActivate($event)"></router-outlet>
 </div>
 
 <section>
