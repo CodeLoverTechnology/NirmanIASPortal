@@ -2,7 +2,7 @@ import {  NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { GetEnquiryComponent } from './Component/enquirycomponent/get-enquiry/get-enquiry.component';
 import { InsertEnquiryComponent } from './Component/enquirycomponent/insert-enquiry/insert-enquiry.component';
-import { LogInComponent } from './component/log-in/log-in/log-in.component';
+
 import { RegistrationComponent } from './component/registration/registration/registration.component';
 import { AboutUsComponent } from './Component/about-us/about-us.component';
 // import { NIASHomeComponent } from './component/niashome/niashome.component';
@@ -81,11 +81,17 @@ import {InsertImagevediosComponent} from "./Component/imagevedios/insert-imageve
 import {GetNotifictionmasterComponent} from "./Component/notification-master/get-notifictionmaster/get-notifictionmaster.component";
 import {InsertNotifictionmasterComponent} from "./Component/notification-master/insert-notifictionmaster/insert-notifictionmaster.component";
 import { TopersAnswerCopyListComponent } from './Component/TopersAnswerCopy/topers-answer-copy-list/topers-answer-copy-list.component';
+import {UserDashboardRoutingModule} from "./user-dashboard/user-dashboard-routing.module";
+import {LoginComponent} from "./Component/login/login.component";
+import {SignupComponent} from "./Component/signup/signup.component";
+import {GuardService} from "./Services/guard.service";
+import {UserDashboardComponent} from "./user-dashboard/user-dashboard/user-dashboard.component";
+import {UserProfileIconComponent} from "./user-dashboard/user-profile-icon/user-profile-icon.component";
 import { TopersAnswerCopyForIndividualComponent } from './Component/TopersAnswerCopy/topers-answer-copy-for-individual/topers-answer-copy-for-individual.component';
 import { UpdateBatchDetailsComponent } from './Component/BatchDetails/update-batch-details/update-batch-details.component';
 const routes: Routes = [
   {path:"",component:NIASHomeComponent},
-  {path:"login",component:LogInComponent},
+ 
   {path:"admin",component:AdminComponent,canActivate:[ActivateGuard],children:
  [
      {path:" ",component:AdminlinkComponent},
@@ -99,6 +105,11 @@ const routes: Routes = [
      {path:"admin/GetBannerList", component:GetBannerComponent},
      {path:"admin/GetSocialMediaList", component:GetSocialMediaComponent},
     {path:'',component:AdminlinkComponent},
+    {path:"dashboardmodule",loadChildren: () => UserDashboardRoutingModule  },
+  {path:"dashboard",component:UserProfileIconComponent, canActivate: [GuardService]},
+  {path:"login",component:LoginComponent},
+  {path:"signup",component:SignupComponent},
+  {path:"userdashbord",component:UserDashboardComponent}
   ]},
  // {path:"admin",component:AdminComponent,canActivate:[ActivateGuard]},
   {path:"Getmaster",component:GetMasterinfoComponent},
@@ -126,8 +137,7 @@ const routes: Routes = [
   {path:"get-category", component:GetCategoryComponent},
  {path : "get-BranchList",component:GetBranchComponent},
 {path : "InsertSocialmedia",component:InsertSocialMediaComponent},
-// {path:"admin",component:AdminComponent},
-//  {path:"login",component:LogInComponent},
+
   {path : "get-subcategory",component:GetSubCategoryComponent },
   {path : "NIAS_Geography", component:BookContentGeographyComponent},
   {path : "NIAS_Governance", component:BookContentGovernanceComponent},

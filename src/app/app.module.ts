@@ -131,6 +131,14 @@ import {TopersAnswerCopyListComponent} from "./Component/TopersAnswerCopy/topers
 import {TopersAnswerCopyForIndividualComponent} from "./Component/TopersAnswerCopy/topers-answer-copy-for-individual/topers-answer-copy-for-individual.component";
 import { GetNotifictionmasterComponent } from './Component/notification-master/get-notifictionmaster/get-notifictionmaster.component';
 import { InsertNotifictionmasterComponent } from './Component/notification-master/insert-notifictionmaster/insert-notifictionmaster.component';
+import { LoginComponent } from './Component/login/login.component';
+import { SignupComponent } from './Component/signup/signup.component';
+import {UserDashboardRoutingModule} from "./user-dashboard/user-dashboard-routing.module";
+import { UserProfileIconComponent } from './user-dashboard/user-profile-icon/user-profile-icon.component';
+import { GuardService } from './Services/guard.service';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './Services/in-memory-data.service';
+import {UserDashboardComponent} from "./user-dashboard/user-dashboard/user-dashboard.component";
 
 
 @NgModule({
@@ -239,7 +247,12 @@ import { InsertNotifictionmasterComponent } from './Component/notification-maste
     TopersAnswerCopyListComponent,
     TopersAnswerCopyForIndividualComponent,
     InsertNotifictionmasterComponent,
-    GetNotifictionmasterComponent
+    GetNotifictionmasterComponent,
+    LoginComponent,
+    SignupComponent,
+    UserProfileIconComponent,
+    UserDashboardComponent
+
     
   ],
   imports: [
@@ -251,6 +264,11 @@ import { InsertNotifictionmasterComponent } from './Component/notification-maste
     NgBusyModule,
     BrowserAnimationsModule,
     NoopAnimationsModule,
+    UserDashboardRoutingModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    )
+    
     
   ],
    providers: [ActivateGuard, AdminService, 
@@ -261,7 +279,7 @@ import { InsertNotifictionmasterComponent } from './Component/notification-maste
     BatchTopicDetailsService,NirmanResultMasterService,
     SubCategoryMasterService,BatchDetailsService,
     ImagevediosService,StudentmasterService,
-    UsermasterService],
+    UsermasterService,GuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
