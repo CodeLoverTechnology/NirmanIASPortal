@@ -89,6 +89,7 @@ import {UserDashboardComponent} from "./user-dashboard/user-dashboard/user-dashb
 import {UserProfileIconComponent} from "./user-dashboard/user-profile-icon/user-profile-icon.component";
 import { TopersAnswerCopyForIndividualComponent } from './Component/TopersAnswerCopy/topers-answer-copy-for-individual/topers-answer-copy-for-individual.component';
 import { UpdateBatchDetailsComponent } from './Component/BatchDetails/update-batch-details/update-batch-details.component';
+import { PrintedMaterialListComponent } from './Component/PrintedMaterial/printed-material-list/printed-material-list.component';
 const routes: Routes = [
   {path:"",component:NIASHomeComponent},
  
@@ -102,7 +103,7 @@ const routes: Routes = [
      {path: "admin/update-enquiry",component:UpdateEnquiryComponent},
      {path:"admin/BranchList", component:GetBranchComponent},
      {path:"admin/GetStudentmaster", component:GetStudentmasterComponent},
-     {path:"admin/GetBannerList", component:GetBannerComponent},
+    //  {path:"admin/GetBannerList", component:GetBannerComponent},
      {path:"admin/GetSocialMediaList", component:GetSocialMediaComponent},
     {path:'',component:AdminlinkComponent},
     {path:"dashboardmodule",loadChildren: () => UserDashboardRoutingModule  },
@@ -183,7 +184,10 @@ const routes: Routes = [
   {path:"insert-notification",component:InsertNotifictionmasterComponent},
   {path: "TopersAnswerCopyList",component:TopersAnswerCopyListComponent},
   {path: "TopersAnswerCopyForIndividual",component:TopersAnswerCopyForIndividualComponent},
-  { path:"UpdateBatchDetails",component:UpdateBatchDetailsComponent}
+  { path:"UpdateBatchDetails",component:UpdateBatchDetailsComponent},
+
+  { path:"PrintedMaterialList",component:PrintedMaterialListComponent}
+
 ];
 
 @NgModule({
