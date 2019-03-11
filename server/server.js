@@ -1,7 +1,15 @@
-var http = require('http');
-var formidable = require('formidable');
-var fs = require('fs');
+const path = require('path');
+const fs = require('fs');
+const express = require('express');
+const multer = require('multer');
+const bodyParser = require('body-parser')
+
 const cors = require('cors');
+
+const app = express();
+const router = express.Router();
+
+
 var corsOptions = {
   origin: '*',
   optionsSuccessStatus: 200

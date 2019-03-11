@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 // import { NgModule } from '@angular/core';
 import {  NgModule } from '@angular/core';
+import { FileSelectDirective } from 'ng2-file-upload';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -137,14 +138,17 @@ import { SignupComponent } from './Component/signup/signup.component';
 import {UserDashboardRoutingModule} from "./user-dashboard/user-dashboard-routing.module";
 import { UserProfileIconComponent } from './user-dashboard/user-profile-icon/user-profile-icon.component';
 import { GuardService } from './Services/guard.service';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+// import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './Services/in-memory-data.service';
 import {UserDashboardComponent} from "./user-dashboard/user-dashboard/user-dashboard.component";
+import { PrintedMaterialListComponent } from './Component/PrintedMaterial/printed-material-list/printed-material-list.component';
+import { UploadFilesComponent } from './Component/upload-files/upload-files.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    FileSelectDirective,
     InsertEnquiryComponent,
     GetEnquiryComponent,
     UpdateEnquiryComponent,
@@ -252,9 +256,9 @@ import {UserDashboardComponent} from "./user-dashboard/user-dashboard/user-dashb
     LoginComponent,
     SignupComponent,
     UserProfileIconComponent,
-    UserDashboardComponent
-
-    
+    UserDashboardComponent,
+    PrintedMaterialListComponent,
+    UploadFilesComponent    
   ],
   imports: [
     BrowserModule,
@@ -266,9 +270,9 @@ import {UserDashboardComponent} from "./user-dashboard/user-dashboard/user-dashb
     BrowserAnimationsModule,
     NoopAnimationsModule,
     UserDashboardRoutingModule,
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
-    )
+    // HttpClientInMemoryWebApiModule.forRoot(
+    //   InMemoryDataService, { dataEncapsulation: false }
+    // )
     
     
   ],
