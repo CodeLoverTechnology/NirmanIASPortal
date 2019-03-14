@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EnquiryModel } from 'src/app/Entity/EnquiryModel';
 import { EnquiryServiceService } from 'src/app/Services/EnquiryServices/enquiry-service.service';
-import { HttpErrorResponse } from '@Angular/common/http';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
     selector: 'app-insert-enquiry',
