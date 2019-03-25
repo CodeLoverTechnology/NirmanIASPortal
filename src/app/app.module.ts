@@ -143,6 +143,8 @@ import { InMemoryDataService } from './Services/in-memory-data.service';
 import {UserDashboardComponent} from "./user-dashboard/user-dashboard/user-dashboard.component";
 import { PrintedMaterialListComponent } from './Component/PrintedMaterial/printed-material-list/printed-material-list.component';
 import { UploadFilesComponent } from './Component/upload-files/upload-files.component';
+import { CurrentAffairsForHinduComponent } from './Component/CurrentAffairs/current-affairs-for-hindu/current-affairs-for-hindu.component';
+import { BookContentStrategyComponent } from './Component/Books/book-content-strategy/book-content-strategy.component';
 
 
 @NgModule({
@@ -258,7 +260,9 @@ import { UploadFilesComponent } from './Component/upload-files/upload-files.comp
     UserProfileIconComponent,
     UserDashboardComponent,
     PrintedMaterialListComponent,
-    UploadFilesComponent    
+    UploadFilesComponent,
+    CurrentAffairsForHinduComponent,
+    BookContentStrategyComponent    
   ],
   imports: [
     BrowserModule,

@@ -59,18 +59,24 @@ StudentDetail
 </div> -->
 
         <div class="row">
-                <div class="col-lg-5 col-md-5 col-sm-10 col-xs-10  shadow-lg " id="page">
+                <div class="col-lg-3 col-md-3 col-sm-10 col-xs-10  shadow-lg  bg-dark rounded text-white " id="page">
                    <a [routerLink]="['admin/getEnquiry'] ">
-                         <i class="fa fa-eye fa-2x " id="hide"></i>
+                         <i class="fa fa-eye " id="hide"></i>
                          Enquiry
                      </a>
                  </div>
-                 <div class="col-lg-5 col-md-5 col-sm-10 col-xs-10  shadow-lg" id="page">
+                 <div class="col-lg-3 col-md-3 col-sm-10 col-xs-10  shadow-lg bg-secondary rounded  text-white" id="page">
                      <a [routerLink]="['admin/Gallery'] " >
-                         <i class="fa fa-picture-o fa-2x" ></i>
+                         <i class="fa fa-picture-o" ></i>
                         Gallery                  
                      </a>
                  </div>
+                 <div class="col-lg-4 col-md-4 col-sm-10 col-xs-10  shadow-lg bg-primary rounded" id="page">
+                    <a [routerLink]="['admin/Gallery'] " >
+                        <i class="fa fa-news-paper" ></i>
+                       Current Affairs                  
+                    </a>
+                </div>
               </div>
 
                  <div class="row">

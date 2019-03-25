@@ -90,6 +90,8 @@ import {UserProfileIconComponent} from "./user-dashboard/user-profile-icon/user-
 import { TopersAnswerCopyForIndividualComponent } from './Component/TopersAnswerCopy/topers-answer-copy-for-individual/topers-answer-copy-for-individual.component';
 import { UpdateBatchDetailsComponent } from './Component/BatchDetails/update-batch-details/update-batch-details.component';
 import { PrintedMaterialListComponent } from './Component/PrintedMaterial/printed-material-list/printed-material-list.component';
+import { CurrentAffairsForHinduComponent } from './Component/CurrentAffairs/current-affairs-for-hindu/current-affairs-for-hindu.component';
+import { BookContentStrategyComponent } from './Component/Books/book-content-strategy/book-content-strategy.component';
 const routes: Routes = [
   {path:"",component:NIASHomeComponent},
  
@@ -186,7 +188,9 @@ const routes: Routes = [
   {path: "TopersAnswerCopyForIndividual",component:TopersAnswerCopyForIndividualComponent},
   { path:"UpdateBatchDetails",component:UpdateBatchDetailsComponent},
 
-  { path:"PrintedMaterialList",component:PrintedMaterialListComponent}
+  { path:"PrintedMaterialList",component:PrintedMaterialListComponent},
+  { path:"The-Hindu-CurrentAffairs",component:CurrentAffairsForHinduComponent},
+  { path:"BookContentStrategy",component:BookContentStrategyComponent}
 
 ];
 

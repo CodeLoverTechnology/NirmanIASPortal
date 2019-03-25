@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder,FormGroup, Validators, NgForm} from "@angular/forms";
 import { AuthenticationService } from "../../Services/authentication.service";
 import { Router, ActivatedRoute, ActivatedRouteSnapshot } from '@angular/router';
+import { Alert } from 'selenium-webdriver';
 
 @Component({
   selector: 'app-login',
@@ -25,8 +26,9 @@ export class LoginComponent implements OnInit {
   }
 
   login(formData: NgForm) {
+    debugger;
     return this.auth.login(formData).subscribe(user => {
-      console.log(user);
+      alert(user);
        this.router.navigate([this.returnUrl]);
     });
   }
