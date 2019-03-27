@@ -71,7 +71,7 @@
 
         <div class="row ">
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
-                <a [routerLink]="['/CurrentAffairs']">
+                <a [routerLink]="['/CurrentAffairs']"  target="_blank" title="Nirman IAS Daily Basis Current Affairs">
                     <div class="card shadow p-2 m-1 img-thumbnail">
                         <div class="card-body">
                             <img src="./assets/currentaffairs.webp" class="img-fluid" />
@@ -83,7 +83,19 @@
                 </a>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
-                <a [routerLink]="['/ClassNotes']">
+                <a [routerLink]="['/The-Hindu-CurrentAffairs']" target="_blank" title="Nirman IAS the Hindu Articles">
+                    <div class="card shadow p-2 m-1 img-thumbnail">
+                        <div class="card-body">
+                            <img src="./assets/TheHindu-NirmanIAS.webp" class="img-fluid" />
+                        </div>
+                        <div class="card-footer">
+                            <h4>The Hindu Article</h4>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
+                <a [routerLink]="['/ClassNotes']" target="_blank" title="Nirman IAS Class Notes">
                     <div class="card shadow p-2 m-1 img-thumbnail">
                         <div class="card-body">
                             <img src="./assets/books-512.webp" class="img-fluid" />
@@ -94,20 +106,9 @@
                     </div>
                 </a>
             </div>
+            
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
-                <a [routerLink]="['/NIAS_SpecialClasses']">
-                    <div class="card shadow p-2 m-1 img-thumbnail">
-                        <div class="card-body">
-                            <img src="./assets/NirmanIAS_Special_Classes.webp" class="img-fluid" />
-                        </div>
-                        <div class="card-footer">
-                            <h4>Special Classes</h4>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
-                <a [routerLink]="['/Books']">
+                <a [routerLink]="['/Books']" target="_blank" title="Nirman IAS Published Books for Distance Learning">
                     <div class="card shadow p-2 m-1 img-thumbnail">
                         <div class="card-body">
                             <img src="./assets/NIAS_DLP_eLearning.webp" class="img-fluid" />
@@ -119,7 +120,7 @@
                 </a>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
-                <a [routerLink]="['/NIAS_TestYourSelf']">
+                <a [routerLink]="['/NIAS_TestYourSelf']" target="_blank">
                     <div class="card shadow p-2 m-1 img-thumbnail">
                         <div class="card-body">
                             <img src="./assets/info.webp" class="img-fluid" />
@@ -131,7 +132,7 @@
                 </a>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
-                <a [routerLink]="['/NIAS_TalksAndInterview']">
+                <a [routerLink]="['/NIAS_TalksAndInterview']" target="_blank">
                     <div class="card shadow p-2 m-1 img-thumbnail">
                         <div class="card-body">
                             <img src="./assets/key.webp" class="img-fluid" />
@@ -144,7 +145,7 @@
                 </a>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
-                <a [routerLink]="['/TopersAnswerCopyList']">
+                <a [routerLink]="['/TopersAnswerCopyList']" target="_blank">
                     <div class="card shadow p-2 m-1 img-thumbnail">
                         <div class="card-body">
                             <img src="./assets/NIAS_Topper_Answer_Copy.webp" class="img-fluid" />
@@ -157,7 +158,7 @@
                 </a>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
-                <a [routerLink]="['/Magazine']">
+                <a [routerLink]="['/Magazine']" target="_blank">
                     <div class="card shadow p-2 m-1 img-thumbnail">
                         <div class="card-body">
                             <img src="./assets/NIAS_Magazine.webp" class="img-fluid" />
@@ -170,7 +171,7 @@
                 </a>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
-                <a [routerLink]="['/PrintedMaterialList']">
+                <a [routerLink]="['/PrintedMaterialList']" target="_blank">
                     <div class="card shadow p-2 m-1 img-thumbnail">
                         <div class="card-body">
                             <img src="./assets/Study-Materials.webp" class="img-fluid" />
@@ -253,7 +254,7 @@
         </div>
     </div>
 </div>
-<div class="container-fluid">
+<!-- <div class="container-fluid">
     <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
             <h2 class="bg-danger text-white text-center p-2">Current Regular GS Batch</h2>
@@ -289,7 +290,6 @@
                     <td>Mr. Niraj Kukreja</td>
                 </tr>
             </table>
-            <!-- <app-get-batch-details></app-get-batch-details> -->
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
             <h2 class="bg-danger text-white text-center p-2">Current Optional Batch</h2>
@@ -317,7 +317,7 @@
             </table>
         </div>
     </div>
-</div>
+</div> -->
 <!-- daily 7 weekly artical -->
 <div class="container-fluid">
     <div class="row bg-danger text-white">
@@ -397,9 +397,9 @@
 
 
     </div>
-    <div class="row p-2">
+    <!-- <div class="row p-2">
         <app-current-affairs-for-hindu></app-current-affairs-for-hindu>
-    </div>
+    </div> -->
 </div>
 <!--ACHIEVEMENTS-->
 <div class="container-fluid">

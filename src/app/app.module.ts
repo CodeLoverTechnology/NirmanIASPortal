@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 // import { NgModule } from '@angular/core';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import {  NgModule } from '@angular/core';
 import { FileSelectDirective } from 'ng2-file-upload';
 import { HttpClientModule } from '@angular/common/http';
@@ -262,7 +263,7 @@ import { BookContentStrategyComponent } from './Component/Books/book-content-str
     PrintedMaterialListComponent,
     UploadFilesComponent,
     CurrentAffairsForHinduComponent,
-    BookContentStrategyComponent    
+    BookContentStrategyComponent   
   ],
   imports: [
     BrowserModule,
@@ -288,7 +289,7 @@ import { BookContentStrategyComponent } from './Component/Books/book-content-str
     BatchTopicDetailsService,NirmanResultMasterService,
     SubCategoryMasterService,BatchDetailsService,
     ImagevediosService,StudentmasterService,
-    UsermasterService,GuardService],
+    UsermasterService,GuardService,{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
