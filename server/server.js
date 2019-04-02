@@ -14,7 +14,7 @@ var corsOptions = {
   origin: '*',
   optionsSuccessStatus: 200
 };
-var port =8080;
+var port =80;
 
 http.use(cors(corsOptions));
 const upload = require('./upload');
