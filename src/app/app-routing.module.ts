@@ -92,6 +92,7 @@ import { UpdateBatchDetailsComponent } from './Component/BatchDetails/update-bat
 import { PrintedMaterialListComponent } from './Component/PrintedMaterial/printed-material-list/printed-material-list.component';
 import { CurrentAffairsForHinduComponent } from './Component/CurrentAffairs/current-affairs-for-hindu/current-affairs-for-hindu.component';
 import { BookContentStrategyComponent } from './Component/Books/book-content-strategy/book-content-strategy.component';
+import { LogInComponent } from './component/log-in/log-in/log-in.component';
 const routes: Routes = [
   {path:"",component:NIASHomeComponent},
  
@@ -110,7 +111,7 @@ const routes: Routes = [
     {path:'',component:AdminlinkComponent},
     {path:"dashboardmodule",loadChildren: () => UserDashboardRoutingModule  },
   {path:"dashboard",component:UserProfileIconComponent, canActivate: [GuardService]},
-  {path:"login",component:LoginComponent},
+  {path:"login",component:LogInComponent},
   {path:"signup",component:SignupComponent},
   {path:"userdashbord",component:UserDashboardComponent}
   ]},

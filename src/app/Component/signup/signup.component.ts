@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormGroup, FormBuilder, Validators, NgForm} from "@angular/forms";
-import {User} from "../../Entity/user";
+// import {UserMaster} from "../../Entity/UserMaster";
+import { UserMaster } from "../../Entity/user-master";
 import {AuthenticationService} from "../../Services/authentication.service";
 import { Observable, of } from 'rxjs';
 import { Router } from '@angular/router';
@@ -19,10 +20,9 @@ import { Router } from '@angular/router';
   
     ngOnInit() {
       this.signupForm = this.fb.group({
-        'email':[null,[Validators.required, Validators.email]],
-      'firstName':[null,Validators.required],
-        'lastName':[null,Validators.required],
-        'password' : [null,Validators.required]
+        'UserEmailID':[null,[Validators.required, Validators.email]],
+      'UserName':[null,Validators.required],
+        'Password' : [null,Validators.required]
       });
     }
   signup(formData:NgForm){

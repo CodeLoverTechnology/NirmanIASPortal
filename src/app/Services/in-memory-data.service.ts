@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 // import { InMemoryDbService, RequestInfo, RequestInfoUtilities, ParsedRequestUrl, ResponseOptions, STATUS, getStatusText } from 'angular-in-memory-web-api';
-import {User} from "../Entity/user";
+// import {User} from "../Entity/user";
+import { UserMaster } from "../Entity/user-master";
 import { ParsedUrlQuery } from 'querystring';
 import { ParsedEvent } from '@angular/compiler';
 import { BrowserDynamicTestingModule } from '@angular/platform-browser-dynamic/testing';
@@ -10,11 +11,11 @@ import { $ } from 'protractor';
   providedIn: 'root'
 })
 export class InMemoryDataService {
-  user = {} as User;
+  user = {} as UserMaster;
   constructor() { }
   createDb() {
     const user = [
-      { id: 11, firstName:'Rahul', lastName:'Kumar', password: 'welcome', email: 'info.rajinfotech@gmail.com' },
+      { UserID: 11, UserName:'Rahul Kumar', Department:'R&D', Designation: 'R&D Head', UserEmailID: 'info.rajinfotech@gmail.com' },
       
     ];
     return {user};

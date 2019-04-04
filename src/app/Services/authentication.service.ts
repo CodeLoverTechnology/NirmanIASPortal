@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
-import { User } from "../Entity/user";
+// import { User } from "../Entity/user";
+import { UserMaster } from "../Entity/user-master";
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import {NgForm} from "@angular/forms";

@@ -6,6 +6,7 @@ export class UserMaster {
         public ContactNo  : string,
         public Department   : string,
         public Designation  : string,
+        public Password : string,
         public Remarks   : string,
         public CreatedBy  : string,
         public CreatedDate   : string,

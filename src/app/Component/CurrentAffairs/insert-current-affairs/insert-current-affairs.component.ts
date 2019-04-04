@@ -10,13 +10,16 @@ import { HttpErrorResponse } from '@angular/common/http';
 })
 export class InsertCurrentAffairsComponent implements OnInit {
   Current = {} as CurrentAffairsMasters;
+
+  CategoryList :any;
   Result: any;
     
   constructor(private _service: CurrentAffairsService) { }
-  ngOnInit() { }
+  ngOnInit() { 
+       
+  }
 
   onFormSubmit() {
-   debugger;
     this._service.postCurrentAffairs(this.Current).subscribe(
       res => this.Result = res);
      (err: HttpErrorResponse) => {
@@ -34,4 +37,5 @@ export class InsertCurrentAffairsComponent implements OnInit {
   getCurrent() {
     this.Result= this._service.getCurrentAffairsInfo();
   }
+
 }
