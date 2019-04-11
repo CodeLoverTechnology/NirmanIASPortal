@@ -4,18 +4,17 @@
             <img src="../assets/NirmanIAS_Logo.webp" class="img-thumbnail">                       
         </div>
     </div>       
-    <form enctype="multipart/form-data"method="post"#EnquiryForm="ngForm"(ngSubmit)="onSubmit()">
+    <form enctype="multipart/form-data" method="post" #EnquiryForm="ngForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
         <label>Name</label>
-    <input type="text"name="name"
-    #name="ngModel"class="form-control"[(ngModel)]="enquiry.name"placeholder="Enter Your Name"required>
-    <div class="validation-error"*ngIf="name.invalid && name.touched">This field is required.</div>
+    <input type="text"name="name" #name="ngModel" class="form-control" [(ngModel)]="enquiry.name" placeholder="Enter Your Name" required>
+    <div class="validation-error" *ngIf="name.invalid && name.touched">This field is required.</div>
     </div>
     <div class="form-group">
     <label>EmailID</label>
-    <input type="text" name="emailID" required #emailID ="ngModel"class="form-control"[(ngModel)]="enquiry.emailID"placeholder="EmailID">
+    <input type="text" name="emailID" required #emailID ="ngModel" class="form-control" [(ngModel)]="enquiry.emailID" placeholder="EmailID">
      
-    <div class="validation-error"*ngIf="emailID.invalid && emailID.touched">Email is invalid.</div>
+    <div class="validation-error" *ngIf="emailID.invalid && emailID.touched">Email is invalid.</div>
     </div>
     <div class="form-group">
     <label>ContactNo</label>

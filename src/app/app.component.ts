@@ -1,5 +1,7 @@
 import { Component, OnInit, NgModule,PLATFORM_ID, APP_ID, Inject } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { SessionStorageService } from 'ngx-webstorage';
+import {UsermasterService} from "../app/Services/UserMaster/usermaster.service";
 
 
 @Component({
@@ -13,8 +15,8 @@ export class AppComponent {
 
   title = 'Nirman IAS';
   private var_one:string;
-  
-  constructor(@Inject(PLATFORM_ID) private platformId: Object,
+  LoginUser : string;
+  constructor(@Inject(PLATFORM_ID) private platformId: Object,private localSt: SessionStorageService,private UserServices:UsermasterService,
     @Inject(APP_ID) private appId: string) { }
     onActivate(event: any) {
       if (isPlatformBrowser(this.platformId)) {
@@ -28,7 +30,14 @@ export class AppComponent {
         }, 16);
       }
     }
-ngOnInit(){ }
+ngOnInit(){
+  this.LoginUser=this.localSt.retrieve("UserName");
+ }
+
+ Logout() {
+   debugger;
+  this.UserServices.Logout();
+}
 
 }
 
@@ -43,5 +52,7 @@ function closeNav() {
   document.getElementById("main").style.marginLeft= "0";
   document.body.style.backgroundColor = "white";
 }
+
+
 
 

@@ -1,16 +1,17 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router } from '@angular/router';
-import { AdminService} from './Services/admin.service';
+import { SessionStorageService } from 'ngx-webstorage';
+// import { AdminService} from './Services/admin.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ActivateGuard implements CanActivate {
-  constructor( private _Service: AdminService, private router:Router){}
+  constructor( private router:Router,private localSt: SessionStorageService,){}
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot):  boolean {
-    if (localStorage.getItem('username')!=null) {
+    if (this.localSt.retrieve('UserEmailID')!=null) {
       return true;
     } 
     else{

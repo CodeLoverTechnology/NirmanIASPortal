@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 // import { NgModule } from '@angular/core';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+
 import {  NgModule } from '@angular/core';
 import { FileSelectDirective } from 'ng2-file-upload';
 import { HttpClientModule } from '@angular/common/http';
@@ -126,7 +127,6 @@ import { InsertStudentmasterComponent } from './Component/student-master/insert-
 import { GetUsermasterComponent } from './Component/user-master/get-usermaster/get-usermaster.component';
 import { InsertUsermasterComponent } from './Component/user-master/insert-usermaster/insert-usermaster.component';
 import {ActivateGuard} from "src/app/activate.guard";
-import {AdminService} from "./Services/admin.service";
 import {ImagevediosService} from "./Services/ImageVedios/imagevedios.service";
 import {StudentmasterService} from "./Services/StudentMaster/studentmaster.service";
 import {UsermasterService} from "./Services/UserMaster/usermaster.service";
@@ -134,7 +134,6 @@ import {TopersAnswerCopyListComponent} from "./Component/TopersAnswerCopy/topers
 import {TopersAnswerCopyForIndividualComponent} from "./Component/TopersAnswerCopy/topers-answer-copy-for-individual/topers-answer-copy-for-individual.component";
 import { GetNotifictionmasterComponent } from './Component/notification-master/get-notifictionmaster/get-notifictionmaster.component';
 import { InsertNotifictionmasterComponent } from './Component/notification-master/insert-notifictionmaster/insert-notifictionmaster.component';
-import { LoginComponent } from './Component/login/login.component';
 import { SignupComponent } from './Component/signup/signup.component';
 import {UserDashboardRoutingModule} from "./user-dashboard/user-dashboard-routing.module";
 import { UserProfileIconComponent } from './user-dashboard/user-profile-icon/user-profile-icon.component';
@@ -146,11 +145,12 @@ import { PrintedMaterialListComponent } from './Component/PrintedMaterial/printe
 import { UploadFilesComponent } from './Component/upload-files/upload-files.component';
 import { CurrentAffairsForHinduComponent } from './Component/CurrentAffairs/current-affairs-for-hindu/current-affairs-for-hindu.component';
 import { BookContentStrategyComponent } from './Component/Books/book-content-strategy/book-content-strategy.component';
+import { NgxWebstorageModule } from 'ngx-webstorage';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent,    
     FileSelectDirective,
     InsertEnquiryComponent,
     GetEnquiryComponent,
@@ -256,7 +256,6 @@ import { BookContentStrategyComponent } from './Component/Books/book-content-str
     TopersAnswerCopyForIndividualComponent,
     InsertNotifictionmasterComponent,
     GetNotifictionmasterComponent,
-    LoginComponent,
     SignupComponent,
     UserProfileIconComponent,
     UserDashboardComponent,
@@ -269,6 +268,7 @@ import { BookContentStrategyComponent } from './Component/Books/book-content-str
     BrowserModule,
     HttpClientModule,
     FormsModule,
+    NgxWebstorageModule.forRoot(),
     AppRoutingModule,
     ReactiveFormsModule,
     NgBusyModule,
@@ -281,7 +281,7 @@ import { BookContentStrategyComponent } from './Component/Books/book-content-str
     
     
   ],
-   providers: [ActivateGuard, AdminService, 
+   providers: [ActivateGuard,  
     EnquiryServiceService,ChatServicesService,
     AuthService,SocialMediaServiceService,
     CategoryMasterService,BannerMasterService,

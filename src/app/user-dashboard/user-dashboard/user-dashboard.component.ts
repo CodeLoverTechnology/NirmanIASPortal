@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {AuthenticationService} from "../../Services/authentication.service";
+import {UsermasterService} from "../../Services/UserMaster/usermaster.service";
 @Component({
   selector: 'app-user-dashboard',
   templateUrl: './user-dashboard.component.html',
@@ -7,12 +7,12 @@ import {AuthenticationService} from "../../Services/authentication.service";
 })
 export class UserDashboardComponent implements OnInit {
 
-  constructor(private auth:AuthenticationService) { }
+  constructor(private auth:UsermasterService) { }
 
   ngOnInit() {
   }
-  logout() {
-    this.auth.logout();
+  Logout() {
+    this.auth.Logout();
    // this.isloggedIn = false;
  }
 

@@ -8,7 +8,7 @@ import { HttpErrorResponse } from '@angular/common/http';
   templateUrl: './insert-batch-details.component.html',
   styleUrls: ['./insert-batch-details.component.css']
 })
-export class InsertBatchDetailsComponent implements OnInit {
+export class InsertBatchDetailsComponent implements OnInit {    
   busy: Promise<any>;
   privatevar_one: string;
   Result : any;
@@ -19,8 +19,7 @@ export class InsertBatchDetailsComponent implements OnInit {
   }
 
   onSubmit() {
-      debugger;
-    this.busy = this._service.postBatchDetails(this.batchDetails).subscribe(
+     this.busy = this._service.postBatchDetails(this.batchDetails).subscribe(
         result => this.Result = result);
     (err: HttpErrorResponse) => {
         if (err.error instanceof Error) {

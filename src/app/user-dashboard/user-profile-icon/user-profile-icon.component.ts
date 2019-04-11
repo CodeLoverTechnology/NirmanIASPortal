@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {AuthenticationService} from "../../Services/authentication.service";
+import {UsermasterService} from "../../Services/UserMaster/usermaster.service";
 @Component({
   selector: 'app-user-profile-icon',
   templateUrl: './user-profile-icon.component.html',
@@ -7,12 +7,12 @@ import {AuthenticationService} from "../../Services/authentication.service";
 })
 export class UserProfileIconComponent implements OnInit {
 
-  constructor(private auth:AuthenticationService) { }
+  constructor(private auth:UsermasterService) { }
 
   ngOnInit() {
   }
   logout() {
-    this.auth.logout();
+    this.auth.Logout();
   }
 
 }

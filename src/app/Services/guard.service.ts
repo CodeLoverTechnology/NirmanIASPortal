@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 import {CanActivate,Router, ActivatedRouteSnapshot, RouterEvent, RouterStateSnapshot} from "@angular/router";
+import { SessionStorageService } from 'ngx-webstorage';
 @Injectable({
   providedIn: 'root'
 })
 export class GuardService {
 
-  constructor(private router:Router) { }
-  canActivate( route:ActivatedRouteSnapshot, state: RouterStateSnapshot) {
-
-    if ( localStorage.getItem('currentUser')) {
+  constructor(private router:Router,private localSt: SessionStorageService) { }
+  canActivate( route:ActivatedRouteSnapshot, state: RouterStateSnapshot) {    
+    if ( this.localSt.retrieve("UserEmailID")) {
       //logged in
       return true;
     }

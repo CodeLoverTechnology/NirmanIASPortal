@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import {FormGroup, FormBuilder, Validators, NgForm} from "@angular/forms";
-// import {UserMaster} from "../../Entity/UserMaster";
-import { UserMaster } from "../../Entity/user-master";
-import {AuthenticationService} from "../../Services/authentication.service";
-import { Observable, of } from 'rxjs';
+import { UserMaster } from "src/app/Entity/user-master";
+import { UsermasterService } from "src/app/Services/UserMaster/usermaster.service";
+import { HttpErrorResponse } from '@angular/common/http';
+import { SessionStorageService } from 'ngx-webstorage';
 import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -12,24 +12,41 @@ import { Router } from '@angular/router';
 })
 
   export class SignupComponent implements OnInit {
-
-    signupForm: FormGroup;
-  
-    constructor(private fb:FormBuilder, private auth:AuthenticationService,
-      private router : Router) { }
+    busy: Promise<any>;
+    Result : any;
+    userDetailsMaster = {} as UserMaster;  
+    constructor(private UserService:UsermasterService, private localSt: SessionStorageService,private router:Router) { }
   
     ngOnInit() {
-      this.signupForm = this.fb.group({
-        'UserEmailID':[null,[Validators.required, Validators.email]],
-      'UserName':[null,Validators.required],
-        'Password' : [null,Validators.required]
-      });
+      
     }
-  signup(formData:NgForm){
-   return this.auth.signup(formData).subscribe(user => {console.log(`added user ${JSON.stringify(user)}`);
-   this.router.navigate(['login']);
-  });
-  
+    onSubmit(){
+      this.busy = this.UserService.postUser(this.userDetailsMaster).subscribe(
+        result => this.Result = result);
+    (err: HttpErrorResponse) => {
+        if (err.error instanceof Error) {
+            console.log("Server Side Error....!");
+        } else {
+            console.log("Client Side Error !");
+        }
+    }; 
+    debugger;
+    if(this.busy)
+    {
+    if(this.Result!=undefined) 
+    {
+      this.localSt.store("UserEmailID", this.Result.userEmailID);
+      this.localSt.store("UserID", this.Result.userID);
+      this.localSt.store("UserName", this.Result.userName);
+      this.localSt.store("Department", this.Result.department);
+      this.localSt.store("Designation", this.Result.designation);
+      // localStorage.setItem("username","admin");
+      this.router.navigate(['/admin']); 
+    }  
+  }
+  else{
+    alert("Please Check Information and try again...");
+  }  
   }
   }
   
