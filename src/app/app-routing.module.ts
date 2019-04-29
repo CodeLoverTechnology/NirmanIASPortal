@@ -92,6 +92,10 @@ import { PrintedMaterialListComponent } from './Component/PrintedMaterial/printe
 import { CurrentAffairsForHinduComponent } from './Component/CurrentAffairs/current-affairs-for-hindu/current-affairs-for-hindu.component';
 import { BookContentStrategyComponent } from './Component/Books/book-content-strategy/book-content-strategy.component';
 import { LogInComponent } from './component/log-in/log-in/log-in.component';
+import { InsertMasterinfoComponent } from './component/MasterInfo/insert-masterinfo/insert-masterinfo.component';
+import { relative } from 'path';
+import { DeleteEnquiryComponent } from './Component/enquirycomponent/delete-enquiry/delete-enquiry.component';
+import { ViewPDFComponent } from './Component/view-pdf/view-pdf.component';
 const routes: Routes = [
   { path: "", component: NIASHomeComponent },
 
@@ -100,28 +104,56 @@ const routes: Routes = [
       [
         { path: " ", component: AdminlinkComponent },
         { path: "admin/getEnquiry", component: GetEnquiryComponent },
-        { path: "admin/Gallery", component: GalleryNIASComponent },
+        { path: "admin/update-enquiry" , component: UpdateEnquiryComponent },        
+        { path: "admin/Delete-enquiry" , component: DeleteEnquiryComponent },
+        
         { path: "admin/get-facultyMaster", component: GetFacultyMasterComponent },
         { path: "admin/getchat", component: GetchatComponent },
-        { path: "admin/update-enquiry", component: UpdateEnquiryComponent },
         { path: "admin/BranchList", component: GetBranchComponent },
-        { path: "admin/", component: GetStudentmasterComponent },
-         {path:"admin/GetBannerList", component:GetBannerComponent},
+        { path: "admin/GetStudentmaster", component: GetStudentmasterComponent },
+        
         { path: "admin/GetSocialMediaList", component: GetSocialMediaComponent },
-        // { path: '', component: AdminlinkComponent },
+        { path: '', component: AdminlinkComponent },
         { path: "dashboardmodule", loadChildren: () => UserDashboardRoutingModule },
         { path: "dashboarGetStudentmasterd", component: UserProfileIconComponent, canActivate: [GuardService] },
-        { path: "userdashbord", component: UserDashboardComponent }
+        { path: "userdashbord", component: UserDashboardComponent },
+        { path: "admin/insert-facultyMaster", component: InsertFacultyMasterComponent },
+        { path: "admin/insert-current", component: InsertCurrentAffairsComponent },
+        { path: "admin/insert-banner", component: InsertBannerComponent },
+        { path: "admin/insert-branch", component: InsertBranchComponent },
+        { path: "admin/InsertSocialmedia", component: InsertSocialMediaComponent },
+        { path: "admin/Getmaster", component: GetMasterinfoComponent },
+        { path: "admin/InsertMaster", component: InsertMasterinfoComponent },
+        { path: "admin/get-category", component: GetCategoryComponent },
+        
+        
+        { path: "admin/insert-category", component: InsertCategoryComponent },
+        { path: "admin/get-subcategory", component: GetSubCategoryComponent },
+        { path: "admin/insert-subcategory", component: InsertSubCategoryComponent },
+        { path: "admin/insert-course", component: InsertCourceMasterComponent },
+        { path: "admin/get-usermaster", component: GetUsermasterComponent },
+        { path: "admin/insert-usermaster", component: InsertUsermasterComponent },
+        { path: "admin/insert-nirmanresult", component: InsertNirmanresultMasterComponent },
+        { path: "admin/InsertBatchInfo", component: InsertBatchDetailsComponent },
+        { path: "admin/insert-batchtopicdetail", component: InsertBatchTopicDetailsComponent },
+        { path: "admin/insert-subcategory", component: InsertSubCategoryComponent },
+        { path: "admin/insert-VideoLecture", component: InsertVideoLectureComponent },
+        { path: "admin/insert-studentmaster", component: InsertStudentmasterComponent },
+        { path: "admin/get-studentmaster", component: GetStudentmasterComponent },
+        { path: "admin/insert-notification", component: InsertNotifictionmasterComponent }, 
+        { path: "insert-imagevedio", component: InsertImagevediosComponent },
       ]
   },
+  {path:"GetBannerList", component:GetBannerComponent},
+  { path: "Gallery", component: GalleryNIASComponent },
   { path: "login", component: LogInComponent },
   { path: "signup", component: SignupComponent },
   // {path:"admin",component:AdminComponent,canActivate:[ActivateGuard]},
-  { path: "Getmaster", component: GetMasterinfoComponent },
+  
   { path: "InsertEnquiry", component: InsertEnquiryComponent },
   { path: "registration", component: RegistrationComponent },
   { path: "Aboutus", component: AboutUsComponent },
-  { path: "get-banner", component: GetBannerComponent },
+  // { path: "get-banner", component: GetBannerComponent },
   { path: "Video", component: VideoNIASComponent },
   { path: "Contact", component: ContactUsComponent },
   { path: "Magazine", component: MagazineListComponent },
@@ -138,12 +170,8 @@ const routes: Routes = [
   { path: "EnvironmentBook", component: BookContentEnvironmentComponent },
   { path: "POLITYBook", component: BookContentPOLITYComponent },
   { path: "Economics", component: BookContentEconomyComponent },
-  { path: "NIAS_TalksAndInterview", component: TalksAndInterviewComponent },
-  { path: "get-category", component: GetCategoryComponent },
-  { path: "get-BranchList", component: GetBranchComponent },
-  { path: "InsertSocialmedia", component: InsertSocialMediaComponent },
-
-  { path: "get-subcategory", component: GetSubCategoryComponent },
+  { path: "NIAS_TalksAndInterview", component: TalksAndInterviewComponent },  
+  { path: "get-BranchList", component: GetBranchComponent },   
   { path: "NIAS_Geography", component: BookContentGeographyComponent },
   { path: "NIAS_Governance", component: BookContentGovernanceComponent },
   { path: "NIAS_History", component: BookContentHistoryComponent },
@@ -158,41 +186,27 @@ const routes: Routes = [
   { path: "NIAS_ModernIndia", component: BookContentModernIndiaComponent },
   { path: "NIAS_SpecialClasses", component: SpecialClassesComponent },
   { path: "NIAS_CourseFee", component: NIASCourseFeeStrutureComponent },
-  { path: "NIAS_TestYourSelf", component: TestYourSelfComponent },
-  { path: "InsertBatchInfo", component: InsertBatchDetailsComponent },
-  { path: "insert-category", component: InsertCategoryComponent },
-  { path: "get-batchdetails", component: GetBatchDetailsComponent },
-  { path: "insert-banner", component: InsertBannerComponent },
-  { path: "insert-course", component: InsertCourceMasterComponent },
+  { path: "NIAS_TestYourSelf", component: TestYourSelfComponent },  
+  { path: "get-batchdetails", component: GetBatchDetailsComponent },  
   { path: "get-course", component: GetCourceMasterComponent },
-  { path: "insert-branch", component: InsertBranchComponent },
-  { path: "insert-nirmanresult", component: InsertNirmanresultMasterComponent },
   { path: "get-nirmanresult", component: GetNirmanresultMasterComponent },
-  // { path: '', redirectTo: '/', pathMatch:'full' }
-  { path: "insert-current", component: InsertCurrentAffairsComponent },
   { path: "get-current", component: GetCurrentAffairsComponent },
-  { path: "insert-batchtopicdetail", component: InsertBatchTopicDetailsComponent },
   { path: "get-batchtopicdetail", component: GetBatchTopicDetailsComponent },
-  { path: "insert-subcategory", component: InsertSubCategoryComponent },
   { path: "get-facultyMaster", component: GetFacultyMasterComponent },
-  { path: "insert-facultyMaster", component: InsertFacultyMasterComponent },
   { path: "get-VideoLecture", component: GetVideoLectureComponent },
-  { path: "insert-VideoLecture", component: InsertVideoLectureComponent },
-  { path: "get-studentmaster", component: GetStudentmasterComponent },
-  { path: "insert-studentmaster", component: InsertStudentmasterComponent },
-  { path: "get-usermaster", component: GetUsermasterComponent },
-  { path: "insert-usermaster", component: InsertUsermasterComponent },
   { path: "get-imagevedio", component: GetImagevediosComponent },
-  { path: "insert-imagevedio", component: InsertImagevediosComponent },
+  
   { path: "get-notification", component: GetNotifictionmasterComponent },
-  { path: "insert-notification", component: InsertNotifictionmasterComponent },
+  
   { path: "TopersAnswerCopyList", component: TopersAnswerCopyListComponent },
   { path: "TopersAnswerCopyForIndividual", component: TopersAnswerCopyForIndividualComponent },
   { path: "UpdateBatchDetails", component: UpdateBatchDetailsComponent },
 
   { path: "PrintedMaterialList", component: PrintedMaterialListComponent },
   { path: "The-Hindu-CurrentAffairs", component: CurrentAffairsForHinduComponent },
-  { path: "BookContentStrategy", component: BookContentStrategyComponent }
+  { path: "BookContentStrategy", component: BookContentStrategyComponent },
+  { path : "ViewPDF", component:ViewPDFComponent}
+
 
 ];
 

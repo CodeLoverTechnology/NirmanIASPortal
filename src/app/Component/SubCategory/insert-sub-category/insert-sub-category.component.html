@@ -7,29 +7,37 @@
    <div class="validation-error" *ngIf="CourseID.invalid && CourseID.touched">This field is required.</div>
     </div>  -->
    <div class="form-group">
+     <div></div>
+    <label>Category &nbsp;&nbsp;</label>
+          <select name="CategoryID" #CategoryID="ngModel" [(ngModel)]="Obj_SubCategory.CategoryID" class="form-control" class="dropdown p-2">
+            <option value="0">--All--</option>
+            <option *ngFor="let cat of CategoryList" id={{cat.categoryID}} value={{cat.categoryID}}>
+              {{cat.categoryName}}
+            </option>
+          </select>
+          </div>
+          <!-- <div>
         <label>CategoryID </label>
        <input type="text" name="CategoryID" #CategoryID="ngModel" class="form-control"
-       [(ngModel)]="SubCategory.CategoryID" required>
-       <div class="validation-error" *ngIf="CategoryID.invalid && CategoryID.touched">This field is required.</div>
-            </div>
-        <div>
+       [(ngModel)]="Obj_SubCategory.CategoryID" required>-->
+        <div> 
         <label>SubCategoryCode</label>
-        <input type="text" name="SubCategoryCode"  #CourseCode="ngModel" class="form-control" required [(ngModel)]="SubCategory.SubCategoryCode" >
+        <input type="text" name="SubCategoryCode"  #SubCategoryCode="ngModel" class="form-control" required [(ngModel)]="Obj_SubCategory.SubCategoryCode" >
         <div class="validation-error" *ngIf="SubCategoryCode.invalid && SubCategoryCode.touched">This field is required.</div>
         </div>
         <div>
           <label>SubCategoryName</label>
-          <textarea type="text" name="SubCategoryName"  #CourseName="ngModel" class="form-control" required [(ngModel)]="SubCategory.SubCategoryName"></textarea>
+          <input type="text" name="SubCategoryName"  #SubCategoryName="ngModel" class="form-control" required [(ngModel)]="Obj_SubCategory.SubCategoryName">
           <div class="validation-error" *ngIf="SubCategoryName.invalid && SubCategoryName.touched">This field is required.</div>
           </div>
           <div>
             <label>SubCatDescription</label>
-            <textarea type="text" name="SubCatDescription"  #SubCatDescription="ngModel" class="form-control" required [(ngModel)]="SubCategory.SubCatDescription"></textarea>
+            <input type="text" name="SubCatDescription"  #SubCatDescription="ngModel" class="form-control" required [(ngModel)]="Obj_SubCategory.SubCatDescription">
             <div class="validation-error" *ngIf="SubCatDescription.invalid && SubCatDescription.touched">This field is required.</div>
             </div>
             <div>
               <label>Sequence</label>
-              <textarea type="text" name="Sequence"  #Sequence="ngModel" class="form-control" required [(ngModel)]="SubCategory.Sequence"></textarea>
+              <input type="text" name="Sequence"  #Sequence="ngModel" class="form-control" required [(ngModel)]="Obj_SubCategory.Sequence">
               <div class="validation-error" *ngIf="Sequence.invalid && Sequence.touched">This field is required.</div>
               </div>
          <button [disabled]="!SubCategoryForm.valid" type="submit"  class="btn btn-primary btn-lg m-3">Submit Now</button> 

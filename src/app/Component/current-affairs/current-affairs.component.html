@@ -1,6 +1,28 @@
 <div class="row">
 <h2 class="container-fluid bg-danger text-white text-center p-2 m-2">Current Affairs</h2>
 <div class="container">
+    <div *ngFor="let x of CurrentAffairsList">
+        <div class="shadow p-2">
+            <div class="row">
+                    <!-- <a class="btn btn-success p-2 m-1" [routerLink]="['/../admin/admin/update-enquiry']" target="_blank"  [queryParams]="{ enquiryID: (x.enquiryID) }"> Edit</a> -->
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 rounded  p-2">
+                            <img src={{x.currentAffairsImgPath}}  class="p-1 img-fluid" style="width: 250px;height: 150px;" />
+                    </div>
+                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 rounded  p-1">
+                            <a class="btn btn-success p-2 m-1" [routerLink]="['../ViewPDF']" target="_blank"  [queryParams]="{ pdfSrc: (x.pdfPath) }"
+                            target="_blank" rel={{x.title}} title={{x.title}}
+                            class="border0 blink">
+                        <div class="p-1">
+                            <h5 class="h5">{{x.title}}</h5>                    
+                            <p class="text-justify small">{{x.summary}} </p>
+                                    <p class="fa fa-clock-o small ">{{x.modifiedDate}}</p>
+                                    <a class="float-right small"  rel={{x.title}} title={{x.title}}>Read More...</a>       
+                        </div>        
+                        </a>
+                    </div>
+            </div>
+        </div>
+        </div>
 <div class="row">
   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 p-2 shadow">
       <h2>Nirman IAS Daily Articles</h2>
@@ -12,6 +34,58 @@
             <tr>
               <td>          
                   <img src="../../../assets/new-animated-gif-4.gif" width="50" height="50" class="p-1"/>
+                  <a href="./assets/CurrentAffairs/NIAS_19_Apr_2019.pdf" target="_blank"  title="सार्वजनिक वितरण प्रणाली" rel="सार्वजनिक वितरण प्रणाली">
+                    सार्वजनिक वितरण प्रणाली 
+                  </a>               
+              </td>
+              <td>19 Apr 2019</td>
+            </tr>
+            <tr>
+              <td>          
+                  <img src="../../../assets/new-animated-gif-4.gif" width="50" height="50" class="p-1"/>
+                  <a href="./assets/CurrentAffairs/NIAS_18_Apr_2019.pdf" target="_blank"  title="बजट स्पेशल (भाग - 2) " rel="बजट स्पेशल (भाग - 2) ">
+                    बजट स्पेशल (भाग - 2)
+                  </a>               
+              </td>
+              <td>18 Apr 2019</td>
+            </tr>
+            <tr>
+              <td>          
+                  <img src="../../../assets/new-animated-gif-4.gif" width="50" height="50" class="p-1"/>
+                  <a href="./assets/CurrentAffairs/NIAS_16_Apr_2019.pdf" target="_blank"  title="जल संकट की आहट " rel="जल संकट की आहट ">
+                 जल संकट की आहट 
+                  </a>               
+              </td>
+              <td>16 Apr 2019</td>
+            </tr>
+            <tr>
+              <td>          
+                  <img src="../../../assets/new-animated-gif-4.gif" width="50" height="50" class="p-1"/>
+                  <a href="./assets/CurrentAffairs/NIAS_13_Apr_2019.pdf" target="_blank"  title="बजट स्पेशल (भाग - 1)" rel="बजट स्पेशल (भाग - 1)">
+                  बजट स्पेशल (भाग - 1)
+                  </a>               
+              </td>
+              <td>13 Apr 2019</td>
+            </tr>
+            <tr>
+              <td>          
+                  <img src="../../../assets/new-animated-gif-4.gif" width="50" height="50" class="p-1"/>
+                  <a href="./assets/CurrentAffairs/NIAS_12_Apr_2019.pdf" target="_blank"  title="राष्ट्रीय पोषण मिशन" rel="राष्ट्रीय पोषण मिशन">
+                   राष्ट्रीय पोषण मिशन
+                  </a>               
+              </td>
+              <td>12 Apr 2019</td>
+            </tr>
+            <tr>
+              <td>          
+                  <a href="./assets/CurrentAffairs/NIAS_11_Apr_2019.pdf" target="_blank"  title="सामाजिक मुद्दे : भारत में दहेज उत्पीडन व बाल - विवाह की वर्तमान स्थिति" rel="सामाजिक मुद्दे : भारत में दहेज उत्पीडन व बाल - विवाह की वर्तमान स्थिति">
+                   सामाजिक मुद्दे : भारत में दहेज उत्पीडन व बाल - विवाह की वर्तमान स्थिति
+                  </a>               
+              </td>
+              <td>11 Apr 2019</td>
+            </tr>
+            <tr>
+              <td>          
                   <a href="./assets/CurrentAffairs/CurrentAffairsTheHindu/The_Hindu_10_April_2019.pdf" target="_blank"  title="Closure on cynicism" rel="Closure on cynicism">
                     Closure on cynicism
                   </a>               
@@ -20,7 +94,6 @@
             </tr>
             <tr>
                 <td>          
-                    <img src="../../../assets/new-animated-gif-4.gif" width="50" height="50" class="p-1"/>
                     <a href="./assets/CurrentAffairs/NIAS_फेम_2_योजना.pdf" target="_blank"  title="फेम-2 योजना" rel="फेम-2 योजना">
                       फेम-2 योजना
                     </a>               
@@ -29,7 +102,6 @@
               </tr>
             <tr>
                 <td>          
-                    <img src="../../../assets/new-animated-gif-4.gif" width="50" height="50" class="p-1"/>
                     <a href="./assets/CurrentAffairs/NIAS_चुनाव_सुधार.pdf" target="_blank"  title="चुनाव सुधार" rel="चुनाव सुधार">
                       चुनाव सुधार
                     </a>               
@@ -38,7 +110,6 @@
               </tr>
               <tr>
                   <td>          
-                      <img src="../../../assets/new-animated-gif-4.gif" width="50" height="50" class="p-1"/>
                       <a href="./assets/CurrentAffairs/CurrentAffairsTheHindu/The_Hindu_08_April_2019.pdf" target="_blank"  title="IF GANDHI WERE ALIVE TODAY" rel="IF GANDHI WERE ALIVE TODAY">
                         IF GANDHI WERE ALIVE TODAY
                       </a>               
@@ -500,7 +571,7 @@
       </table>
   </div>
   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 p-2 shadow">
-      <h2>MCQ for Prelims with Current Affairs</h2>
+      <!-- <h2>MCQ for Prelims with Current Affairs</h2>
       <table class="table table-hover table-fluid">
           <tr>
               <th>MCQ Paper</th>
@@ -508,8 +579,41 @@
               <th>Updated Date</th>
             </tr>
             <tr>
+              <td>          
+                  <img src="../../../assets/new-animated-gif-4.gif" width="50" height="50" class="p-1"/>
+                  <a href="./assets/CurrentAffairs/NIAS_MCQ/NIAS_MCQ17.pdf" target="_blank">
+                    समसामयिकी टेस्ट 17 प्रश्न + उत्तर
+                  </a>               
+              </td>
+              <td>
+                 
+              </td>
+              <td>17 APR 2019</td>
+            </tr>
+            <tr>
+              <td>          
+                  <a href="./assets/CurrentAffairs/NIAS_MCQ/NIAS_MCQ16.pdf" target="_blank">
+                    समसामयिकी टेस्ट 16 प्रश्न + उत्तर
+                  </a>               
+              </td>
+              <td>
+                 
+              </td>
+              <td>16 APR 2019</td>
+            </tr>
+            <tr>
+              <td>          
+                  <a href="./assets/CurrentAffairs/NIAS_MCQ/NIAS_MCQ15.pdf" target="_blank">
+                    समसामयिकी टेस्ट 15 प्रश्न + उत्तर
+                  </a>               
+              </td>
+              <td>
+                 
+              </td>
+              <td>13 APR 2019</td>
+            </tr>
+            <tr>
                 <td>          
-                    <img src="../../../assets/new-animated-gif-4.gif" width="50" height="50" class="p-1"/>
                     <a href="./assets/CurrentAffairs/NIAS_MCQ/NIAS_MCQ14.pdf" target="_blank">
                       समसामयिकी टेस्ट 14 प्रश्न + उत्तर
                     </a>               
@@ -521,7 +625,6 @@
               </tr>
               <tr>
                   <td>          
-                      <img src="../../../assets/new-animated-gif-4.gif" width="50" height="50" class="p-1"/>
                       <a href="./assets/CurrentAffairs/NIAS_MCQ/NIAS_MCQ13.pdf" target="_blank">
                         समसामयिकी टेस्ट 13 प्रश्न + उत्तर
                       </a>               
@@ -684,7 +787,7 @@
               </td>
               <td>15 Mar 2019</td>
             </tr>
-      </table>
+      </table> -->
   </div>
   </div>
 </div>

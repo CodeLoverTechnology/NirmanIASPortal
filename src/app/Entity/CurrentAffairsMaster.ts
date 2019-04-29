@@ -7,6 +7,7 @@ export class CurrentAffairsMasters{
         public Summary: string,
         public PDFPath: string,
         public CurrentAffairsImgPath: string,
+        public VideoLink :string,
         public IsNew : boolean,
         public NoOfView: number,
         public SpecialRemarks   :   string,

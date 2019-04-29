@@ -16,7 +16,6 @@ export class CurrentAffairsService {
   }
 
    postCurrentAffairs(Current: CurrentAffairsMasters):any{
-     debugger;
     return this._http.post<any>(this.BaseURL+"CurrentAffairsMasters/CreateCurrentAffairsMasters",Current);
   }
 }

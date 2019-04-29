@@ -10,21 +10,30 @@ import {HttpErrorResponse} from "@angular/common/http";
 export class InsertNirmanresultMasterComponent implements OnInit {
 
   Results = {} as NirmanResultMasters;
-
+  busy: Promise<any>;
   constructor(private _service:NirmanResultMasterService) { }
   ngOnInit(){ }
   onFormSubmit()
   {
-    debugger;
-    this._service.postNirmanResults(this.Results).subscribe(
-   result => console.log('Success !!!.',result),
+    this.Results.IsNew=true;
+    this.busy = this._service.postNirmanResults(this.Results).subscribe(
+   result => this.Results = result);
       (err:HttpErrorResponse)=>{
      if(err.error instanceof Error){
             console.log("Server Side Error....!");
           }else{
             console.log("Client Side Error   !");
           }
-        }) 
-        debugger;
-      console.log(this.Results);
-    }}
+        };
+        if(this.busy)
+        {
+          alert("NIrman IAS Result Added Successfully.");
+          this.Results = {} as NirmanResultMasters;
+        //this.router.navigate(['/get-current']);
+        }
+        else{
+          alert("NIrman IAS Result not Added.");
+        }
+    
+    }
+  }

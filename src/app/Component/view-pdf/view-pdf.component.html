@@ -1,0 +1,14 @@
+<div class="row bg-light">
+  <div class="col-lg-8 col-mg-8 col-sm-12 col-xs-12 text-center bg-secondary">
+      <a href={{pdfSrc}} target="_blank" class="btn-success text-white p-2 m-2">
+          <i class="fa fa-download text-white" aria-hidden="true"></i>&nbsp; Open For Download</a>
+        <pdf-viewer [src]="pdfSrc" [render-text-mode]="1"  [show-all]="true" [stick-to-page]="true" [render-text]="true" [render-text-mode]="1" [original-size]="true" style="display: block;"
+          ></pdf-viewer>
+  </div>
+  <div class="col-lg-4 col-mg-4 col-sm-12 col-xs-12 shadow">
+    <app-insert-enquiry></app-insert-enquiry>
+    <hr>
+    <app-current-affairs-for-hindu></app-current-affairs-for-hindu>
+  </div>
+  
+</div>

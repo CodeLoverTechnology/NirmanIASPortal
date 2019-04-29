@@ -11,6 +11,7 @@ export class StudentMaster {
         public ValidityStartDate  : string,
         public ValidityEndDate  : string,
         public Branch  : string,
+        public Password : string,
         public Remarks  : string,
         public CreatedBy  : string,
         public CreatedDate  : string,

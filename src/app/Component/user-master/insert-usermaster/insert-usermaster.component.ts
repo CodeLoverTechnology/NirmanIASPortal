@@ -9,23 +9,25 @@ import {HttpErrorResponse} from "@angular/common/http";
 })
 export class InsertUsermasterComponent implements OnInit {
 
-  usermaster = {} as UserMaster;
-
+  Objuser = {} as UserMaster;
+  public Response : any;
+  busy: Promise<any>;
   constructor(private _service:UsermasterService) { }
   ngOnInit(){ }
+
   onFormSubmit()
   {
     debugger;
-    this._service.postUser(this.usermaster).subscribe(
-   result => console.log('Success !!!.',result),
+    this.busy == this._service.postUser(this.Objuser).subscribe(
+   result => this.Response = result);
       (err:HttpErrorResponse)=>{
      if(err.error instanceof Error){
             console.log("Server Side Error....!");
           }else{
             console.log("Client Side Error   !");
           }
-        }) 
+        };
         debugger;
-      console.log(this.usermaster);
+      console.log(this.Response);
     }}
 

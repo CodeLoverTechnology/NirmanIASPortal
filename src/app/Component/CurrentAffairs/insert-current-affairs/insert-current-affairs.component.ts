@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { CurrentAffairsMasters } from 'src/app/Entity/CurrentAffairsMaster';
 import { CurrentAffairsService } from '../../../Services/CurrentAffairs/current-affairs.service';
+import { CategoryMasterService } from '../../../Services/CategoryMaster/category-master.service';
+import { SubCategoryMasterService } from '../../../Services/SubCategoryService/sub-category-master.service';
 import { HttpErrorResponse } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-insert-current-affairs',
@@ -10,32 +13,61 @@ import { HttpErrorResponse } from '@angular/common/http';
 })
 export class InsertCurrentAffairsComponent implements OnInit {
   Current = {} as CurrentAffairsMasters;
-
-  CategoryList :any;
+  busy: Promise<any>;
+  CategoryList: any;
+  SubCategoryList : any;
   Result: any;
-    
-  constructor(private _service: CurrentAffairsService) { }
+      
+  constructor(private _service: CurrentAffairsService,private router: Router,
+    private _Categoryservice:CategoryMasterService,private _SubCategoryservice:SubCategoryMasterService) { }
   ngOnInit() { 
-       
+    this.GetCategoryList();
   }
 
   onFormSubmit() {
-    this._service.postCurrentAffairs(this.Current).subscribe(
+    this.Current.IsNew=true;
+    this.busy =this._service.postCurrentAffairs(this.Current).subscribe(
       res => this.Result = res);
      (err: HttpErrorResponse) => {
-    if (err.error instanceof Error) {
-      
+    if (err.error instanceof Error) {      
       alert(' server error');
-      //console.log("Server Side Error....!");
     } else {
       alert('Client error');
-      //console.log("Client Side Error !");
     }
-    //this.getCurrent();
-  };
-  }
-  getCurrent() {
-    this.Result= this._service.getCurrentAffairsInfo();
+   };
+  if(this.busy)
+    {
+      alert("Current Affairs Added Successfully.");
+      this.Current={} as CurrentAffairsMasters;
+    //this.router.navigate(['/get-current']);
+    }
+    else{
+      alert("Current Affairs not Added.");
+    }
+    
   }
 
+  GetCategoryList()
+  {
+    this._Categoryservice.getCategoryMaster().subscribe(res=>this.CategoryList=res);
+    (err:HttpErrorResponse)=>{
+      if(err.error instanceof Error){
+        console.log("Server Side Error !");
+  }else{
+      console.log("Client Side Error   !");
+  }
+  }
+}
+
+GetSubCategory()
+{
+  this._SubCategoryservice.getsubcategoryInfo().subscribe(res=>this.SubCategoryList=res);
+    (err:HttpErrorResponse)=>{
+      if(err.error instanceof Error){
+        console.log("Server Side Error !");
+  }else{
+      console.log("Client Side Error   !");
+  }
+}
+}
 }

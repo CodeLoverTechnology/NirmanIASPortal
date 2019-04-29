@@ -2,7 +2,7 @@ export class NotificationMaster {
     constructor(
         public NotificationID : number,
         public Category : number,
-        public Notification : string,
+        public NotificationTitle : string,
         public Description : string,
         public ImagePath : string,
         public MoreDetailsFilePath : string,

@@ -11,128 +11,146 @@
 
 <!-- <div class="ng-view" autoscroll="true"></div> -->
 <section>
-<div class="row">
+<!--<div class="row">
 <div id="mySidenav" class="sidenav">
-    <app-side-menu></app-side-menu>
+     <app-side-menu></app-side-menu> 
 </div>
-</div>
+</div>-->
+<div class="row navbar navbar-expand-lg navbar-dark bg-light text-center"> 
+  <div class="col-lg-2 col-md-2 col-sm-10 col-xs-10">
+    <a class="navbar-brand p-0 m-0" href="/" >
+        <img src="../assets/NIAS_Logo.png" class="img-fluid rounded-circle" style="max-width:200px;max-height: 100px;">
+        <!-- <img src="../assets/NIAS.png" class="img-fluid rounded" style="max-width:200px;max-height: 100px;"> -->
+ </a>
+  </div>  
+  <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light text-black-50 text-center stroke fill circle">
+        
 
-<div class="row navbar navbar-expand-lg navbar-dark bg-primary text-white text-center">  
-    <a [routerLink]="['/']"  class="navbar-brand p-1 ml-4" title="NIRMAN IAS Home"><i class="fa fa-home" aria-hidden="true"></i>&nbsp; NIRMAN IAS &nbsp; &nbsp; &nbsp; &nbsp;</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse text-uppercase w-100 " id="navbarSupportedContent">
-        <ul class="navbar-nav">
+        <button class="navbar-toggler text-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon bg-dark"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <div class="col-lg-2 col-md-2 d-none d-sm-block text-right">
-                        <i class="fa fa-map-marker" data-toggle="tooltip" data-placement="bottom"  title="
-                    
-===============================
-Nirman IAS Head Office - Delhi
-===============================
-H.No : 996 1st Floor,
-Mukherjee Nagar,
-(Near Gandhi Vihar Bandh)
-Delhi-110009, India 
-
- Info@nirmanias.com
- nirmanias07@gmail.com
- (+91) 11 4705-8219
- (+91) 95406-76789
- (+91) 97177-67797
-===============================
-
-                        ">&nbsp;&nbsp;Delhi</i>
-                </div>
+              <a [routerLink]="['']" class="nav-link" >
+                  <i class="fa fa-home" aria-hidden="true"></i><br>
+                   Home<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <div class="col-lg-2 col-md-2  d-none d-sm-block">
-                        <i class="fa fa-map-marker" data-toggle="tooltip" data-placement="bottom"  title="
-===============================
-      Gwalior Nirman IAS
-===============================
-2/3 Aziz Complex, 
-New Khera Pati Colony 
-Phool Bagh Gwalior, (MP)- 474001 , India
-
-jaipurnias@nirmanias.com
-(+91) 97530-02277
-===============================
-                        ">&nbsp;&nbsp;Gwalior</i>
-                </div>
+                 <a [routerLink]="['/Aboutus']" class="nav-link" >
+                    <i class="fa fa-lightbulb-o" aria-hidden="true"></i> <br>
+                    About Us</a>               
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
+              <i class="fa fa-book" aria-hidden="true"></i><br>
+                   Courses
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a [routerLink]="['/UPSC_Course']" class="dropdown-item">
+                        <i class="fa fa-book" aria-hidden="true"></i>
+                        UPSC Courses</a>
+                        <a [routerLink]="['/NIAS_CourseFee']"   class="dropdown-item">
+                            <i class="fa fa-book" aria-hidden="true"></i>
+                            Course Fee</a>
+                            <a [routerLink]="['/StatePCS']"   class="dropdown-item">
+                                <i class="fa fa-book" aria-hidden="true"></i>
+                                State PCS</a>
+                                <a [routerLink]="['/TestSeries']"   class="dropdown-item">
+                                    <i class="fa fa-book" aria-hidden="true"></i>
+                                    Test Series</a>               
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
+              <i class="fa fa-book" aria-hidden="true"></i><br>
+              Current Affairs
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a [routerLink]="['/CurrentAffairs']" class="dropdown-item">
+                        <i class="fa fa-book" aria-hidden="true"></i>
+                        Daily Current Article</a>
+                        <a [routerLink]="['/The-Hindu-CurrentAffairs']"   class="dropdown-item">
+                            <i class="fa fa-book" aria-hidden="true"></i>
+                            The Hindu Article</a>
+                            <a [routerLink]="['/CurrentAffairs']"   class="dropdown-item">
+                                <i class="fa fa-book" aria-hidden="true"></i>
+                                Current MCQ</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
+              <i class="fa fa-picture-o" aria-hidden="true"></i><br>
+              Gallery
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a [routerLink]="['/Gallery']" class="dropdown-item">
+                      <i class="fa fa-picture-o" aria-hidden="true"></i>
+                        Photo Gallery</a>
+                        <a [routerLink]="['/Video']"   class="dropdown-item">
+                          <i class="fa fa-video-camera" aria-hidden="true"></i>
+                            Video Gallery</a>
+                       </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
+              <i class="fa fa-picture-o" aria-hidden="true"></i><br>
+              NCERT
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a [routerLink]="['#']" class="dropdown-item">
+                      <i class="fa fa-picture-o" aria-hidden="true"></i>
+                      NCERT Books</a>
+                        <a [routerLink]="['#']"   class="dropdown-item">
+                          <i class="fa fa-video-camera" aria-hidden="true"></i>
+                          NCERT Test</a>
+                       </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
+              <i class="fa fa-picture-o" aria-hidden="true"></i><br>
+              schedules
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a [routerLink]="['#']" class="dropdown-item">
+                      <i class="fa fa-picture-o" aria-hidden="true"></i>
+                      Batch schedule</a>
+                        <a [routerLink]="['#']"   class="dropdown-item">
+                          <i class="fa fa-video-camera" aria-hidden="true"></i>
+                          Test Series schedule</a>
+                       </div>
             </li>
             <li class="nav-item">
-                <div class="col-lg-2 col-md-2  d-none d-sm-block">
-                        <i class="fa fa-map-marker" data-toggle="tooltip" data-placement="bottom"  title="
-===============================
-       Jaipur Nirman IAS
-===============================
-Hindaun Heights 57,
-Riddhi Siddhi Gopalpura Bypass,
-Jaipur- 302019 , India
-
-gwaliornias@nirmanias.com
-(+91) 80942-25566
-(+91) 96805-13367
-===============================
-                        ">&nbsp;&nbsp;Jaipur</i>
-                </div>
+                    <a [routerLink]="['/Contact']"  class="nav-link" ><i class="fa fa-info-circle"  aria-hidden="true"></i><br> Contact</a>
             </li>
             <li class="nav-item">
-                <div class="col-lg-2 col-md-2  d-none d-sm-block">
-                        <i class="fa fa-map-marker" data-toggle="tooltip" data-placement="bottom"  title="
-===============================
-      Prayagraj Nirman IAS
-===============================
-10/14, Elgin Road, 
-Civil Line, Prayagraj(Allahabad)
-Utter Pradesh (U.P.)- 211001 , India
+                    <a [routerLink]="['/login']" class="nav-link"><i class="fa fa-user-circle"  aria-hidden="true"></i><br> Login</a>                                
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <a href="https://onlinetest.nirmanias.com" target="_blank" rel="NIRMAN IAS" title="NIRMAN IAS Online Test" class="bg-primary text-white p-2 text-bold rounded">Nirman IAS Online Test</a>
+  </div>  
 
- nirmaniasald@gmail.com
- prayagrajnias@nirmanias.com
- (+91) 99844-74888
-===============================
-                         ">&nbsp;&nbsp;Prayagraj</i>
-                </div>
-            </li>
-            <li class="nav-item">
-                <div class="col-lg-2 col-md-2  d-none d-sm-block">
-                    <a href="mailto:info@nirmanias.com" target="_blank">
-                        <i class="fa fa-envelope text-white">&nbsp;&nbsp;info@nirmanias.com</i>
-                    </a>
-                </div>
-            </li>
-            <li class="nav-item">
-                <div class="col-lg-2 col-md-2  col-sm-12 col-xs-12 text-center">
-                        
-                    <!-- <a class="btn-info mt-2 p-2" href=""><small>हिंदी</small></a>
-                    <a class="btn-info active p-2  mt-1" href=""><small>ENG</small></a> -->
-                </div>
-            </li>
-        </ul>
-        &nbsp; &nbsp; &nbsp; &nbsp;
-        <!-- <form class="form-inline float-right">
-                <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search.." aria-label="Search" aria-describedby="basic-addon2">
-                        <div class="input-group-append">
-                          <span class="fa fa-search btn btn-danger" id="Search" title="Search"></span>
-                        </div>
-                      </div>
-        </form> -->
-    </div>    
-    <!-- <a href="" class="bg-danger text-white p-1 text-bold rounded border0 mr-1">{{LoginUser}}</a>
-    <button (click)="callComponentMethodHere()">Logout</button> -->   
-    <a href="https://onlinetest.nirmanias.com" target="_blank" rel="NIRMAN IAS" title="NIRMAN IAS Online Test" class="bg-danger text-white p-1 text-bold rounded">Online Test</a>
+  <div class="col-lg-2 col-md-2 col-sm-10 col-xs-10">
+    <img src="../assets/NIAS.png" class="img-fluid rounded" style="max-width:200px;max-height: 100px;">
+  </div>
+      
+</div>
 
-</div>        
-</section>
+   </section>
 <div id="main">
-    <section>
+    <!-- <section>
    <span id="SideMenu" style="font-size:28px;cursor:pointer;width: 35px;" 
    class="fixed-top text-white p-1 bg-primary" onclick="SideMenuShow();">&#9776;</span>
-</section>
+</section> -->
     <router-outlet (activate)="onActivate($event)"></router-outlet>
 </div>
 
@@ -141,7 +159,9 @@ Utter Pradesh (U.P.)- 211001 , India
 
 <!-- SocialIcon -->
 <div class="icon-bar">
-    <a href="https://www.youtube.com/channel/UCgJnU1HmRZkRzoyzJVRgq8w?sub_confirmation=1" target="_blank" class="youtube">
+    <a href="https://play.google.com/store/apps/details?id=com.nirmanias" target="_blank" class="google">
+      <img src="../assets/PlayGoogle.jpg" width="20px" height="20px" class="rounded"></a>
+    <a href="https://www.youtube.com/user/nirmanias?sub_confirmation=1" target="_blank" class="youtube">
         <i class="fa fa-youtube-play" aria-hidden="true"></i></a>
     <a href="https://www.facebook.com/nirman.ias" target="_blank" class="facebook">
         <i class="fa fa-facebook-official" aria-hidden="true"></i></a>

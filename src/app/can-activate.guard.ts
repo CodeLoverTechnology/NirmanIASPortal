@@ -3,8 +3,7 @@ import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angul
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
-  
+  providedIn: 'root'  
 })
 
 

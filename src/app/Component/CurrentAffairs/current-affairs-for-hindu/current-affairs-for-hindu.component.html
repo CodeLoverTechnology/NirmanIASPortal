@@ -1,10 +1,41 @@
 <div class="row">
-  <h2 class="container-fluid bg-danger text-white text-center p-2 m-2">Current Affairs</h2>
-  
-  <div class="container-fluid">
-  
-  <div class="row p-2 shadow">
-        <h2>Nirman IAS The Hindu Articles in Hindi PDF</h2>
+  <h2 class="container-fluid bg-danger text-white text-center p-2 m-2">The Hindu Articles : Nirman IAS</h2>
+  <div class="container [ngBusy]">
+      <div *ngFor="let x of TheHinduNews">
+          <div class="shadow p-2">
+              <div class="row">
+                      <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 rounded  p-2">
+                              <img src={{x.currentAffairsImgPath}}  class="p-1 img-fluid" />
+                      </div>
+                      <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 rounded  p-1">                              
+                          <div class="p-1">
+                              <h5 class="h5">{{x.title}}</h5>                    
+                              <p class="text-justify small">{{x.summary}} </p>
+                                      <div class="p-2 container">
+                                              <a href={{x.pdfPath}}
+                                              target="_blank" rel={{x.title}} title={{x.title}}
+                                              class="border0 blink  p-2 m-2">
+                                              <i class="fa fa-file-pdf-o  fa-3x "  aria-hidden="true"></i>
+                                            </a>
+                                            <a href={{x.videoLink}}
+                                                target="_blank" rel={{x.title}} title={{x.title}}
+                                                class="border0 blink p-2 m-2">
+                                                <i class="fa fa-file-video-o fa-3x" aria-hidden="true"></i>
+                                              </a>
+                                            <br>
+                                            <p class="fa fa-clock-o small  p-2 m-2 ">{{x.modifiedDate}}</p>
+                                            <a [routerLink]="['../ViewPDF']" target="_blank"  [queryParams]="{ pdfSrc: (x.pdfPath) }" class="small p-2 btn-success"  rel={{x.title}} title={{x.title}}>Read More...</a>        
+                                          </div>
+                                     </div>        
+                          
+                      </div>
+              </div>
+          </div>
+          </div>
+
+
+
+  <!-- <div class="row p-2 shadow">
         <table class="table table-hover table-fluid">
             <tr>
                 <th>Topics</th>
@@ -13,6 +44,73 @@
               <tr>
                 <td>          
                     <img src="../../../assets/new-animated-gif-4.gif" width="50" height="50" class="p-1"/>
+                    <a href="./assets/CurrentAffairs/CurrentAffairsTheHindu/The_Hindu_19_April_2019.pdf" target="_blank"  title="HARD LANDING ( जेट एयरवेज ) पेपर - 3 अवसंरचना" rel="HARD LANDING ( जेट एयरवेज ) पेपर - 3 अवसंरचना">
+                      HARD LANDING ( जेट एयरवेज ) पेपर - 3 अवसंरचना
+                    </a>               
+                </td>
+                <td>19 Apr 2019</td>
+              </tr>
+              <tr>
+                <td>          
+                    <img src="../../../assets/new-animated-gif-4.gif" width="50" height="50" class="p-1"/>
+                    <a href="./assets/CurrentAffairs/CurrentAffairsTheHindu/The_Hindu_18_April_2019.pdf" target="_blank"  title="A Crisis of credibilty" rel="A Crisis of credibilty">
+                      A Crisis of credibilty
+                    </a>               
+                </td>
+                <td>18 Apr 2019</td>
+              </tr>
+              <tr>
+                <td>          
+                    <img src="../../../assets/new-animated-gif-4.gif" width="50" height="50" class="p-1"/>
+                    <a href="./assets/CurrentAffairs/CurrentAffairsTheHindu/The_Hindu_17_April_2019.pdf" target="_blank"  title="17 वें लोकसभा चुनाव व आचार संहिता" rel="17 वें लोकसभा चुनाव व आचार संहिता">
+                      17 वें लोकसभा चुनाव व आचार संहिता
+                    </a>               
+                </td>
+                <td>17 Apr 2019</td>
+              </tr>
+              <tr>
+                <td>          
+                    <a href="./assets/CurrentAffairs/CurrentAffairsTheHindu/The_Hindu_16_April_2019.pdf" target="_blank"  title="A FRESH WARNING" rel="A FRESH WARNING">
+                      A FRESH WARNING
+                    </a>               
+                </td>
+                <td>16 Apr 2019</td>
+              </tr>
+              <tr>
+                <td>          
+                    <a href="./assets/CurrentAffairs/CurrentAffairsTheHindu/The_Hindu_15_April_2019.pdf" target="_blank"  title="Necessary Steps to ending poverty" rel="Necessary Steps to ending poverty">
+                      Necessary Steps to ending poverty
+                    </a>               
+                </td>
+                <td>15 Apr 2019</td>
+              </tr>
+              <tr>
+                  <td>          
+                      <a href="./assets/CurrentAffairs/CurrentAffairsTheHindu/The_Hindu_13_April_2019.pdf" target="_blank"  title="Electoral Bond" rel="Electoral Bond">
+                        Electoral Bond
+                      </a>               
+                  </td>
+                  <td>13 Apr 2019</td>
+                </tr>
+              <tr>
+                <td>          
+                    <a href="./assets/CurrentAffairs/CurrentAffairsTheHindu/The_Hindu_12_April_2019.pdf" target="_blank"  title="'Deep regret' is simply not good enough" rel="'Deep regret' is simply not good enough">
+                      'Deep regret' is simply not good enough
+                    </a>               
+                </td>
+                <td>12 Apr 2019</td>
+              </tr>
+              <tr>
+                <td>          
+                    <a href="./assets/CurrentAffairs/CurrentAffairsTheHindu/The_Hindu_11_April_2019.pdf" target="_blank"  title="ब्लैक होल" rel="ब्लैक होल">
+                      ब्लैक होल
+                    </a>               
+                </td>
+                <td>11 Apr 2019</td>
+              </tr>
+
+              <tr>
+                <td>          
                     <a href="./assets/CurrentAffairs/CurrentAffairsTheHindu/The_Hindu_10_April_2019.pdf" target="_blank"  title="Closure on cynicism" rel="Closure on cynicism">
                       Closure on cynicism
                     </a>               
@@ -21,7 +119,6 @@
               </tr>
               <tr>
                 <td>          
-                    <img src="../../../assets/new-animated-gif-4.gif" width="50" height="50" class="p-1"/>
                     <a href="./assets/CurrentAffairs/CurrentAffairsTheHindu/The_Hindu_09_April_2019.pdf" target="_blank"  title="Open up supreme court" rel="Open up supreme court">
                       Open up supreme court
                     </a>               
@@ -155,6 +252,6 @@
              
              
                </table>
-    </div>
+    </div> -->
     </div>
   </div>

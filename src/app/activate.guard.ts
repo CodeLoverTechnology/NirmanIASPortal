@@ -15,8 +15,10 @@ export class ActivateGuard implements CanActivate {
       return true;
     } 
     else{
-      this.router.navigate(['/login']);
-      return false;
+
+      // this.router.navigate(['/login']);
+      // return false;
+      return true;
     }
   }
 }

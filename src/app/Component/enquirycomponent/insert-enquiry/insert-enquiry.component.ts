@@ -12,12 +12,14 @@ export class InsertEnquiryComponent implements OnInit {
     busy: Promise<any>;
     privatevar_one: string;
     enquiry = {} as EnquiryModel;
+    private EnquiryResult :EnquiryModel;
 
     constructor(private _service: EnquiryServiceService) { }
     ngOnInit() { }
     onSubmit() {
+        debugger;
         this.busy = this._service.postEnquiry(this.enquiry).subscribe(
-            result => this.enquiry = result);
+            result => this.EnquiryResult = result);
         (err: HttpErrorResponse) => {
             if (err.error instanceof Error) {
                 console.log("Server Side Error....!");
@@ -25,11 +27,11 @@ export class InsertEnquiryComponent implements OnInit {
                 console.log("Client Side Error !");
             }
         };
-        alert('Dear Student Your Enquiry has Submited to NIRMAN IAS. We Well get back to you soon!!!...Enquiry ID : ' + this.enquiry["enquiryID"]);
+        alert('Dear Student Your Enquiry has Submited to NIRMAN IAS. We Well get back to you soon!!!...Enquiry ID : ' + this.EnquiryResult["enquiryID"]);
         closeNav();
     }
 
 }
 function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("mySidenav1").style.width = "0";
 }

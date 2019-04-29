@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class EnquiryServiceService {
-  BaseURL: string = "http://nias.codelovertechnology.com/api/";
+  BaseURL: string = "http://NIAS.codelovertechnology.com/api/";
 
   selectedEnquiry: { Name: string; EmailID: string; Contact: string; EnquiryMessage: string; };
   constructor(private _http:HttpClient){}
@@ -17,16 +17,17 @@ export class EnquiryServiceService {
   }
 
   public getEnquiryById(enquiryID: number):any{
-    return this._http.get(this.BaseURL + "api/SocialMediaMasters/SocialMediaMastersDetails/{id}" + enquiryID);
+    return this._http.get(this.BaseURL + "Enquiry/EnquiryDetails/" + enquiryID);
   }
   public postEnquiry(enquiry : EnquiryModel):any{
     return this._http.post<any>(this.BaseURL+"Enquiry/CreateEnquiry",enquiry);
   }
 
    public  updateEnquiry(Enquiry : EnquiryModel):any{
-  return this._http.put<any>(this.BaseURL + "Enquiry/UpdateEnquiry" + Enquiry.enquiryID,Enquiry);
+     debugger;
+  return this._http.put<any>(this.BaseURL + "Enquiry/UpdateEnquiry",Enquiry);
   }
   public  deleteEnquiry(EnquiryID: number):any {
-    return this._http.delete<any>(this.BaseURL + "Enquiry/DeleteEnquiry/{id}" + EnquiryID);
+    return this._http.delete<any>(this.BaseURL + "Enquiry/DeleteEnquiry/" + EnquiryID);
   }
 }

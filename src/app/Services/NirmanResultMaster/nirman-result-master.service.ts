@@ -16,7 +16,7 @@ export class NirmanResultMasterService {
     return this._http.get(this.BaseURL+"NirmanResultMasters/NirmanResultMastersList");
   }
 
-  public postNirmanResults(Results : NirmanResultMasters){
+  public postNirmanResults(Results : NirmanResultMasters):any{
     return this._http.post<any>(this.BaseURL+"NirmanResultMasters/CreateNirmanResultMasters",Results);
   }
 }

@@ -17,7 +17,7 @@ export class SubCategoryMasterService {
     return this._http.get(this.BaseURL+"SubCategoryMaster/SubCategoryMasterList");
   }
 
-  public postsubcategory(SubCategory: SubCategoryMaster){
+  public postsubcategory(SubCategory: SubCategoryMaster):any{
     return this._http.post<any>(this.BaseURL+"SubCategoryMaster/CreateSubCategoryMaster",SubCategory);
   }
 }

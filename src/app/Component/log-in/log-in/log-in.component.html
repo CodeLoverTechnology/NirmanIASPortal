@@ -1,4 +1,4 @@
-<div class="row" id="login">
+<!-- <div class="row" id="login">
     <div class=" offset-lg-3 col-lg-6 col-md-6 col-sm-6 col-xs-6">
       <div class="card">
        <div class="card-header text-center text-white bg-danger">
@@ -34,8 +34,7 @@
        <div class="form-group">
           <label class="control-label" for="login"></label>
           <div class="input-group">
-          <!-- <button class="btn btn-dark form-control hideBtn" id="login" type="submit" routerLink="../admin" [routerLink]="['/admin']"> Log in</button>   -->
-         <button class="btn btn-dark form-control" (click)="check(u1.value,p1.value)" type="submit" >Log In</button>  
+        <button class="btn btn-dark form-control" (click)="check(u1.value,p1.value)" type="submit" >Log In</button>  
  </div> 
 
       </div>
@@ -55,9 +54,53 @@
     </div>
     </div>
     </div>
-    </div>
+    </div> -->
     <br>
     <br>
+
+    <div class="container" style="padding-top:60px;">  
+      <div class="row">  
+        <div class="col-md-6 mx-auto">  
+          <div class="card-group">  
+            <div class="card p-4">  
+              <div class="card-body">  
+                <form name="form" (ngSubmit)="login()">   
+                  <h1 style="text-align:center">Login</h1>  
+                   
+                  <div class="input-group mb-3">  
+                    <div class="input-group-prepend">  
+                      <span class="input-group-text"><i class="icon-user"></i></span>  
+                    </div>  
+                    <input type="text" name="UserName" [(ngModel)]="model.UserName" class="form-control sty1" placeholder="Email" required>  
+                  </div>  
+                  <div class="input-group mb-4">  
+                    <div class="input-group-prepend">  
+                      <span class="input-group-text"><i class="icon-lock"></i></span>  
+                    </div>  
+                    <input  type="password" name="Passward" [(ngModel)]="model.Password" class="form-control"  
+                   placeholder="Password">  
+                  </div>  
+                  <div>  
+                      <p style="color:#E92626;font-size:20px;font-weight:normal" Class="success">  
+                        {{errorMessage}}  
+                      </p>  
+                    </div>  
+                  <div class="row">  
+                    <div class="col-6">  
+                      <button type="submit" class="btn btn-primary px-4">Login</button>  
+                    </div>  
+                    <div class="col-6 text-right">  
+                      <button type="button" class="btn btn-link px-0">Forgot password?</button>  
+                    </div>  
+                  </div>  
+                    
+                </form>  
+              </div>  
+            </div>  
+          </div>  
+        </div>  
+      </div>  
+    </div> 
   
   
   

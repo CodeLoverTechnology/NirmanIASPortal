@@ -73,7 +73,7 @@ import { BookContentIndianIRComponent } from './Component/books/book-content-ind
 import { BookContentSociologyComponent } from './Component/Books/book-content-sociology/book-content-sociology.component';
 import { BookContentAgricultureEconomicComponent } from './Component/books/book-content-agriculture-economic/book-content-agriculture-economic.component';
 import { BookContentModernIndiaComponent } from './Component/books/book-content-modern-india/book-content-modern-india.component';
-import {NgBusyModule} from 'ng-busy';
+import {NgBusyModule, BusyConfig} from 'ng-busy';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -146,7 +146,9 @@ import { UploadFilesComponent } from './Component/upload-files/upload-files.comp
 import { CurrentAffairsForHinduComponent } from './Component/CurrentAffairs/current-affairs-for-hindu/current-affairs-for-hindu.component';
 import { BookContentStrategyComponent } from './Component/Books/book-content-strategy/book-content-strategy.component';
 import { NgxWebstorageModule } from 'ngx-webstorage';
-
+import { CustomBusyComponentComponent } from './custom-busy-component/custom-busy-component.component';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { ViewPDFComponent } from './Component/view-pdf/view-pdf.component';
 
 @NgModule({
   declarations: [
@@ -262,7 +264,9 @@ import { NgxWebstorageModule } from 'ngx-webstorage';
     PrintedMaterialListComponent,
     UploadFilesComponent,
     CurrentAffairsForHinduComponent,
-    BookContentStrategyComponent   
+    BookContentStrategyComponent,
+    CustomBusyComponentComponent,
+    ViewPDFComponent   
   ],
   imports: [
     BrowserModule,
@@ -271,6 +275,7 @@ import { NgxWebstorageModule } from 'ngx-webstorage';
     NgxWebstorageModule.forRoot(),
     AppRoutingModule,
     ReactiveFormsModule,
+    PdfViewerModule,
     NgBusyModule,
     BrowserAnimationsModule,
     NoopAnimationsModule,
@@ -281,6 +286,9 @@ import { NgxWebstorageModule } from 'ngx-webstorage';
     
     
   ],
+  entryComponents: [
+    CustomBusyComponentComponent
+],
    providers: [ActivateGuard,  
     EnquiryServiceService,ChatServicesService,
     AuthService,SocialMediaServiceService,

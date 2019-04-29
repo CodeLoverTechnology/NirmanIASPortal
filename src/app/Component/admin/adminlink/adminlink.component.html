@@ -1,128 +1,62 @@
- <!-- <div class="row">
-  <div class="col-lg-5 col-md-5 col-sm-10 col-xs-10  shadow-lg " id="page">
-     <a  routerLink="../getEnquiry">
-           <i class="fa fa-eye fa-2x"></i>
-           Enquiry 
-       </a>
-   </div>
-   <div class="col-lg-5 col-md-5 col-sm-10 col-xs-10  shadow-lg" id="page">
-       <a href="/">
-           <i class="fa fa-book fa-2x"></i>
-           Course                     
-       </a>
-   </div>
-</div>
-   <div class="row">
-   <div class="col-lg-5 col-md-5 col-sm-10 col-xs-10  shadow-lg" id="page">
-       <a href="/">
-           <i class="fa fa-sliders fa-2x"></i>
-           Banner
-       </a>
-     </div>
-     <div class="col-lg-5 col-md-5 col-sm-10 col-xs-10  shadow-lg" id="page">
-       <a href="/">
-           <i class="fa fa-share-square fa-2x "></i>
-           Social Media
-     </a>
-      </div>
-</div>
+<div class="row w-100 bg-primary text-white h2 text-center p-3">Regular Used Function</div>
+<div class="row p-3">
+    <div class="col-lg-3 col-md-3 col-sm-10 col-xs-10  shadow-lg  bg-dark rounded text-white " id="page">
+        <a [routerLink]="['admin/getEnquiry'] ">
+            <i class="fa fa-eye " id="hide"></i>
+            Enquiry
+        </a>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-10 col-xs-10  shadow-lg bg-primary rounded" id="page">
+        <a [routerLink]="['/get-current'] " target="_blank" class="text-white">
+            <i class="fa fa-newspaper-o"></i>
+            Current Affairs
+        </a>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-10 col-xs-10  shadow-lg  bg-dark rounded text-white " id="page">
+        <a [routerLink]="['admin/getchat']">
+            <i class="fa fa-commenting-o"></i>
+            Chat
+        </a>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-10 col-xs-10  shadow-lg  bg-dark rounded text-white " id="page">
+        <a [routerLink]="['admin/GetBannerList'] ">
+            <i class="fa fa-sliders"></i>
+            Banner
+        </a>
+    </div>
 
-<div class="row">
-<div class="col-lg-5 col-md-5 col-sm-10 col-xs-10  shadow-lg" id="page">
-   <a href="/BranchList">
-       <i class="fa fa-sign-out fa-2x "></i>
-       Branch
-   </a>
+<div class="col-lg-3 col-md-3 col-sm-10 col-xs-10  shadow-lg  bg-dark rounded text-white " id="page">
+    <a [routerLink]="['admin/GetStudentmaster'] ">
+        <i class="fa fa-user"></i>
+        Student Detail
+    </a>
 </div>
-<div class="col-lg-5 col-md-5 col-sm-10 col-xs-10  shadow-lg" id="page">
-   <a href="/">
-       <i class="fa fa-commenting-o fa-2x "></i>
-       Chat
-   </a>
+<div class="col-lg-3 col-md-3 col-sm-10 col-xs-10  shadow-lg  bg-dark rounded text-white " id="page">
+    <a [routerLink]="['admin/get-facultyMaster'] ">
+        <i class="fa fa-users"></i>
+        Faculty Detail
+    </a>
 </div>
-
 </div>
-<div class="row">
-<div class="col-lg-5 col-md-5 col-sm-10 col-xs-10 shadow-lg" id="page">
-   <a href="/">
-       <i class="fa fa-user fa-2x"></i>
-StudentDetail
-   </a>
-</div>
-<div class="col-lg-5 col-md-5 col-sm-10 col-xs-10 shadow-lg" id="page">
-   <a href="/">
-       <i class="fa fa-users fa-2x"></i>
-       FacultyDetail
-   </a>
-</div>
-
-</div> -->
-
-        <div class="row">
-                <div class="col-lg-3 col-md-3 col-sm-10 col-xs-10  shadow-lg  bg-dark rounded text-white " id="page">
-                   <a [routerLink]="['admin/getEnquiry'] ">
-                         <i class="fa fa-eye " id="hide"></i>
-                         Enquiry
-                     </a>
-                 </div>
-                 <div class="col-lg-3 col-md-3 col-sm-10 col-xs-10  shadow-lg bg-secondary rounded  text-white" id="page">
-                     <a [routerLink]="['admin/Gallery'] " >
-                         <i class="fa fa-picture-o" ></i>
-                        Gallery                  
-                     </a>
-                 </div>
-                 <div class="col-lg-4 col-md-4 col-sm-10 col-xs-10  shadow-lg bg-primary rounded" id="page">
-                    <a [routerLink]="['admin/Gallery'] " >
-                        <i class="fa fa-news-paper" ></i>
-                       Current Affairs                  
+<div class="row w-100 bg-primary text-white h2 text-center p-3">Master Function</div>
+<div class="row p-3">
+        <div class="col-lg-3 col-md-3 col-sm-10 col-xs-10  shadow-lg  bg-dark rounded text-white " id="page">
+                <a [routerLink]="['admin/GetSocialMediaList']">
+                    <i class="fa fa-share-square"></i>
+                    Social Media
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-10 col-xs-10  shadow-lg bg-secondary rounded  text-white" id="page">
+                    <a [routerLink]="['admin/Gallery'] ">
+                        <i class="fa fa-picture-o"></i>
+                        Gallery
                     </a>
                 </div>
-              </div>
-
-                 <div class="row">
-                        <div class="col-lg-5 col-md-5 col-sm-10 col-xs-10  shadow-lg" id="page">
-                                <a [routerLink]="['admin/getchat']">
-                                    <i class="fa fa-commenting-o fa-2x "></i>
-                                    Chat
-                                </a>
-                             </div>
-                 
-                   <div class="col-lg-5 col-md-5 col-sm-10 col-xs-10  shadow-lg" id="page">
-                        <a [routerLink]="['admin/GetSocialMediaList']">
-                         <i class="fa fa-share-square fa-2x "></i>
-                         Social Media
-                   </a>
+                <div class="col-lg-3 col-md-3 col-sm-10 col-xs-10  shadow-lg  bg-dark rounded text-white " id="page">
+                        <a [routerLink]="['admin/BranchList']">
+                            <i class="fa fa-sign-out"></i>
+                            Branch
+                        </a>
                     </div>
-              </div>
-              
-              <div class="row">
-              <div class="col-lg-5 col-md-5 col-sm-10 col-xs-10  shadow-lg" id="page">
-                    <a [routerLink]="['admin/BranchList']">
-                     <i class="fa fa-sign-out fa-2x "></i>
-                     Branch
-                 </a>
-              </div>
-              <div class="col-lg-5 col-md-5 col-sm-10 col-xs-10  shadow-lg" id="page">
-                    <a [routerLink]="['admin/GetBannerList'] ">
-                        <i class="fa fa-sliders fa-2x"></i>
-                        Banner
-                    </a>
-                  </div>            
-              
-              </div>
-              <div class="row">
-              <div class="col-lg-5 col-md-5 col-sm-10 col-xs-10 shadow-lg" id="page">
-                    <a [routerLink]="['admin/GetStudentmaster'] ">
-                     <i class="fa fa-user fa-2x"></i>
-              StudentDetail
-                 </a>
-              </div>
-              <div class="col-lg-5 col-md-5 col-sm-10 col-xs-10 shadow-lg" id="page">
-                    <a [routerLink]="['admin/get-facultyMaster'] ">
-                     <i class="fa fa-users fa-2x"></i>
-                     FacultyDetail
-                 </a>
-              </div>
-              
-              </div>
-        
+            
+</div>

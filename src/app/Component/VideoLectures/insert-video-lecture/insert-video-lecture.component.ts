@@ -25,11 +25,7 @@
      } else {
        console.log("Client Side Error !");
      }
-     this.getLecture();
      };
- }
- getLecture() {
-   this.Result= this._service.getLectureInfo();
  }
  
  

@@ -61,6 +61,12 @@
                   <div class="validation-error" *ngIf="Remarks.invalid && Remarks.touched">This field is required.</div>
                               </div>
 
+                              <div> 
+                                  <label>Password</label>
+                                 <input type="password" name="Password"  #Password="ngModel" class="form-control" required [(ngModel)]="student.Password">
+                                 <div class="validation-error" *ngIf="Password.invalid && Password.touched">This field is required.</div>
+                                             </div>
+
          <button [disabled]="!StudentForm.valid" type="submit"  class="btn btn-primary btn-lg m-3">Submit Now</button> 
             </form> 
    </div>

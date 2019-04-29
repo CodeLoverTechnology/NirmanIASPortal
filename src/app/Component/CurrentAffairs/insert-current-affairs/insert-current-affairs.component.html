@@ -1,57 +1,75 @@
-<div class="container-fluid">
-  <form enctype="multipart/form-data" method="post" #CurrentAffairsForm="ngForm"  (ngSubmit)="onFormSubmit()">
-    <!-- <div class="form-group">
-        <label >CurrentAffairsID</label>
-       <input type="text" name="CurrentAffairsID" required  #CurrentAffairsID ="ngModel" class="form-control"  [(ngModel)]="Current.CurrentAffairsID "  >
-        <div class="validation-error" *ngIf="CurrentAffairsID .invalid && CurrentAffairsID .touched">This field is required.</div>
-        </div> -->
-    <div class="form-group">
-    <label >Category</label>
-      <input type="text" name="Category" required  #Category ="ngModel" class="form-control"  [(ngModel)]="Current.Category"  >
-    <div class="validation-error" *ngIf="Category.invalid && Category.touched">This field is required.</div>
-    </div> 
-   <div class="form-group">
-    <label>SubCategory</label>
-     <input type="text" name="SubCategory" #SubCategory ="ngModel" class="form-control"
-     [(ngModel)]="Current.SubCategory" required>
-    <div class="validation-error" *ngIf="SubCategory.invalid && SubCategory.touched">This field is required.</div>
-   </div>
-   <div>
-    <label>Title</label>
-      <textarea type="text" name="Title"  #Title="ngModel" class="form-control" required [(ngModel)]="Current.Title"></textarea>
-       <div class="validation-error" *ngIf="Title.invalid && Title.touched">This field is required.</div>
-   </div>
-   <div>
-    <label>Summary</label>
-     <textarea type="text" name="Summary"  #Summary="ngModel" class="form-control" required [(ngModel)]="Current.Summary"></textarea>
-        <div class="validation-error" *ngIf="Summary.invalid && Summary.touched">This field is required.</div>
-   </div>
-   <div>
-    <label>PDFPath</label>
-     <textarea type="text" name="PDFPath"  #PDFPath="ngModel" class="form-control" required [(ngModel)]="Current.PDFPath"></textarea>
+<div class="btn btn-success text-white"><a [routerLink]="['/get-current']" target="_blank" class=" text-white"><i
+      class="fa fa-newspaper-o text-white" aria-hidden="true"></i> Show Current Affairs</a></div>
+      <div class="text-center p-2 h3">Current Affairs Entry</div>
+      <hr>
+
+<div class="container-fluid" [ngBusy]="busy" (busyStop)="onBusyStop()" (busyStart)="onBusyStart()">
+  <form enctype="multipart/form-data" method="post" #CurrentAffairsForm="ngForm" (ngSubmit)="onFormSubmit();CurrentAffairsForm.reset()">
+    <div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <div class="form-group">
+            <label>Category &nbsp;&nbsp;</label>
+            <select name="Category" #Category="ngModel" [(ngModel)]="Current.Category" class="form-control"
+              (change)="GetSubCategory($event.target.id)" class="dropdown p-2">
+              <option value="0">--All--</option>
+              <option *ngFor="let cat of CategoryList" id={{cat.categoryID}} value={{cat.categoryID}}>
+                {{cat.categoryName}}
+              </option>
+            </select>
+          </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <div class="form-group">
+            <label>SubCategory &nbsp;&nbsp;&nbsp;</label>
+            <select name="SubCategory" #SubCategory="ngModel" class="form-control" [(ngModel)]="Current.SubCategory"
+              class="dropdown p-2">
+              <option value="0">--All--</option>
+              <option *ngFor="let SubCat of SubCategoryList" id={{SubCat.subCategoryID}} value={{SubCat.subCategoryID}}>
+                {{SubCat.subCategoryName}}
+              </option>
+            </select>
+          </div>
+    </div>
+  </div>
+    <div>
+      <label>Title</label>
+      <input type="text" name="Title" #Title="ngModel" class="form-control" required [(ngModel)]="Current.Title">
+      <div class="validation-error" *ngIf="Title.invalid && Title.touched">This field is required.</div>
+    </div>
+    <div>
+      <label>Summary</label>
+      <textarea type="text" name="Summary" #Summary="ngModel" class="form-control" required
+        [(ngModel)]="Current.Summary"></textarea>
+      <div class="validation-error" *ngIf="Summary.invalid && Summary.touched">This field is required.</div>
+    </div>
+    <div>
+      <label>PDFPath</label>
+      <input type="text" name="PDFPath" #PDFPath="ngModel" class="form-control" required [(ngModel)]="Current.PDFPath">
       <div class="validation-error" *ngIf="PDFPath.invalid && PDFPath.touched">This field is required.</div>
-   </div>
-   <div>
-    <label>CurrentAffairsImgPath</label>
-     <textarea type="text" name="CurrentAffairsImgPath"  #CurrentAffairsImgPath="ngModel" class="form-control" required [(ngModel)]="Current.CurrentAffairsImgPath"></textarea>
-       <div class="validation-error" *ngIf="CurrentAffairsImgPath.invalid && CurrentAffairsImgPath.touched">This field is required.</div>
-   </div>
-   <div>
-    <label>IsNew</label>
-     <textarea type="text" name="IsNew"  #IsNew ="ngModel" class="form-control" required [(ngModel)]="Current.IsNew"></textarea>
-       <div class="validation-error" *ngIf="IsNew.invalid && IsNew.touched">This field is required.</div>
-   </div>
-   <div>
-    <label>NoOfView</label>
-      <textarea type="text" name="NoOfView"  #NoOfView="ngModel" class="form-control" required [(ngModel)]="Current.NoOfView"></textarea>
-       <div class="validation-error" *ngIf="NoOfView.invalid && NoOfView.touched">This field is required.</div>
-   </div>
-   <div>
-    <label>SpecialRemarks</label>
-      <textarea type="text" name="SpecialRemarks"  #SpecialRemarks="ngModel" class="form-control" required [(ngModel)]="Current.SpecialRemarks"></textarea>
-        <div class="validation-error" *ngIf="SpecialRemarks.invalid && SpecialRemarks.touched">This field is required.</div>
-   </div>
-                
-  <button [disabled]="!CurrentAffairsForm.valid" type="submit"  class="btn btn-primary btn-lg m-3">Submit Now</button> 
-</form> 
-   </div>
+    </div>
+    <div>
+      <label>CurrentAffairsImgPath</label>
+      <input type="text" name="CurrentAffairsImgPath" #CurrentAffairsImgPath="ngModel" class="form-control" required
+        [(ngModel)]="Current.CurrentAffairsImgPath">
+      <div class="validation-error" *ngIf="CurrentAffairsImgPath.invalid && CurrentAffairsImgPath.touched">This field is
+        required.</div>
+    </div>
+    <div>
+        <label>Video Link</label>
+        <input type="text" name="VideoLink" #VideoLink="ngModel" class="form-control"
+          [(ngModel)]="Current.VideoLink">
+      </div>
+    <div>
+      <label>NoOfView</label>
+      <input type="text" name="NoOfView" #NoOfView="ngModel" class="form-control" [(ngModel)]="Current.NoOfView">
+    </div>
+    <div>
+      <label>SpecialRemarks</label>
+      <textarea type="text" name="SpecialRemarks" #SpecialRemarks="ngModel" class="form-control" required
+        [(ngModel)]="Current.SpecialRemarks"></textarea>
+      <div class="validation-error" *ngIf="SpecialRemarks.invalid && SpecialRemarks.touched">This field is required.
+      </div>
+    </div>
+    <button [disabled]="!CurrentAffairsForm.valid" type="submit" class="btn btn-primary btn-lg m-3">Submit Now</button>
+  </form>
+</div>

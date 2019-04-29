@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid"  [ngBusy]="busy">
   <form enctype="multipart/form-data" method="post" #FacultyMasterForm="ngForm"  (ngSubmit)="onFormSubmit()">
   <div class="form-group">
        <label >FacultyName </label>

@@ -1,79 +1,55 @@
 <div class="container-fluid">
-  <form enctype="multipart/form-data" method="post" #NirmanResultForm="ngForm"  (ngSubmit)="onFormSubmit()">
-     <!-- <div class="form-group">
+  <form enctype="multipart/form-data" method="post" #NirmanResultForm="ngForm" (ngSubmit)="onFormSubmit()">
+    <!-- <div class="form-group">
        <label >ResultID </label>
    <input type="text" name="ResultID" required  #ResultID="ngModel" class="form-control"  [(ngModel)]="Results.ResultID">
    
    <div class="validation-error" *ngIf="ResultID.invalid && ResultID.touched">This field is required.</div>
     </div>  -->
-   <div class="form-group">
-        <label>ExamName </label>
-       <input type="text" name="ExamName" #ExamName="ngModel" class="form-control"
-       [(ngModel)]="Results.ExamName" required>
-       <div class="validation-error" *ngIf="ExamName.invalid && ExamName.touched">This field is required.</div>
-            </div>
-        <div>
-        <label>ExamYear</label>
-        <textarea type="text" name="ExamYear"  #ExamYear="ngModel" class="form-control" required [(ngModel)]="Results.ExamYear"></textarea>
-        <div class="validation-error" *ngIf="ExamYear.invalid && ExamYear.touched">This field is required.</div>
-        </div>
-        <div>
-          <label>CandidateName</label>
-          <textarea type="text" name="CandidateName"  #CandidateName="ngModel" class="form-control" required [(ngModel)]="Results.CandidateName"></textarea>
-          <div class="validation-error" *ngIf="CandidateName.invalid && CandidateName.touched">This field is required.</div>
-          </div>
-          <div>
-            <label>CandidateRank</label>
-            <textarea type="text" name="CandidateRank"  #CandidateRank="ngModel" class="form-control" required [(ngModel)]="Results.CandidateRank"></textarea>
-            <div class="validation-error" *ngIf="CandidateRank.invalid && CandidateRank.touched">This field is required.</div>
-            </div>
-            <div>
-              <label>CandiatePicPath</label>
-              <textarea type="text" name="CandiatePicPath"  #CandiatePicPath="ngModel" class="form-control"  [(ngModel)]="Results.CandiatePicPath"></textarea>
-              <div class="validation-error" *ngIf="CandiatePicPath.invalid && CandiatePicPath.touched">This field is required.</div>
-              </div>
-              <div>
-                <label>CandiateReview</label>
-                <textarea type="text" name="CandiateReview"  #CandiateReview="ngModel" class="form-control"  [(ngModel)]="Results.CandiateReview"></textarea>
-                <div class="validation-error" *ngIf="CandiateReview.invalid && CandiateReview.touched">This field is required.</div>
-                </div>
-                <div>
-                  <label>Remarks</label>
-                  <textarea type="text" name="Remarks"  #Remarks="ngModel" class="form-control"  [(ngModel)]="Results.Remarks"></textarea>
-                  <div class="validation-error" *ngIf="Remarks.invalid && Remarks.touched">This field is required.</div>
-                  </div>
-                  <!-- <div>
-                    <label>CreatedBy</label>
-                    <textarea type="text" name="CreatedBy"  #CreatedBy="ngModel" class="form-control" required [(ngModel)]="Results.CreatedBy"></textarea>
-                    <div class="validation-error" *ngIf="CreatedBy.invalid && CreatedBy.touched">This field is required.</div>
-                    </div>
-                    <div>
-                      <label>CreatedDate</label>
-                      <textarea type="text" name="CreatedDate"  #CreatedDate="ngModel" class="form-control" required [(ngModel)]="Results.CreatedDate"></textarea>
-                      <div class="validation-error" *ngIf="CreatedDate.invalid && CreatedDate.touched">This field is required.</div>
-                      </div>
-                      <div>
-                        <label>ModifiedBy</label>
-                        <textarea type="text" name="ModifiedBy"  #ModifiedBy="ngModel" class="form-control" required [(ngModel)]="Results.ModifiedBy"></textarea>
-                        <div class="validation-error" *ngIf="ModifiedBy.invalid && ModifiedBy.touched">This field is required.</div>
-                        </div>
-                        <div>
-                          <label>ModifiedDate</label>
-                          <textarea type="text" name="ModifiedDate"  #ModifiedDate="ngModel" class="form-control" required [(ngModel)]="Results.ModifiedDate"></textarea>
-                          <div class="validation-error" *ngIf="ModifiedDate.invalid && ModifiedDate.touched">This field is required.</div>
-                          </div>
-                          <div>
-                            <label>Active</label>
-                            <textarea type="text" name="Active"  #Active="ngModel" class="form-control" required [(ngModel)]="Results.Active"></textarea>
-                            <div class="validation-error" *ngIf="Active.invalid && Active.touched">This field is required.</div>
-                            </div>-->
-                            <div> 
-                              <label>IsNew</label>
-                              <textarea type="text" name="IsNew"  #IsNew="ngModel" class="form-control" required [(ngModel)]="Results.IsNew"></textarea>
-                              <div class="validation-error" *ngIf="IsNew.invalid && IsNew.touched">This field is required.</div>
-                              </div>
-
-         <button [disabled]="!NirmanResultForm.valid" type="submit"  class="btn btn-primary btn-lg m-3">Submit Now</button> 
-            </form> 
-   </div>
-   
+    <div class="form-group">
+      <label>ExamName </label>
+      <input type="text" name="ExamName" #ExamName="ngModel" class="form-control" [(ngModel)]="Results.ExamName"
+        required>
+      <div class="validation-error" *ngIf="ExamName.invalid && ExamName.touched">This field is required.</div>
+    </div>
+    <div>
+      <label>ExamYear</label>
+      <input type="text" name="ExamYear" #ExamYear="ngModel" class="form-control" required
+        [(ngModel)]="Results.ExamYear">
+      <div class="validation-error" *ngIf="ExamYear.invalid && ExamYear.touched">This field is required.</div>
+    </div>
+    <div>
+      <label>CandidateName</label>
+      <input type="text" name="CandidateName" #CandidateName="ngModel" class="form-control" required
+        [(ngModel)]="Results.CandidateName">
+      <div class="validation-error" *ngIf="CandidateName.invalid && CandidateName.touched">This field is required.</div>
+    </div>
+    <div>
+      <label>CandidateRank</label>
+      <input type="text" name="CandidateRank" #CandidateRank="ngModel" class="form-control" required
+        [(ngModel)]="Results.CandidateRank">
+      <div class="validation-error" *ngIf="CandidateRank.invalid && CandidateRank.touched">This field is required.</div>
+    </div>
+    <div>
+      <label>CandiatePicPath</label>
+      <input type="text" name="CandiatePicPath" #CandiatePicPath="ngModel" class="form-control"
+        [(ngModel)]="Results.CandiatePicPath">
+      <div class="validation-error" *ngIf="CandiatePicPath.invalid && CandiatePicPath.touched">This field is required.
+      </div>
+    </div>
+    <div>
+      <label>CandiateReview</label>
+      <textarea type="text" name="CandiateReview" #CandiateReview="ngModel" class="form-control"
+        [(ngModel)]="Results.CandiateReview"></textarea>
+      <div class="validation-error" *ngIf="CandiateReview.invalid && CandiateReview.touched">This field is required.
+      </div>
+    </div>
+    <div>
+      <label>Remarks</label>
+      <textarea type="text" name="Remarks" #Remarks="ngModel" class="form-control"
+        [(ngModel)]="Results.Remarks"></textarea>
+      <div class="validation-error" *ngIf="Remarks.invalid && Remarks.touched">This field is required.</div>
+    </div>
+    <button [disabled]="!NirmanResultForm.valid" type="submit" class="btn btn-primary btn-lg m-3">Submit Now</button>
+  </form>
+</div>
