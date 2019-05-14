@@ -16,7 +16,6 @@ import { EnquiryServiceService } from './Services/EnquiryServices/enquiry-servic
 import { AboutUsComponent } from './Component/about-us/about-us.component';
 import { FooterComponent } from './Component/footer/footer.component';
 import { LiveChatComponent } from './Component/live-chat/live-chat.component';
-import { SideMenuComponent } from './Component/side-menu/side-menu.component';
 import { ChatServicesService } from './Services/Chat/chat-services.service';
 import { LogInComponent } from './component/log-in/log-in/log-in.component';
 import { RegistrationComponent } from './component/registration/registration/registration.component';
@@ -57,7 +56,7 @@ import { BookContentPOLITYComponent } from './Component/Books/book-content-polit
 import { BookContentEthicsComponent } from './Component/Books/book-content-ethics/book-content-ethics.component';
 import { BookContentEnvironmentComponent } from './Component/Books/book-content-environment/book-content-environment.component';
 import { BookContentEconomyComponent } from './Component/Books/book-content-economy/book-content-economy.component';
-import { Home1Component } from './component/niashome/home1/home1.component';
+// import { Home1Component } from './component/niashome/home1/home1.component';
 import { GetchatComponent } from './component/getchat/getchat.component';
 import { PutchatComponent } from './component/putchat/putchat.component';
 import {SocialMediaServiceService} from "./Services/SocialMediaService/social-media-service.service";
@@ -165,7 +164,7 @@ import { GetTestStudentResultListComponent } from './Component/TestStudentResult
     AdminlinkComponent,
     FooterComponent,
     LiveChatComponent,
-    SideMenuComponent,
+    
     GetSubCategoryComponent,
     LogInComponent,
     RegistrationComponent,
@@ -203,7 +202,7 @@ import { GetTestStudentResultListComponent } from './Component/TestStudentResult
     BookContentEthicsComponent,
     BookContentEnvironmentComponent,
     BookContentEconomyComponent,
-    Home1Component,
+    
     GetchatComponent,
     PutchatComponent,
     BookContentSociologyComponent,
