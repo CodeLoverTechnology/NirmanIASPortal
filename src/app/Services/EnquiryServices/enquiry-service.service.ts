@@ -20,11 +20,10 @@ export class EnquiryServiceService {
     return this._http.get(this.BaseURL + "Enquiry/EnquiryDetails/" + enquiryID);
   }
   public postEnquiry(enquiry : EnquiryModel):any{
-    return this._http.post<any>(this.BaseURL+"Enquiry/CreateEnquiry",enquiry);
+     return this._http.post<any>(this.BaseURL+"Enquiry/CreateEnquiry",enquiry);
   }
 
    public  updateEnquiry(Enquiry : EnquiryModel):any{
-     debugger;
   return this._http.put<any>(this.BaseURL + "Enquiry/UpdateEnquiry",Enquiry);
   }
   public  deleteEnquiry(EnquiryID: number):any {

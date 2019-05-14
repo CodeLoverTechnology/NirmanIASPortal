@@ -25,7 +25,6 @@ export class LiveChatComponent implements OnInit {
 
   }
   onSubmit() {
-    debugger;
     this.chatModel.ReplyMessage = null;
     var Result = this._service.postchat(this.chatModel).subscribe(
       result => { //this.chatModel=result?result:undefined ;

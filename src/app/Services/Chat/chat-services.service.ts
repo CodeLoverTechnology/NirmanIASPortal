@@ -25,7 +25,7 @@ export class ChatServicesService {
     this._http.get<{ ip: string }>('https://jsonip.com')
       .subscribe(data => {
         console.log('User Info : ', data);
-        debugger;
+         
         this.ipAddress = data
       })
   }

@@ -17,7 +17,7 @@ export class InsertUsermasterComponent implements OnInit {
 
   onFormSubmit()
   {
-    debugger;
+     
     this.busy == this._service.postUser(this.Objuser).subscribe(
    result => this.Response = result);
       (err:HttpErrorResponse)=>{
@@ -27,7 +27,7 @@ export class InsertUsermasterComponent implements OnInit {
             console.log("Client Side Error   !");
           }
         };
-        debugger;
+         
       console.log(this.Response);
     }}
 

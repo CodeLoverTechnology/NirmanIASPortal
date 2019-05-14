@@ -15,7 +15,7 @@ export class BatchDetailsService {
   }
 
   public postBatchDetails(btcDetails : BatchDetails):any{
-    debugger;
+     
     return this._http.post<any>(this.BaseURL+"BatchDetails/CreateBatchDetails",btcDetails);
   }
 }

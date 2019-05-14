@@ -14,7 +14,6 @@ export class InsertBatchTopicDetailsComponent implements OnInit {
   ngOnInit(){ }
   onFormSubmit()
   {
-    debugger;
     this._service.postBatchdetail(this.BatchTopic).subscribe(
    result => console.log('Success !!!.',result),
       (err:HttpErrorResponse)=>{
@@ -24,6 +23,5 @@ export class InsertBatchTopicDetailsComponent implements OnInit {
             console.log("Client Side Error   !");
           }
         })
-        debugger;
-      console.log(this.BatchTopic);
+        console.log(this.BatchTopic);
     }}

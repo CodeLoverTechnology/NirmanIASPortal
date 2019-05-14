@@ -149,6 +149,9 @@ import { NgxWebstorageModule } from 'ngx-webstorage';
 import { CustomBusyComponentComponent } from './custom-busy-component/custom-busy-component.component';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { ViewPDFComponent } from './Component/view-pdf/view-pdf.component';
+import { IndiaYearBook2019Component } from './Component/CurrentAffairs/india-year-book2019/india-year-book2019.component';
+import { InsertTestStudentResultComponent } from './Component/TestStudentResult/insert-test-student-result/insert-test-student-result.component';
+import { GetTestStudentResultListComponent } from './Component/TestStudentResult/get-test-student-result-list/get-test-student-result-list.component';
 
 @NgModule({
   declarations: [
@@ -266,7 +269,10 @@ import { ViewPDFComponent } from './Component/view-pdf/view-pdf.component';
     CurrentAffairsForHinduComponent,
     BookContentStrategyComponent,
     CustomBusyComponentComponent,
-    ViewPDFComponent   
+    ViewPDFComponent,
+    IndiaYearBook2019Component,
+    InsertTestStudentResultComponent,
+    GetTestStudentResultListComponent   
   ],
   imports: [
     BrowserModule,

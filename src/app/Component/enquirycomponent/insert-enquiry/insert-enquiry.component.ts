@@ -17,7 +17,6 @@ export class InsertEnquiryComponent implements OnInit {
     constructor(private _service: EnquiryServiceService) { }
     ngOnInit() { }
     onSubmit() {
-        debugger;
         this.busy = this._service.postEnquiry(this.enquiry).subscribe(
             result => this.EnquiryResult = result);
         (err: HttpErrorResponse) => {
@@ -27,7 +26,9 @@ export class InsertEnquiryComponent implements OnInit {
                 console.log("Client Side Error !");
             }
         };
-        alert('Dear Student Your Enquiry has Submited to NIRMAN IAS. We Well get back to you soon!!!...Enquiry ID : ' + this.EnquiryResult["enquiryID"]);
+        alert('Dear Student Your Enquiry has Submited to NIRMAN IAS. We Well get back to you soon!!!...');
+        //Enquiry ID : ' + this.EnquiryResult["enquiryID"]);
+        this.enquiry = {} as EnquiryModel;
         closeNav();
     }
 

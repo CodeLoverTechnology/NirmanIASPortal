@@ -19,7 +19,7 @@ export class CategoryMasterService {
     let options={
       headers:httpheaders
     };
-    debugger;
+     
     return this._http.post<CategoryMaster>(this.BaseURL+"CategoryMaster/CreateCategoryMaster",category,options);
   }
   

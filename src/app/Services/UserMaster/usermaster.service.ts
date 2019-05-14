@@ -17,7 +17,7 @@ export class UsermasterService {
     return this._http.get(this.BaseURL + 'UserMaster/UserMasterList');
   }
   public postUser(user: UserMaster): any {
-    debugger;
+     
     return this._http.post<any>(this.BaseURL + 'UserMaster/CreateUserMaster', user);
   }
 

@@ -20,7 +20,7 @@
     </div>
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <div class="form-group">
-            <label>SubCategory &nbsp;&nbsp;&nbsp;</label>
+            <label>Sub Category &nbsp;&nbsp;&nbsp;</label>
             <select name="SubCategory" #SubCategory="ngModel" class="form-control" [(ngModel)]="Current.SubCategory"
               class="dropdown p-2">
               <option value="0">--All--</option>
@@ -43,12 +43,13 @@
       <div class="validation-error" *ngIf="Summary.invalid && Summary.touched">This field is required.</div>
     </div>
     <div>
-      <label>PDFPath</label>
+      <label>PDF Path</label>
+
       <input type="text" name="PDFPath" #PDFPath="ngModel" class="form-control" required [(ngModel)]="Current.PDFPath">
       <div class="validation-error" *ngIf="PDFPath.invalid && PDFPath.touched">This field is required.</div>
     </div>
     <div>
-      <label>CurrentAffairsImgPath</label>
+      <label>Current Affairs Img Path</label>
       <input type="text" name="CurrentAffairsImgPath" #CurrentAffairsImgPath="ngModel" class="form-control" required
         [(ngModel)]="Current.CurrentAffairsImgPath">
       <div class="validation-error" *ngIf="CurrentAffairsImgPath.invalid && CurrentAffairsImgPath.touched">This field is
@@ -60,11 +61,11 @@
           [(ngModel)]="Current.VideoLink">
       </div>
     <div>
-      <label>NoOfView</label>
+      <label>No Of View</label>
       <input type="text" name="NoOfView" #NoOfView="ngModel" class="form-control" [(ngModel)]="Current.NoOfView">
     </div>
     <div>
-      <label>SpecialRemarks</label>
+      <label>Special Remarks</label>
       <textarea type="text" name="SpecialRemarks" #SpecialRemarks="ngModel" class="form-control" required
         [(ngModel)]="Current.SpecialRemarks"></textarea>
       <div class="validation-error" *ngIf="SpecialRemarks.invalid && SpecialRemarks.touched">This field is required.

@@ -20,7 +20,7 @@ export class SocialMediaServiceService {
   //   let options={
   //     headers:httpheaders
   //   };
-  //   debugger;
+  //    
   //   return this._http.post<SocialMediaModel>(this.BaseURL+"api/SocialMediaMasters/CreateSocialMediaMasters",socialmedia,options);
   // }
   

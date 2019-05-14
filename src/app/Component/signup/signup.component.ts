@@ -30,7 +30,7 @@ import { Router } from '@angular/router';
             console.log("Client Side Error !");
         }
     }; 
-    debugger;
+     
     if(this.busy)
     {
     if(this.Result!=undefined) 

@@ -35,7 +35,7 @@ export class LogInComponent implements OnInit {
    //check(username: string, password: string) {
     login()
     {
-    debugger;
+     
     // this.UserDeatilsMaster.UserEmailID = username;
     // this.UserDeatilsMaster.Password = password;
     //this.busy =this._userServices.LoginUser(this.model).subscribe();
@@ -56,14 +56,14 @@ export class LogInComponent implements OnInit {
       this.router.navigate(['/admin']);
     }
     else { 
-      debugger;
+       
       alert("Invalid username or password");
       //this.router.navigate(['/login']);
       this.router.navigate(['/admin']);
     } 
     // .subscribe(
     //   (result:UserMaster) =>{
-    //     debugger;   
+    //         
     //     if(result != undefined && result.UserEmailID!='')    
     //     {              
     //   this.localSt.store("UserEmailID", result.UserEmailID);
@@ -104,7 +104,7 @@ export class LogInComponent implements OnInit {
     //   this.router.navigate(['/admin']);
     // }
     // else { 
-    //   debugger;
+    //    
     //   alert("Invalid username or password");
     //   //this.router.navigate(['/login']);
     //   this.router.navigate(['/admin']);

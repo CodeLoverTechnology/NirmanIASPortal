@@ -15,33 +15,9 @@
                     </a>
                 </li>
                 <li>
-                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                <a [routerLink]="['admin/getEnquiry']" >
                   <i class="fa fa-eye"></i>Enquiry
                 </a>
-                        <ul class="collapse list-unstyled" id="homeSubmenu">
-                            <li>
-                                <a  [routerLink]="['admin/getEnquiry']">
-                                 <i class="fa fa-eye" ></i>
-                                  View</a>
-                            </li>
-                            <li>
-                                   
-                                <a  >
-                                <i class="fa fa-pencil"></i>      
-                              Edit</a>
-                            </li>
-                            <li>
-                                <a   [routerLink]="['admin/update-enquiry']" [queryParams]="{ enquiryID: 191 }" target="_blank" >
-                                  <i class="fa fa-upload"></i>       
-                                Update</a>
-                            </li>
-                            <li>
-                                <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                <i class="fa fa-trash"></i> 
-                                    Delete</a>
-                            </li>
-                        </ul>
-                   
                 </li>
                 <li>
                         <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
@@ -59,24 +35,29 @@
                              <i class="fa fa-eye"></i>
                               View</a>
                         </li>
-                        <li>
-                            <a   [routerLink]="['admin/getchat']" target="_blank" >
-                            <i class="fa fa-pencil"></i>      
-                          Edit</a>
-                        </li>
-                        <li>
-                            <a   [routerLink]="['admin/getchat']" target="_blank" >
-                              <i class="fa fa-upload"></i>       
-                            Update</a>
-                        </li>
-                        <li>
-                            <a   [routerLink]="['admin/getchat']" target="_blank" >
-                            <i class="fa fa-trash"></i> 
-                                Delete</a>
-                        </li>
-                    </ul>
+                      </ul>
                       
                 </li>
+
+                <li>
+                    <a href="#pageTestResult" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fa fa-picture-o"></i>
+                        Test Result
+             </a>
+             <ul class="collapse list-unstyled" id="pageTestResult">
+                    <li>
+                            <a  [routerLink]="['admin/InsertTestStudentResult']" >
+                             <i class="fa fa-plus"></i>
+                              Add</a>
+                        </li>    
+                <li>
+                        <a [routerLink]="['/GetTestStudentResultList']" target="_blank" >
+                         <i class="fa fa-eye"></i>
+                          View</a>
+                    </li>
+                  </ul>
+                  
+            </li>
                 <li>
                     <a href="#bannerSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                         <i class="fa fa-sliders"></i>
@@ -92,21 +73,6 @@
                                 <a [routerLink]="['/GetBannerList']" target="_blank" >
                                  <i class="fa fa-eye"></i>
                                   View</a>
-                            </li>
-                            <li>
-                                <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                <i class="fa fa-pencil"></i>      
-                              Edit</a>
-                            </li>
-                            <li>
-                                <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                  <i class="fa fa-upload"></i>       
-                                Update</a>
-                            </li>
-                            <li>
-                                <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                <i class="fa fa-trash"></i> 
-                                    Delete</a>
                             </li>
                         </ul>
                 </li>
@@ -126,21 +92,6 @@
                                  <i class="fa fa-eye"></i>
                                   View</a>
                             </li>
-                            <li>
-                                <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                <i class="fa fa-pencil"></i>      
-                              Edit</a>
-                            </li>
-                            <li>
-                                <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                  <i class="fa fa-upload"></i>       
-                                Update</a>
-                            </li>
-                            <li>
-                                <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                <i class="fa fa-trash"></i> 
-                                    Delete</a>
-                            </li>
                         </ul>
                 </li>
                 <li>
@@ -153,21 +104,6 @@
                                 <a   [routerLink]="['admin/getchat']" target="_blank" >
                                  <i class="fa fa-eye"></i>
                                   View</a>
-                            </li>
-                            <li>
-                                <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                <i class="fa fa-pencil"></i>      
-                              Edit</a>
-                            </li>
-                            <li>
-                                <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                  <i class="fa fa-upload"></i>       
-                                Update</a>
-                            </li>
-                            <li>
-                                <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                <i class="fa fa-trash"></i> 
-                                    Delete</a>
                             </li>
                         </ul>
                 </li>
@@ -186,21 +122,6 @@
                                 <a   [routerLink]="['/get-socialmedia']" target="_blank" >
                                  <i class="fa fa-eye"></i>
                                   View</a>
-                            </li>
-                            <li>
-                                <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                <i class="fa fa-pencil"></i>      
-                              Edit</a>
-                            </li>
-                            <li>
-                                <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                  <i class="fa fa-upload"></i>       
-                                Update</a>
-                            </li>
-                            <li>
-                                <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                <i class="fa fa-trash"></i> 
-                                    Delete</a>
                             </li>
                         </ul>
                 </li>
@@ -221,21 +142,6 @@
                                  <i class="fa fa-eye"></i>
                                   View</a>
                             </li>
-                            <li>
-                                <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                <i class="fa fa-pencil"></i>      
-                              Edit</a>
-                            </li>
-                            <li>
-                                <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                  <i class="fa fa-upload"></i>       
-                                Update</a>
-                            </li>
-                            <li>
-                                <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                <i class="fa fa-trash"></i> 
-                                    Delete</a>
-                            </li>
                         </ul>
                 </li>
                 <li>
@@ -253,21 +159,6 @@
                                 <a [routerLink]="['admin/get-facultyMaster']">
                                  <i class="fa fa-eye"></i>
                                   View</a>
-                            </li>
-                            <li>
-                                <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                <i class="fa fa-pencil"></i>      
-                              Edit</a>
-                            </li>
-                            <li>
-                                <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                  <i class="fa fa-upload"></i>       
-                                Update</a>
-                            </li>
-                            <li>
-                                <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                <i class="fa fa-trash"></i> 
-                                    Delete</a>
                             </li>
                         </ul>
                 </li>
@@ -287,21 +178,6 @@
                                      <i class="fa fa-eye"></i>
                                       View</a>
                                 </li>
-                                <li>
-                                    <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                    <i class="fa fa-pencil"></i>      
-                                  Edit</a>
-                                </li>
-                                <li>
-                                    <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                      <i class="fa fa-upload"></i>       
-                                    Update</a>
-                                </li>
-                                <li>
-                                    <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                    <i class="fa fa-trash"></i> 
-                                        Delete</a>
-                                </li>
                             </ul>
                     </li>
                     <li>
@@ -319,21 +195,6 @@
                                     <a [routerLink]="['admin/Getmaster']">
                                      <i class="fa fa-eye"></i>
                                       View</a>
-                                </li>
-                                <li>
-                                    <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                    <i class="fa fa-pencil"></i>      
-                                  Edit</a>
-                                </li>
-                                <li>
-                                    <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                      <i class="fa fa-upload"></i>       
-                                    Update</a>
-                                </li>
-                                <li>
-                                    <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                    <i class="fa fa-trash"></i> 
-                                        Delete</a>
                                 </li>
                             </ul>
                     </li>
@@ -353,21 +214,6 @@
                                      <i class="fa fa-eye"></i>
                                       View</a>
                                 </li>
-                                <li>
-                                    <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                    <i class="fa fa-pencil"></i>      
-                                  Edit</a>
-                                </li>
-                                <li>
-                                    <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                      <i class="fa fa-upload"></i>       
-                                    Update</a>
-                                </li>
-                                <li>
-                                    <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                    <i class="fa fa-trash"></i> 
-                                        Delete</a>
-                                </li>
                             </ul>
                     </li>
                     <li>
@@ -385,21 +231,6 @@
                                     <a [routerLink]="['admin/get-subcategory']">
                                      <i class="fa fa-eye"></i>
                                       View</a>
-                                </li>
-                                <li>
-                                    <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                    <i class="fa fa-pencil"></i>      
-                                  Edit</a>
-                                </li>
-                                <li>
-                                    <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                      <i class="fa fa-upload"></i>       
-                                    Update</a>
-                                </li>
-                                <li>
-                                    <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                    <i class="fa fa-trash"></i> 
-                                        Delete</a>
                                 </li>
                             </ul>
                     </li>
@@ -419,21 +250,6 @@
                                      <i class="fa fa-eye"></i>
                                       View</a>
                                 </li>
-                                <li>
-                                    <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                    <i class="fa fa-pencil"></i>      
-                                  Edit</a>
-                                </li>
-                                <li>
-                                    <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                      <i class="fa fa-upload"></i>       
-                                    Update</a>
-                                </li>
-                                <li>
-                                    <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                    <i class="fa fa-trash"></i> 
-                                        Delete</a>
-                                </li>
                             </ul>
                     </li>
                     <li>
@@ -451,21 +267,6 @@
                                     <a [routerLink]="['/get-course']" target="_blank">
                                      <i class="fa fa-eye"></i>
                                       View</a>
-                                </li>
-                                <li>
-                                    <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                    <i class="fa fa-pencil"></i>      
-                                  Edit</a>
-                                </li>
-                                <li>
-                                    <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                      <i class="fa fa-upload"></i>       
-                                    Update</a>
-                                </li>
-                                <li>
-                                    <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                    <i class="fa fa-trash"></i> 
-                                        Delete</a>
                                 </li>
                             </ul>
                     </li>
@@ -485,21 +286,6 @@
                                      <i class="fa fa-eye"></i>
                                       View</a>
                                 </li>
-                                <li>
-                                    <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                    <i class="fa fa-pencil"></i>      
-                                  Edit</a>
-                                </li>
-                                <li>
-                                    <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                      <i class="fa fa-upload"></i>       
-                                    Update</a>
-                                </li>
-                                <li>
-                                    <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                    <i class="fa fa-trash"></i> 
-                                        Delete</a>
-                                </li>
                             </ul>
                     </li>
                     <li>
@@ -518,22 +304,7 @@
                                      <i class="fa fa-eye"></i>
                                       View</a>
                                 </li>
-                                <li>
-                                    <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                    <i class="fa fa-pencil"></i>      
-                                  Edit</a>
-                                </li>
-                                <li>
-                                    <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                      <i class="fa fa-upload"></i>       
-                                    Update</a>
-                                </li>
-                                <li>
-                                    <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                    <i class="fa fa-trash"></i> 
-                                        Delete</a>
-                                </li>
-                            </ul>
+                              </ul>
                     </li>
                     <li>
                         <a href="#pageSubmenu15" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
@@ -550,21 +321,6 @@
                                     <a [routerLink]="['/get-batchtopicdetail']"  target="_blank">
                                      <i class="fa fa-eye"></i>
                                       View</a>
-                                </li>
-                                <li>
-                                    <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                    <i class="fa fa-pencil"></i>      
-                                  Edit</a>
-                                </li>
-                                <li>
-                                    <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                      <i class="fa fa-upload"></i>       
-                                    Update</a>
-                                </li>
-                                <li>
-                                    <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                    <i class="fa fa-trash"></i> 
-                                        Delete</a>
                                 </li>
                             </ul>
                     </li>
@@ -584,21 +340,6 @@
                                      <i class="fa fa-eye"></i>
                                       View</a>
                                 </li>
-                                <li>
-                                    <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                    <i class="fa fa-pencil"></i>      
-                                  Edit</a>
-                                </li>
-                                <li>
-                                    <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                      <i class="fa fa-upload"></i>       
-                                    Update</a>
-                                </li>
-                                <li>
-                                    <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                    <i class="fa fa-trash"></i> 
-                                        Delete</a>
-                                </li>
                             </ul>
                     </li>
                     <li>
@@ -617,21 +358,6 @@
                                      <i class="fa fa-eye"></i>
                                       View</a>
                                 </li>
-                                <li>
-                                    <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                    <i class="fa fa-pencil"></i>      
-                                  Edit</a>
-                                </li>
-                                <li>
-                                    <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                      <i class="fa fa-upload"></i>       
-                                    Update</a>
-                                </li>
-                                <li>
-                                    <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                    <i class="fa fa-trash"></i> 
-                                        Delete</a>
-                                </li>
                             </ul>
                     </li>
                     <li>
@@ -649,21 +375,6 @@
                                     <a [routerLink]="['/get-nirmanresult']" target="_blank">
                                      <i class="fa fa-eye"></i>
                                       View</a>
-                                </li>
-                                <li>
-                                    <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                    <i class="fa fa-pencil"></i>      
-                                  Edit</a>
-                                </li>
-                                <li>
-                                    <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                      <i class="fa fa-upload"></i>       
-                                    Update</a>
-                                </li>
-                                <li>
-                                    <a   [routerLink]="['admin/getchat']" target="_blank" >
-                                    <i class="fa fa-trash"></i> 
-                                        Delete</a>
                                 </li>
                             </ul>
                     </li>

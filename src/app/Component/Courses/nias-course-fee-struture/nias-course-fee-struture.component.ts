@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nias-course-fee-struture.component.css']
 })
 export class NIASCourseFeeStrutureComponent implements OnInit {
-
-  constructor() { }
+  constructor() { 
+     }
 
   ngOnInit() {
+
   }
 
 }

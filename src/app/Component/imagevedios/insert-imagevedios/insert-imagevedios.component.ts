@@ -15,7 +15,7 @@ export class InsertImagevediosComponent implements OnInit {
   ngOnInit(){ }
   onFormSubmit()
   {
-    debugger;
+     
     this._service.postImagevedios(this.image).subscribe(
    result => console.log('Success !!!.',result),
       (err:HttpErrorResponse)=>{
@@ -25,7 +25,7 @@ export class InsertImagevediosComponent implements OnInit {
             console.log("Client Side Error   !");
           }
         }) 
-        debugger;
+         
       console.log(this.image);
     }}
 

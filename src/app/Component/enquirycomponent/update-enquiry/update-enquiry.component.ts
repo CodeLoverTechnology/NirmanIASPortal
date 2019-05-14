@@ -24,7 +24,7 @@ export class UpdateEnquiryComponent implements OnInit {
     this.route.queryParams.subscribe(params => {
       this.EnqID=params.enquiryID ;
     });
-debugger;
+ 
     this.busy =this._Service.getEnquiryById(this.EnqID).subscribe(res=>this.enquiry=res);
     (err:HttpErrorResponse)=>{
     if(err.error instanceof Error){
@@ -51,7 +51,7 @@ debugger;
   }
 
   onSubmit() {
-    debugger;
+     
     this._Service.updateEnquiry(this.enquiry)
       .pipe(first())
       .subscribe(

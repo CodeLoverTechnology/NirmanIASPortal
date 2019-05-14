@@ -35,7 +35,7 @@ export class DeleteEnquiryComponent implements OnInit {
   }
 
   onSubmit() {    
-    debugger;
+     
     this._Service.deleteEnquiry(this.enquiry.enquiryID)
       .subscribe(
         data => {

@@ -17,7 +17,9 @@ export class InsertCurrentAffairsComponent implements OnInit {
   CategoryList: any;
   SubCategoryList : any;
   Result: any;
-      
+  PDF_Path_fileToUpload: File = null;
+  Affairs_Img_Path_fileToUpload: File = null;  
+
   constructor(private _service: CurrentAffairsService,private router: Router,
     private _Categoryservice:CategoryMasterService,private _SubCategoryservice:SubCategoryMasterService) { }
   ngOnInit() { 
@@ -57,6 +59,22 @@ export class InsertCurrentAffairsComponent implements OnInit {
       console.log("Client Side Error   !");
   }
   }
+}
+
+handleFileInput(files: FileList) {
+  this.PDF_Path_fileToUpload = files.item(0);
+}
+
+handleFileInputImages(files: FileList) {
+  this.Affairs_Img_Path_fileToUpload = files.item(0);
+}
+
+uploadFileToActivity() {
+  // this.fileUploadService.postFile(this.fileToUpload).subscribe(data => {
+  // alert(this.fileToUpload + "File Uploaded Successfull");
+  //   }, error => {
+  //     console.log(error);
+  //   });
 }
 
 GetSubCategory()

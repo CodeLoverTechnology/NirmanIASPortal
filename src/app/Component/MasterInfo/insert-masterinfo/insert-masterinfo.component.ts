@@ -30,7 +30,7 @@ onSubmit()
         console.log("Client Side Error   !");
       }
     })
-debugger;
+ 
 if(this.Response!=undefined)
 {
   alert("Master Record Added Successfully.");

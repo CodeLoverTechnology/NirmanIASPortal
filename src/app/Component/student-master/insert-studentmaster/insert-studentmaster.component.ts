@@ -15,7 +15,7 @@ export class InsertStudentmasterComponent implements OnInit {
   ngOnInit(){ }
   onFormSubmit()
   {
-    debugger;
+     
     this._service.postStudentMaster(this.student).subscribe(
    result => console.log('Success !!!.',result),
       (err:HttpErrorResponse)=>{
@@ -25,7 +25,7 @@ export class InsertStudentmasterComponent implements OnInit {
             console.log("Client Side Error   !");
           }
         }) 
-        debugger;
+         
       console.log(this.student);
     }}
 

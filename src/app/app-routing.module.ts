@@ -96,6 +96,9 @@ import { InsertMasterinfoComponent } from './component/MasterInfo/insert-masteri
 import { relative } from 'path';
 import { DeleteEnquiryComponent } from './Component/enquirycomponent/delete-enquiry/delete-enquiry.component';
 import { ViewPDFComponent } from './Component/view-pdf/view-pdf.component';
+import { IndiaYearBook2019Component } from './Component/CurrentAffairs/india-year-book2019/india-year-book2019.component';
+import { GetTestStudentResultListComponent } from './Component/TestStudentResult/get-test-student-result-list/get-test-student-result-list.component';
+import { InsertTestStudentResultComponent } from './Component/TestStudentResult/insert-test-student-result/insert-test-student-result.component';
 const routes: Routes = [
   { path: "", component: NIASHomeComponent },
 
@@ -142,6 +145,7 @@ const routes: Routes = [
         { path: "admin/get-studentmaster", component: GetStudentmasterComponent },
         { path: "admin/insert-notification", component: InsertNotifictionmasterComponent }, 
         { path: "insert-imagevedio", component: InsertImagevediosComponent },
+        {path : "admin/InsertTestStudentResult", component: InsertTestStudentResultComponent},
       ]
   },
   {path:"GetBannerList", component:GetBannerComponent},
@@ -205,7 +209,10 @@ const routes: Routes = [
   { path: "PrintedMaterialList", component: PrintedMaterialListComponent },
   { path: "The-Hindu-CurrentAffairs", component: CurrentAffairsForHinduComponent },
   { path: "BookContentStrategy", component: BookContentStrategyComponent },
-  { path : "ViewPDF", component:ViewPDFComponent}
+  { path : "ViewPDF", component:ViewPDFComponent},
+  { path : "IndiaYearBook", component:IndiaYearBook2019Component},
+  { path : "GetTestStudentResultList" , component:GetTestStudentResultListComponent}
+
 
 
 ];

@@ -16,7 +16,7 @@ export class VideoLecturesService {
       return this._http.get(this.BaseURL+"VideoLectures/VideoLecturesList");
     }
     public postLecture(Lectures : VideoLectures):any{
-      debugger;
+       
       return this._http.post<any>(this.BaseURL+"VideoLectures/CreateVideoLectures",Lectures);
     }
 }

@@ -14,7 +14,7 @@ export class GetVideoLectureComponent implements OnInit {
   constructor(private _service: VideoLecturesService) { }
 
   ngOnInit() {
-    debugger;
+     
     this._service.getLectureInfo().subscribe(
       res => this.Result = res);
      (err: HttpErrorResponse) => {

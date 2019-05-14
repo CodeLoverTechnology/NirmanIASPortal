@@ -1,0 +1,30 @@
+<div class="btn btn-success text-white"><a [routerLink]="['/GetTestStudentResultList']" target="_blank" class=" text-white"><i
+  class="fa fa-newspaper-o text-white" aria-hidden="true"></i> Show Test Student Result</a></div>
+  <div class="text-center p-2 h3">Test Student Result Entry</div>
+  <hr>
+
+<div class="container-fluid" [ngBusy]="busy" (busyStop)="onBusyStop()" (busyStart)="onBusyStart()">
+<form enctype="multipart/form-data" method="post" #TestStudentResult="ngForm" (ngSubmit)="onFormSubmit();TestStudentResult.reset()">
+<div>
+  <label>Student Name</label>
+  <input type="text" name="StudentName" #StudentName="ngModel" class="form-control" required [(ngModel)]="testStudentResult.StudentName">
+  <div class="validation-error" *ngIf="StudentName.invalid && StudentName.touched">Student Name is required.</div>
+</div>
+<div>
+  <label>Contact No</label>
+  <input type="text" name="ContactNo" #ContactNo="ngModel" class="form-control" required [(ngModel)]="testStudentResult.ContactNo">
+  <div class="validation-error" *ngIf="ContactNo.invalid && ContactNo.touched">Student Contact No is required.</div>
+</div>
+<div>
+  <label>Email ID</label>
+  <input type="text" name="Email_ID" #Email_ID="ngModel" class="form-control" required [(ngModel)]="testStudentResult.Email_ID">
+  <div class="validation-error" *ngIf="Email_ID.invalid && Email_ID.touched">Student Email ID is required.</div>
+</div>
+<div>
+  <label>Test Title</label>
+  <input type="text" name="TestTitle" #TestTitle="ngModel" class="form-control" required [(ngModel)]="testStudentResult.TestTitle">
+  <div class="validation-error" *ngIf="TestTitle.invalid && TestTitle.touched">This field is required.</div>
+</div>
+<button [disabled]="!TestStudentResult.valid" type="submit" class="btn btn-primary btn-lg m-3">Submit Now</button>
+</form>
+</div>

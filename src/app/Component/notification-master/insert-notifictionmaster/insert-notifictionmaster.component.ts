@@ -15,7 +15,7 @@ export class InsertNotifictionmasterComponent implements OnInit {
   ngOnInit(){ }
   onFormSubmit()
   {
-    debugger;
+     
     this._service.postNotification(this.notification).subscribe(
    result => console.log('Success !!!.',result),
       (err:HttpErrorResponse)=>{
@@ -25,7 +25,7 @@ export class InsertNotifictionmasterComponent implements OnInit {
             console.log("Client Side Error   !");
           }
         }) 
-        debugger;
+         
       console.log(this.notification);
     }}
 
