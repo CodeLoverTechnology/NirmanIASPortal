@@ -1,10 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import {  FileUploader, FileSelectDirective } from 'ng2-file-upload/ng2-file-upload';
+import { Component, OnInit, VERSION } from '@angular/core';
+import {HttpClientModule, HttpClient, HttpRequest, HttpResponse, HttpEventType} from '@angular/common/http';
 
-const URL = 'http://localhost:3000/api/upload';
-
-
-
+// const URL = 'http://localhost:3000/api/upload';
 
 @Component({
   selector: 'app-upload-files',
@@ -12,18 +9,70 @@ const URL = 'http://localhost:3000/api/upload';
   styleUrls: ['./upload-files.component.css']
 })
 export class UploadFilesComponent implements OnInit {
-
-  public uploader: FileUploader = new FileUploader({url: URL, itemAlias: 'photo|pdf'});
+  BaseURL: string = "http://NIAS.codelovertechnology.com/assets/CurrentAffairs/CurrentAffairsTheHindu/";
+  percentDone: number;
+  uploadSuccess: boolean;
+  // fileToUpload: File = null;
+  constructor( private http: HttpClient) { }
+  version = VERSION
   
-  constructor() { }
-
   ngOnInit() {
-    this.uploader.onAfterAddingFile = (file) => { file.withCredentials = false; };
-    this.uploader.onCompleteItem = (item: any, response: any, status: any, headers: any) => {
-         console.log('ImageUpload:uploaded:', item, status, response);
-         alert('File uploaded successfully');
-     };
   }
+
+  upload(files: File[]){
+    //pick from one of the 4 styles of file uploads below
+    this.uploadAndProgress(files);
+  }
+
+  basicUpload(files: File[]){
+    var formData = new FormData();
+    Array.from(files).forEach(f => formData.append('file', f))
+    this.http.post(this.BaseURL, formData)
+      .subscribe(event => {  
+        console.log('done')
+      })
+  }
+ 
+  basicUploadSingle(file: File){    
+    this.http.post(this.BaseURL, file)
+      .subscribe(event => {  
+        console.log('done')
+      })
+  }
+  
+  uploadAndProgress(files: File[]){
+    console.log(files)
+    var formData = new FormData();
+    Array.from(files).forEach(f => formData.append('file',f))
+    
+    this.http.post(this.BaseURL, formData, {reportProgress: true, observe: 'events'})
+      .subscribe(event => {
+        if (event.type === HttpEventType.UploadProgress) {
+          this.percentDone = Math.round(100 * event.loaded / event.total);
+        } else if (event instanceof HttpResponse) {
+          this.uploadSuccess = true;
+        }
+    });
+  }
+  
+  uploadAndProgressSingle(file: File){    
+    this.http.post(this.BaseURL, file, {reportProgress: true, observe: 'events'})
+      .subscribe(event => {
+        if (event.type === HttpEventType.UploadProgress) {
+          this.percentDone = Math.round(100 * event.loaded / event.total);
+        } else if (event instanceof HttpResponse) {
+          this.uploadSuccess = true;
+        }
+    });
+  }
+
+// uploadFileToActivity() {
+//   // this.fileUploadService.postFile(this.fileToUpload).subscribe(data => {
+//   //   // do something, if upload success
+//   //   }, error => {
+//   //     console.log(error);
+//   //   });
+// }
 
   
 

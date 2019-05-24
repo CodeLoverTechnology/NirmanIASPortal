@@ -1,0 +1,19 @@
+<div class="container-fluid" style="max-width:300px;" [ngBusy]="busy">
+  <form enctype="multipart/form-data" method="post" #SMSDetailsForm="ngForm" (ngSubmit)="onFormSubmit()">
+    <div class="form-group">
+      <label>Send Bulk SMS Message</label>
+      <textarea type="text" name="Message" #Message="ngModel" class="form-control"
+        [(ngModel)]="sMSMessage.Message" placeholder="Enter Subject" required></textarea>
+      <div class="validation-error" *ngIf="Message.invalid && Message.touched">SMS Message required.</div>
+    </div>
+
+    <div class="form-group">
+      <label>Student Numbers</label>
+      <textarea type="text" name="ContactNo" #ContactNo="ngModel" class="form-control"
+        [(ngModel)]="sMSMessage.ContactNo" placeholder="Enter Student Numbers" required></textarea>
+      <div class="validation-error" *ngIf="ContactNo.invalid && ContactNo.touched">Student Numbers required.
+      </div>
+    </div>
+    <button [disabled]="!SMSDetailsForm.valid" type="submit" class="btn btn-primary btn-lg m-3 ">Send SMS Now</button>
+  </form>
+</div>

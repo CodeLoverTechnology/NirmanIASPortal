@@ -1,6 +1,7 @@
 import { Component, OnInit, NgModule } from '@angular/core';
 import { CurrentAffairsService } from 'src/app/Services/CurrentAffairs/current-affairs.service';
 import { HttpClientModule } from '@angular/common/http';
+import { CurrentAffairsMasters } from 'src/app/Entity/CurrentAffairsMaster';
 
 @Component({
   selector: 'app-current-affairs',
@@ -13,12 +14,13 @@ export class CurrentAffairsComponent implements OnInit {
   public CurrentAffairsID:string ="6";
   public CurrentAffairsList: any;
   public busy: Promise<any>;
- 
+  Current = {} as CurrentAffairsMasters;
   constructor(private _service:CurrentAffairsService) { }
 ngOnInit() {
-  this.busy = this._service.getCurrentAffairsInfo().subscribe(
-    result => {
-     this.CurrentAffairsList = result.filter(Curr => Curr.subCategory === this.CurrentAffairsID);
+  this.Current.SubCategory="6";
+  this.busy = this._service.getCurrentAffairsInfo(this.Current).subscribe(
+    result => {  
+     this.CurrentAffairsList = result;//.filter(CurrInfo => CurrInfo.subCategory === this.CurrentAffairsID);
     },
     (err: HttpClientModule) => {
       if (err instanceof Error) {
@@ -27,7 +29,7 @@ ngOnInit() {
         console.log("Client Side Error   !" + err);
       }
     });
-}
+  }
 }
 
 

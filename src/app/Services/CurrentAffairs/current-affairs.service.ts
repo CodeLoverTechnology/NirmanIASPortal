@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpParams} from "@angular/common/http";
 import { CurrentAffairsMasters} from '../../Entity/CurrentAffairsMaster';
 import { DomSanitizer } from '@angular/platform-browser';
 
@@ -14,9 +14,11 @@ export class CurrentAffairsService {
     this.sanitizedUrl=this.sanitizer.sanitize(4,this.BaseURL);
   }
   
-   getCurrentAffairsInfo():any{
-      
-    return this._http.get(this.sanitizedUrl+"CurrentAffairsMasters/CurrentAffairsMastersList");
+   getCurrentAffairsInfo(Current: CurrentAffairsMasters):any{
+      debugger;
+      // let params1 = new HttpParams().append("SubCategory",Current.SubCategory);
+      // params1 = new HttpParams().append("Category",Current.Category);
+    return this._http.get(this.sanitizedUrl+"CurrentAffairsMasters/CurrentAffairsMastersList?SubCategory="+Current.SubCategory+"&Category="+Current.Category);
   }
 
    postCurrentAffairs(Current: CurrentAffairsMasters):any{

@@ -4,12 +4,11 @@
     <div *ngFor="let x of CurrentAffairsList">
         <div class="shadow p-2">
             <div class="row">
-                    <!-- <a class="btn btn-success p-2 m-1" [routerLink]="['/../admin/admin/update-enquiry']" target="_blank"  [queryParams]="{ enquiryID: (x.enquiryID) }"> Edit</a> -->
-                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 rounded  p-2">
+                    <!-- <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 rounded  p-2">
                             <img src={{x.currentAffairsImgPath}}  class="p-1 img-fluid" style="width: 250px;height: 150px;" />
                     </div>
-                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 rounded  p-1">
-                            <a class="btn btn-success p-2 m-1" [routerLink]="['../ViewPDF']" target="_blank"  [queryParams]="{ pdfSrc: (x.pdfPath) }"
+                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 rounded  p-1">-->
+                            <a class="btn btn-success p-2 m-1" [routerLink]="['../ViewPDF']" target="_blank"  [queryParams]="{ pdfSrc: (x.pdfPath) }" 
                             target="_blank" rel={{x.title}} title={{x.title}}
                             class="border0 blink">
                         <div class="p-1">
@@ -19,12 +18,12 @@
                                     <a class="float-right small"  rel={{x.title}} title={{x.title}}>Read More...</a>       
                         </div>        
                         </a>
-                    </div>
+                    <!-- </div> -->
             </div>
-        </div>
+       </div>
         </div>
 <div class="row">
-  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 p-2 shadow">
+  <!-- <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 p-2 shadow">
       <h2>Nirman IAS Daily Articles</h2>
       <table class="table table-hover table-fluid">
           <tr>
@@ -571,7 +570,7 @@
       </table>
   </div>
   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 p-2 shadow">
-      <!-- <h2>MCQ for Prelims with Current Affairs</h2>
+      <h2>MCQ for Prelims with Current Affairs</h2>
       <table class="table table-hover table-fluid">
           <tr>
               <th>MCQ Paper</th>
@@ -787,8 +786,8 @@
               </td>
               <td>15 Mar 2019</td>
             </tr>
-      </table> -->
-  </div>
+      </table> 
+  </div> -->
   </div>
 </div>
 </div>

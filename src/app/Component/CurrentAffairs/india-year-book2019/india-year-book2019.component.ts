@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CurrentAffairsService } from 'src/app/Services/CurrentAffairs/current-affairs.service';
 import { HttpClientModule } from '@angular/common/http';
+import { CurrentAffairsMasters } from 'src/app/Entity/CurrentAffairsMaster';
 
 @Component({
   selector: 'app-india-year-book2019',
@@ -12,12 +13,14 @@ export class IndiaYearBook2019Component implements OnInit {
   public IndiaYearBookID:string ="10";
   public IndiaYearBook: any;
   public busy: Promise<any>;
+  Current = {} as CurrentAffairsMasters;
   constructor(private _service:CurrentAffairsService){ }
 
   ngOnInit() {
-    this.busy = this._service.getCurrentAffairsInfo().subscribe(
+    this.Current.SubCategory=this.IndiaYearBookID;
+    this.busy = this._service.getCurrentAffairsInfo(this.Current).subscribe(
       result => {
-       this.IndiaYearBook = result.filter(Curr => Curr.subCategory === this.IndiaYearBookID);
+       this.IndiaYearBook = result;//.filter(Curr => Curr.subCategory === this.IndiaYearBookID);
       },
       (err: HttpClientModule) => {
         if (err instanceof Error) {

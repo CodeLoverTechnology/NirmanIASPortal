@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CurrentAffairsService } from "../../../Services/CurrentAffairs/current-affairs.service";
 import { HttpErrorResponse } from '@Angular/common/http';
+import { CurrentAffairsMasters } from 'src/app/Entity/CurrentAffairsMaster';
 
 
 @Component({
@@ -11,9 +12,11 @@ import { HttpErrorResponse } from '@Angular/common/http';
 export class GetCurrentAffairsComponent implements OnInit {
 
   public result:any;
+  Current = {} as CurrentAffairsMasters;
   constructor(private _service:CurrentAffairsService) { }
 ngOnInit() {
-    this._service.getCurrentAffairsInfo().subscribe(res=>this.result=res);
+  debugger;
+    this._service.getCurrentAffairsInfo(this.Current).subscribe(res=>this.result=res);
     (err:HttpErrorResponse)=>{
       if(err.error instanceof Error){
         console.log("Server Side Error !");

@@ -99,6 +99,8 @@ import { ViewPDFComponent } from './Component/view-pdf/view-pdf.component';
 import { IndiaYearBook2019Component } from './Component/CurrentAffairs/india-year-book2019/india-year-book2019.component';
 import { GetTestStudentResultListComponent } from './Component/TestStudentResult/get-test-student-result-list/get-test-student-result-list.component';
 import { InsertTestStudentResultComponent } from './Component/TestStudentResult/insert-test-student-result/insert-test-student-result.component';
+import { UploadFilesComponent } from './Component/upload-files/upload-files.component';
+import { SendSMSBYAdminComponent } from './Component/SendSMS/send-smsbyadmin/send-smsbyadmin.component';
 const routes: Routes = [
   { path: "", component: NIASHomeComponent },
 
@@ -145,7 +147,8 @@ const routes: Routes = [
         { path: "admin/get-studentmaster", component: GetStudentmasterComponent },
         { path: "admin/insert-notification", component: InsertNotifictionmasterComponent }, 
         { path: "insert-imagevedio", component: InsertImagevediosComponent },
-        {path : "admin/InsertTestStudentResult", component: InsertTestStudentResultComponent},
+        { path : "admin/InsertTestStudentResult", component: InsertTestStudentResultComponent},
+        { path : "SendSMS" , component: SendSMSBYAdminComponent},
       ]
   },
   {path:"GetBannerList", component:GetBannerComponent},
@@ -157,7 +160,7 @@ const routes: Routes = [
   { path: "InsertEnquiry", component: InsertEnquiryComponent },
   { path: "registration", component: RegistrationComponent },
   { path: "Aboutus", component: AboutUsComponent },
-  // { path: "get-banner", component: GetBannerComponent },
+  { path: "UploadFiles", component: UploadFilesComponent },
   { path: "Video", component: VideoNIASComponent },
   { path: "Contact", component: ContactUsComponent },
   { path: "Magazine", component: MagazineListComponent },

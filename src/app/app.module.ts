@@ -151,6 +151,7 @@ import { ViewPDFComponent } from './Component/view-pdf/view-pdf.component';
 import { IndiaYearBook2019Component } from './Component/CurrentAffairs/india-year-book2019/india-year-book2019.component';
 import { InsertTestStudentResultComponent } from './Component/TestStudentResult/insert-test-student-result/insert-test-student-result.component';
 import { GetTestStudentResultListComponent } from './Component/TestStudentResult/get-test-student-result-list/get-test-student-result-list.component';
+import { SendSMSBYAdminComponent } from './Component/SendSMS/send-smsbyadmin/send-smsbyadmin.component';
 
 @NgModule({
   declarations: [
@@ -271,7 +272,8 @@ import { GetTestStudentResultListComponent } from './Component/TestStudentResult
     ViewPDFComponent,
     IndiaYearBook2019Component,
     InsertTestStudentResultComponent,
-    GetTestStudentResultListComponent   
+    GetTestStudentResultListComponent,
+    SendSMSBYAdminComponent   
   ],
   imports: [
     BrowserModule,
