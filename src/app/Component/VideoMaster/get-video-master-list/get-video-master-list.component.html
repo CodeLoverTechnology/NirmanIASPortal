@@ -1,0 +1,15 @@
+<div *ngFor="let x of result">
+    <div class="shadow p-2">
+        <div class="row">
+                    <div class="p-1">
+                        <h5 class="h5">{{x.videoTitle}}</h5>                    
+                        <p class="text-justify small">{{x.description}} </p>
+                        <p>{{x.videoPath}}</p>
+                       <iframe width="420" height="315" src ={{x.videoPath}}></iframe>
+                       <object data={{x.videoPath}} width="560" height="315"></object>
+ 
+                       <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/vhlIcnF4Wqk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                    </div>        
+          </div>
+    </div>
+    </div>

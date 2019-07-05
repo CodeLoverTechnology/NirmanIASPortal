@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { LOCAL_STORAGE } from '@ng-toolkit/universal';
+import { Component, OnInit , Inject} from '@angular/core';
 import { UserMaster } from "src/app/Entity/user-master";
 import { UsermasterService } from "src/app/Services/UserMaster/usermaster.service";
 import { HttpErrorResponse } from '@angular/common/http';
@@ -15,7 +16,7 @@ import { Router } from '@angular/router';
     busy: Promise<any>;
     Result : any;
     userDetailsMaster = {} as UserMaster;  
-    constructor(private UserService:UsermasterService, private localSt: SessionStorageService,private router:Router) { }
+    constructor(@Inject(LOCAL_STORAGE) private localStorage: any, private UserService:UsermasterService, private localSt: SessionStorageService,private router:Router) { }
   
     ngOnInit() {
       

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FacultyMasterService } from "../../../Services/FacultyMaster/faculty-master.service";
-import { HttpErrorResponse } from '@Angular/common/http';
+import { HttpErrorResponse } from '@angular/common/http';
 
 
 @Component({

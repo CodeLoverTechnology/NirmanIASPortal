@@ -1,3 +1,4 @@
+import { WINDOW } from '@ng-toolkit/universal';
 import { Component, OnInit, NgModule,PLATFORM_ID, APP_ID, Inject } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { SessionStorageService } from 'ngx-webstorage';
@@ -16,16 +17,16 @@ export class AppComponent {
   title = 'Nirman IAS';
   private var_one:string;
   LoginUser : string;
-  constructor(@Inject(PLATFORM_ID) private platformId: Object,private localSt: SessionStorageService,private UserServices:UsermasterService,
+  constructor(@Inject(WINDOW) private window: Window, @Inject(PLATFORM_ID) private platformId: Object,private localSt: SessionStorageService,private UserServices:UsermasterService,
     @Inject(APP_ID) private appId: string) { }
     onActivate(event: any) {
       if (isPlatformBrowser(this.platformId)) {
-        let scrollToTop = window.setInterval(() => {
-          let pos = window.pageYOffset;
+        let scrollToTop = this.window.setInterval(() => {
+          let pos = this.window.pageYOffset;
           if (pos > 0) {
-            window.scrollTo(0, pos - 50); // how far to scroll on each step
+            this.window.scrollTo(0, pos - 50); // how far to scroll on each step
           } else {
-            window.clearInterval(scrollToTop);
+            this.window.clearInterval(scrollToTop);
           }
         }, 16);
       }

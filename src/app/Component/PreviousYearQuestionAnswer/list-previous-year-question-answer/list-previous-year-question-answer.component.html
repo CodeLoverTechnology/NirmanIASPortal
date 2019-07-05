@@ -1,0 +1,20 @@
+<div class="row p-2 bg-danger text-white m-2">
+    <h2>UPSC Previous Year Question </h2>
+</div>
+<div class="container m-2">
+<div *ngFor="let x of result" class="row">        
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 rounded bg-info shadow p-2">
+                <a class="btn btn-success p-1 m-2 border0 blink text-white" [routerLink]="['../ViewPDF']" target="_blank"
+                    [queryParams]="{ pdfSrc: (x.questionPaperPath) }" target="_blank" 
+                    rel={{x.questionPaperName}} title={{x.questionPaperName}}>
+                    
+                    <div class="p-1 text-white">
+                        <h5 class="h5 text-white">{{x.questionPaperName}}</h5>
+                        <h5 class="h5 text-white">{{x.subCategory}} - {{x.year}}</h5>
+                        <a class="float-right small text-white" rel={{x.questionPaperName}} title={{x.questionPaperName}}>Read
+                            More...</a>
+                    </div>
+                </a>
+            </div>
+        </div>
+ </div>

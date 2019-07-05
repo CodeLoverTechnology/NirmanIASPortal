@@ -9,9 +9,12 @@ import { PdfViewerComponent } from 'ng2-pdf-viewer';
 })
 export class ViewPDFComponent implements OnInit {
   pdfSrc: string = '/assets/CurrentAffairs/CurrentAffairsTheHindu/The_Hindu_17_April_2019.pdf';
-  @ViewChild(PdfViewerComponent) private pdfComponent: PdfViewerComponent;
+  //@ViewChild(PdfViewerComponent);
+   private pdfComponent: PdfViewerComponent;
   
-  constructor(private router: Router,private route: ActivatedRoute, ) { }
+  constructor(private router: Router,private route: ActivatedRoute) { 
+
+  }
 
   ngOnInit() {
     this.route.queryParams.subscribe(params => {

@@ -1,0 +1,60 @@
+<div class="btn btn-success text-white">
+  <a [routerLink]="['/get-current']" target="_blank" class=" text-white"><i class="fa fa-newspaper-o text-white"
+      aria-hidden="true"></i> Show Video Master</a></div>
+<div class="text-center p-2 h3">Video Master</div>
+<hr>
+
+<div class="container-fluid" [ngBusy]="busy">
+  <form enctype="multipart/form-data" method="post" #VideoMasterForm="ngForm" (ngSubmit)="onFormSubmit();VideoMasterForm.reset()">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <div class="form-group">
+          <label>Category &nbsp;&nbsp;</label>
+          <select name="Category" class="form-control"
+            (change)="GetSubCategory($event.target.id)" class="dropdown p-2">
+            <option value="0">--All--</option>
+            <option *ngFor="let cat of CategoryList" id={{cat.categoryID}} value={{cat.categoryID}}>
+              {{cat.categoryName}}
+            </option>
+          </select>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <div class="form-group">
+          <label>Sub Category &nbsp;&nbsp;&nbsp;</label>
+          <select name="SubCategory" #SubCategory="ngModel" class="form-control" [(ngModel)]="Current.SubCategory"
+            class="dropdown p-2">
+            <option value="0">--All--</option>
+            <option *ngFor="let SubCat of SubCategoryList" id={{SubCat.subCategoryID}} value={{SubCat.subCategoryID}}>
+              {{SubCat.subCategoryName}}
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div>
+      <label>Video Title</label>
+      <input type="text" name="VideoTitle" #VideoTitle="ngModel" class="form-control" required [(ngModel)]="Current.VideoTitle">
+      <div class="validation-error" *ngIf="VideoTitle.invalid && VideoTitle.touched">This field is required.</div>
+    </div>
+    <div>
+      <label>Description</label>
+      <textarea type="text" name="Description" #Description="ngModel" class="form-control" required [(ngModel)]="Current.Description"></textarea>
+      <div class="validation-error" *ngIf="Description.invalid && Description.touched">This field is required.</div>
+    </div>
+    <div>
+      <label>Video Path</label>
+
+      <input type="text" name="VideoPath" #VideoPath="ngModel" class="form-control" required [(ngModel)]="Current.VideoPath">
+      <div class="validation-error" *ngIf="VideoPath.invalid && VideoPath.touched">This field is required.</div>
+    </div>
+    <div>
+      <label>Remarks</label>
+      <textarea type="text" name="Remarks" #Remarks="ngModel" class="form-control" required
+        [(ngModel)]="Current.Remarks"></textarea>
+      <div class="validation-error" *ngIf="Remarks.invalid && Remarks.touched">This field is required.
+      </div>
+    </div>
+    <button [disabled]="!VideoMasterForm.valid" type="submit" class="btn btn-primary btn-lg m-3">Submit Now</button>
+  </form>
+</div>

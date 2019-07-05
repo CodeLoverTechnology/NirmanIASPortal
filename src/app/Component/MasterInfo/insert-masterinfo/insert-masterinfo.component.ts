@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MasterInfoModel } from 'src/app/Entity/master-info-model';
 import { MasterInfoServiceService } from 'src/app/Services/MasterInfo/master-info-service.service';
-import { HttpErrorResponse } from '@Angular/common/http';
+import { HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
 
 @Component({

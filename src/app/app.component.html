@@ -64,13 +64,19 @@
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a [routerLink]="['/CurrentAffairs']" class="dropdown-item">
                         <i class="fa fa-book" aria-hidden="true"></i>
-                        Daily Current Article</a>
+                        Current Capsule</a>
+                        <a [routerLink]="['/CurrentAffairs']" class="dropdown-item">
+                          <i class="fa fa-book" aria-hidden="true"></i>
+                          Daily Articles</a>
                         <a [routerLink]="['/The-Hindu-CurrentAffairs']"   class="dropdown-item">
                             <i class="fa fa-book" aria-hidden="true"></i>
                             The Hindu Article</a>
                             <a [routerLink]="['/IndiaYearBook']"   class="dropdown-item">
                                 <i class="fa fa-book" aria-hidden="true"></i>
                                 India Year Book 2019</a>
+                                <a [routerLink]="['/CurrentAffairs']" class="dropdown-item">
+                                  <i class="fa fa-book" aria-hidden="true"></i>
+                                  आर्थिक हलचल</a>
               </div>
             </li>
             <li class="nav-item dropdown">
@@ -110,19 +116,24 @@
               schedules
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a [routerLink]="['#']" class="dropdown-item">
-                      <i class="fa fa-picture-o" aria-hidden="true"></i>
-                      Batch schedule</a>
-                        <a [routerLink]="['#']"   class="dropdown-item">
-                          <i class="fa fa-video-camera" aria-hidden="true"></i>
+                    <a [routerLink]="['/get-batchdetails']" class="dropdown-item">
+                      <i class="fa fa-clock-o" aria-hidden="true"></i>
+                      Batch Schedule</a>
+                        <a href="../../../../assets/NIAS_Courses/Test_Series/UPSC-Mains-Test-Series-Schedule.pdf" target="_blank"  class="dropdown-item">
+                          <i class="fa fa-tachometer" aria-hidden="true"></i>
                           Test Series schedule</a>
+                        <a href="../../../../assets/NIAS_Courses/Test_Series/NIRMAN-IAS-UPSC-Batch-Schedule.pdf" target="_blank"  class="dropdown-item">
+                            <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+                            Class Schedule</a>
                        </div>
             </li>
             <li class="nav-item">
                     <a [routerLink]="['/Contact']"  class="nav-link" ><i class="fa fa-info-circle"  aria-hidden="true"></i><br> Contact</a>
             </li>
             <li class="nav-item">
-                    <a [routerLink]="['/login']" class="nav-link"><i class="fa fa-user-circle"  aria-hidden="true"></i><br> Login</a>                                
+                    <!-- <a [routerLink]="['/login']" class="nav-link"><i class="fa fa-user-circle"  aria-hidden="true"></i><br> Login</a>   
+                                                  -->
+                                                  <a href="https://blog.nirmanias.com" class="nav-link" target="_blank" alt="Nirman IAS Blogs"><i class="fa fa-newspaper-o"  aria-hidden="true"></i><br>Blog</a>
             </li>
           </ul>
         </div>
@@ -138,11 +149,7 @@
 
    </section>
 <div id="main">
-    <!-- <section>
-   <span id="SideMenu" style="font-size:28px;cursor:pointer;width: 35px;" 
-   class="fixed-top text-white p-1 bg-primary" onclick="SideMenuShow();">&#9776;</span>
-</section> -->
-    <router-outlet (activate)="onActivate($event)"></router-outlet>
+   <router-outlet (activate)="onActivate($event)"></router-outlet>
 </div>
 
 <section>
@@ -156,8 +163,8 @@
         <i class="fa fa-youtube-play" aria-hidden="true"></i></a>
     <a href="https://www.facebook.com/nirman.ias" target="_blank" class="facebook">
         <i class="fa fa-facebook-official" aria-hidden="true"></i></a>
-    <a href="https://plus.google.com/102780980116787682106" target="_blank" class="google">
-        <i class="fa fa-google" aria-hidden="true"></i></a>
+    <!-- <a href="https://plus.google.com/102780980116787682106" target="_blank" class="google">
+        <i class="fa fa-google" aria-hidden="true"></i></a> -->
     <a href="https://twitter.com/nirmanias07" target="_blank" class="twitter">
         <i class="fa fa-twitter" aria-hidden="true"></i></a>
     <a href="https://www.instagram.com/nirmanias/" target="_blank" class="instagram bg-success">

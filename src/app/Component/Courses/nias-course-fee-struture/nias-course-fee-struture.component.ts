@@ -6,11 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nias-course-fee-struture.component.css']
 })
 export class NIASCourseFeeStrutureComponent implements OnInit {
+  pdfPath: string = '/assets/CurrentAffairs/CurrentAffairsTheHindu/The_Hindu_17_April_2019.pdf';
   constructor() { 
      }
 
   ngOnInit() {
 
+    
   }
 
 }

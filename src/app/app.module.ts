@@ -1,9 +1,10 @@
+import { NgtUniversalModule } from '@ng-toolkit/universal';
+import { TransferHttpCacheModule } from '@nguniversal/common';
 import { BrowserModule } from '@angular/platform-browser';
-// import { NgModule } from '@angular/core';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { HashLocationStrategy, LocationStrategy , CommonModule} from '@angular/common';
+//import { bootstrap } from '@ng-bootstrap/ng-bootstrap'
 
 import {  NgModule } from '@angular/core';
-import { FileSelectDirective } from 'ng2-file-upload';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,36 +18,35 @@ import { AboutUsComponent } from './Component/about-us/about-us.component';
 import { FooterComponent } from './Component/footer/footer.component';
 import { LiveChatComponent } from './Component/live-chat/live-chat.component';
 import { ChatServicesService } from './Services/Chat/chat-services.service';
-import { LogInComponent } from './component/log-in/log-in/log-in.component';
-import { RegistrationComponent } from './component/registration/registration/registration.component';
-import { AdminComponent } from './component/admin/admin/admin.component';
+import { LogInComponent } from './Component/log-in/log-in/log-in.component';
+import { RegistrationComponent } from './Component/registration/registration/registration.component';
+import { AdminComponent } from './Component/admin/admin/admin.component';
 import { AdminlinkComponent } from './Component/admin/adminlink/adminlink.component';
 import { NIASHomeComponent } from './Component/niashome/niashome.component';
 import { GalleryNIASComponent } from './Component/gallery-nias/gallery-nias.component';
 import { VideoNIASComponent } from './Component/video-nias/video-nias.component';
 import { ContactUsComponent } from './Component/contact-us/contact-us.component';
-import { MagazineListComponent } from './component/Magazine/magazine-list/magazine-list.component';
-import { BookListComponent } from './component/Books/book-list/book-list.component';
+import { MagazineListComponent } from './Component/Magazine/magazine-list/magazine-list.component';
+import { BookListComponent } from './Component/Books/book-list/book-list.component';
 import { UPSCCoursesComponent } from './Component/Courses/upsc-courses/upsc-courses.component';
 import { StatePCSCoursesComponent } from './Component/Courses/state-pcs-courses/state-pcs-courses.component';
 import { TestSeriesComponent } from './Component/Courses/test-series/test-series.component';
-import { InsertSubCategoryComponent } from './component/SubCategory/insert-sub-category/insert-sub-category.component';
+import { InsertSubCategoryComponent } from './Component/SubCategory/insert-sub-category/insert-sub-category.component';
 import { GetSubCategoryComponent } from './Component/SubCategory/get-sub-category/get-sub-category.component';
 import { GetSocialMediaComponent } from './Component/SocialMediaMaster/get-social-media/get-social-media.component';
-import { InsertSocialMediaComponent } from './component/SocialMediaMaster/insert-social-media/insert-social-media.component';
+import { InsertSocialMediaComponent } from './Component/SocialMediaMaster/insert-social-media/insert-social-media.component';
 
-import { GetMasterinfoComponent } from './component/MasterInfo/get-masterinfo/get-masterinfo.component';
-import { InsertMasterinfoComponent } from './component/MasterInfo/insert-masterinfo/insert-masterinfo.component';
+import { GetMasterinfoComponent } from './Component/MasterInfo/get-masterinfo/get-masterinfo.component';
+import { InsertMasterinfoComponent } from './Component/MasterInfo/insert-masterinfo/insert-masterinfo.component';
 import { GetCourceMasterComponent } from './Component/courseMaster/get-cource-master/get-cource-master.component';
 import { InsertCourceMasterComponent } from './Component/courseMaster/insert-cource-master/insert-cource-master.component';
 
-import { GetCategoryComponent } from './component/CategoryMaster/get-category/get-category.component';
+import { GetCategoryComponent } from './Component/CategoryMaster/get-category/get-category.component';
 import { InsertCategoryComponent } from './Component/CategoryMaster/insert-category/insert-category.component';
-import { GetBranchComponent } from './component/BranchMaster/get-branch/get-branch.component';
-import { InsertBranchComponent } from './component/BranchMaster/insert-branch/insert-branch.component';
-// import { GetBannerComponent } from './component/Banner/get-banner/get-banner.component';
-import { GetBannerComponent } from './component/Banner/get-banner/get-banner.component';
-import { InsertBannerComponent } from './component/Banner/insert-banner/insert-banner.component';
+import { GetBranchComponent } from './Component/BranchMaster/get-branch/get-branch.component';
+import { InsertBranchComponent } from './Component/BranchMaster/insert-branch/insert-branch.component';
+import { GetBannerComponent } from './Component/Banner/get-banner/get-banner.component';
+import { InsertBannerComponent } from './Component/Banner/insert-banner/insert-banner.component';
 import { UPSCGSMainsSyllabusComponent } from './Component/Courses/upsc-gs-mains-syllabus/upsc-gs-mains-syllabus.component';
 import { UPSCPrelimsGSSyllabusComponent } from './Component/Courses/upsc-prelims-gs-syllabus/upsc-prelims-gs-syllabus.component';
 import { CurrentAffairsComponent } from './Component/current-affairs/current-affairs.component';
@@ -56,22 +56,21 @@ import { BookContentPOLITYComponent } from './Component/Books/book-content-polit
 import { BookContentEthicsComponent } from './Component/Books/book-content-ethics/book-content-ethics.component';
 import { BookContentEnvironmentComponent } from './Component/Books/book-content-environment/book-content-environment.component';
 import { BookContentEconomyComponent } from './Component/Books/book-content-economy/book-content-economy.component';
-// import { Home1Component } from './component/niashome/home1/home1.component';
-import { GetchatComponent } from './component/getchat/getchat.component';
-import { PutchatComponent } from './component/putchat/putchat.component';
+import { GetchatComponent } from './Component/getchat/getchat.component';
+import { PutchatComponent } from './Component/putchat/putchat.component';
 import {SocialMediaServiceService} from "./Services/SocialMediaService/social-media-service.service";
-import { BookContentSOCIALJUSTICEComponent } from './Component/books/book-content-social-justice/book-content-social-justice.component';
-import { BookContentScienceTechComponent } from './Component/books/book-content-science-tech/book-content-science-tech.component';
-import { BookContentPaperIIIComponent } from './Component/books/book-content-paper-iii/book-content-paper-iii.component';
-import { BookContentGeographyComponent } from './Component/books/book-content-geography/book-content-geography.component';
-import { BookContentGovernanceComponent } from './Component/books/book-content-governance/book-content-governance.component';
-import { BookContentHistoryComponent } from './Component/books/book-content-history/book-content-history.component';
-import { BookContentIndianSocietyComponent } from './Component/books/book-content-indian-society/book-content-indian-society.component';
-import { BookContentIndianSecurityComponent } from './Component/books/book-content-indian-security/book-content-indian-security.component';
-import { BookContentIndianIRComponent } from './Component/books/book-content-indian-ir/book-content-indian-ir.component';
+import { BookContentSOCIALJUSTICEComponent } from './Component/Books/book-content-social-justice/book-content-social-justice.component';
+import { BookContentScienceTechComponent } from './Component/Books/book-content-science-tech/book-content-science-tech.component';
+import { BookContentPaperIIIComponent } from './Component/Books/book-content-paper-iii/book-content-paper-iii.component';
+import { BookContentGeographyComponent } from './Component/Books/book-content-geography/book-content-geography.component';
+import { BookContentGovernanceComponent } from './Component/Books/book-content-governance/book-content-governance.component';
+import { BookContentHistoryComponent } from './Component/Books/book-content-history/book-content-history.component';
+import { BookContentIndianSocietyComponent } from './Component/Books/book-content-indian-society/book-content-indian-society.component';
+import { BookContentIndianSecurityComponent } from './Component/Books/book-content-indian-security/book-content-indian-security.component';
+import { BookContentIndianIRComponent } from './Component/Books/book-content-indian-ir/book-content-indian-ir.component';
 import { BookContentSociologyComponent } from './Component/Books/book-content-sociology/book-content-sociology.component';
-import { BookContentAgricultureEconomicComponent } from './Component/books/book-content-agriculture-economic/book-content-agriculture-economic.component';
-import { BookContentModernIndiaComponent } from './Component/books/book-content-modern-india/book-content-modern-india.component';
+import { BookContentAgricultureEconomicComponent } from './Component/Books/book-content-agriculture-economic/book-content-agriculture-economic.component';
+import { BookContentModernIndiaComponent } from './Component/Books/book-content-modern-india/book-content-modern-india.component';
 import {NgBusyModule, BusyConfig} from 'ng-busy';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
@@ -99,19 +98,18 @@ import { DeleteNirmanresultMasterComponent } from './Component/NirmanResultMaste
 import {BannerMasterService} from "./Services/Banner/banner-master.service";
 import { GetCurrentAffairsComponent } from './Component/CurrentAffairs/get-current-affairs/get-current-affairs.component';
 
-//import { InsertGetCurrentAffairsComponent } from './Component/CurrentAffairs/insert-get-current-affairs/insert-get-current-affairs.component';
 import { InsertCurrentAffairsComponent } from './Component/CurrentAffairs/insert-current-affairs/insert-current-affairs.component';
 import { UpdatCurrentAffairsComponent } from './Component/CurrentAffairs/updat-current-affairs/updat-current-affairs.component';
 import { UpdateCurrentAffairsComponent } from './Component/CurrentAffairs/update-current-affairs/update-current-affairs.component';
 import { DeleteCurrentAffairsComponent } from './Component/CurrentAffairs/delete-current-affairs/delete-current-affairs.component';
 
-import { CourseDetailsComponent } from './Component/mppcs/course-details/course-details.component';
+import { CourseDetailsComponent } from './Component/MPPCS/course-details/course-details.component';
 
 import { from } from 'rxjs';
-import { GetFacultyMasterComponent } from './component/FacultyMaster/get-faculty-master/get-faculty-master.component';
-import { InsertFacultyMasterComponent } from './component/FacultyMaster/insert-faculty-master/insert-faculty-master.component';
-import { UpdateFacultyMasterComponent } from './component/FacultyMaster/update-faculty-master/update-faculty-master.component';
-import { DeleteFacultyMasterComponent } from './component/FacultyMaster/delete-faculty-master/delete-faculty-master.component';
+import { GetFacultyMasterComponent } from './Component/FacultyMaster/get-faculty-master/get-faculty-master.component';
+import { InsertFacultyMasterComponent } from './Component/FacultyMaster/insert-faculty-master/insert-faculty-master.component';
+import { UpdateFacultyMasterComponent } from './Component/FacultyMaster/update-faculty-master/update-faculty-master.component';
+import { DeleteFacultyMasterComponent } from './Component/FacultyMaster/delete-faculty-master/delete-faculty-master.component';
 import {CategoryMasterService} from "./Services/CategoryMaster/category-master.service";
 import {CourseMasterService} from "./Services/CourseMaster/course-master.service";
 import { BranchMasterService } from "./Services/BranchMaster/branch-master.service";
@@ -125,39 +123,40 @@ import { GetStudentmasterComponent } from './Component/student-master/get-studen
 import { InsertStudentmasterComponent } from './Component/student-master/insert-studentmaster/insert-studentmaster.component';
 import { GetUsermasterComponent } from './Component/user-master/get-usermaster/get-usermaster.component';
 import { InsertUsermasterComponent } from './Component/user-master/insert-usermaster/insert-usermaster.component';
-import {ActivateGuard} from "src/app/activate.guard";
-import {ImagevediosService} from "./Services/ImageVedios/imagevedios.service";
-import {StudentmasterService} from "./Services/StudentMaster/studentmaster.service";
-import {UsermasterService} from "./Services/UserMaster/usermaster.service";
-import {TopersAnswerCopyListComponent} from "./Component/TopersAnswerCopy/topers-answer-copy-list/topers-answer-copy-list.component";
-import {TopersAnswerCopyForIndividualComponent} from "./Component/TopersAnswerCopy/topers-answer-copy-for-individual/topers-answer-copy-for-individual.component";
+import { ActivateGuard } from "./Services/ActivateGuard/activate.guard";
+import { ImagevediosService } from "./Services/ImageVedios/imagevedios.service";
+import { StudentmasterService } from "./Services/StudentMaster/studentmaster.service";
+import { UsermasterService } from "./Services/UserMaster/usermaster.service";
+import { TopersAnswerCopyListComponent } from "./Component/TopersAnswerCopy/topers-answer-copy-list/topers-answer-copy-list.component";
+import { TopersAnswerCopyForIndividualComponent } from "./Component/TopersAnswerCopy/topers-answer-copy-for-individual/topers-answer-copy-for-individual.component";
 import { GetNotifictionmasterComponent } from './Component/notification-master/get-notifictionmaster/get-notifictionmaster.component';
 import { InsertNotifictionmasterComponent } from './Component/notification-master/insert-notifictionmaster/insert-notifictionmaster.component';
 import { SignupComponent } from './Component/signup/signup.component';
-import {UserDashboardRoutingModule} from "./user-dashboard/user-dashboard-routing.module";
-import { UserProfileIconComponent } from './user-dashboard/user-profile-icon/user-profile-icon.component';
 import { GuardService } from './Services/guard.service';
-// import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from './Services/in-memory-data.service';
-import {UserDashboardComponent} from "./user-dashboard/user-dashboard/user-dashboard.component";
 import { PrintedMaterialListComponent } from './Component/PrintedMaterial/printed-material-list/printed-material-list.component';
 import { UploadFilesComponent } from './Component/upload-files/upload-files.component';
 import { CurrentAffairsForHinduComponent } from './Component/CurrentAffairs/current-affairs-for-hindu/current-affairs-for-hindu.component';
 import { BookContentStrategyComponent } from './Component/Books/book-content-strategy/book-content-strategy.component';
 import { NgxWebstorageModule } from 'ngx-webstorage';
-import { CustomBusyComponentComponent } from './custom-busy-component/custom-busy-component.component';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { ViewPDFComponent } from './Component/view-pdf/view-pdf.component';
 import { IndiaYearBook2019Component } from './Component/CurrentAffairs/india-year-book2019/india-year-book2019.component';
 import { InsertTestStudentResultComponent } from './Component/TestStudentResult/insert-test-student-result/insert-test-student-result.component';
 import { GetTestStudentResultListComponent } from './Component/TestStudentResult/get-test-student-result-list/get-test-student-result-list.component';
 import { SendSMSBYAdminComponent } from './Component/SendSMS/send-smsbyadmin/send-smsbyadmin.component';
+import { InsertVideoMasterComponent } from './Component/VideoMaster/insert-video-master/insert-video-master.component';
+import { GetVideoMasterListComponent } from './Component/VideoMaster/get-video-master-list/get-video-master-list.component';
+import { InsertPreviousYearQuestionAnswerComponent } from './Component/PreviousYearQuestionAnswer/insert-previous-year-question-answer/insert-previous-year-question-answer.component';
+import { ListPreviousYearQuestionAnswerComponent } from './Component/PreviousYearQuestionAnswer/list-previous-year-question-answer/list-previous-year-question-answer.component';
+import { GetOfflineTestListComponent } from './Component/Offlinetest/get-offline-test-list/get-offline-test-list.component';
+import { InsertOfflineTestDetailsComponent } from './Component/Offlinetest/insert-offline-test-details/insert-offline-test-details.component';
 
 @NgModule({
   declarations: [
-    AppComponent,    
-    FileSelectDirective,
+    AppComponent,
+    //bootstrap,
     InsertEnquiryComponent,
+    
     GetEnquiryComponent,
     UpdateEnquiryComponent,
     DeleteEnquiryComponent,
@@ -262,21 +261,51 @@ import { SendSMSBYAdminComponent } from './Component/SendSMS/send-smsbyadmin/sen
     InsertNotifictionmasterComponent,
     GetNotifictionmasterComponent,
     SignupComponent,
-    UserProfileIconComponent,
-    UserDashboardComponent,
+    // UserProfileIconComponent,
+    // UserDashboardComponent,
     PrintedMaterialListComponent,
     UploadFilesComponent,
     CurrentAffairsForHinduComponent,
     BookContentStrategyComponent,
-    CustomBusyComponentComponent,
     ViewPDFComponent,
     IndiaYearBook2019Component,
     InsertTestStudentResultComponent,
     GetTestStudentResultListComponent,
-    SendSMSBYAdminComponent   
+    SendSMSBYAdminComponent,
+    InsertVideoMasterComponent,
+    GetVideoMasterListComponent,
+    InsertPreviousYearQuestionAnswerComponent,
+    ListPreviousYearQuestionAnswerComponent,
+    GetOfflineTestListComponent,
+    InsertOfflineTestDetailsComponent   
   ],
-  imports: [
-    BrowserModule,
+  bootstrap: [ AppComponent ],
+  imports:[
+ CommonModule,
+NgtUniversalModule,
+ 
+ TransferHttpCacheModule,
+HttpClientModule,
+ 
+ CommonModule,
+NgtUniversalModule,
+ 
+ TransferHttpCacheModule,
+HttpClientModule,
+ 
+ CommonModule,
+NgtUniversalModule,
+ 
+ TransferHttpCacheModule,
+HttpClientModule,
+ 
+ CommonModule,
+NgtUniversalModule,
+ 
+ TransferHttpCacheModule,
+HttpClientModule,
+ 
+    
     HttpClientModule,
     FormsModule,
     NgxWebstorageModule.forRoot(),
@@ -286,17 +315,13 @@ import { SendSMSBYAdminComponent } from './Component/SendSMS/send-smsbyadmin/sen
     NgBusyModule,
     BrowserAnimationsModule,
     NoopAnimationsModule,
-    UserDashboardRoutingModule,
-    // HttpClientInMemoryWebApiModule.forRoot(
-    //   InMemoryDataService, { dataEncapsulation: false }
-    // )
-    
+    BrowserModule,
     
   ],
   entryComponents: [
-    CustomBusyComponentComponent
-],
-   providers: [ActivateGuard,  
+ ],
+   providers: [
+     ActivateGuard,  
     EnquiryServiceService,ChatServicesService,
     AuthService,SocialMediaServiceService,
     CategoryMasterService,BannerMasterService,
@@ -304,7 +329,8 @@ import { SendSMSBYAdminComponent } from './Component/SendSMS/send-smsbyadmin/sen
     BatchTopicDetailsService,NirmanResultMasterService,
     SubCategoryMasterService,BatchDetailsService,
     ImagevediosService,StudentmasterService,
-    UsermasterService,GuardService,{provide: LocationStrategy, useClass: HashLocationStrategy}],
-  bootstrap: [AppComponent]
+    UsermasterService,GuardService,
+    {provide: LocationStrategy, useClass: HashLocationStrategy}
+  ],
 })
 export class AppModule { }

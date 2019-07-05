@@ -41,7 +41,6 @@ export class InsertCurrentAffairsComponent implements OnInit {
     {
       alert("Current Affairs Added Successfully.");
       this.Current={} as CurrentAffairsMasters;
-    //this.router.navigate(['/get-current']);
     }
     else{
       alert("Current Affairs not Added.");
@@ -77,7 +76,7 @@ uploadFileToActivity() {
   //   });
 }
 
-GetSubCategory()
+GetSubCategory(id:any)
 {
   this._SubCategoryservice.getsubcategoryInfo().subscribe(res=>this.SubCategoryList=res);
     (err:HttpErrorResponse)=>{

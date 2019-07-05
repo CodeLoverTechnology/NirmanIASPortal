@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { WINDOW } from '@ng-toolkit/universal';
+import { Component, OnInit , Inject} from '@angular/core';
 import { EnquiryModel } from 'src/app/Entity/EnquiryModel';
 import { NgForm } from '@angular/forms';
 import {Router, ActivatedRoute} from '@angular/router';
-import { EnquiryServiceService } from './../../../Services/EnquiryServices/enquiry-service.service';
+import { EnquiryServiceService } from '../../../Services/EnquiryServices/enquiry-service.service';
 import { first } from 'rxjs/operators';
-import { NumberValueAccessor } from '@angular/forms/src/directives';
 import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
@@ -17,7 +17,7 @@ export class UpdateEnquiryComponent implements OnInit {
   UpdateForm: NgForm;
   EnqID : number;
   busy: Promise<any>;
-  constructor(private router: Router,private route: ActivatedRoute, private _Service:EnquiryServiceService ) {
+  constructor(@Inject(WINDOW) private window: Window, private router: Router,private route: ActivatedRoute, private _Service:EnquiryServiceService ) {
   }
 
   ngOnInit() {

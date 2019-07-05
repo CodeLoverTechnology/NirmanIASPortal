@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SocialMediaServiceService } from "../../../Services/SocialMediaService/social-media-service.service";
-import { HttpErrorResponse } from '@Angular/common/http';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-get-social-media',

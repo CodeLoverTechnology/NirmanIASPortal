@@ -22,7 +22,7 @@ export class UsermasterService {
   }
 
   public LoginUser(user: UserMaster): any {
-    return this._http.post<any>(this.BaseURL + 'UserMaster/UserLogin', user);
+   return this._http.post<any>(this.BaseURL + 'UserMaster/UserLogin', user);
   }
 
   public Logout() {

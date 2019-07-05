@@ -3,7 +3,7 @@
   <div class="text-center p-2 h3">Test Student Result Entry</div>
   <hr>
 
-<div class="container-fluid" [ngBusy]="busy" (busyStop)="onBusyStop()" (busyStart)="onBusyStart()">
+<div class="container-fluid" [ngBusy]="busy">
 <form enctype="multipart/form-data" method="post" #TestStudentResult="ngForm" (ngSubmit)="onFormSubmit();TestStudentResult.reset()">
 <div>
   <label>Student Name</label>

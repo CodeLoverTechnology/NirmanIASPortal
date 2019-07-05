@@ -4,7 +4,7 @@
             Main Exam 2019 (Online,Offline)
             Comprehensive All India Test Series for IAS Prelims & Mains -2019 </b></marquee>
 </div>
-<div class="container-fluid">
+<div class="container-fluid p-3 bg-secondary">
     <div class="row m-5 text-center">
         <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
             <a class="carousel-control-prev left" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -14,10 +14,26 @@
         <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
             <div class="row">
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <div class="row">
+                                <div class="col-md-3 col-sm-6 col-12">
+                                    <a [routerLink]="['/The-Hindu-CurrentAffairs']" target="_blank"
+                                        class="small text-wide p-2"
+                                        title="Nirman IAS Daily Basis Current Affairs">
+                                        <div class="card shadow">
+                                            <div class="card-img-top card-img-top-250">
+                                                <img class="img-fluid" src="./assets/TheHindu-NirmanIAS.jpg"
+                                                    alt="Nirman IAS the Hindu Articles"
+                                                    title="Nirman IAS the Hindu Articles">
+                                            </div>
+                                            <div class="card-block p-t-2">
+                                                <h6 class="small text-wide p-b-2">Nirman IAS the Hindu Articles</h6>
+                                                <h4>The Hindu Article</h4>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
                                 <div class="col-md-3 col-sm-6 col-12">
                                     <a [routerLink]="['/CurrentAffairs']" target="_blank"
                                         title="Nirman IAS Daily Basis Current Affairs" class="p-2">
@@ -35,91 +51,8 @@
                                     </a>
                                 </div>
                                 <div class="col-md-3 col-sm-6 col-12">
-                                    <a [routerLink]="['/NIAS_TestYourSelf']" target="_blank"
-                                         title="Nirman IAS Test Yourself"  class="p-2">
-                                        <div class="card shadow  p-2">
-                                            <div class="card-img-top card-img-top-250">
-                                                <img class="img-fluid" src="./assets/NIAS_test_YourSelf.jpg"
-                                                    alt="Nirman IAS Test Yourself" title="Nirman IAS Test Yourself">
-                                            </div>
-                                            <div class="card-block p-t-2">
-                                                <h6 class="small text-wide p-b-2">Nirman IAS Test Yourself</h6>
-                                                <h4>Test Yourself</h4>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-md-3 col-sm-6 col-12">
-                                    <a [routerLink]="['/ClassNotes']" target="_blank"
-                                        title="Nirman IAS Class Notes"  class="p-2">
-                                        <div class="card shadow  p-2">
-                                            <div class="card-img-top card-img-top-250">
-                                                <img class="img-fluid" src="./assets/Class_Notes.jpg"
-                                                    alt="Nirman IAS Class Notes" title="Nirman IAS Class Notes">
-                                            </div>
-                                            <div class="card-block p-t-2">
-                                                <h6 class="small text-wide p-b-2">Nirman IAS Class Notes</h6>
-                                                <h4>Class Notes</h4>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-md-3 col-sm-6 col-12">
-                                    <a [routerLink]="['/Books']" target="_blank"
-                                        title="Nirman IAS Published Books for Distance Learning"  class="p-2">
-                                        <div class="card shadow  p-2">
-                                            <div class="card-img-top card-img-top-250">
-                                                <img class="img-fluid" src="./assets/DLP_1.jpg"
-                                                    alt="Nirman IAS Published Books for Distance Learning"
-                                                    title="Nirman IAS Published Books for Distance Learning">
-                                            </div>
-                                            <div class="card-block p-t-2">
-                                                <h6 class="small text-wide p-b-2">Nirman IAS Published Books</h6>
-                                                <h4>DLP</h4>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <div class="carousel-item">
-                            <div class="row">
-                                <div class="col-md-3 col-sm-6 col-12">
-                                    <a [routerLink]="['/The-Hindu-CurrentAffairs']" target="_blank"
-                                        class="small text-wide p-b-2" title="Nirman IAS Daily Basis Current Affairs">
-                                        <div class="card shadow">
-                                            <div class="card-img-top card-img-top-250">
-                                                <img class="img-fluid" src="./assets/TheHindu-NirmanIAS.jpg"
-                                                    alt="Nirman IAS the Hindu Articles"
-                                                    title="Nirman IAS the Hindu Articles">
-                                            </div>
-                                            <div class="card-block p-t-2">
-                                                <h6 class="small text-wide p-b-2">Nirman IAS the Hindu Articles</h6>
-                                                <h4>The Hindu Article</h4>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-md-3 col-sm-6 col-12">
-                                    <a [routerLink]="['/TopersAnswerCopyList']" target="_blank"
-                                        class="small text-wide p-b-2" title="Nirman IAS Topper Answer Copy">
-                                        <div class="card shadow">
-                                            <div class="card-img-top card-img-top-250">
-                                                <img class="img-fluid" src="./assets/NIAS_Topper_Answer_Copy.webp"
-                                                    alt="Nirman IAS Topper Answer Copy"
-                                                    title="Nirman IAS Topper Answer Copy">
-                                            </div>
-                                            <div class="card-block p-t-2">
-                                                <h6 class="small text-wide p-b-2">Nirman IAS Topper Answer Copy</h6>
-                                                <h4>Topper Answer Copy</h4>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-md-3 col-sm-6 col-12">
-                                    <a [routerLink]="['/Magazine']" target="_blank" class="small text-wide p-b-2"
+                                    <a [routerLink]="['/Magazine']" target="_blank" 
+                                    class="small text-wide p-2"
                                         title="Nirman IAS Magazine">
                                         <div class="card shadow">
                                             <div class="card-img-top card-img-top-250">
@@ -134,46 +67,47 @@
                                     </a>
                                 </div>
                                 <div class="col-md-3 col-sm-6 col-12">
-                                    <a [routerLink]="['/PrintedMaterialList']" target="_blank"
-                                        class="small text-wide p-b-1" title="Nirman IAS Printed Material">
+                                    <a [routerLink]="['/ListPreviousYearQuestionAnswer']" target="_blank"
+                                        title="NIAS Previous Year Question" class="p-2">
                                         <div class="card shadow">
                                             <div class="card-img-top card-img-top-250">
-                                                <img class="img-fluid p-2" src="./assets/NIAS-study-material.png"
-                                                    alt="Nirman IAS Printed Material" style="height: 140px;"
-                                                    title="Nirman IAS Printed Material">
+                                                <img class="img-fluid" src="./assets/NIAS-Previous-Year-Question.jpg"
+                                                    alt="NIAS Previous Year Question"
+                                                    title="NIAS Previous Year Question">
                                             </div>
-                                            <div class="card-block p-t-1">
-                                                <h6 class="small text-wide p-b-1">Nirman IAS Printed Material</h6>
-                                                <h4>Printed Material</h4>
+                                            <div class="card-block p-t-2">
+                                                <h6 class="small text-wide p-b-2">NIAS Previous Year Question</h6>
+                                                <h5>Previous Year Question</h5>
                                             </div>
                                         </div>
                                     </a>
                                 </div>
                             </div>
+
                         </div>
                         <div class="carousel-item">
-                            <div class="row">
+                            <div class="row text-center p-3">
                                 <div class="col-md-3 col-sm-6 col-12">
-                                    <a [routerLink]="['/NIAS_TalksAndInterview']" target="_blank"
-                                        class="small text-wide p-b-2" title="Nirman IAS Talks And Interview">
-                                        <div class="card shadow p-2">
-                                            <div class="card-img-top card-img-top-250">
-                                                <img class="img-fluid" src="./assets/key.webp"
-                                                    alt="Nirman IAS Talks And Interview"
-                                                    title="Nirman IAS Talks And Interview">
+                                    <a [routerLink]="['/TopersAnswerCopyList']" target="_blank"
+                                        class="small text-wide" title="Nirman IAS Topper Answer Copy">
+                                        <div class="card shadow">
+                                            <div class="card-img-top">
+                                                <img class="img-fluid w-100" src="./assets/NIAS-ToppersTestCopy.png"
+                                                    alt="Nirman IAS Topper Answer Copy"
+                                                    title="Nirman IAS Topper Answer Copy">
                                             </div>
                                             <div class="card-block p-t-2">
-                                                <h6 class="small text-wide p-b-2">Nirman IAS Talks And Interview</h6>
-                                                <h4>Talks &amp; Interview</h4>
+                                                <h6 class="small text-wide p-b-2">Nirman IAS Topper Answer Copy</h6>
+                                                <h5 class=" h5 p-b-4">Topper Answer Copy</h5>
                                             </div>
                                         </div>
                                     </a>
                                 </div>
                                 <div class="col-md-3 col-sm-6 col-12">
-                                    <a [routerLink]="['/NIAS_TalksAndInterview']" target="_blank"
+                                    <a [routerLink]="['/GetOfflineTestList']" target="_blank"
                                         class="small text-wide p-b-2" title="Nirman IAS Offline Test">
-                                        <div class="card shadow  p-2">
-                                            <div class="card-img-top card-img-top-250">
+                                        <div class="card shadow">
+                                            <div class="card-img-top">
                                                 <img class="img-fluid" src="./assets/offline-test-generator-500x500.png"
                                                     alt="Nirman IAS Offline Test" title="Nirman IAS Offline Test">
                                             </div>
@@ -187,13 +121,12 @@
                                 <div class="col-md-3 col-sm-6 col-12">
                                     <a [routerLink]="['/NIAS_TalksAndInterview']" target="_blank"
                                         class="small text-wide p-b-2" title="Nirman IAS NCRT Test">
-                                        <div class="card shadow  p-2">
-                                            <div class="card-img-top card-img-top-250">
+                                        <div class="card shadow">
+                                            <div class="card-img-top">
                                                 <img class="img-fluid" src="./assets/ncert-mcq.png"
                                                     alt="Nirman IAS NCERT Test" title="Nirman IAS NCERT Test">
                                             </div>
                                             <div class="card-block p-t-2">
-                                                <br>
                                                 <h6 class="small text-wide p-b-2">NCERT Test</h6>
                                                 <h4>NCERT Test</h4>
                                             </div>
@@ -203,8 +136,8 @@
                                 <div class="col-md-3 col-sm-6 col-12">
                                     <a [routerLink]="['/NIAS_TalksAndInterview']" target="_blank"
                                         class="small text-wide p-b-2" title="Nirman IAS Mains Question">
-                                        <div class="card shadow  p-2">
-                                            <div class="card-img-top card-img-top-250">
+                                        <div class="card shadow">
+                                            <div class="card-img-top">
                                                 <img class="img-fluid" src="./assets/GSMains.jpg"
                                                     alt="Nirman IAS Mains Question" title="Nirman IAS Mains Question">
                                             </div>
@@ -215,6 +148,77 @@
                                         </div>
                                     </a>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-3 col-sm-6 col-12">
+                                    <a [routerLink]="['/ClassNotes']" target="_blank"
+                                     title="Nirman IAS Class Notes"
+                                        class="p-2">
+                                        <div class="card shadow  p-2">
+                                            <div class="card-img-top card-img-top-250">
+                                                <img class="img-fluid" src="./assets/Class_Notes.jpg"
+                                                    alt="Nirman IAS Class Notes" title="Nirman IAS Class Notes">
+                                            </div>
+                                            <div class="card-block p-t-2">
+                                                <h6 class="small text-wide p-b-2">Nirman IAS Class Notes</h6>
+                                                <h4>Class Notes</h4>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-3 col-sm-6 col-12">
+                                    <a [routerLink]="['/Books']" target="_blank"
+                                        title="Nirman IAS Published Books for Distance Learning" class="p-2">
+                                        <div class="card shadow  p-2">
+                                            <div class="card-img-top card-img-top-250">
+                                                <img class="img-fluid" src="./assets/DLP_1.jpg"
+                                                    alt="Nirman IAS Published Books for Distance Learning"
+                                                    title="Nirman IAS Published Books for Distance Learning">
+                                            </div>
+                                            <div class="card-block p-t-2">
+                                                <h6 class="small text-wide p-b-2">Nirman IAS Published Books</h6>
+                                                <h4>DLP</h4>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-3 col-sm-6 col-12">
+                                    <a [routerLink]="['/PrintedMaterialList']" target="_blank"
+                                        class="small text-wide p-2" title="Nirman IAS Printed Material">
+                                        <div class="card shadow p-2">
+                                            <div class="card-img-top card-img-top-250">
+                                                <img class="img-fluid" src="./assets/NIAS-study-material.png"
+                                                    alt="Nirman IAS Printed Material"
+                                                    title="Nirman IAS Printed Material">
+                                            </div>
+                                            <div class="card-block p-t-1">
+                                                <h6 class="small text-wide p-b-1">Nirman IAS Printed Material</h6>
+                                                <h4>Printed Material</h4>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-3 col-sm-6 col-12">
+                                    <a [routerLink]="['/NIAS_TalksAndInterview']" target="_blank"
+                                        class="small text-wide p-2" title="Nirman IAS Talks And Interview">
+                                        <div class="card shadow p-2">
+                                            <div class="card-img-top card-img-top-250">
+                                                <img class="img-fluid" src="./assets/NIAS-TalknInterview.png"
+                                                    alt="Nirman IAS Talks And Interview"
+                                                    title="Nirman IAS Talks And Interview">
+                                            </div>
+                                            <div class="card-block p-t-2">
+                                                <h6 class="small text-wide p-b-2">Nirman IAS Talks And Interview</h6>
+                                                <h4>Talks &amp; Interview</h4>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+
+
                             </div>
                         </div>
                     </div>
@@ -322,16 +326,17 @@ Utter Pradesh (U.P.)- 211001 , India
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center rounded p-2">
                 <div class="row  m-3">
-                    <div class="card bg-light w-100 shadow">
+                    <div class="card bg-light w-100 shadow " style="min-height: 300px;max-height: 500px;">
                         <div class="card-header">Notification</div>
-                        <div class="card-body text-left">
+                        <div class="card-body text-left" style="overflow: scroll;">
                             <div *ngFor="let x of NotificationResult">
                                 <div class="p-2 shadow m-1">
                                     <a href={{x.moreDetailsFilePath}} target="_blank" rel={{x.description}}
                                         title={{x.description}} class="border0 blink">
-                                       <p class="small"> <img src="../../../assets/new-animated-gif-4.gif" *ngIf=x.isNew width="40"
-                                            height="40" class="p-1" />
-                                        {{x.description}}</p></a>
+                                        <p class="small"> <img src="../../../assets/new-animated-gif-4.gif"
+                                                *ngIf=x.isNew width="40" height="40" class="p-1" />
+                                            {{x.description}}</p>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -341,6 +346,33 @@ Utter Pradesh (U.P.)- 211001 , India
         </div>
     </div>
 </div>
+<div class="row mt-2">
+    <div class=" h2 container-fluid p-2 text-center text-white bg-danger">Live राजसभा TV और PIB TV</div>
+</div>
+<div class="row bg-white p-3">
+    <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+        <div class="p-2 m-1 shadow Thumbnail">
+            <iframe src="http://www.youtube.com/embed/+lastest?listType=user_uploads&list=rajyasabhatv"
+                style="height:300px; width: 100%; overflow:scroll; "></iframe>
+
+            <div class="bg-dark text-white text-center p-2">
+                <a href="https://www.youtube.com/channel/UCgJnU1HmRZkRzoyzJVRgq8w" class="text-white" target="_blank"><i
+                        class="fa fa-youtube-play" aria-hidden="true"> </i> &nbsp;Old राजसभा TV News</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+        <div class="p-2 m-1 shadow Thumbnail">
+            <iframe src="http://www.youtube.com/embed/+lastest?listType=user_uploads&list=pibindia"
+                style="height:300px; width: 100%; overflow:scroll; "></iframe>
+            <div class="bg-dark text-white text-center p-2">
+                <a href="https://www.youtube.com/channel/UCgJnU1HmRZkRzoyzJVRgq8w" class="text-white" target="_blank"><i
+                        class="fa fa-youtube-play" aria-hidden="true"> </i> &nbsp;Old PIB TV News</a>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="row p-5 bg-secondary">
     <app-printed-material-list></app-printed-material-list>
 </div>

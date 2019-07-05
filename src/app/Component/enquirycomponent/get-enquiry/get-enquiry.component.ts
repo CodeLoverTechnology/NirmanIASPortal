@@ -1,5 +1,6 @@
+import { WINDOW } from '@ng-toolkit/universal';
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , Inject} from '@angular/core';
 import { EnquiryServiceService } from 'src/app/Services/EnquiryServices/enquiry-service.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
@@ -14,7 +15,7 @@ export class GetEnquiryComponent implements OnInit {
     busy: Promise<any>;
     enquiries: EnquiryModel []
 public result:any;
-constructor(private _service:EnquiryServiceService, private router:Router) { }
+constructor(@Inject(WINDOW) private window: Window, private _service:EnquiryServiceService, private router:Router) { }
 ngOnInit() {
     this.busy =this._service.getEnquiryInfo().subscribe(res=>this.result=res);
 (err:HttpErrorResponse)=>{
@@ -33,8 +34,8 @@ deleteEnquiry(enquiry: EnquiryModel): void {
   };
   
   editUser(Enquiry: EnquiryModel): void {
-    window.localStorage.removeItem("EnquiryId");
-    window.localStorage.setItem("EnquiryId", Enquiry.enquiryID.toString());
+    this.window.localStorage.removeItem("EnquiryId");
+    this.window.localStorage.setItem("EnquiryId", Enquiry.enquiryID.toString());
     this.router.navigate(['admin/update-enquiry']);
   };
  

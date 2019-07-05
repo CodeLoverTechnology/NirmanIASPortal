@@ -3,7 +3,7 @@
       <div class="text-center p-2 h3">Current Affairs Entry</div>
       <hr>
 
-<div class="container-fluid" [ngBusy]="busy" (busyStop)="onBusyStop()" (busyStart)="onBusyStart()">
+<div class="container-fluid" [ngBusy]="busy">
   <form enctype="multipart/form-data" method="post" #CurrentAffairsForm="ngForm" (ngSubmit)="onFormSubmit();CurrentAffairsForm.reset()">
     <div class="row">
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">

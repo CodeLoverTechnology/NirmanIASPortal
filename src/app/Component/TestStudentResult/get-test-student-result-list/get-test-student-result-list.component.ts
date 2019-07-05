@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { WINDOW } from '@ng-toolkit/universal';
+import { Component, OnInit , Inject} from '@angular/core';
 import { TestStudentResult } from 'src/app/Entity/TestStudentResult';
 import { TestStudentResultService } from 'src/app/Services/TestStudentResult/test-student-result.service';
 import { Router } from '@angular/router';
@@ -14,7 +15,7 @@ export class GetTestStudentResultListComponent implements OnInit {
   busy: Promise<any>;
   testStudentResult: TestStudentResult[]
   public result: any;
-  constructor(private _service: TestStudentResultService, private router: Router) { }
+  constructor(@Inject(WINDOW) private window: Window, private _service: TestStudentResultService, private router: Router) { }
   ngOnInit() {
     this.busy = this._service.getTestStudentResult().subscribe(res => this.result = res);
     (err: HttpErrorResponse) => {

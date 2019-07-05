@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MasterInfoServiceService } from 'src/app/Services/MasterInfo/master-info-service.service';
-import { HttpErrorResponse } from '@Angular/common/http';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-get-masterinfo',

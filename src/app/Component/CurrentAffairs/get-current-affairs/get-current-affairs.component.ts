@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CurrentAffairsService } from "../../../Services/CurrentAffairs/current-affairs.service";
-import { HttpErrorResponse } from '@Angular/common/http';
+import { HttpErrorResponse } from '@angular/common/http';
 import { CurrentAffairsMasters } from 'src/app/Entity/CurrentAffairsMaster';
 
 

@@ -24,6 +24,8 @@ export class LogInComponent implements OnInit {
     errorMessage:string;
 
   ngOnInit() {
+    sessionStorage.removeItem('UserName');    
+    sessionStorage.clear(); 
       this.localSt.clear("UserEmailID");
       this.localSt.clear("UserID");
       this.localSt.clear("UserName");
@@ -32,82 +34,37 @@ export class LogInComponent implements OnInit {
       this.localSt.clear(); 
     }
 
-   //check(username: string, password: string) {
     login()
     {
-     
-    // this.UserDeatilsMaster.UserEmailID = username;
-    // this.UserDeatilsMaster.Password = password;
-    //this.busy =this._userServices.LoginUser(this.model).subscribe();
-    this._userServices.LoginUser(this.model).subscribe(res => this.result = res);
-    (err: HttpErrorResponse) => {
-      if (err.error instanceof Error) {
-        console.log("Server Side Error !");
-      } else {
-        console.log("Client Side Error   !");
+    this.busy=this._userServices.LoginUser(this.model).subscribe(    
+      result =>{ 
+        debugger;
+          if(result.length >0) 
+        {      
+        if(result != undefined && result[0].userEmailID!='')    
+        {              
+      this.localSt.store("UserEmailID", result[0].userEmailID);
+      this.localSt.store("UserID", result[0].userID);
+      this.localSt.store("UserName", result[0].userName);
+      this.localSt.store("Department", result[0].department);
+      this.localSt.store("Designation", result[0].designation);
+      this.router.navigate(['./admin']);                
+        }    
+        else{    
+          this.errorMessage = "Login ID and Password are invalid. Try Again!... 1";    
+        }  
       }
-    }
-    if (this.result != undefined) {
-      this.localSt.store("UserEmailID", this.result.userEmailID);
-      this.localSt.store("UserID", this.result.userID);
-      this.localSt.store("UserName", this.result.userName);
-      this.localSt.store("Department", this.result.department);
-      this.localSt.store("Designation", this.result.designation);
-      this.router.navigate(['/admin']);
-    }
-    else { 
-       
-      alert("Invalid username or password");
-      //this.router.navigate(['/login']);
-      this.router.navigate(['/admin']);
-    } 
-    // .subscribe(
-    //   (result:UserMaster) =>{
-    //         
-    //     if(result != undefined && result.UserEmailID!='')    
-    //     {              
-    //   this.localSt.store("UserEmailID", result.UserEmailID);
-    //   this.localSt.store("UserID", result.UserID);
-    //   this.localSt.store("UserName", result.UserName);
-    //   this.localSt.store("Department", result.Department);
-    //   this.localSt.store("Designation", result.Designation);
-    //   this.router.navigate(['./admin']);                
-    //     }    
-    //     else{    
-    //       this.errorMessage = "Login ID and Password are invalid. Try Again!... 1";    
-    //     }    
-    //   },    
-    //   (err: HttpClientModule) => {
-    //     if (err instanceof Error) {
-    //       console.log("Server Side Error....!");
-    //     } else {
-    //       console.log("Client Side Error   !" + err);
-    //     }
-    //   }); 
-      //res => this.result = res
-      
-     // );
-    // (err: HttpErrorResponse) => {
-    //   if (err.error instanceof Error) {
-    //     console.log("Server Side Error !");
-    //   }
-    //    else {
-    //     console.log("Client Side Error   !");
-    //   }
-    // }
-    // if (this.result != undefined) {
-    //   this.localSt.store("UserEmailID", this.result.userEmailID);
-    //   this.localSt.store("UserID", this.result.userID);
-    //   this.localSt.store("UserName", this.result.userName);
-    //   this.localSt.store("Department", this.result.department);
-    //   this.localSt.store("Designation", this.result.designation);
-    //   this.router.navigate(['/admin']);
-    // }
-    // else { 
-    //    
-    //   alert("Invalid username or password");
-    //   //this.router.navigate(['/login']);
-    //   this.router.navigate(['/admin']);
-    // }    
- }
+      else
+      {
+        this.errorMessage = "Login ID and Password are invalid. Try Again!... ";   
+      } 
+      },    
+      (err: HttpClientModule) => {
+        if (err instanceof Error) {
+          console.log("Server Side Error....!");
+        } else {
+          console.log("Client Side Error   !" + err);
+        }
+      });      
+   }
 }

@@ -1,45 +1,29 @@
-<table class="table table-hover table-striped">
-  <thead>
-    <tr>
-    <!-- <th>BatchID </th> 
-      <th>BatchFor  </th>-->
-      <th>BatchCode  </th>
-      <th>Subject  </th>
-      <th>Time  </th>
-      <th>Faculty </th>
-      <th>BatchStartDate </th>
-      <th></th>
-      <!-- <th>BatchEndDate</th>
-      <th>TotalStudents</th> -->
-      <!-- <th>Remarks</th>
-      <th>CreatedBy </th>
-      <th>CreatedDate</th>
-      <th>ModifiedBy</th>
-      <th>ModifiedDate</th>
-      <th>Active</th>
-      <th>IsNew</th> -->
-    </tr>
-  </thead>
-  <tbody>
-        <tr  *ngFor="let x of Result">
-            <input type="hidden" value="{{x.batchID }}"/>
-      <!-- <td>{{x.batchID }}</td> -->
-        <!-- <td>{{x.batchFor }}</td> -->
+<div class="row ">
+  <div class="h2 p-2 m-1 w-100 text-center bg-danger text-white">
+    Nirman Batch Schedule
+    <small><a href="../../../../assets/NIAS_Courses/Test_Series/NIRMAN-IAS-UPSC-Batch-Schedule.pdf" target="_blank" class="text-white">Download All Batch Schedules</a></small>
+  </div>
+</div>
+<div class="container">
+  <table class="table table-hover table-striped">
+    <thead>
+      <tr>
+        <th>Batch Code </th>
+        <th>Subject </th>
+        <th>Time </th>
+        <th>Faculty </th>
+        <th>Batch Start Date </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let x of Result">
+        <input type="hidden" value="{{x.batchID }}" />
         <td>{{x.batchCode }}</td>
         <td>{{x.subject }}</td>
         <td>{{x.time }}</td>
-       <td>{{x.faculty}}</td>
-       <td>{{x.batchStartDate}}</td> 
-       <!-- <td>{{x.batchEndDate}}</td>
-       <td>{{x.totalStudents}}</td> -->
-       <!-- <td>{{x.remarks}}</td> 
-       <td>{{x.createdBy}}</td>  
-       <td>{{x.createdDate }}</td>
-       <td>{{x.modifiedBy}}</td>
-       <td>{{x.modifiedDate}}</td> 
-       <td>{{x.active}}</td>
-       <td>{{x.isNew}}</td>  -->
-         <td><a [routerLink]="['/UpdateBatchDetails']">Details</a></td>
-       </tr>
-       </tbody>
-       </table>
+        <td>{{x.faculty}}</td>
+        <td>{{x.batchStartDate}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -19,7 +19,7 @@
        <textarea type="text" name="Notes"  #Notes="ngModel" class="form-control" required [(ngModel)]="socialmedia.Notes"></textarea>
        <div class="validation-error" *ngIf="Notes.invalid && Notes.touched">This field is required.</div>
        </div>
-        <button [disabled]="!SocialMediaMastersForm.valid" type="submit"  class="btn btn-primary btn-lg m-3">Submit Now</button> 
+        <button [disabled]="!SocialMediaForm.valid" type="submit"  class="btn btn-primary btn-lg m-3">Submit Now</button> 
            </form> 
   </div>
   
