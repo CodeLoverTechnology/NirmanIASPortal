@@ -33,15 +33,9 @@ export class UpdateEnquiryComponent implements OnInit {
     console.log("Client Side Error !");
     }
     }
-
-    // this.enquiry = this._Service.getEnquiryById(+this.EnqID)
-    // .subscribe( data => {
-    //   this.UpdateForm.setValue(data.result);
-    // });
-      alert("params.enquiryID : " + this.EnqID);
+     alert("params.enquiryID : " + this.EnqID);
   
-    //let enquiryId = window.localStorage.getItem("updateenquiryID");
-    if(!this.EnqID) {
+     if(!this.EnqID) {
       alert("Invalid action.")
       this.router.navigate(['admin/get-enquiry']);
       return;

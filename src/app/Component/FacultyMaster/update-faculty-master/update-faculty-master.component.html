@@ -1,3 +1,44 @@
-<p>
-  update-faculty-master works!
-</p>
+<div class="p-3 text-center bg-primary text-white">Update Faculty Information</div>
+<div class="container-fluid" [ngBusy]="busy">
+  <form enctype="multipart/form-data" method="post" #FacultyMasterForm="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Faculty Name </label>
+      <input type="text" name="facultyName" #facultyName="ngModel" class="form-control" [(ngModel)]="Faculty.facultyName" 
+      placeholder="Enter Your Faculty Name">
+      <!-- <div class="validation-error" *ngIf="FacultyName.invalid && FacultyName.touched">This field is required.</div> -->
+    </div>
+    <div class="form-group">
+      <label>Subject</label>
+      <input type="text" name="subject" #subject="ngModel" class="form-control" [(ngModel)]="Faculty.subject"  required>
+      <!-- <div class="validation-error" *ngIf="Subject.invalid && Subject.touched">This field is required.</div> -->
+    </div>
+    <div class="form-group">
+      <label>Reference Name </label>
+      <input type="text" name="refeenceName" #refeenceName="ngModel" class="form-control" [(ngModel)]="Faculty.refeenceName" required>
+      <!-- <div class="validation-error" *ngIf="refeenceName.invalid && refeenceName.touched">This field is required.</div> -->
+    </div>
+    <div class="form-group">
+      <label>Address </label>
+      <input type="text" name="Address" #Address="ngModel" class="form-control" [(ngModel)]="Faculty.address" required>
+      <!-- <div class="validation-error" *ngIf="Address.invalid && Address.touched">This field is required.</div> -->
+    </div>
+    <div class="form-group">
+      <label>Email ID </label>
+      <input type="email" name="emailID" #emailID="ngModel" class="form-control" [(ngModel)]="Faculty.emailID" required>
+      <!-- <div class="validation-error" *ngIf="emailID.invalid && emailID.touched">This field is required.</div> -->
+    </div>
+    <div class="form-group">
+      <label>Contact No </label>
+      <input type="text" name="contactNo" #ContactNo="ngModel" class="form-control" [(ngModel)]="Faculty.contactNo"
+        required>
+      <!-- <div class="validation-error" *ngIf="contactNo.invalid && contactNo.touched">This field is required.</div> -->
+    </div>
+    <div class="form-group">
+      <label>Remarks </label>
+      <input type="text" name="remarks" #remarks="ngModel" class="form-control" [(ngModel)]="Faculty.remarks" required>
+      <!-- <div class="validation-error" *ngIf="remarks.invalid && remarks.touched">This field is required.</div> -->
+    </div>
+    <!-- <button [disabled]="!FacultyMasterForm.valid" type="submit" class="btn btn-primary btn-lg m-3">Update Now</button> -->
+    <button  type="submit" class="btn btn-primary btn-lg m-3">Update Now</button>
+  </form>
+</div>

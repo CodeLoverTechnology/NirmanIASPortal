@@ -99,6 +99,8 @@ import { InsertVideoMasterComponent } from './Component/VideoMaster/insert-video
 import { GetVideoMasterListComponent } from './Component/VideoMaster/get-video-master-list/get-video-master-list.component';
 import { ListPreviousYearQuestionAnswerComponent } from './Component/PreviousYearQuestionAnswer/list-previous-year-question-answer/list-previous-year-question-answer.component';
 import { GetOfflineTestListComponent } from './Component/Offlinetest/get-offline-test-list/get-offline-test-list.component';
+import { UpdateFacultyMasterComponent } from './Component/FacultyMaster/update-faculty-master/update-faculty-master.component';
+import { DeleteFacultyMasterComponent } from './Component/FacultyMaster/delete-faculty-master/delete-faculty-master.component';
 const routes: Routes = [
   { path: "", component: NIASHomeComponent },
 
@@ -114,6 +116,8 @@ const routes: Routes = [
         { path: "admin/getchat", component: GetchatComponent },
         { path: "admin/BranchList", component: GetBranchComponent },
         { path: "admin/GetStudentmaster", component: GetStudentmasterComponent },
+        { path: "admin/update-facultyMaster", component: UpdateFacultyMasterComponent },
+        { path: "admin/delete-facultyMaster", component: DeleteFacultyMasterComponent },
         
         { path: "admin/GetSocialMediaList", component: GetSocialMediaComponent },
         { path: '', component: AdminlinkComponent },

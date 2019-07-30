@@ -8,9 +8,7 @@
   <th>ContactNo</th>
   <th>EnquiryMessage</th>
   <th>ReplyMessage</th>
-  <th>createdBy</th>
   <th>createdDate</th>
-  <th>Active</th>
   </tr>
   </thead>
   <tbody>
@@ -21,11 +19,9 @@
   <td>{{x.contactNo}}</td>
   <td>{{x.enquiryMessage}}</td>
   <td>{{x.replyMessage}}</td>
-  <td>{{x.createdBy}}</td>
   <td>{{x.createdDate}}</td>
-  <td>{{x.active}}</td>
+  <td><a class="btn btn-success p-2 m-1" [routerLink]="['/../admin/admin/update-enquiry']" target="_blank"  [queryParams]="{ enquiryID: (x.enquiryID) }"> Reply</a></td>  
   <td><a class="btn btn-danger p-2 m-1" [routerLink]="['/../admin/admin/Delete-enquiry']" target="_blank" [queryParams]="{ enquiryID: (x.enquiryID) }"> Delete</a></td>
-  <td><a class="btn btn-success p-2 m-1" [routerLink]="['/../admin/admin/update-enquiry']" target="_blank"  [queryParams]="{ enquiryID: (x.enquiryID) }"> Edit</a></td>  
   
   </tr>
   </tbody>

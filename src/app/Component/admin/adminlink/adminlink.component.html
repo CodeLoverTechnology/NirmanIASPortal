@@ -1,15 +1,14 @@
 <div class="row w-100 bg-primary text-white h2 text-center p-3">Regular Used Function</div>
-<div class="row p-3">
+<div class="row w-100">
     <div class="col-lg-3 col-md-3 col-sm-10 col-xs-10  shadow-lg  bg-dark rounded text-white " id="page">
         <a [routerLink]="['admin/getEnquiry'] ">
             <i class="fa fa-eye " id="hide"></i>
             Enquiry
         </a>
     </div>
-    <div class="col-lg-3 col-md-3 col-sm-10 col-xs-10  shadow-lg bg-primary rounded" id="page">
-        <a [routerLink]="['/get-current'] " target="_blank" class="text-white">
-            <i class="fa fa-newspaper-o"></i>
-            Current Affairs
+    <div class="col-lg-4 col-md-4 col-sm-10 col-xs-10  shadow-lg bg-primary rounded" id="page">
+        <a [routerLink]="['/get-current'] " target="_blank" class="text-white">            
+           <p><i class="fa fa-newspaper-o"></i>Current Affairs</p> 
         </a>
     </div>
     <div class="col-lg-3 col-md-3 col-sm-10 col-xs-10  shadow-lg  bg-dark rounded text-white " id="page">
@@ -19,44 +18,21 @@
         </a>
     </div>
     <div class="col-lg-3 col-md-3 col-sm-10 col-xs-10  shadow-lg  bg-dark rounded text-white " id="page">
-        <a [routerLink]="['admin/GetBannerList'] ">
-            <i class="fa fa-sliders"></i>
-            Banner
+        <a [routerLink]="['admin/Gallery'] ">
+            <i class="fa fa-picture-o"></i>
+            Gallery
         </a>
     </div>
 
-<div class="col-lg-3 col-md-3 col-sm-10 col-xs-10  shadow-lg  bg-dark rounded text-white " id="page">
+<div class="col-lg-4 col-md-4 col-sm-10 col-xs-10  shadow-lg  bg-dark rounded text-white " id="page">
     <a [routerLink]="['admin/GetStudentmaster'] ">
-        <i class="fa fa-user"></i>
-        Student Detail
+        <p><i class="fa fa-user"></i>Student Details</p>
     </a>
 </div>
 <div class="col-lg-3 col-md-3 col-sm-10 col-xs-10  shadow-lg  bg-dark rounded text-white " id="page">
-    <a [routerLink]="['admin/get-facultyMaster'] ">
-        <i class="fa fa-users"></i>
-        Faculty Detail
-    </a>
-</div>
-</div>
-<div class="row w-100 bg-primary text-white h2 text-center p-3">Master Function</div>
-<div class="row p-3">
-        <div class="col-lg-3 col-md-3 col-sm-10 col-xs-10  shadow-lg  bg-dark rounded text-white " id="page">
-                <a [routerLink]="['admin/GetSocialMediaList']">
-                    <i class="fa fa-share-square"></i>
-                    Social Media
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-10 col-xs-10  shadow-lg bg-secondary rounded  text-white" id="page">
-                    <a [routerLink]="['admin/Gallery'] ">
-                        <i class="fa fa-picture-o"></i>
-                        Gallery
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-10 col-xs-10  shadow-lg  bg-dark rounded text-white " id="page">
-                        <a [routerLink]="['admin/BranchList']">
+    <a [routerLink]="['admin/BranchList']">
                             <i class="fa fa-sign-out"></i>
-                            Branch
+                            Batch Details
                         </a>
-                    </div>
-            
+</div> 
 </div>

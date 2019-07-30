@@ -1,3 +1,4 @@
+<div class="p-3 text-center bg-primary text-white">Faculty Information List</div>
 <table class="table table-hover table-justified">
     <thead>
       <tr>
@@ -9,11 +10,8 @@
           <th>EmailID</th>
           <th>ContactNo</th>
           <th>Remarks   </th>
-          <th>CreatedBy   </th>
-          <th>CreatedDate   </th>
-          <th>ModifiedBy  </th>
-          <th>ModifiedDate  </th>
-          <th>Active </th>
+          <th></th>
+          <th></th>
           </tr>
       </thead>
     <tbody>
@@ -26,11 +24,8 @@
           <td>{{x.emailID}}</td>
           <td>{{x.contactNo}}</td>
           <td>{{x.remarks}}</td>
-          <td>{{x.createdBy}}</td>
-          <td>{{x.createdDate}}</td>
-          <td>{{x.modifiedBy}}</td>
-          <td>{{x.modifiedDate}}</td>
-          <td>{{x.active}}</td>
-         </tr>   
+          <td><a class="btn btn-success p-2 m-1" [routerLink]="['/../admin/admin/update-facultyMaster']" target="_blank"  [queryParams]="{ facultyID: (x.facultyID) }"> Update</a></td>  
+          <td><a class="btn btn-danger p-2 m-1" [routerLink]="['/../admin/admin/delete-facultyMaster']" target="_blank" [queryParams]="{ facultyID: (x.facultyID) }"> Delete</a></td>
+  </tr>   
     </tbody>      
 </table>
