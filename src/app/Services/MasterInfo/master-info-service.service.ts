@@ -7,7 +7,7 @@ import {MasterInfoModel} from "../../Entity/master-info-model";
 })
 export class MasterInfoServiceService {
 
-  BaseURL: string = "http://NIAS.codelovertechnology.com/";
+  BaseURL: string = "https://nias.nirmanias.com/api/";
 
   selectedMaster: { MasterID: string; MasterValue: string; MasterTable: string; Sequence: string;};
   
@@ -16,10 +16,10 @@ export class MasterInfoServiceService {
   
   
   public getMasterInfo():any{
-    return this._http.get(this.BaseURL+"api/MasterInfo/MasterInfoList");
+    return this._http.get(this.BaseURL+"MasterInfo/MasterInfoList");
   }
 
   public postMasterInfo(MasterInfoModel : MasterInfoModel){
-    return this._http.post<any>(this.BaseURL+"api/MasterInfo/CreateMasterInfo",MasterInfoModel);
+    return this._http.post<any>(this.BaseURL+"MasterInfo/CreateMasterInfo",MasterInfoModel);
   }
 }

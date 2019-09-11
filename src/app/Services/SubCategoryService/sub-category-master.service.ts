@@ -7,7 +7,7 @@ import { SubCategoryMaster } from '../../Entity/sub-category-master';
 })
 export class SubCategoryMasterService {
 
-  BaseURL: string = "http://NIAS.codelovertechnology.com/api/";
+  BaseURL: string = "https://nias.nirmanias.com/api/";
 
    
   constructor(private _http:HttpClient){}

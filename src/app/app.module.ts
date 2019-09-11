@@ -150,6 +150,9 @@ import { InsertPreviousYearQuestionAnswerComponent } from './Component/PreviousY
 import { ListPreviousYearQuestionAnswerComponent } from './Component/PreviousYearQuestionAnswer/list-previous-year-question-answer/list-previous-year-question-answer.component';
 import { GetOfflineTestListComponent } from './Component/Offlinetest/get-offline-test-list/get-offline-test-list.component';
 import { InsertOfflineTestDetailsComponent } from './Component/Offlinetest/insert-offline-test-details/insert-offline-test-details.component';
+import { JwPaginationComponent } from 'jw-angular-pagination';
+import { GetImportantTodayNewsComponent } from './Component/CurrentAffairs/ImportantTodayNews/get-important-today-news/get-important-today-news.component';
+import { GetEconomicUpheavalComponent } from './Component/CurrentAffairs/get-economic-upheaval/get-economic-upheaval.component';
 
 @NgModule({
   declarations: [
@@ -277,7 +280,10 @@ import { InsertOfflineTestDetailsComponent } from './Component/Offlinetest/inser
     InsertPreviousYearQuestionAnswerComponent,
     ListPreviousYearQuestionAnswerComponent,
     GetOfflineTestListComponent,
-    InsertOfflineTestDetailsComponent   
+    InsertOfflineTestDetailsComponent,
+    JwPaginationComponent,
+    GetImportantTodayNewsComponent,
+    GetEconomicUpheavalComponent 
   ],
   bootstrap: [ AppComponent ],
   imports:[

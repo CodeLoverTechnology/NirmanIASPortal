@@ -9,7 +9,7 @@ import { SessionStorageService } from 'ngx-webstorage';
 })
 export class SMSMessageMasterServicesService {
 
-  BaseURL:string =  "http://nias.codelovertechnology.com/api/";
+  BaseURL:string =  "https://nias.nirmanias.com/api/";
   result: any;
   constructor(private _http: HttpClient, private router: Router, private localSt: SessionStorageService) { }
 

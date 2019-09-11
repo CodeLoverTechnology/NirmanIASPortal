@@ -6,7 +6,7 @@ import {Imagevedios} from "../../Entity/imagevedios";
 })
 export class ImagevediosService {
 
-  BaseURL: string = "http://NIAS.codelovertechnology.com/api/";
+  BaseURL: string = "https://nias.nirmanias.com/api/";
 
   constructor(private _http: HttpClient) { }
   

@@ -9,7 +9,7 @@ import {HttpClientModule, HttpClient, HttpRequest, HttpResponse, HttpEventType} 
   styleUrls: ['./upload-files.component.css']
 })
 export class UploadFilesComponent implements OnInit {
-  BaseURL: string = "http://NIAS.codelovertechnology.com/assets/CurrentAffairs/CurrentAffairsTheHindu/";
+  BaseURL: string = "https://nias.nirmanias.com/assets/CurrentAffairs/CurrentAffairsTheHindu/";
   percentDone: number;
   uploadSuccess: boolean;
   // fileToUpload: File = null;

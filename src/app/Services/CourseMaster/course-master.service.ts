@@ -7,7 +7,7 @@ import {CourseMaster} from "../../Entity/course-master";
 export class CourseMasterService {
 
 
-    BaseURL: string = "http://NIAS.codelovertechnology.com/";
+    BaseURL: string = "https://nias.nirmanias.com/api/";
   
     selectedCource: { CourseID: number; CourseType : string; CourseCode : string; CourseName: string; Remarks: string;};
     constructor(private _http:HttpClient){}

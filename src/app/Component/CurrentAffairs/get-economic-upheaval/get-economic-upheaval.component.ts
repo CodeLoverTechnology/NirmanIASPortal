@@ -4,14 +4,12 @@ import { HttpErrorResponse, HttpClientModule } from '@angular/common/http';
 import { CurrentAffairsMasters } from 'src/app/Entity/CurrentAffairsMaster';
 
 @Component({
-  selector: 'app-current-affairs-for-hindu',
-  templateUrl: './current-affairs-for-hindu.component.html',
-  styleUrls: ['./current-affairs-for-hindu.component.css']
+  selector: 'app-get-economic-upheaval',
+  templateUrl: './get-economic-upheaval.component.html',
+  styleUrls: ['./get-economic-upheaval.component.css']
 })
-export class CurrentAffairsForHinduComponent implements OnInit {
+export class GetEconomicUpheavalComponent implements OnInit {
   public result:any;
-  public TheHinduID:string ="7";
-  //public TheHinduNews: any;
   public busy: Promise<any>;
   items: Array<any>;
   pageOfItems: Array<any>;
@@ -19,12 +17,12 @@ export class CurrentAffairsForHinduComponent implements OnInit {
   constructor(private _service:CurrentAffairsService) { }
 
   ngOnInit() {
-    this.Current.SubCategory="7";
+    this.Current.Category="4";
+    this.Current.SubCategory="18";
     this.busy = this._service.getCurrentAffairsInfo(this.Current).subscribe(
       result => {
-       //this.TheHinduNews = result.filter(Curr => Curr.subCategory === this.TheHinduID);
-       this.items= result.filter(Curr => Curr.subCategory === this.TheHinduID);
-       this.pageOfItems= result.filter(Curr => Curr.subCategory === this.TheHinduID);
+      this.items= result;
+       this.pageOfItems= result;
       },
       (err: HttpClientModule) => {
         if (err instanceof Error) {
@@ -36,7 +34,6 @@ export class CurrentAffairsForHinduComponent implements OnInit {
   }
 
   onChangePage(pageOfItems: Array<any>) {
-    // update current page of items
     this.pageOfItems = pageOfItems;
 }
 }

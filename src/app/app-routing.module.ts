@@ -101,6 +101,9 @@ import { ListPreviousYearQuestionAnswerComponent } from './Component/PreviousYea
 import { GetOfflineTestListComponent } from './Component/Offlinetest/get-offline-test-list/get-offline-test-list.component';
 import { UpdateFacultyMasterComponent } from './Component/FacultyMaster/update-faculty-master/update-faculty-master.component';
 import { DeleteFacultyMasterComponent } from './Component/FacultyMaster/delete-faculty-master/delete-faculty-master.component';
+import { GetImportantTodayNewsComponent } from './Component/CurrentAffairs/ImportantTodayNews/get-important-today-news/get-important-today-news.component';
+import { GetEconomicUpheavalComponent } from './Component/CurrentAffairs/get-economic-upheaval/get-economic-upheaval.component';
+
 const routes: Routes = [
   { path: "", component: NIASHomeComponent },
 
@@ -214,6 +217,8 @@ const routes: Routes = [
 
   { path: "PrintedMaterialList", component: PrintedMaterialListComponent },
   { path: "The-Hindu-CurrentAffairs", component: CurrentAffairsForHinduComponent },
+  { path: "Get-Important-Today-News", component:GetImportantTodayNewsComponent},
+  { path: "आर्थिक-हलचल", component:GetEconomicUpheavalComponent},
   { path: "BookContentStrategy", component: BookContentStrategyComponent },
   { path : "ViewPDF", component:ViewPDFComponent},
   { path : "IndiaYearBook", component:IndiaYearBook2019Component},

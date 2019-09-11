@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class SocialMediaServiceService {
 
-  BaseURL: string = "http://NIAS.codelovertechnology.com/";
+  BaseURL: string = "https://nias.nirmanias.com/api/";
 
   selectedMedia: { SocialMediaID: string; SocialMediaName: string; Address : string; Notes: string; };
   
@@ -26,10 +26,10 @@ export class SocialMediaServiceService {
   
   
   public getSocialMediaInfo():any{
-    return this._http.get(this.BaseURL+"api/SocialMediaMasters/SocialMediaMastersList");
+    return this._http.get(this.BaseURL+"SocialMediaMasters/SocialMediaMastersList");
   }
 
   public postSocialMedia(socialmedia : SocialMediaModel):any{
-    return this._http.post<any>(this.BaseURL+"api/SocialMediaMasters/CreateSocialMediaMasters",socialmedia);
+    return this._http.post<any>(this.BaseURL+"SocialMediaMasters/CreateSocialMediaMasters",socialmedia);
   }
 }

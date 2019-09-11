@@ -8,7 +8,7 @@ import { BannerModel } from 'src/app/Entity/banner-model';
 })
 export class BannerMasterService {
  
-  BaseURL: string = "http://NIAS.codelovertechnology.com/api/";
+  BaseURL: string = "https://nias.nirmanias.com/api/";
 
   selectedBanner: { BannerID: string; BannerTitle : string; BannerImagesPath : string; SubTitle: string; Remarks: string;};
   

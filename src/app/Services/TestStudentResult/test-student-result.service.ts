@@ -7,7 +7,7 @@ import { TestStudentResult } from 'src/app/Entity/TestStudentResult';
   providedIn: 'root'
 })
 export class TestStudentResultService {
-  BaseURL: string = "http://NIAS.codelovertechnology.com/api/";
+  BaseURL: string = "https://nias.nirmanias.com/api/";
   constructor(private _http:HttpClient) { }
 
   public getTestStudentResult():any{

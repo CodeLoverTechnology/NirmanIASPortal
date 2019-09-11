@@ -7,7 +7,7 @@ import { ChatModel } from 'src/app/Entity/ChatModel';
 })
 export class ChatServicesService {
   ipAddress: any;
-  BaseURL: string = "http://nias.codelovertechnology.com/api/";
+  BaseURL: string = "https://nias.nirmanias.com/api/";
   constructor(private _http: HttpClient) { }
 
 

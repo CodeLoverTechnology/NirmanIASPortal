@@ -8,7 +8,7 @@ import {FacultyMaster } from '../../Entity/FacultyMaster';
 })
 export class FacultyMasterService { 
 
-  BaseURL: string = "http://NIAS.codelovertechnology.com/api/";
+  BaseURL: string = "https://nias.nirmanias.com/api/";
 
 constructor(private _http:HttpClient){}
   

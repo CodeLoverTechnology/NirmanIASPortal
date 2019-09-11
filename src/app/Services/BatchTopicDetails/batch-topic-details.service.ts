@@ -6,7 +6,7 @@ import {BatchTopicDetails} from "../../Entity/batch-topic details";
 })
 export class BatchTopicDetailsService {
 
-  BaseURL: string = "http://NIAS.codelovertechnology.com/api/";
+  BaseURL: string = "https://nias.nirmanias.com/api/";
 
   
   constructor(private _http:HttpClient){}

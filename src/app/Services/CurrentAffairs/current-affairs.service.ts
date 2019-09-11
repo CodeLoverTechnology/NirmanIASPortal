@@ -8,14 +8,13 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class CurrentAffairsService {
 
-  BaseURL: string = "http://nias.codelovertechnology.com/api/";
+  BaseURL: string = "https://nias.nirmanias.com/api/";
   sanitizedUrl : any;
   constructor(private _http:HttpClient,private sanitizer:DomSanitizer){
     this.sanitizedUrl=this.sanitizer.sanitize(4,this.BaseURL);
   }
   
    getCurrentAffairsInfo(Current: CurrentAffairsMasters):any{
-      debugger;
       // let params1 = new HttpParams().append("SubCategory",Current.SubCategory);
       // params1 = new HttpParams().append("Category",Current.Category);
     return this._http.get(this.sanitizedUrl+"CurrentAffairsMasters/CurrentAffairsMastersList?SubCategory="+Current.SubCategory+"&Category="+Current.Category);

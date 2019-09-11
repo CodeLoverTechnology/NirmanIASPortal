@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class EnquiryServiceService {
-  BaseURL: string = "http://NIAS.codelovertechnology.com/api/";
+  BaseURL: string = "https://nias.nirmanias.com/api/";
 
   selectedEnquiry: { Name: string; EmailID: string; Contact: string; EnquiryMessage: string; };
   constructor(private _http:HttpClient){}

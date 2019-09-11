@@ -6,7 +6,7 @@ import {HttpClient, HttpHeaders, } from "@angular/common/http";
   providedIn: 'root'
 })
 export class FileUploadService {
-  BaseURL: string = "http://NIAS.codelovertechnology.com/assets/CurrentAffairs/CurrentAffairsTheHindu/";
+  BaseURL: string = "https://nias.nirmanias.com/assets/CurrentAffairs/CurrentAffairsTheHindu/";
  // HeaderName : HttpHeaders;
   
   constructor(private _http:HttpClient) { }

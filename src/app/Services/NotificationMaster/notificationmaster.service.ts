@@ -7,7 +7,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class NotificationmasterService {
 
-  BaseURL: string = "http://NIAS.codelovertechnology.com/api/";
+  BaseURL: string = "https://nias.nirmanias.com/api/";
   sanitizedUrl : any;
   constructor(private _http:HttpClient,private sanitizer:DomSanitizer){
     this.sanitizedUrl=this.sanitizer.sanitize(4,this.BaseURL);
