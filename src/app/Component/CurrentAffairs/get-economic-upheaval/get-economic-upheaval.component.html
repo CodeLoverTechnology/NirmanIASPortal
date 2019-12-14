@@ -12,12 +12,17 @@
                               <h5 class="h5">{{x.title}}</h5>                    
                               <p class="text-justify small">{{x.summary}} </p>
                                       <div class="p-2 container">
-                                              <a href={{x.pdfPath}}
-                                              target="_blank" rel={{x.title}} title={{x.title}}
-                                              class="border0 blink  p-2 m-2">
-                                              <i class="fa fa-file-pdf-o  fa-3x "  aria-hidden="true"></i>
-                                            </a>
-                                            <br>
+                                        <a href={{x.pdfPath}}
+                                        target="_blank" rel={{x.title}} title={{x.title}}
+                                        class="border0 blink  p-2 m-2">
+                                        <i class="fa fa-file-pdf-o  fa-3x "  aria-hidden="true"></i>
+                                      </a>
+                                      <a href={{x.videoLink}}
+                                          target="_blank" rel={{x.title}} title={{x.title}}
+                                          class="border0 blink p-2 m-2">
+                                          <i class="fa fa-file-video-o fa-3x" aria-hidden="true"></i>
+                                        </a>
+                                      <br>
                                             <p class="fa fa-clock-o small  p-2 m-2 ">{{x.modifiedDate}}</p>
                                             <a [routerLink]="['../ViewPDF']" target="_blank"  [queryParams]="{ pdfSrc: (x.pdfPath) }" class="small p-2 btn-success"  rel={{x.title}} title={{x.title}}>Read More...</a>        
                                           </div>
