@@ -218,7 +218,7 @@ const routes: Routes = [
   { path: "PrintedMaterialList", component: PrintedMaterialListComponent },
   { path: "The-Hindu-CurrentAffairs", component: CurrentAffairsForHinduComponent },
   { path: "Get-Important-Today-News", component:GetImportantTodayNewsComponent},
-  { path: "आर्थिक-हलचल", component:GetEconomicUpheavalComponent},
+  { path: "Audio-Article", component:GetEconomicUpheavalComponent},
   { path: "BookContentStrategy", component: BookContentStrategyComponent },
   { path : "ViewPDF", component:ViewPDFComponent},
   { path : "IndiaYearBook", component:IndiaYearBook2019Component},

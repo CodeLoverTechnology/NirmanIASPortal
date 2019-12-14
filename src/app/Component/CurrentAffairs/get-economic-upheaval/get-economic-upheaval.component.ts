@@ -18,7 +18,7 @@ export class GetEconomicUpheavalComponent implements OnInit {
 
   ngOnInit() {
     this.Current.Category="4";
-    this.Current.SubCategory="18";
+    this.Current.SubCategory="19";
     this.busy = this._service.getCurrentAffairsInfo(this.Current).subscribe(
       result => {
       this.items= result;

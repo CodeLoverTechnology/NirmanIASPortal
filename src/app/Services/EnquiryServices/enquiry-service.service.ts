@@ -27,6 +27,7 @@ export class EnquiryServiceService {
   return this._http.put<any>(this.BaseURL + "Enquiry/UpdateEnquiry",Enquiry);
   }
   public  deleteEnquiry(EnquiryID: number):any {
+    debugger;
     return this._http.delete<any>(this.BaseURL + "Enquiry/DeleteEnquiry/" + EnquiryID);
   }
 }
